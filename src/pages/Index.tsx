@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import About from "@/components/About";
 import ProductCard from "@/components/ProductCard";
 import ProductDetail from "@/components/ProductDetail";
 import { products } from "@/data/products";
@@ -13,14 +14,15 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <Hero />
+      <About />
       
       <section id="catalog" className="container py-16">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
-            Our Collection
+            Our Spool Collection
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Browse through our carefully curated selection of premium tech products
+            Browse through our comprehensive range of high-quality spools for cable and wire industry
           </p>
         </div>
         

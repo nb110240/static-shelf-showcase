@@ -9,86 +9,86 @@ import product6 from "@/assets/product-6.jpg";
 export const products: Product[] = [
   {
     id: "1",
-    name: "Premium Wireless Headphones",
-    price: 299.99,
-    description: "Experience crystal-clear audio with advanced noise cancellation technology. Perfect for music lovers and professionals alike.",
-    category: "Audio",
+    name: "Industrial Cable Spool - 500mm",
+    price: 2499.00,
+    description: "Heavy-duty industrial spool designed for high-capacity cable winding. Perfect for large-scale cable manufacturing operations.",
+    category: "Industrial",
     image: product1,
     features: [
-      "Active Noise Cancellation",
-      "40-hour battery life",
-      "Premium sound quality",
-      "Comfortable over-ear design"
+      "Diameter: 500mm",
+      "High load capacity",
+      "Durable plastic construction",
+      "Suitable for heavy cables"
     ]
   },
   {
     id: "2",
-    name: "Luxury Smart Watch",
-    price: 449.99,
-    description: "Stay connected and track your fitness goals with this elegant smartwatch featuring premium materials and advanced health monitoring.",
-    category: "Wearables",
+    name: "Medium Wire Spool - 300mm",
+    price: 1299.00,
+    description: "Versatile medium-sized spool ideal for wire and cable production. Designed for optimal performance and durability.",
+    category: "Medium Duty",
     image: product2,
     features: [
-      "Heart rate monitoring",
-      "GPS tracking",
-      "Water resistant",
-      "5-day battery life"
+      "Diameter: 300mm",
+      "Balanced design",
+      "Lightweight yet strong",
+      "Multi-purpose application"
     ]
   },
   {
     id: "3",
-    name: "Mechanical Keyboard Pro",
-    price: 189.99,
-    description: "Elevate your typing experience with this premium mechanical keyboard featuring customizable RGB lighting and tactile switches.",
-    category: "Accessories",
+    name: "Precision Winding Spool - 200mm",
+    price: 899.00,
+    description: "Compact spool engineered for precision winding applications. Ideal for fine wire and specialized cable production.",
+    category: "Precision",
     image: product3,
     features: [
-      "Mechanical switches",
-      "RGB backlighting",
-      "Aluminum frame",
-      "Programmable keys"
+      "Diameter: 200mm",
+      "Precision molded",
+      "Smooth winding surface",
+      "Perfect for thin cables"
     ]
   },
   {
     id: "4",
-    name: "Designer Wireless Mouse",
-    price: 99.99,
-    description: "Precision meets elegance with this ergonomically designed wireless mouse. Perfect for both work and creative projects.",
-    category: "Accessories",
+    name: "Heavy Duty Cable Reel - 630mm",
+    price: 3499.00,
+    description: "Extra-large capacity reel for industrial cable production. Built to withstand demanding manufacturing environments.",
+    category: "Heavy Duty",
     image: product4,
     features: [
-      "Ergonomic design",
-      "High-precision sensor",
-      "60-day battery",
-      "Multi-device pairing"
+      "Diameter: 630mm",
+      "Maximum load capacity",
+      "Reinforced construction",
+      "Industrial grade quality"
     ]
   },
   {
     id: "5",
-    name: "Portable Bluetooth Speaker",
-    price: 149.99,
-    description: "Take your music anywhere with this powerful portable speaker. Waterproof design and exceptional sound quality in a compact form.",
-    category: "Audio",
+    name: "Standard Wire Bobbin - 250mm",
+    price: 999.00,
+    description: "Reliable standard bobbin for everyday wire production needs. Consistent quality and performance guaranteed.",
+    category: "Standard",
     image: product5,
     features: [
-      "360° sound",
-      "Waterproof IP67",
-      "20-hour playtime",
-      "USB-C charging"
+      "Diameter: 250mm",
+      "Cost-effective solution",
+      "Proven reliability",
+      "Wide industry acceptance"
     ]
   },
   {
     id: "6",
-    name: "Premium Laptop Stand",
-    price: 79.99,
-    description: "Improve your workspace ergonomics with this sleek aluminum laptop stand. Adjustable height and angles for optimal comfort.",
-    category: "Accessories",
+    name: "Custom Moulded Spool - 400mm",
+    price: 1899.00,
+    description: "Specialized spool with custom design capabilities. Can be tailored to meet specific industry requirements.",
+    category: "Custom",
     image: product6,
     features: [
-      "Adjustable height",
-      "Aluminum construction",
-      "Heat dissipation",
-      "Universal compatibility"
+      "Diameter: 400mm",
+      "Custom design available",
+      "Flexible specifications",
+      "Industry-specific solutions"
     ]
   }
 ];
