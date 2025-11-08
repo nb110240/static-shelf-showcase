@@ -16,13 +16,13 @@ const Index = () => {
       <Hero />
       <About />
       
-      <section id="catalog" className="container py-16">
+      <section id="catalog" className="container py-16 md:py-24">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
-            Our Spool Collection
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground uppercase tracking-tight">
+            Our Product Range
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Browse through our comprehensive range of high-quality spools for cable and wire industry
+          <p className="text-muted-foreground max-w-3xl mx-auto text-lg">
+            Comprehensive range of industrial spools, bobbins and reels for cable, wire and fiber applications. All products manufactured to international standards.
           </p>
         </div>
         
