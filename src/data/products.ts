@@ -205,61 +205,97 @@ export const products: Product[] = [
   {
     id: "sd-100",
     name: "SD100 Welding Wire Spool",
-    description: "DIN 8559 compliant welding wire spool. Available in A.B.S / H.I.P.S / Polypropylene quality.",
+    description: "DIN 8559 compliant welding wire spool. Available in A.B.S / H.I.P.S / Polypropylene quality. General colors are cream and black, other colors available on request.",
     category: "Welding Wire",
     image: weldingWireNew,
     features: [
-      "Flange Dia: 100mm",
-      "Barrel Dia: 38mm",
+      "Flange Dia (d1): 100mm",
+      "Barrel Dia (d2): 38mm",
       "Length: 45mm",
-      "Traverse: 38.5mm",
-      "Bore: 16.5mm",
-      "Winding Capacity: 1.5 Kgs"
+      "Traverse (L2): 38.5mm",
+      "Bore (d4): 16.5mm",
+      "Winding Capacity: 1.5 Kgs",
+      "Weight of Bobbin: 50 gms"
     ]
   },
   {
     id: "sd-200",
     name: "SD200 Welding Wire Spool",
-    description: "Medium capacity welding wire spool for industrial applications.",
+    description: "Medium capacity welding wire spool for industrial applications. Available in A.B.S / H.I.P.S / Polypropylene quality.",
     category: "Welding Wire",
     image: weldingWireNew,
     features: [
-      "Flange Dia: 200mm",
-      "Barrel Dia: 105mm",
+      "Flange Dia (d1): 200mm",
+      "Barrel Dia (d2): 105mm",
       "Length: 55mm",
-      "Traverse: 45mm",
-      "Bore: 51.5mm",
-      "Winding Capacity: 5 kgs"
+      "Traverse (L2): 45mm",
+      "Bore (d4): 51.5mm",
+      "Winding Capacity: 5 kgs",
+      "Weight of Bobbin: 260 gms"
     ]
   },
   {
     id: "sd-270",
     name: "SD270 Welding Wire Spool",
-    description: "Large capacity welding wire spool for heavy-duty operations.",
+    description: "Large capacity welding wire spool for heavy-duty operations. Available in A.B.S / H.I.P.S / Polypropylene quality.",
     category: "Welding Wire",
     image: weldingWireNew,
     features: [
-      "Flange Dia: 270mm",
-      "Barrel Dia: 148mm",
+      "Flange Dia (d1): 270mm",
+      "Barrel Dia (d2): 148mm",
       "Length: 105mm",
-      "Traverse: 89mm",
-      "Bore: 53mm",
-      "Winding Capacity: 20 kgs"
+      "Traverse (L2): 89mm",
+      "Bore (d4): 53mm",
+      "Winding Capacity: 20 kgs",
+      "Weight of Bobbin: 700 gms"
     ]
   },
   {
     id: "sd-300",
     name: "SD300 Welding Wire Spool",
-    description: "Premium welding wire spool for professional applications.",
+    description: "High-capacity welding wire spool for professional applications. Available in A.B.S / H.I.P.S / Polypropylene quality.",
     category: "Welding Wire",
     image: weldingWireNew,
     features: [
-      "Flange Dia: 300mm",
-      "Barrel Dia: 165mm",
-      "Length: 120mm",
-      "Traverse: 95mm",
-      "Bore: 53mm",
-      "Winding Capacity: 25 kgs"
+      "Flange Dia (d1): 300mm",
+      "Barrel Dia (d2): 212mm",
+      "Length: 103mm",
+      "Traverse (L2): 91mm",
+      "Bore (d4): 51.5mm",
+      "Winding Capacity: 15 kgs",
+      "Weight of Bobbin: 780 gms"
+    ]
+  },
+  {
+    id: "sd-300-alt",
+    name: "SD300 Welding Wire Spool (Alternative)",
+    description: "Alternative configuration SD300 welding wire spool. Available in A.B.S / H.I.P.S / Polypropylene quality.",
+    category: "Welding Wire",
+    image: weldingWireNew,
+    features: [
+      "Flange Dia (d1): 300mm",
+      "Barrel Dia (d2): 205mm",
+      "Length: 103mm",
+      "Traverse (L2): 89.8mm",
+      "Bore (d4): 51.5mm",
+      "Winding Capacity: 15 kgs",
+      "Weight of Bobbin: 650 gms"
+    ]
+  },
+  {
+    id: "sd-300-3",
+    name: "SD300/3 Welding Wire Spool",
+    description: "Premium SD300/3 welding wire spool for professional applications. Available in A.B.S / H.I.P.S / Polypropylene quality.",
+    category: "Welding Wire",
+    image: weldingWireNew,
+    features: [
+      "Flange Dia (d1): 300mm",
+      "Barrel Dia (d2): 212mm",
+      "Length: 103mm",
+      "Traverse (L2): 91mm",
+      "Bore (d4): 51.5mm",
+      "Winding Capacity: 15 kgs",
+      "Weight of Bobbin: 840 gms"
     ]
   },
 
