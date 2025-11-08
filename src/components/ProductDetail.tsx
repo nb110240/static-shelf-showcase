@@ -35,9 +35,6 @@ const ProductDetail = ({ product, open, onClose }: ProductDetailProps) => {
             </Badge>
             
             <div>
-              <div className="text-3xl font-bold text-primary mb-2">
-                ${product.price.toFixed(2)}
-              </div>
               <p className="text-muted-foreground">
                 {product.description}
               </p>

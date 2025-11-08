@@ -27,12 +27,9 @@ const ProductCard = ({ product, onViewDetails }: ProductCardProps) => {
         <h3 className="font-semibold text-lg text-card-foreground mb-2 line-clamp-1">
           {product.name}
         </h3>
-        <p className="text-muted-foreground text-sm line-clamp-2 mb-3">
+        <p className="text-muted-foreground text-sm line-clamp-3">
           {product.description}
         </p>
-        <div className="text-2xl font-bold text-primary">
-          ${product.price.toFixed(2)}
-        </div>
       </CardContent>
       
       <CardFooter className="p-4 pt-0">
