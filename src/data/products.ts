@@ -1,29 +1,31 @@
 import { Product } from "@/types/product";
-import taperedBobbins from "@/assets/tapered-bobbins.jpg";
-import weldingWire from "@/assets/welding-wire.jpg";
-import compositeReels from "@/assets/composite-reels.jpg";
-import edmWire from "@/assets/edm-wire.jpg";
-import stitchingWire from "@/assets/stitching-wire.jpg";
-import din46399 from "@/assets/din-46399.jpg";
-import steelTinsel from "@/assets/steel-tinsel.jpg";
-import aluminumWire from "@/assets/aluminum-wire.jpg";
-import cableDelivery from "@/assets/cable-delivery.jpg";
-import superTough from "@/assets/super-tough.jpg";
-import jumboReels from "@/assets/jumbo-reels.jpg";
-import biconical from "@/assets/biconical.jpg";
-import monofilament from "@/assets/monofilament.jpg";
-import miscReels from "@/assets/misc-reels.jpg";
-import isiReels from "@/assets/isi-reels.jpg";
-import copperConductor from "@/assets/copper-conductor.jpg";
+import taperedBobbinsNew from "@/assets/tapered-bobbins-new.jpg";
+import weldingWireNew from "@/assets/welding-wire-new.jpg";
+import compositeReelsNew from "@/assets/composite-reels-new.jpg";
+import edmWireNew from "@/assets/edm-wire-new.jpg";
+import stitchingWireNew from "@/assets/stitching-wire-new.jpg";
+import din46399New from "@/assets/din-46399-new.jpg";
+import steelTinselNew from "@/assets/steel-tinsel-new.jpg";
+import aluminumWireNew from "@/assets/aluminum-wire-new.jpg";
+import cableDeliveryNew from "@/assets/cable-delivery-new.jpg";
+import superToughNew from "@/assets/super-tough-new.jpg";
+import jumboReelsNew from "@/assets/jumbo-reels-new.jpg";
+import biconicalNew from "@/assets/biconical-new.jpg";
+import monofilamentNew from "@/assets/monofilament-new.jpg";
+import miscReelsNew from "@/assets/misc-reels-new.jpg";
+import isiReelsNew from "@/assets/isi-reels-new.jpg";
+import copperConductorNew from "@/assets/copper-conductor-new.jpg";
+import textileBobbins from "@/assets/textile-bobbins.jpg";
+import paperTubes from "@/assets/paper-tubes.jpg";
 
 export const products: Product[] = [
-  // DIN 46383 / IEC 264-3 TAPERED BOBBINS (PLASTIC TAPER REELS)
+  // 1. TAPERED BOBBINS (DIN 46383 / IEC 264-3)
   {
     id: "pt-1",
     name: "PT-1 Tapered Bobbin",
     description: "DIN 46383 / IEC 264-3 compliant plastic taper reel. Available in P.P, A.B.S and P.S in standard colors.",
     category: "Tapered Bobbins",
-    image: taperedBobbins,
+    image: taperedBobbinsNew,
     features: [
       "Flange Dia: 93.5/103mm",
       "Barrel Dia: 54/60mm",
@@ -38,7 +40,7 @@ export const products: Product[] = [
     name: "PT-2 Tapered Bobbin",
     description: "Medium capacity tapered bobbin for cable winding applications. Durable plastic construction.",
     category: "Tapered Bobbins",
-    image: taperedBobbins,
+    image: taperedBobbinsNew,
     features: [
       "Flange Dia: 105/115mm",
       "Barrel Dia: 60/67mm",
@@ -53,7 +55,7 @@ export const products: Product[] = [
     name: "PT-4 Tapered Bobbin",
     description: "High capacity tapered spool for industrial cable manufacturing.",
     category: "Tapered Bobbins",
-    image: taperedBobbins,
+    image: taperedBobbinsNew,
     features: [
       "Flange Dia: 122/140mm",
       "Barrel Dia: 74/85mm",
@@ -68,7 +70,7 @@ export const products: Product[] = [
     name: "PT-6 Tapered Bobbin",
     description: "Heavy-duty tapered bobbin for large-scale cable production.",
     category: "Tapered Bobbins",
-    image: taperedBobbins,
+    image: taperedBobbinsNew,
     features: [
       "Flange Dia: 147/160mm",
       "Barrel Dia: 90/100mm",
@@ -78,22 +80,36 @@ export const products: Product[] = [
       "Winding Capacity: 6 kgs"
     ]
   },
-  
-  // DIN 8559 (WELDING WIRE)
+  {
+    id: "pt-8",
+    name: "PT-8 Tapered Bobbin",
+    description: "Extra large tapered bobbin for maximum capacity applications.",
+    category: "Tapered Bobbins",
+    image: taperedBobbinsNew,
+    features: [
+      "Flange Dia: 178/195mm",
+      "Barrel Dia: 108/120mm",
+      "Traverse: 185mm",
+      "Overall Width: 215mm",
+      "Bore: 26mm",
+      "Winding Capacity: 8 kgs"
+    ]
+  },
+
+  // 2. WELDING WIRE (DIN 8559)
   {
     id: "sd-100",
     name: "SD100 Welding Wire Spool",
     description: "DIN 8559 compliant welding wire spool. Available in A.B.S / H.I.P.S / Polypropylene quality.",
     category: "Welding Wire",
-    image: weldingWire,
+    image: weldingWireNew,
     features: [
       "Flange Dia: 100mm",
       "Barrel Dia: 38mm",
       "Length: 45mm",
       "Traverse: 38.5mm",
       "Bore: 16.5mm",
-      "Winding Capacity: 1.5 Kgs",
-      "Weight: 50 gms"
+      "Winding Capacity: 1.5 Kgs"
     ]
   },
   {
@@ -101,15 +117,14 @@ export const products: Product[] = [
     name: "SD200 Welding Wire Spool",
     description: "Medium capacity welding wire spool for industrial applications.",
     category: "Welding Wire",
-    image: weldingWire,
+    image: weldingWireNew,
     features: [
       "Flange Dia: 200mm",
       "Barrel Dia: 105mm",
       "Length: 55mm",
       "Traverse: 45mm",
       "Bore: 51.5mm",
-      "Winding Capacity: 5 kgs",
-      "Weight: 260gms"
+      "Winding Capacity: 5 kgs"
     ]
   },
   {
@@ -117,32 +132,45 @@ export const products: Product[] = [
     name: "SD270 Welding Wire Spool",
     description: "Large capacity welding wire spool for heavy-duty operations.",
     category: "Welding Wire",
-    image: weldingWire,
+    image: weldingWireNew,
     features: [
       "Flange Dia: 270mm",
       "Barrel Dia: 148mm",
       "Length: 105mm",
       "Traverse: 89mm",
       "Bore: 53mm",
-      "Winding Capacity: 20 kgs",
-      "Weight: 700 gms"
+      "Winding Capacity: 20 kgs"
+    ]
+  },
+  {
+    id: "sd-300",
+    name: "SD300 Welding Wire Spool",
+    description: "Premium welding wire spool for professional applications.",
+    category: "Welding Wire",
+    image: weldingWireNew,
+    features: [
+      "Flange Dia: 300mm",
+      "Barrel Dia: 165mm",
+      "Length: 120mm",
+      "Traverse: 95mm",
+      "Bore: 53mm",
+      "Winding Capacity: 25 kgs"
     ]
   },
 
-  // COMPOSITE REELS DIN 46397
+  // 3. COMPOSITE REELS (DIN 46397)
   {
     id: "pf-tc-400a",
     name: "PF/TC/400 A Composite Reel",
     description: "Composite reel for cable and fiber industry. Dynamically balanced at 1500 rpm as per VDI 2060 Grade 6.3.",
     category: "Composite Reels",
-    image: compositeReels,
+    image: compositeReelsNew,
     features: [
       "Flange Dia: 400mm",
       "Barrel Dia (d2/DIN): 200mm",
       "Traverse: 200-300mm",
       "Bore: 36-56mm",
-      "Overall: 250-350mm",
-      "Available in standard colors"
+      "Overall: 250-350mm"
     ]
   },
   {
@@ -150,71 +178,98 @@ export const products: Product[] = [
     name: "PF/TC/500 Composite Reel",
     description: "Heavy capacity composite reel for fiber optic and cable manufacturing.",
     category: "Composite Reels",
-    image: compositeReels,
+    image: compositeReelsNew,
     features: [
       "Flange Dia: 500mm",
       "Barrel Dia: 200mm",
       "Traverse: 250-310mm",
       "Bore: 36-56mm",
-      "Overall: 300-375mm",
-      "Dynamically balanced"
+      "Overall: 300-375mm"
+    ]
+  },
+  {
+    id: "pf-tc-630",
+    name: "PF/TC/630 Composite Reel",
+    description: "Large capacity composite reel for industrial cable production.",
+    category: "Composite Reels",
+    image: compositeReelsNew,
+    features: [
+      "Flange Dia: 630mm",
+      "Barrel Dia: 280mm",
+      "Traverse: 400mm",
+      "Bore: 50-80mm",
+      "Overall: 500mm"
     ]
   },
   {
     id: "pf-tc-800",
     name: "PF/TC/800 Composite Reel",
-    description: "Extra large composite reel for industrial cable production.",
+    description: "Extra large composite reel for maximum capacity cable production.",
     category: "Composite Reels",
-    image: compositeReels,
+    image: compositeReelsNew,
     features: [
       "Flange Dia: 800mm",
       "Barrel Dia: 400mm",
       "Traverse: 500mm",
       "Bore: 80-127mm",
-      "Overall: 600mm",
-      "VDI 2060 Grade 6.3 certified"
+      "Overall: 600mm"
     ]
   },
 
-  // EDM WIRE REELS
+  // 4. EDM WIRE
   {
     id: "ep-1",
     name: "EP-1 EDM Wire Reel",
     description: "Plastic reel suitable for EDM wire applications.",
     category: "EDM Wire",
-    image: edmWire,
+    image: edmWireNew,
     features: [
-      "Flange Dia: 130(6-12)mm",
-      "Barrel Dia: 60(2-36)mm",
-      "Traverse: 28(1-10)mm",
-      "Overall: 36(1-42)mm",
-      "Bore: 12.5(0-5)mm",
-      "Weight Capacity: 1.2(2-65)kg"
+      "Flange Dia: 130mm",
+      "Barrel Dia: 60mm",
+      "Traverse: 28mm",
+      "Overall: 36mm",
+      "Bore: 12.5mm",
+      "Weight Capacity: 1.2kg"
+    ]
+  },
+  {
+    id: "ep-2",
+    name: "EP-2 EDM Wire Reel",
+    description: "Medium capacity EDM wire reel for precision machining.",
+    category: "EDM Wire",
+    image: edmWireNew,
+    features: [
+      "Flange Dia: 145mm",
+      "Barrel Dia: 75mm",
+      "Traverse: 45mm",
+      "Overall: 60mm",
+      "Bore: 16mm",
+      "Weight Capacity: 2.5kg"
     ]
   },
   {
     id: "ep-5",
     name: "EP-5 EDM Wire Reel",
-    description: "Medium capacity EDM wire reel for precision applications.",
+    description: "Large capacity EDM wire reel for industrial applications.",
     category: "EDM Wire",
-    image: edmWire,
+    image: edmWireNew,
     features: [
-      "Flange Dia: 160(6-3)mm",
-      "Barrel Dia: 90(3-54)mm",
-      "Traverse: 90(3-54)mm",
-      "Overall: 112(4-41)mm",
-      "Bore: 22(0-87)mm",
-      "Weight Capacity: 5.0(11-0)kg"
+      "Flange Dia: 160mm",
+      "Barrel Dia: 90mm",
+      "Traverse: 90mm",
+      "Overall: 112mm",
+      "Bore: 22mm",
+      "Weight Capacity: 5.0kg"
     ]
   },
 
-  // STITCHING WIRES
+  // 5. STITCHING WIRE
   {
     id: "sd-2",
     name: "SD-2 Stitching Wire Reel",
     description: "Reel for stitching wire applications in textile and packaging industries.",
     category: "Stitching Wire",
-    image: stitchingWire,
+    image: stitchingWireNew,
     features: [
       "Flange Dia: 133mm",
       "Barrel Dia: 53mm",
@@ -228,7 +283,7 @@ export const products: Product[] = [
     name: "SD-4 Stitching Wire Reel",
     description: "Medium capacity stitching wire reel for industrial sewing applications.",
     category: "Stitching Wire",
-    image: stitchingWire,
+    image: stitchingWireNew,
     features: [
       "Flange Dia: 154mm",
       "Barrel Dia: 67mm",
@@ -237,14 +292,28 @@ export const products: Product[] = [
       "Bore: 18mm"
     ]
   },
+  {
+    id: "sd-6",
+    name: "SD-6 Stitching Wire Reel",
+    description: "Heavy duty stitching wire reel for high volume operations.",
+    category: "Stitching Wire",
+    image: stitchingWireNew,
+    features: [
+      "Flange Dia: 175mm",
+      "Barrel Dia: 80mm",
+      "Traverse: 68mm",
+      "Overall: 78mm",
+      "Bore: 20mm"
+    ]
+  },
 
-  // DIN 46399 SPOOLS
+  // 6. DIN 46399 SPOOLS
   {
     id: "din-63",
     name: "DIN 46399 Type 63",
     description: "DIN 46399 standard plastic spool. All dimensions are in millimeter.",
     category: "DIN 46399",
-    image: din46399,
+    image: din46399New,
     features: [
       "Type: 63",
       "Flange Dia: 63mm",
@@ -259,7 +328,7 @@ export const products: Product[] = [
     name: "DIN 46399 Type 100",
     description: "Medium capacity DIN 46399 standard spool for wire and cable.",
     category: "DIN 46399",
-    image: din46399,
+    image: din46399New,
     features: [
       "Type: 100",
       "Flange Dia: 100mm",
@@ -270,11 +339,41 @@ export const products: Product[] = [
     ]
   },
   {
+    id: "din-125",
+    name: "DIN 46399 Type 125",
+    description: "Mid-size DIN 46399 spool for versatile applications.",
+    category: "DIN 46399",
+    image: din46399New,
+    features: [
+      "Type: 125",
+      "Flange Dia: 125mm",
+      "Barrel Dia: 80mm",
+      "Overall: 125mm",
+      "Traverse: 100mm",
+      "Bore: 18mm"
+    ]
+  },
+  {
+    id: "din-160",
+    name: "DIN 46399 Type 160",
+    description: "Large capacity DIN 46399 standard spool.",
+    category: "DIN 46399",
+    image: din46399New,
+    features: [
+      "Type: 160",
+      "Flange Dia: 160mm",
+      "Barrel Dia: 100mm",
+      "Overall: 160mm",
+      "Traverse: 125mm",
+      "Bore: 20mm"
+    ]
+  },
+  {
     id: "din-200",
     name: "DIN 46399 Type 200",
-    description: "Large capacity DIN 46399 standard spool for industrial applications.",
+    description: "Extra large DIN 46399 spool for industrial applications.",
     category: "DIN 46399",
-    image: din46399,
+    image: din46399New,
     features: [
       "Type: 200",
       "Flange Dia: 200mm",
@@ -285,13 +384,13 @@ export const products: Product[] = [
     ]
   },
 
-  // STAINLESS STEEL AND TINSEL WIRE
+  // 7. STEEL & TINSEL WIRE
   {
     id: "us-4",
     name: "US-4 Steel Wire Reel",
     description: "Reel for stainless steel and tinsel wire applications.",
     category: "Steel & Tinsel",
-    image: steelTinsel,
+    image: steelTinselNew,
     features: [
       "Flange Dia: 162mm",
       "Barrel Dia: 90mm",
@@ -301,11 +400,25 @@ export const products: Product[] = [
     ]
   },
   {
+    id: "us-100",
+    name: "US-100 Steel Wire Reel",
+    description: "Medium capacity steel wire delivery reel.",
+    category: "Steel & Tinsel",
+    image: steelTinselNew,
+    features: [
+      "Flange Dia: 180mm",
+      "Barrel Dia: 100mm",
+      "Traverse: 120mm",
+      "Overall: 145mm",
+      "Bore: 25mm"
+    ]
+  },
+  {
     id: "us-200",
     name: "US-200 Steel Wire Reel",
     description: "Heavy-duty reel for stainless steel wire delivery.",
     category: "Steel & Tinsel",
-    image: steelTinsel,
+    image: steelTinselNew,
     features: [
       "Flange Dia: 200mm",
       "Barrel Dia: 114mm",
@@ -315,13 +428,13 @@ export const products: Product[] = [
     ]
   },
 
-  // ALUMINIUM WIRE DELIVERY
+  // 8. ALUMINUM WIRE
   {
     id: "al-200",
     name: "AL-200 Aluminum Wire Reel",
     description: "Reel for delivery of aluminum wire with heavy-duty construction.",
     category: "Aluminum Wire",
-    image: aluminumWire,
+    image: aluminumWireNew,
     features: [
       "Flange Dia: 200mm",
       "Barrel Dia: 105mm",
@@ -331,11 +444,25 @@ export const products: Product[] = [
     ]
   },
   {
+    id: "al-250",
+    name: "AL-250 Aluminum Wire Reel",
+    description: "Medium capacity aluminum wire distribution reel.",
+    category: "Aluminum Wire",
+    image: aluminumWireNew,
+    features: [
+      "Flange Dia: 250mm",
+      "Barrel Dia: 110mm",
+      "Traverse: 55mm",
+      "Overall: 65mm",
+      "Bore: 51mm"
+    ]
+  },
+  {
     id: "al-320",
     name: "AL-320 Aluminum Wire Reel",
     description: "Large capacity reel for aluminum wire distribution.",
     category: "Aluminum Wire",
-    image: aluminumWire,
+    image: aluminumWireNew,
     features: [
       "Flange Dia: 320mm",
       "Barrel Dia: 120mm",
@@ -345,13 +472,13 @@ export const products: Product[] = [
     ]
   },
 
-  // CABLE DELIVERY REELS
+  // 9. CABLE DELIVERY
   {
     id: "cd-141",
     name: "CD-141 Cable Delivery Reel",
     description: "Reel for delivery of cables with various flange designs.",
     category: "Cable Delivery",
-    image: cableDelivery,
+    image: cableDeliveryNew,
     features: [
       "Flange Dia: 141mm",
       "Barrel Dia: 36mm",
@@ -361,11 +488,25 @@ export const products: Product[] = [
     ]
   },
   {
+    id: "cd-180",
+    name: "CD-180 Cable Delivery Reel",
+    description: "Mid-size cable delivery reel for versatile applications.",
+    category: "Cable Delivery",
+    image: cableDeliveryNew,
+    features: [
+      "Flange Dia: 180mm",
+      "Barrel Dia: 65mm",
+      "Bore: 50mm",
+      "Overall: 85mm",
+      "Traverse: 78mm"
+    ]
+  },
+  {
     id: "cd-230",
     name: "CD-230 Cable Delivery Reel",
-    description: "Medium capacity cable delivery reel for industrial distribution.",
+    description: "Large capacity cable delivery reel for industrial distribution.",
     category: "Cable Delivery",
-    image: cableDelivery,
+    image: cableDeliveryNew,
     features: [
       "Flange Dia: 230mm",
       "Barrel Dia: 92mm",
@@ -375,13 +516,28 @@ export const products: Product[] = [
     ]
   },
 
-  // SUPER TOUGH REELS
+  // 10. SUPER TOUGH REELS
+  {
+    id: "st-18",
+    name: "18\" Super Tough Reel",
+    description: "Super tough reel for wire drawing / stranding / bunching applications.",
+    category: "Super Tough",
+    image: superToughNew,
+    features: [
+      "Flange Dia: 18\"",
+      "Barrel Dia: 12\" (305)",
+      "Bore: 5\" (127)",
+      "Traverse: 9.00\" (230)",
+      "Winding Volume: 1850 cu.inch",
+      "Winding Weight: 180 k.g."
+    ]
+  },
   {
     id: "st-22",
     name: "22\" Super Tough Reel",
-    description: "Super tough reel for wire drawing / stranding / bunching applications. Replacement for metal reels.",
+    description: "Heavy capacity super tough reel. Replacement for metal reels.",
     category: "Super Tough",
-    image: superTough,
+    image: superToughNew,
     features: [
       "Flange Dia: 22\"",
       "Barrel Dia: 14\" (355)",
@@ -394,9 +550,9 @@ export const products: Product[] = [
   {
     id: "st-25",
     name: "25\" Super Tough Reel",
-    description: "Heavy capacity super tough reel for industrial wire processing.",
+    description: "Extra large super tough reel for heavy industrial wire processing.",
     category: "Super Tough",
-    image: superTough,
+    image: superToughNew,
     features: [
       "Flange Dia: 25\"",
       "Barrel Dia: 14\" (355)",
@@ -407,13 +563,27 @@ export const products: Product[] = [
     ]
   },
 
-  // JUMBO PLASTIC REELS
+  // 11. JUMBO REELS
+  {
+    id: "jumbo-315",
+    name: "Jumbo Reel 315mm",
+    description: "Jumbo plastic reel for large capacity wire applications.",
+    category: "Jumbo Reels",
+    image: jumboReelsNew,
+    features: [
+      "Flange Dia: 315mm",
+      "Barrel Dia: 160mm",
+      "Traverse: 160mm",
+      "Bore: 36mm",
+      "Volume: 12.5dm³"
+    ]
+  },
   {
     id: "jumbo-400",
     name: "Jumbo Reel 400mm",
-    description: "Jumbo plastic reel for large capacity wire and cable applications.",
+    description: "Extra large jumbo reel for heavy-duty cable manufacturing.",
     category: "Jumbo Reels",
-    image: jumboReels,
+    image: jumboReelsNew,
     features: [
       "Flange Dia: 400mm",
       "Barrel Dia: 200mm",
@@ -425,25 +595,25 @@ export const products: Product[] = [
   {
     id: "jumbo-500",
     name: "Jumbo Reel 500mm",
-    description: "Extra large jumbo reel for heavy-duty cable manufacturing.",
+    description: "Maximum capacity jumbo reel for industrial cable production.",
     category: "Jumbo Reels",
-    image: jumboReels,
+    image: jumboReelsNew,
     features: [
       "Flange Dia: 500mm",
       "Barrel Dia: 200,250mm",
       "Traverse: 265,300mm",
       "Bore: 40mm",
-      "Volume: 43.68 / 44.15mm"
+      "Volume: 43.68dm³"
     ]
   },
 
-  // BICONICAL SERIES
+  // 12. BICONICAL SERIES
   {
     id: "bk-75",
     name: "BK 75/45 Biconical",
     description: "Biconical series spool for specialized technical applications.",
     category: "Biconical",
-    image: biconical,
+    image: biconicalNew,
     features: [
       "Size: BK 75/45",
       "Flange Dia: 52.7mm",
@@ -454,11 +624,26 @@ export const products: Product[] = [
     ]
   },
   {
+    id: "bk-100",
+    name: "BK 100 Biconical",
+    description: "Medium biconical spool for precision winding.",
+    category: "Biconical",
+    image: biconicalNew,
+    features: [
+      "Size: BK 100",
+      "Flange Dia: 99.8mm",
+      "Barrel Dia: 55mm",
+      "Traverse: 62mm",
+      "Overall: 115mm",
+      "Bore: 18.2mm"
+    ]
+  },
+  {
     id: "bk-160",
     name: "BK 160 Biconical",
     description: "Large biconical spool for precision winding applications.",
     category: "Biconical",
-    image: biconical,
+    image: biconicalNew,
     features: [
       "Size: BK 160",
       "Flange Dia: 159.8mm",
@@ -469,13 +654,13 @@ export const products: Product[] = [
     ]
   },
 
-  // MONOFILAMENT SERIES
+  // 13. MONOFILAMENT
   {
     id: "mono-m1",
     name: "M1 Monofilament Spool",
     description: "Monofilament series spool for fishing line and technical filament.",
     category: "Monofilament",
-    image: monofilament,
+    image: monofilamentNew,
     features: [
       "Size: M1",
       "Flange Dia: 98mm",
@@ -485,11 +670,25 @@ export const products: Product[] = [
     ]
   },
   {
+    id: "mono-m2",
+    name: "M2 Monofilament Spool",
+    description: "Medium capacity monofilament spool for technical applications.",
+    category: "Monofilament",
+    image: monofilamentNew,
+    features: [
+      "Size: M2",
+      "Flange Dia: 118mm",
+      "Barrel Dia: 98mm",
+      "Traverse: 22mm",
+      "Bore: 16mm"
+    ]
+  },
+  {
     id: "mono-hand-large",
     name: "Hand Caster Large",
     description: "Large hand caster monofilament spool for manual operations.",
     category: "Monofilament",
-    image: monofilament,
+    image: monofilamentNew,
     features: [
       "Size: Hand Caster Large",
       "Flange Dia: 172.7mm",
@@ -500,13 +699,57 @@ export const products: Product[] = [
     ]
   },
 
-  // ISI STANDARD REELS
+  // 14. MISC REELS
+  {
+    id: "misc-plastic-50",
+    name: "Plastic Reel 50mm",
+    description: "Versatile plastic reel for various industrial applications.",
+    category: "Misc Reels",
+    image: miscReelsNew,
+    features: [
+      "Flange Dia: 50mm",
+      "Barrel Dia: 25mm",
+      "Traverse: 30mm",
+      "Overall: 40mm",
+      "Bore: 8mm"
+    ]
+  },
+  {
+    id: "misc-plastic-75",
+    name: "Plastic Reel 75mm",
+    description: "Medium capacity miscellaneous plastic reel.",
+    category: "Misc Reels",
+    image: miscReelsNew,
+    features: [
+      "Flange Dia: 75mm",
+      "Barrel Dia: 40mm",
+      "Traverse: 45mm",
+      "Overall: 60mm",
+      "Bore: 12mm"
+    ]
+  },
+  {
+    id: "misc-plastic-90",
+    name: "Plastic Reel 90mm",
+    description: "Large miscellaneous reel for diverse applications.",
+    category: "Misc Reels",
+    image: miscReelsNew,
+    features: [
+      "Flange Dia: 90mm",
+      "Barrel Dia: 50mm",
+      "Traverse: 55mm",
+      "Overall: 70mm",
+      "Bore: 14mm"
+    ]
+  },
+
+  // 15. ISI REELS
   {
     id: "isi-5",
     name: "ISI 5\" Reel",
     description: "ISI standard reel for wire and cable applications. All dimensions in millimeter.",
     category: "ISI Reels",
-    image: isiReels,
+    image: isiReelsNew,
     features: [
       "Size: 5\"",
       "Flange Dia (d1): 125mm",
@@ -521,7 +764,7 @@ export const products: Product[] = [
     name: "ISI 130mm Reel",
     description: "ISI standard 130mm reel for industrial wire applications.",
     category: "ISI Reels",
-    image: isiReels,
+    image: isiReelsNew,
     features: [
       "Size: 130mm",
       "Flange Dia (d1): 133mm",
@@ -536,7 +779,7 @@ export const products: Product[] = [
     name: "ISI 130mm L Reel",
     description: "ISI standard 130mm L series reel with extended traverse.",
     category: "ISI Reels",
-    image: isiReels,
+    image: isiReelsNew,
     features: [
       "Size: 130mm L",
       "Flange Dia (d1): 133mm",
@@ -551,7 +794,7 @@ export const products: Product[] = [
     name: "ISI 6\" Reel",
     description: "ISI standard 6 inch reel for medium capacity applications.",
     category: "ISI Reels",
-    image: isiReels,
+    image: isiReelsNew,
     features: [
       "Size: 6\"",
       "Flange Dia (d1): 160mm",
@@ -566,7 +809,7 @@ export const products: Product[] = [
     name: "ISI 7\" Reel",
     description: "ISI standard 7 inch reel for heavy-duty wire applications.",
     category: "ISI Reels",
-    image: isiReels,
+    image: isiReelsNew,
     features: [
       "Size: 7\"",
       "Flange Dia (d1): 178mm",
@@ -581,7 +824,7 @@ export const products: Product[] = [
     name: "ISI 8\" Reel",
     description: "ISI standard 8 inch reel for large capacity wire delivery.",
     category: "ISI Reels",
-    image: isiReels,
+    image: isiReelsNew,
     features: [
       "Size: 8\"",
       "Flange Dia (d1): 200mm",
@@ -596,7 +839,7 @@ export const products: Product[] = [
     name: "ISI 9\" Reel",
     description: "ISI standard 9 inch reel for industrial cable applications.",
     category: "ISI Reels",
-    image: isiReels,
+    image: isiReelsNew,
     features: [
       "Size: 9\"",
       "Flange Dia (d1): 230mm",
@@ -611,7 +854,7 @@ export const products: Product[] = [
     name: "ISI 10\" Reel",
     description: "ISI standard 10 inch reel for high capacity wire winding.",
     category: "ISI Reels",
-    image: isiReels,
+    image: isiReelsNew,
     features: [
       "Size: 10\"",
       "Flange Dia (d1): 260mm",
@@ -626,7 +869,7 @@ export const products: Product[] = [
     name: "ISI 13\" Reel",
     description: "ISI standard 13 inch reel for heavy industrial applications.",
     category: "ISI Reels",
-    image: isiReels,
+    image: isiReelsNew,
     features: [
       "Size: 13\"",
       "Flange Dia (d1): 336mm",
@@ -637,13 +880,13 @@ export const products: Product[] = [
     ]
   },
 
-  // COPPER CONDUCTOR REELS
+  // 16. COPPER CONDUCTOR
   {
     id: "cc-450x280",
     name: "450x280 Copper Conductor Reel",
     description: "Large capacity reel specifically designed for copper conductor wire delivery.",
     category: "Copper Conductor",
-    image: copperConductor,
+    image: copperConductorNew,
     features: [
       "Model: 450x280",
       "Flange Dia: 452mm",
@@ -658,7 +901,7 @@ export const products: Product[] = [
     name: "500x280 Copper Conductor Reel",
     description: "Extra large capacity reel for heavy copper conductor applications.",
     category: "Copper Conductor",
-    image: copperConductor,
+    image: copperConductorNew,
     features: [
       "Model: 500x280",
       "Flange Dia: 503mm",
@@ -666,6 +909,96 @@ export const products: Product[] = [
       "Traverse: 210mm",
       "Overall: 248mm",
       "Bore: 41.2mm"
+    ]
+  },
+
+  // 17. TEXTILE BOBBINS
+  {
+    id: "textile-cone-1",
+    name: "Textile Cone Bobbin Small",
+    description: "Plastic cone bobbin for textile yarn winding applications.",
+    category: "Textile Bobbins",
+    image: textileBobbins,
+    features: [
+      "Type: Cone",
+      "Base Dia: 45mm",
+      "Top Dia: 25mm",
+      "Height: 120mm",
+      "Bore: 18mm",
+      "Material: PP/ABS"
+    ]
+  },
+  {
+    id: "textile-cone-2",
+    name: "Textile Cone Bobbin Medium",
+    description: "Medium capacity textile cone for yarn manufacturing.",
+    category: "Textile Bobbins",
+    image: textileBobbins,
+    features: [
+      "Type: Cone",
+      "Base Dia: 60mm",
+      "Top Dia: 32mm",
+      "Height: 150mm",
+      "Bore: 22mm",
+      "Material: PP/ABS"
+    ]
+  },
+  {
+    id: "textile-parallel-1",
+    name: "Textile Parallel Bobbin",
+    description: "Parallel sided bobbin for textile thread applications.",
+    category: "Textile Bobbins",
+    image: textileBobbins,
+    features: [
+      "Type: Parallel",
+      "Diameter: 50mm",
+      "Height: 100mm",
+      "Bore: 20mm",
+      "Material: Polypropylene"
+    ]
+  },
+
+  // 18. PAPER TUBES
+  {
+    id: "paper-tube-2",
+    name: "Paper Tube 2 inch",
+    description: "Cardboard core tube for textile and paper industries.",
+    category: "Paper Tubes",
+    image: paperTubes,
+    features: [
+      "Inner Dia: 2 inch (50mm)",
+      "Wall Thickness: 3mm",
+      "Length: Customizable",
+      "Material: High-grade cardboard",
+      "Application: Textile/Paper winding"
+    ]
+  },
+  {
+    id: "paper-tube-3",
+    name: "Paper Tube 3 inch",
+    description: "Medium diameter paper tube for industrial winding.",
+    category: "Paper Tubes",
+    image: paperTubes,
+    features: [
+      "Inner Dia: 3 inch (76mm)",
+      "Wall Thickness: 4mm",
+      "Length: Customizable",
+      "Material: High-grade cardboard",
+      "Application: Industrial winding"
+    ]
+  },
+  {
+    id: "paper-tube-4",
+    name: "Paper Tube 4 inch",
+    description: "Large diameter paper tube for heavy-duty applications.",
+    category: "Paper Tubes",
+    image: paperTubes,
+    features: [
+      "Inner Dia: 4 inch (100mm)",
+      "Wall Thickness: 5mm",
+      "Length: Customizable",
+      "Material: High-grade cardboard",
+      "Application: Heavy-duty winding"
     ]
   }
 ];
