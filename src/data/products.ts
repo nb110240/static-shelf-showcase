@@ -283,9 +283,9 @@ export const products: Product[] = [
     ]
   },
   {
-    id: "sd-300-3",
-    name: "SD300/3 Welding Wire Spool",
-    description: "Premium SD300/3 welding wire spool for professional applications. Available in A.B.S / H.I.P.S / Polypropylene quality.",
+    id: "sd-300-os",
+    name: "SD300 OS Welding Wire Spool",
+    description: "Premium SD300 OS welding wire spool for professional applications. Available in A.B.S / H.I.P.S / Polypropylene quality.",
     category: "Welding Wire",
     image: weldingWireNew,
     features: [
@@ -303,43 +303,183 @@ export const products: Product[] = [
   {
     id: "pf-tc-400a",
     name: "PF/TC/400 A Composite Reel",
-    description: "Composite reel for cable and fiber industry. Dynamically balanced at 1500 rpm as per VDI 2060 Grade 6.3.",
+    description: "Composite reel for cable and fiber industry. Dynamically balanced at 1500 rpm as per VDI 2060 Grade 6.3. Available in standard colors.",
     category: "Composite Reels",
     image: compositeReelsNew,
     features: [
-      "Flange Dia: 400mm",
-      "Barrel Dia (d2/DIN): 200mm",
-      "Traverse: 200-300mm",
-      "Bore: 36-56mm",
-      "Overall: 250-350mm"
+      "Flange Dia (d1): 400mm",
+      "Barrel dia (d2)DIN: 200mm",
+      "Traverse (L2): 200-300mm",
+      "Bore (d4): 36-56mm",
+      "Overall (L1): 250-350mm"
+    ]
+  },
+  {
+    id: "pf-tc-400",
+    name: "PF/TC/400 Composite Reel",
+    description: "Standard composite reel for cable and fiber applications. Dynamically balanced at 1500 rpm as per VDI 2060 Grade 6.3.",
+    category: "Composite Reels",
+    image: compositeReelsNew,
+    features: [
+      "Flange Dia (d1): 400mm",
+      "Barrel dia (d2)DIN: 142mm",
+      "Traverse (L2): 200-300mm",
+      "Bore (d4): 36-56mm",
+      "Overall (L1): 250-350mm"
+    ]
+  },
+  {
+    id: "pf-tc-432",
+    name: "PF/TC/432 Composite Reel",
+    description: "Mid-size composite reel for versatile cable and fiber applications.",
+    category: "Composite Reels",
+    image: compositeReelsNew,
+    features: [
+      "Flange Dia (d1): 432mm",
+      "Barrel dia (d2)DIN: 204mm",
+      "Traverse (L2): 200-300mm",
+      "Bore (d4): 36-56mm",
+      "Overall (L1): 250-350mm"
+    ]
+  },
+  {
+    id: "pf-tc-450",
+    name: "PF/TC/450 Composite Reel",
+    description: "Heavy-duty composite reel for industrial cable production.",
+    category: "Composite Reels",
+    image: compositeReelsNew,
+    features: [
+      "Flange Dia (d1): 450mm",
+      "Barrel dia (d2)DIN: 200-300mm",
+      "Traverse (L2): 250-300mm",
+      "Bore (d4): 36-56mm",
+      "Overall (L1): 300-350mm"
     ]
   },
   {
     id: "pf-tc-500",
     name: "PF/TC/500 Composite Reel",
-    description: "Heavy capacity composite reel for fiber optic and cable manufacturing.",
+    description: "High capacity composite reel for fiber optic and cable manufacturing.",
     category: "Composite Reels",
     image: compositeReelsNew,
     features: [
-      "Flange Dia: 500mm",
-      "Barrel Dia: 200mm",
-      "Traverse: 250-310mm",
-      "Bore: 36-56mm",
-      "Overall: 300-375mm"
+      "Flange Dia (d1): 500mm",
+      "Barrel dia (d2)DIN: 200mm",
+      "Traverse (L2): 250-310mm",
+      "Bore (d4): 36-56mm",
+      "Overall (L1): 300-375mm"
     ]
   },
   {
-    id: "pf-tc-630",
-    name: "PF/TC/630 Composite Reel",
-    description: "Large capacity composite reel for industrial cable production.",
+    id: "pf-tc-500a",
+    name: "PF/TC/500 A Composite Reel",
+    description: "Alternative configuration PF/TC/500 composite reel for cable applications.",
     category: "Composite Reels",
     image: compositeReelsNew,
     features: [
-      "Flange Dia: 630mm",
-      "Barrel Dia: 280mm",
-      "Traverse: 400mm",
-      "Bore: 50-80mm",
-      "Overall: 500mm"
+      "Flange Dia (d1): 500mm",
+      "Barrel dia (d2)DIN: 250mm",
+      "Traverse (L2): 250-310mm",
+      "Bore (d4): 36-56mm",
+      "Overall (L1): 300-375mm"
+    ]
+  },
+  {
+    id: "pf-tc-500b",
+    name: "PF/TC/500 B Composite Reel",
+    description: "Heavy barrel PF/TC/500 composite reel for enhanced capacity.",
+    category: "Composite Reels",
+    image: compositeReelsNew,
+    features: [
+      "Flange Dia (d1): 500mm",
+      "Barrel dia (d2)DIN: 254mm",
+      "Traverse (L2): 250-310mm",
+      "Bore (d4): 36-56mm",
+      "Overall (L1): 300-375mm"
+    ]
+  },
+  {
+    id: "pf-tc-540",
+    name: "PF/TC/540 Composite Reel",
+    description: "Large diameter composite reel for specialized cable applications.",
+    category: "Composite Reels",
+    image: compositeReelsNew,
+    features: [
+      "Flange Dia (d1): 550mm",
+      "Barrel dia (d2)DIN: 150mm",
+      "Traverse (L2): 250-310mm",
+      "Bore (d4): 36-56mm",
+      "Overall (L1): 300-375mm"
+    ]
+  },
+  {
+    id: "pf-tc-560",
+    name: "PF/TC/560 Composite Reel",
+    description: "Professional grade composite reel for industrial cable production.",
+    category: "Composite Reels",
+    image: compositeReelsNew,
+    features: [
+      "Flange Dia (d1): 560mm",
+      "Barrel dia (d2)DIN: 254mm",
+      "Traverse (L2): 250-310mm",
+      "Bore (d4): 36-56-127mm",
+      "Overall (L1): 300-375mm"
+    ]
+  },
+  {
+    id: "pf-tc-600",
+    name: "PF/TC/600 Composite Reel",
+    description: "Extra large composite reel for high-capacity cable operations.",
+    category: "Composite Reels",
+    image: compositeReelsNew,
+    features: [
+      "Flange Dia (d1): 600mm",
+      "Barrel dia (d2)DIN: 300mm",
+      "Traverse (L2): 300-350mm",
+      "Bore (d4): 36-80-127mm",
+      "Overall (L1): 350-400mm"
+    ]
+  },
+  {
+    id: "pf-tc-620a",
+    name: "PF/TC/620 A Composite Reel",
+    description: "Premium capacity composite reel for large-scale cable manufacturing.",
+    category: "Composite Reels",
+    image: compositeReelsNew,
+    features: [
+      "Flange Dia (d1): 630mm",
+      "Barrel dia (d2)DIN: 250mm",
+      "Traverse (L2): 350-400mm",
+      "Bore (d4): 36-80-127mm",
+      "Overall (L1): 425-475mm"
+    ]
+  },
+  {
+    id: "pf-tc-630b",
+    name: "PF/TC/630 B Composite Reel",
+    description: "Heavy-duty PF/TC/630 composite reel for industrial operations.",
+    category: "Composite Reels",
+    image: compositeReelsNew,
+    features: [
+      "Flange Dia (d1): 630mm",
+      "Barrel dia (d2)DIN: 315mm",
+      "Traverse (L2): 350-400mm",
+      "Bore (d4): 36-80-127mm",
+      "Overall (L1): 425-475mm"
+    ]
+  },
+  {
+    id: "pf-tc-710",
+    name: "PF/TC/710 Composite Reel",
+    description: "Versatile large composite reel with variable barrel and traverse options.",
+    category: "Composite Reels",
+    image: compositeReelsNew,
+    features: [
+      "Flange Dia (d1): 710mm",
+      "Barrel dia (d2)DIN: 250-500mm",
+      "Traverse (L2): 180-400mm",
+      "Bore (d4): 36-80-127mm",
+      "Overall (L1): 250-475mm"
     ]
   },
   {
@@ -349,11 +489,25 @@ export const products: Product[] = [
     category: "Composite Reels",
     image: compositeReelsNew,
     features: [
-      "Flange Dia: 800mm",
-      "Barrel Dia: 400mm",
-      "Traverse: 500mm",
-      "Bore: 80-127mm",
-      "Overall: 600mm"
+      "Flange Dia (d1): 800mm",
+      "Barrel dia (d2)DIN: 400mm",
+      "Traverse (L2): 500mm",
+      "Bore (d4): 80-127mm",
+      "Overall (L1): 600mm"
+    ]
+  },
+  {
+    id: "pf-tc-1000",
+    name: "PF/TC/1000 Composite Reel",
+    description: "Maximum capacity composite reel for industrial-scale cable manufacturing operations.",
+    category: "Composite Reels",
+    image: compositeReelsNew,
+    features: [
+      "Flange Dia (d1): 1000mm",
+      "Barrel dia (d2)DIN: 500mm",
+      "Traverse (L2): 625mm",
+      "Bore (d4): 80-127mm",
+      "Overall (L1): 750mm"
     ]
   },
 
