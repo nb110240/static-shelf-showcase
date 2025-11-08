@@ -81,18 +81,123 @@ export const products: Product[] = [
     ]
   },
   {
-    id: "pt-8",
-    name: "PT-8 Tapered Bobbin",
-    description: "Extra large tapered bobbin for maximum capacity applications.",
+    id: "pt-5",
+    name: "PT-5 Tapered Bobbin",
+    description: "Large capacity tapered bobbin for professional cable manufacturing.",
     category: "Tapered Bobbins",
     image: taperedBobbinsNew,
     features: [
-      "Flange Dia: 178/195mm",
-      "Barrel Dia: 108/120mm",
-      "Traverse: 185mm",
-      "Overall Width: 215mm",
-      "Bore: 26mm",
-      "Winding Capacity: 8 kgs"
+      "Flange Dia: 157/180mm",
+      "Barrel Dia: 95/108mm",
+      "Traverse: 202mm",
+      "Overall Width: 226mm",
+      "Bore: 30mm",
+      "Winding Capacity: 10 kgs"
+    ]
+  },
+  {
+    id: "pt-11",
+    name: "PT-11 Tapered Bobbin",
+    description: "Heavy-duty tapered bobbin with superior winding capacity.",
+    category: "Tapered Bobbins",
+    image: taperedBobbinsNew,
+    features: [
+      "Flange Dia: 170/180mm",
+      "Barrel Dia: 104/110mm",
+      "Traverse: 200mm",
+      "Overall Width: 230mm",
+      "Bore: 22.5mm",
+      "Winding Capacity: 12 kgs"
+    ]
+  },
+  {
+    id: "pt-15",
+    name: "PT-15 Tapered Bobbin",
+    description: "High-performance tapered bobbin for industrial applications.",
+    category: "Tapered Bobbins",
+    image: taperedBobbinsNew,
+    features: [
+      "Flange Dia: 180/200mm",
+      "Barrel Dia: 95/110mm",
+      "Traverse: 201mm",
+      "Overall Width: 225mm",
+      "Bore: 30mm",
+      "Winding Capacity: 15 kgs"
+    ]
+  },
+  {
+    id: "pt-20",
+    name: "PT-20 Tapered Bobbin",
+    description: "Extra large tapered bobbin for maximum capacity operations.",
+    category: "Tapered Bobbins",
+    image: taperedBobbinsNew,
+    features: [
+      "Flange Dia: 212/230mm",
+      "Barrel Dia: 132/150mm",
+      "Traverse: 247mm",
+      "Overall Width: 277mm",
+      "Bore: 32mm",
+      "Winding Capacity: 20 kgs"
+    ]
+  },
+  {
+    id: "pt-25",
+    name: "PT-25 Tapered Bobbin",
+    description: "Industrial grade tapered bobbin for heavy-duty cable production.",
+    category: "Tapered Bobbins",
+    image: taperedBobbinsNew,
+    features: [
+      "Flange Dia: 215/230mm",
+      "Barrel Dia: 110/130mm",
+      "Traverse: 250mm",
+      "Overall Width: 275mm",
+      "Bore: 30mm",
+      "Winding Capacity: 25 kgs"
+    ]
+  },
+  {
+    id: "pt-60",
+    name: "PT-60 Tapered Bobbin",
+    description: "Premium capacity tapered bobbin for large-scale operations.",
+    category: "Tapered Bobbins",
+    image: taperedBobbinsNew,
+    features: [
+      "Flange Dia: 295/257mm",
+      "Barrel Dia: 176/145mm",
+      "Traverse: 347mm",
+      "Overall Width: 395mm",
+      "Bore: 44mm",
+      "Winding Capacity: 60 kgs"
+    ]
+  },
+  {
+    id: "pt-45",
+    name: "PT-45 Tapered Bobbin",
+    description: "High-capacity tapered bobbin for professional cable manufacturing.",
+    category: "Tapered Bobbins",
+    image: taperedBobbinsNew,
+    features: [
+      "Flange Dia: 236/250mm",
+      "Barrel Dia: 140/160mm",
+      "Traverse: 335mm",
+      "Overall Width: 400mm",
+      "Bore: 100mm",
+      "Winding Capacity: 45 kgs"
+    ]
+  },
+  {
+    id: "pt-90",
+    name: "PT-90 Tapered Bobbin",
+    description: "Maximum capacity tapered bobbin for industrial-scale cable production.",
+    category: "Tapered Bobbins",
+    image: taperedBobbinsNew,
+    features: [
+      "Flange Dia: 300/315mm",
+      "Barrel Dia: 180/200mm",
+      "Traverse: 425mm",
+      "Overall Width: 500mm",
+      "Bore: 100mm",
+      "Winding Capacity: 90 kgs"
     ]
   },
 
