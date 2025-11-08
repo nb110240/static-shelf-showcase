@@ -592,43 +592,71 @@ export const products: Product[] = [
   {
     id: "sd-2",
     name: "SD-2 Stitching Wire Reel",
-    description: "Reel for stitching wire applications in textile and packaging industries.",
+    description: "Compact stitching wire reel for textile and packaging applications.",
     category: "Stitching Wire",
     image: stitchingWireNew,
     features: [
-      "Flange Dia: 133mm",
-      "Barrel Dia: 53mm",
-      "Traverse: 44mm",
-      "Overall: 50mm",
-      "Bore: 18mm"
+      "Flange Dia (d1): 133mm",
+      "Barrel Dia (d2): 53mm",
+      "Traverse (L2): 44mm",
+      "Overall (L1): 50mm",
+      "Bore (d4): 18mm"
+    ]
+  },
+  {
+    id: "sd-3",
+    name: "SD-3 Stitching Wire Reel",
+    description: "Standard capacity stitching wire reel for industrial sewing operations.",
+    category: "Stitching Wire",
+    image: stitchingWireNew,
+    features: [
+      "Flange Dia (d1): 138mm",
+      "Barrel Dia (d2): 53mm",
+      "Traverse (L2): 48mm",
+      "Overall (L1): 57mm",
+      "Bore (d4): 18mm"
     ]
   },
   {
     id: "sd-4",
     name: "SD-4 Stitching Wire Reel",
-    description: "Medium capacity stitching wire reel for industrial sewing applications.",
+    description: "Medium capacity stitching wire reel for textile and packaging industries.",
     category: "Stitching Wire",
     image: stitchingWireNew,
     features: [
-      "Flange Dia: 154mm",
-      "Barrel Dia: 67mm",
-      "Traverse: 56mm",
-      "Overall: 63mm",
-      "Bore: 18mm"
+      "Flange Dia (d1): 154mm",
+      "Barrel Dia (d2): 67mm",
+      "Traverse (L2): 56mm",
+      "Overall (L1): 63mm",
+      "Bore (d4): 18mm"
     ]
   },
   {
-    id: "sd-6",
-    name: "SD-6 Stitching Wire Reel",
-    description: "Heavy duty stitching wire reel for high volume operations.",
+    id: "sd-5",
+    name: "SD-5 Stitching Wire Reel",
+    description: "High capacity stitching wire reel for heavy-duty industrial applications.",
     category: "Stitching Wire",
     image: stitchingWireNew,
     features: [
-      "Flange Dia: 175mm",
-      "Barrel Dia: 80mm",
-      "Traverse: 68mm",
-      "Overall: 78mm",
-      "Bore: 20mm"
+      "Flange Dia (d1): 171mm",
+      "Barrel Dia (d2): 72mm",
+      "Traverse (L2): 63mm",
+      "Overall (L1): 61.5mm",
+      "Bore (d4): 68mm"
+    ]
+  },
+  {
+    id: "sd-10",
+    name: "SD-10 Stitching Wire Reel",
+    description: "Maximum capacity stitching wire reel for extended production runs.",
+    category: "Stitching Wire",
+    image: stitchingWireNew,
+    features: [
+      "Flange Dia (d1): 225mm",
+      "Barrel Dia (d2): 72mm",
+      "Traverse (L2): 63mm",
+      "Overall (L1): 61.5mm",
+      "Bore (d4): 68mm"
     ]
   },
 
