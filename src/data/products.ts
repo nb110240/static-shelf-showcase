@@ -515,46 +515,76 @@ export const products: Product[] = [
   {
     id: "ep-1",
     name: "EP-1 EDM Wire Reel",
-    description: "Plastic reel suitable for EDM wire applications.",
+    description: "Plastic reel suitable for EDM wire applications. Precision manufactured for electrical discharge machining.",
     category: "EDM Wire",
     image: edmWireNew,
     features: [
-      "Flange Dia: 130mm",
-      "Barrel Dia: 60mm",
-      "Traverse: 28mm",
-      "Overall: 36mm",
-      "Bore: 12.5mm",
-      "Weight Capacity: 1.2kg"
-    ]
-  },
-  {
-    id: "ep-2",
-    name: "EP-2 EDM Wire Reel",
-    description: "Medium capacity EDM wire reel for precision machining.",
-    category: "EDM Wire",
-    image: edmWireNew,
-    features: [
-      "Flange Dia: 145mm",
-      "Barrel Dia: 75mm",
-      "Traverse: 45mm",
-      "Overall: 60mm",
-      "Bore: 16mm",
-      "Weight Capacity: 2.5kg"
+      "Flange Dia (d1): 130(5.12)mm",
+      "Barrel Dia (d2): 60(2.36)mm",
+      "Traverse (L2): 28(1.10)mm",
+      "Overall (L1): 36(1.42)mm",
+      "Bore (d4): 12.5(0.5)mm",
+      "Weight Capacity: 1.2(2.65)kg"
     ]
   },
   {
     id: "ep-5",
     name: "EP-5 EDM Wire Reel",
-    description: "Large capacity EDM wire reel for industrial applications.",
+    description: "Medium capacity EDM wire reel for precision machining applications.",
     category: "EDM Wire",
     image: edmWireNew,
     features: [
-      "Flange Dia: 160mm",
-      "Barrel Dia: 90mm",
-      "Traverse: 90mm",
-      "Overall: 112mm",
-      "Bore: 22mm",
-      "Weight Capacity: 5.0kg"
+      "Flange Dia (d1): 160(6.3)mm",
+      "Barrel Dia (d2): 90(3.54)mm",
+      "Traverse (L2): 90(3.54)mm",
+      "Overall (L1): 112(4.41)mm",
+      "Bore (d4): 22(0.87)mm",
+      "Weight Capacity: 5.0(11.0)kg"
+    ]
+  },
+  {
+    id: "ep-10",
+    name: "EP-10 EDM Wire Reel",
+    description: "High capacity EDM wire reel for industrial precision machining operations.",
+    category: "EDM Wire",
+    image: edmWireNew,
+    features: [
+      "Flange Dia (d1): 200(7.87)mm",
+      "Barrel Dia (d2): 90(3.54)mm",
+      "Traverse (L2): 111(4.37)mm",
+      "Overall (L1): 135(5.31)mm",
+      "Bore (d4): 26(1.02)mm",
+      "Weight Capacity: 10(22.0)kg"
+    ]
+  },
+  {
+    id: "ep-15",
+    name: "EP-15 EDM Wire Reel",
+    description: "Large capacity EDM wire reel for extended production runs.",
+    category: "EDM Wire",
+    image: edmWireNew,
+    features: [
+      "Flange Dia (d1): 250(9.84)mm",
+      "Barrel Dia (d2): 110(4.33)mm",
+      "Traverse (L2): 111(4.37)mm",
+      "Overall (L1): 135(5.31)mm",
+      "Bore (d4): 35(1.38)mm",
+      "Weight Capacity: 15(33.0)kg"
+    ]
+  },
+  {
+    id: "ep-30",
+    name: "EP-30 EDM Wire Reel",
+    description: "Maximum capacity EDM wire reel for heavy-duty precision machining applications.",
+    category: "EDM Wire",
+    image: edmWireNew,
+    features: [
+      "Flange Dia (d1): 300(11.81)mm",
+      "Barrel Dia (d2): 130(5.12)mm",
+      "Traverse (L2): 130(5.12)mm",
+      "Overall (L1): 160(6.30)mm",
+      "Bore (d4): 35(1.38)mm",
+      "Weight Capacity: 30(66.0)kg"
     ]
   },
 
