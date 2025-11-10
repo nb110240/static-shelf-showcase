@@ -26,10 +26,10 @@ import jumboReelsNew from "@/assets/jumbo-reels-new.jpg";
 import biconicalNew from "@/assets/biconical-new.jpg";
 import monofilamentNew from "@/assets/monofilament-new.jpg";
 import miscReelsNew from "@/assets/misc-reels-new.jpg";
+import miscReel1 from "@/assets/misc-reel-1.jpg";
+import miscReel2 from "@/assets/misc-reel-2.jpg";
 import isiReelsNew from "@/assets/isi-reels-new.jpg";
 import copperConductorNew from "@/assets/copper-conductor-new.jpg";
-import textileBobbins from "@/assets/textile-bobbins.jpg";
-import paperTubes from "@/assets/paper-tubes.jpg";
 
 export const products: Product[] = [
   // 1. TAPERED BOBBINS (DIN 46383 / IEC 264-3)
@@ -1140,45 +1140,33 @@ export const products: Product[] = [
 
   // 14. MISC REELS
   {
-    id: "misc-plastic-50",
-    name: "Plastic Reel 50mm",
-    description: "Versatile plastic reel for various industrial applications.",
+    id: "misc-2-2",
+    name: "MISC Reel 2/2\"",
+    description: "Compact miscellaneous reel for various industrial applications. Durable construction with precise specifications.",
     category: "Misc Reels",
-    image: miscReelsNew,
+    image: miscReel1,
     features: [
-      "Flange Dia: 50mm",
-      "Barrel Dia: 25mm",
-      "Traverse: 30mm",
-      "Overall: 40mm",
-      "Bore: 8mm"
+      "Model: 2/2\"",
+      "Flange: 60mm",
+      "Barrel: 26mm",
+      "Traverse: 84mm",
+      "Overall: 101mm",
+      "Bore: 10.5mm"
     ]
   },
   {
-    id: "misc-plastic-75",
-    name: "Plastic Reel 75mm",
-    description: "Medium capacity miscellaneous plastic reel.",
+    id: "misc-connector",
+    name: "MISC Connector Reel",
+    description: "Versatile connector reel for specialized winding applications. Professional grade construction.",
     category: "Misc Reels",
-    image: miscReelsNew,
+    image: miscReel2,
     features: [
-      "Flange Dia: 75mm",
-      "Barrel Dia: 40mm",
-      "Traverse: 45mm",
-      "Overall: 60mm",
-      "Bore: 12mm"
-    ]
-  },
-  {
-    id: "misc-plastic-90",
-    name: "Plastic Reel 90mm",
-    description: "Large miscellaneous reel for diverse applications.",
-    category: "Misc Reels",
-    image: miscReelsNew,
-    features: [
-      "Flange Dia: 90mm",
-      "Barrel Dia: 50mm",
-      "Traverse: 55mm",
-      "Overall: 70mm",
-      "Bore: 14mm"
+      "Model: Connector",
+      "Flange: 50mm",
+      "Barrel: 23/27mm",
+      "Traverse: 135mm",
+      "Overall: 152mm",
+      "Bore: 19.6mm"
     ]
   },
 
@@ -1351,95 +1339,6 @@ export const products: Product[] = [
     ]
   },
 
-  // 17. TEXTILE BOBBINS
-  {
-    id: "textile-cone-1",
-    name: "Textile Cone Bobbin Small",
-    description: "Plastic cone bobbin for textile yarn winding applications.",
-    category: "Textile Bobbins",
-    image: textileBobbins,
-    features: [
-      "Type: Cone",
-      "Base Dia: 45mm",
-      "Top Dia: 25mm",
-      "Height: 120mm",
-      "Bore: 18mm",
-      "Material: PP/ABS"
-    ]
-  },
-  {
-    id: "textile-cone-2",
-    name: "Textile Cone Bobbin Medium",
-    description: "Medium capacity textile cone for yarn manufacturing.",
-    category: "Textile Bobbins",
-    image: textileBobbins,
-    features: [
-      "Type: Cone",
-      "Base Dia: 60mm",
-      "Top Dia: 32mm",
-      "Height: 150mm",
-      "Bore: 22mm",
-      "Material: PP/ABS"
-    ]
-  },
-  {
-    id: "textile-parallel-1",
-    name: "Textile Parallel Bobbin",
-    description: "Parallel sided bobbin for textile thread applications.",
-    category: "Textile Bobbins",
-    image: textileBobbins,
-    features: [
-      "Type: Parallel",
-      "Diameter: 50mm",
-      "Height: 100mm",
-      "Bore: 20mm",
-      "Material: Polypropylene"
-    ]
-  },
-
-  // 18. PAPER TUBES
-  {
-    id: "paper-tube-2",
-    name: "Paper Tube 2 inch",
-    description: "Cardboard core tube for textile and paper industries.",
-    category: "Paper Tubes",
-    image: paperTubes,
-    features: [
-      "Inner Dia: 2 inch (50mm)",
-      "Wall Thickness: 3mm",
-      "Length: Customizable",
-      "Material: High-grade cardboard",
-      "Application: Textile/Paper winding"
-    ]
-  },
-  {
-    id: "paper-tube-3",
-    name: "Paper Tube 3 inch",
-    description: "Medium diameter paper tube for industrial winding.",
-    category: "Paper Tubes",
-    image: paperTubes,
-    features: [
-      "Inner Dia: 3 inch (76mm)",
-      "Wall Thickness: 4mm",
-      "Length: Customizable",
-      "Material: High-grade cardboard",
-      "Application: Industrial winding"
-    ]
-  },
-  {
-    id: "paper-tube-4",
-    name: "Paper Tube 4 inch",
-    description: "Large diameter paper tube for heavy-duty applications.",
-    category: "Paper Tubes",
-    image: paperTubes,
-    features: [
-      "Inner Dia: 4 inch (100mm)",
-      "Wall Thickness: 5mm",
-      "Length: Customizable",
-      "Material: High-grade cardboard",
-      "Application: Heavy-duty winding"
-    ]
-  }
 ];
 
 // Extract unique categories for filtering
