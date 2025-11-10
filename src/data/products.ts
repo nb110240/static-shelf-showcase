@@ -15,6 +15,8 @@ import din250 from "@/assets/din-250.jpg";
 import din355 from "@/assets/din-355.jpg";
 import steelTinselNew from "@/assets/steel-tinsel-new.jpg";
 import aluminumWireNew from "@/assets/aluminum-wire-new.jpg";
+import aluminumReel200 from "@/assets/aluminum-reel-200.jpg";
+import aluminumReel320 from "@/assets/aluminum-reel-320.jpg";
 import cableDeliveryNew from "@/assets/cable-delivery-new.jpg";
 import cableReel1 from "@/assets/cable-reel-1.jpg";
 import cableReel2 from "@/assets/cable-reel-2.jpg";
@@ -843,43 +845,31 @@ export const products: Product[] = [
   {
     id: "al-200",
     name: "AL-200 Aluminum Wire Reel",
-    description: "Reel for delivery of aluminum wire with heavy-duty construction.",
+    description: "Heavy-duty reel for delivery of aluminum wire with precision-engineered construction and circular hole pattern for weight reduction.",
     category: "Aluminum Wire",
-    image: aluminumWireNew,
+    image: aluminumReel200,
     features: [
-      "Flange Dia: 200mm",
-      "Barrel Dia: 105mm",
-      "Traverse: 45mm",
-      "Overall: 55mm",
-      "Bore: 51mm"
-    ]
-  },
-  {
-    id: "al-250",
-    name: "AL-250 Aluminum Wire Reel",
-    description: "Medium capacity aluminum wire distribution reel.",
-    category: "Aluminum Wire",
-    image: aluminumWireNew,
-    features: [
-      "Flange Dia: 250mm",
-      "Barrel Dia: 110mm",
-      "Traverse: 55mm",
-      "Overall: 65mm",
-      "Bore: 51mm"
+      "Ref.No: AL-200",
+      "Flange Dia (d1): 200mm",
+      "Barrel Dia (d2): 105mm",
+      "Traverse (L2): 45mm",
+      "Overall (L1): 55mm",
+      "Bore (d4): 51mm"
     ]
   },
   {
     id: "al-320",
     name: "AL-320 Aluminum Wire Reel",
-    description: "Large capacity reel for aluminum wire distribution.",
+    description: "Large capacity reel for aluminum wire distribution with reinforced hexagonal center design for enhanced durability.",
     category: "Aluminum Wire",
-    image: aluminumWireNew,
+    image: aluminumReel320,
     features: [
-      "Flange Dia: 320mm",
-      "Barrel Dia: 120mm",
-      "Traverse: 67.62mm",
-      "Overall: 79mm",
-      "Bore: 38.2mm"
+      "Ref.No: AL-320",
+      "Flange Dia (d1): 320mm",
+      "Barrel Dia (d2): 120mm",
+      "Traverse (L2): 67.62mm",
+      "Overall (L1): 79mm",
+      "Bore (d4): 38.2mm"
     ]
   },
 
