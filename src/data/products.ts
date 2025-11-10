@@ -5,6 +5,14 @@ import compositeReelsNew from "@/assets/composite-reels-new.jpg";
 import edmWireNew from "@/assets/edm-wire-new.jpg";
 import stitchingWireNew from "@/assets/stitching-wire-new.jpg";
 import din46399New from "@/assets/din-46399-new.jpg";
+import din63 from "@/assets/din-63.jpg";
+import din80 from "@/assets/din-80.jpg";
+import din100 from "@/assets/din-100.jpg";
+import din125 from "@/assets/din-125.jpg";
+import din160 from "@/assets/din-160.jpg";
+import din200 from "@/assets/din-200.jpg";
+import din250 from "@/assets/din-250.jpg";
+import din355 from "@/assets/din-355.jpg";
 import steelTinselNew from "@/assets/steel-tinsel-new.jpg";
 import aluminumWireNew from "@/assets/aluminum-wire-new.jpg";
 import cableDeliveryNew from "@/assets/cable-delivery-new.jpg";
@@ -666,14 +674,29 @@ export const products: Product[] = [
     name: "DIN 46399 Type 63",
     description: "DIN 46399 standard plastic spool. All dimensions are in millimeter.",
     category: "DIN 46399",
-    image: din46399New,
+    image: din63,
     features: [
       "Type: 63",
-      "Flange Dia: 63mm",
-      "Barrel Dia: 40mm",
-      "Overall: 63mm",
-      "Traverse: 49mm",
-      "Bore: 11mm"
+      "Flange Dia (d1): 63mm",
+      "Barrel Dia (d2): 40mm",
+      "Overall (L1): 63mm",
+      "Traverse (L2): 49mm",
+      "Bore (d4): 11mm"
+    ]
+  },
+  {
+    id: "din-80",
+    name: "DIN 46399 Type 80",
+    description: "Compact DIN 46399 standard spool for cable and wire applications.",
+    category: "DIN 46399",
+    image: din80,
+    features: [
+      "Type: 80",
+      "Flange Dia (d1): 80mm",
+      "Barrel Dia (d2): 50mm",
+      "Overall (L1): 80mm",
+      "Traverse (L2): 64mm",
+      "Bore (d4): 16mm"
     ]
   },
   {
@@ -681,14 +704,14 @@ export const products: Product[] = [
     name: "DIN 46399 Type 100",
     description: "Medium capacity DIN 46399 standard spool for wire and cable.",
     category: "DIN 46399",
-    image: din46399New,
+    image: din100,
     features: [
       "Type: 100",
-      "Flange Dia: 100mm",
-      "Barrel Dia: 63mm",
-      "Overall: 100mm",
-      "Traverse: 80mm",
-      "Bore: 16mm"
+      "Flange Dia (d1): 100mm",
+      "Barrel Dia (d2): 63mm",
+      "Overall (L1): 100mm",
+      "Traverse (L2): 80mm",
+      "Bore (d4): 16mm"
     ]
   },
   {
@@ -696,14 +719,14 @@ export const products: Product[] = [
     name: "DIN 46399 Type 125",
     description: "Mid-size DIN 46399 spool for versatile applications.",
     category: "DIN 46399",
-    image: din46399New,
+    image: din125,
     features: [
       "Type: 125",
-      "Flange Dia: 125mm",
-      "Barrel Dia: 80mm",
-      "Overall: 125mm",
-      "Traverse: 100mm",
-      "Bore: 18mm"
+      "Flange Dia (d1): 125mm",
+      "Barrel Dia (d2): 80mm",
+      "Overall (L1): 125mm",
+      "Traverse (L2): 100mm",
+      "Bore (d4): 16mm"
     ]
   },
   {
@@ -711,14 +734,14 @@ export const products: Product[] = [
     name: "DIN 46399 Type 160",
     description: "Large capacity DIN 46399 standard spool.",
     category: "DIN 46399",
-    image: din46399New,
+    image: din160,
     features: [
       "Type: 160",
-      "Flange Dia: 160mm",
-      "Barrel Dia: 100mm",
-      "Overall: 160mm",
-      "Traverse: 125mm",
-      "Bore: 20mm"
+      "Flange Dia (d1): 160mm",
+      "Barrel Dia (d2): 100mm",
+      "Overall (L1): 160mm",
+      "Traverse (L2): 128mm",
+      "Bore (d4): 22mm"
     ]
   },
   {
@@ -726,14 +749,44 @@ export const products: Product[] = [
     name: "DIN 46399 Type 200",
     description: "Extra large DIN 46399 spool for industrial applications.",
     category: "DIN 46399",
-    image: din46399New,
+    image: din200,
     features: [
       "Type: 200",
-      "Flange Dia: 200mm",
-      "Barrel Dia: 125mm",
-      "Overall: 200mm",
-      "Traverse: 160mm",
-      "Bore: 22.36mm"
+      "Flange Dia (d1): 200mm",
+      "Barrel Dia (d2): 125mm",
+      "Overall (L1): 200mm",
+      "Traverse (L2): 160mm",
+      "Bore (d4): 22,36mm"
+    ]
+  },
+  {
+    id: "din-250",
+    name: "DIN 46399 Type 250",
+    description: "Heavy duty DIN 46399 spool for high capacity applications.",
+    category: "DIN 46399",
+    image: din250,
+    features: [
+      "Type: 250",
+      "Flange Dia (d1): 250mm",
+      "Barrel Dia (d2): 160mm",
+      "Overall (L1): 200mm",
+      "Traverse (L2): 160mm",
+      "Bore (d4): 22,36,102mm"
+    ]
+  },
+  {
+    id: "din-355",
+    name: "DIN 46399 Type 355",
+    description: "Maximum capacity DIN 46399 spool for extended industrial operations.",
+    category: "DIN 46399",
+    image: din355,
+    features: [
+      "Type: 355",
+      "Flange Dia (d1): 355mm",
+      "Barrel Dia (d2): 224mm",
+      "Overall (L1): 200mm",
+      "Traverse (L2): 160mm",
+      "Bore (d4): 36mm"
     ]
   },
 
