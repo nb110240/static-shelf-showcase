@@ -16,6 +16,11 @@ import din355 from "@/assets/din-355.jpg";
 import steelTinselNew from "@/assets/steel-tinsel-new.jpg";
 import aluminumWireNew from "@/assets/aluminum-wire-new.jpg";
 import cableDeliveryNew from "@/assets/cable-delivery-new.jpg";
+import cableReel1 from "@/assets/cable-reel-1.jpg";
+import cableReel2 from "@/assets/cable-reel-2.jpg";
+import cableReel3 from "@/assets/cable-reel-3.jpg";
+import cableReel4 from "@/assets/cable-reel-4.jpg";
+import cableReel5 from "@/assets/cable-reel-5.jpg";
 import superToughNew from "@/assets/super-tough-new.jpg";
 import jumboReelsNew from "@/assets/jumbo-reels-new.jpg";
 import biconicalNew from "@/assets/biconical-new.jpg";
@@ -880,45 +885,73 @@ export const products: Product[] = [
 
   // 9. CABLE DELIVERY
   {
-    id: "cd-141",
-    name: "CD-141 Cable Delivery Reel",
-    description: "Reel for delivery of cables with various flange designs.",
+    id: "cd-type-1",
+    name: "Cable Delivery Reel Type 1",
+    description: "Compact cable delivery reel with blue plastic flanges and black barrel. Ideal for small to medium cable distribution applications.",
     category: "Cable Delivery",
-    image: cableDeliveryNew,
+    image: cableReel1,
     features: [
-      "Flange Dia: 141mm",
-      "Barrel Dia: 36mm",
-      "Bore: 32mm",
-      "Overall: 55mm",
-      "Traverse: 52mm"
+      "Flange Dia (d1): 141mm",
+      "Barrel Dia (d2): 36mm",
+      "Bore (d4): 32mm",
+      "Overall (L1): 55mm",
+      "Traverse (L2): 52mm"
     ]
   },
   {
-    id: "cd-180",
-    name: "CD-180 Cable Delivery Reel",
-    description: "Mid-size cable delivery reel for versatile applications.",
+    id: "cd-type-2",
+    name: "Cable Delivery Reel Type 2",
+    description: "Medium size cable delivery reel with elongated barrel design. Suitable for versatile cable winding applications.",
     category: "Cable Delivery",
-    image: cableDeliveryNew,
+    image: cableReel2,
     features: [
-      "Flange Dia: 180mm",
-      "Barrel Dia: 65mm",
-      "Bore: 50mm",
-      "Overall: 85mm",
-      "Traverse: 78mm"
+      "Flange Dia (d1): 141mm",
+      "Barrel Dia (d2): 36mm",
+      "Bore (d4): 32mm",
+      "Overall (L1): 78mm",
+      "Traverse (L2): 75mm"
     ]
   },
   {
-    id: "cd-230",
-    name: "CD-230 Cable Delivery Reel",
-    description: "Large capacity cable delivery reel for industrial distribution.",
+    id: "cd-type-3",
+    name: "Cable Delivery Reel Type 3",
+    description: "Large capacity cable delivery reel with perforated flanges for weight reduction. Professional grade for industrial cable distribution.",
     category: "Cable Delivery",
-    image: cableDeliveryNew,
+    image: cableReel3,
     features: [
-      "Flange Dia: 230mm",
-      "Barrel Dia: 92mm",
-      "Bore: 72mm",
-      "Overall: 120mm",
-      "Traverse: 112mm"
+      "Flange Dia (d1): 230mm",
+      "Barrel Dia (d2): 82mm",
+      "Bore (d4): 72mm",
+      "Overall (L1): 120mm",
+      "Traverse (L2): 112mm"
+    ]
+  },
+  {
+    id: "cd-type-4",
+    name: "Cable Delivery Reel Type 4",
+    description: "Extra large heavy-duty cable delivery reel with reinforced metal frame. Designed for high-capacity cable transportation and storage.",
+    category: "Cable Delivery",
+    image: cableReel4,
+    features: [
+      "Flange Dia (d1): 300mm",
+      "Barrel Dia (d2): 102mm",
+      "Bore (d4): 32mm",
+      "Overall (L1): 220mm",
+      "Traverse (L2): 210mm"
+    ]
+  },
+  {
+    id: "cd-type-5",
+    name: "Cable Delivery Reel Type 5",
+    description: "Heavy-duty cable delivery reel with square flange design and reinforced construction. Ideal for industrial-scale cable delivery operations.",
+    category: "Cable Delivery",
+    image: cableReel5,
+    features: [
+      "Flange Dia (d1): 300mm",
+      "Barrel Dia (d2): 102mm",
+      "Bore (d4): 32mm",
+      "Overall (L1): 220mm",
+      "Traverse (L2): 210mm"
     ]
   },
 
