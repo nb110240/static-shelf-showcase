@@ -24,6 +24,12 @@ import cableReel3 from "@/assets/cable-reel-3.jpg";
 import cableReel4 from "@/assets/cable-reel-4.jpg";
 import cableReel5 from "@/assets/cable-reel-5.jpg";
 import superToughNew from "@/assets/super-tough-new.jpg";
+import superTough1 from "@/assets/super-tough-1.jpg";
+import superTough2 from "@/assets/super-tough-2.jpg";
+import superTough3 from "@/assets/super-tough-3.jpg";
+import superTough4 from "@/assets/super-tough-4.jpg";
+import superTough5 from "@/assets/super-tough-5.jpg";
+import superTough6 from "@/assets/super-tough-6.jpg";
 import jumboReelsNew from "@/assets/jumbo-reels-new.jpg";
 import biconicalNew from "@/assets/biconical-new.jpg";
 import monofilamentNew from "@/assets/monofilament-new.jpg";
@@ -947,47 +953,98 @@ export const products: Product[] = [
 
   // 10. SUPER TOUGH REELS
   {
-    id: "st-18",
-    name: "18\" Super Tough Reel",
-    description: "Super tough reel for wire drawing / stranding / bunching applications.",
+    id: "st-22-1",
+    name: "22\" Super Tough Reel - Type 1",
+    description: "Super tough reel for wire drawing/stranding/bunching. Replacement for metal reels.",
     category: "Super Tough",
-    image: superToughNew,
+    image: superTough1,
     features: [
-      "Flange Dia: 18\"",
-      "Barrel Dia: 12\" (305)",
-      "Bore: 5\" (127)",
-      "Traverse: 9.00\" (230)",
-      "Winding Volume: 1850 cu.inch",
-      "Winding Weight: 180 k.g."
-    ]
-  },
-  {
-    id: "st-22",
-    name: "22\" Super Tough Reel",
-    description: "Heavy capacity super tough reel. Replacement for metal reels.",
-    category: "Super Tough",
-    image: superToughNew,
-    features: [
-      "Flange Dia: 22\"",
-      "Barrel Dia: 14\" (355)",
-      "Bore: 5\" (127)",
-      "Traverse: 11.00\" (280)",
-      "Winding Volume: 2485 cu.inch",
+      "Sr.No: 1",
+      "Flange Dia (d1): 22\"",
+      "Barrel Dia (d2): 14\" (355mm)",
+      "Bore (d4): 5\" (127mm)",
+      "Traverse (L2): 11.00\" (280mm)",
+      "Winding Volume: 2486 cu.inch / 40735 c.c",
       "Winding Weight: 250 k.g."
     ]
   },
   {
-    id: "st-25",
-    name: "25\" Super Tough Reel",
-    description: "Extra large super tough reel for heavy industrial wire processing.",
+    id: "st-22-2",
+    name: "22\" Super Tough Reel - Type 2",
+    description: "Enhanced capacity super tough reel for wire drawing/stranding/bunching. Replacement for metal reels.",
     category: "Super Tough",
-    image: superToughNew,
+    image: superTough2,
     features: [
-      "Flange Dia: 25\"",
-      "Barrel Dia: 14\" (355)",
-      "Bore: 5\" (127)",
-      "Traverse: 15.40\" (391)",
-      "Winding Volume: 5186 cu.inch",
+      "Sr.No: 2",
+      "Flange Dia (d1): 22\"",
+      "Barrel Dia (d2): 14\" (355mm)",
+      "Bore (d4): 5\" (127mm)",
+      "Traverse (L2): 13.00\" (330mm)",
+      "Winding Volume: 2939 cu.inch / 48141 c.c",
+      "Winding Weight: 300 k.g."
+    ]
+  },
+  {
+    id: "st-22-3",
+    name: "22\" Super Tough Reel - Type 3",
+    description: "High capacity super tough reel for wire drawing/stranding/bunching. Replacement for metal reels.",
+    category: "Super Tough",
+    image: superTough3,
+    features: [
+      "Sr.No: 3",
+      "Flange Dia (d1): 22\"",
+      "Barrel Dia (d2): 14\" (355mm)",
+      "Bore (d4): 5\" (127mm)",
+      "Traverse (L2): 15.00\" (381mm)",
+      "Winding Volume: 3391 cu.inch / 55547 c.c",
+      "Winding Weight: 345 k.g."
+    ]
+  },
+  {
+    id: "st-25-1",
+    name: "25\" Super Tough Reel - Type 4",
+    description: "Large capacity super tough reel for wire drawing/stranding/bunching. Replacement for metal reels.",
+    category: "Super Tough",
+    image: superTough4,
+    features: [
+      "Sr.No: 4",
+      "Flange Dia (d1): 25\"",
+      "Barrel Dia (d2): 14\" (355mm)",
+      "Bore (d4): 5\" (127mm)",
+      "Traverse (L2): 11.40\" (290mm)",
+      "Winding Volume: 3839 cu.inch / 62884 c.c",
+      "Winding Weight: 390 k.g."
+    ]
+  },
+  {
+    id: "st-25-2",
+    name: "25\" Super Tough Reel - Type 5",
+    description: "Extra large super tough reel for heavy duty wire drawing/stranding/bunching. Replacement for metal reels.",
+    category: "Super Tough",
+    image: superTough5,
+    features: [
+      "Sr.No: 5",
+      "Flange Dia (d1): 25\"",
+      "Barrel Dia (d2): 14\" (355mm)",
+      "Bore (d4): 5\" (127mm)",
+      "Traverse (L2): 13.00\" (340mm)",
+      "Winding Volume: 4512 cu.inch / 73917 c.c",
+      "Winding Weight: 450 k.g."
+    ]
+  },
+  {
+    id: "st-25-3",
+    name: "25\" Super Tough Reel - Type 6",
+    description: "Maximum capacity super tough reel for heavy industrial wire drawing/stranding/bunching. Replacement for metal reels.",
+    category: "Super Tough",
+    image: superTough6,
+    features: [
+      "Sr.No: 6",
+      "Flange Dia (d1): 25\"",
+      "Barrel Dia (d2): 14\" (355mm)",
+      "Bore (d4): 5\" (127mm)",
+      "Traverse (L2): 15.40\" (391mm)",
+      "Winding Volume: 5186 cu.inch / 84946 c.c",
       "Winding Weight: 525 k.g."
     ]
   },
