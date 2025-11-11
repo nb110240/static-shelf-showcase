@@ -13,6 +13,7 @@ const Index = () => {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [searchTerm, setSearchTerm] = useState<string>("");
+  const [activeFilter, setActiveFilter] = useState<string | null>(null);
 
   const filteredProducts = useMemo(() => {
     return products.filter((product) => {
@@ -20,9 +21,23 @@ const Index = () => {
       
       const searchLower = searchTerm.toLowerCase().trim();
       
-      // Search in name, description, and all features/specifications
+      // If no search term, show all products in category
+      if (searchTerm === "") {
+        return matchesCategory;
+      }
+      
+      // If a specific filter is active, search only in features matching that field
+      if (activeFilter) {
+        const matchesFilteredSearch = product.features.some(feature => {
+          const featureLower = feature.toLowerCase();
+          return featureLower.includes(activeFilter.toLowerCase()) && 
+                 featureLower.includes(searchLower);
+        });
+        return matchesCategory && matchesFilteredSearch;
+      }
+      
+      // Otherwise, search in name, description, category, and all features
       const matchesSearch = 
-        searchTerm === "" ||
         product.name.toLowerCase().includes(searchLower) ||
         product.description.toLowerCase().includes(searchLower) ||
         product.category.toLowerCase().includes(searchLower) ||
@@ -30,7 +45,7 @@ const Index = () => {
       
       return matchesCategory && matchesSearch;
     });
-  }, [selectedCategory, searchTerm]);
+  }, [selectedCategory, searchTerm, activeFilter]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -48,7 +63,12 @@ const Index = () => {
           </p>
         </div>
 
-        <ProductSearch searchTerm={searchTerm} onSearchChange={setSearchTerm} />
+        <ProductSearch 
+          searchTerm={searchTerm} 
+          onSearchChange={setSearchTerm}
+          activeFilter={activeFilter}
+          onFilterChange={setActiveFilter}
+        />
         
         <CategoryFilter
           categories={categories}
