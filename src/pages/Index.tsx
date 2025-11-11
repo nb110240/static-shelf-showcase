@@ -17,8 +17,17 @@ const Index = () => {
   const filteredProducts = useMemo(() => {
     return products.filter((product) => {
       const matchesCategory = selectedCategory === "All" || product.category === selectedCategory;
-      const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           product.description.toLowerCase().includes(searchTerm.toLowerCase());
+      
+      const searchLower = searchTerm.toLowerCase().trim();
+      
+      // Search in name, description, and all features/specifications
+      const matchesSearch = 
+        searchTerm === "" ||
+        product.name.toLowerCase().includes(searchLower) ||
+        product.description.toLowerCase().includes(searchLower) ||
+        product.category.toLowerCase().includes(searchLower) ||
+        product.features.some(feature => feature.toLowerCase().includes(searchLower));
+      
       return matchesCategory && matchesSearch;
     });
   }, [selectedCategory, searchTerm]);
