@@ -59,12 +59,13 @@ export const products: Product[] = [
     category: "Tapered Bobbins",
     image: taperedBobbinsNew,
     features: [
-      "Flange Dia: 93.5/103mm",
-      "Barrel Dia: 54/60mm",
-      "Traverse: 98mm",
-      "Overall Width: 119mm",
-      "Bore: 16mm",
-      "Winding Capacity: 1 kgs"
+      "Ref. No: PT-1",
+      "Flange Dia: 93.5/103mm (3.68/4.06 inch)",
+      "Barrel Dia: 54/60mm (2.13/2.36 inch)",
+      "Traverse: 98mm (3.85 inch)",
+      "Overall Width: 119mm (4.68 inch)",
+      "Bore: 16mm (0.63 inch)",
+      "Weight Capacity: 1kg (2.20 lbs)"
     ]
   },
   {
@@ -74,12 +75,13 @@ export const products: Product[] = [
     category: "Tapered Bobbins",
     image: taperedBobbinsNew,
     features: [
-      "Flange Dia: 105/115mm",
-      "Barrel Dia: 60/67mm",
-      "Traverse: 150mm",
-      "Overall Width: 169mm",
-      "Bore: 16mm",
-      "Winding Capacity: 2 kgs"
+      "Ref. No: PT-2",
+      "Flange Dia: 105/115mm (4.13/4.53 inch)",
+      "Barrel Dia: 60/67mm (2.36/2.64 inch)",
+      "Traverse: 150mm (5.90 inch)",
+      "Overall Width: 169mm (6.65 inch)",
+      "Bore: 16mm (0.63 inch)",
+      "Weight Capacity: 2kg (4.40 lbs)"
     ]
   },
   {
@@ -89,12 +91,13 @@ export const products: Product[] = [
     category: "Tapered Bobbins",
     image: taperedBobbinsNew,
     features: [
-      "Flange Dia: 122/140mm",
-      "Barrel Dia: 74/85mm",
-      "Traverse: 172mm",
-      "Overall Width: 200mm",
-      "Bore: 26mm",
-      "Winding Capacity: 4 kgs"
+      "Ref. No: PT-4",
+      "Flange Dia: 122/140mm (4.80/5.51 inch)",
+      "Barrel Dia: 74/85mm (2.91/3.35 inch)",
+      "Traverse: 172mm (6.77 inch)",
+      "Overall Width: 200mm (7.87 inch)",
+      "Bore: 26mm (1.02 inch)",
+      "Weight Capacity: 4kg (8.80 lbs)"
     ]
   },
   {
@@ -104,42 +107,29 @@ export const products: Product[] = [
     category: "Tapered Bobbins",
     image: taperedBobbinsNew,
     features: [
-      "Flange Dia: 147/160mm",
-      "Barrel Dia: 90/100mm",
-      "Traverse: 150mm",
-      "Overall Width: 180mm",
-      "Bore: 20mm",
-      "Winding Capacity: 6 kgs"
+      "Ref. No: PT-6",
+      "Flange Dia: 147/160mm (5.78/6.30 inch)",
+      "Barrel Dia: 90/100mm (3.54/4.25 inch)",
+      "Traverse: 150mm (5.90 inch)",
+      "Overall Width: 180mm (7.08 inch)",
+      "Bore: 20mm (0.78 inch)",
+      "Weight Capacity: 6kg (13.20 lbs)"
     ]
   },
   {
-    id: "pt-5",
-    name: "PT-5 Tapered Bobbin",
+    id: "pt-10",
+    name: "PT-10 Tapered Bobbin",
     description: "Large capacity tapered bobbin for professional cable manufacturing.",
     category: "Tapered Bobbins",
     image: taperedBobbinsNew,
     features: [
-      "Flange Dia: 157/180mm",
-      "Barrel Dia: 95/108mm",
-      "Traverse: 202mm",
-      "Overall Width: 226mm",
-      "Bore: 30mm",
-      "Winding Capacity: 10 kgs"
-    ]
-  },
-  {
-    id: "pt-11",
-    name: "PT-11 Tapered Bobbin",
-    description: "Heavy-duty tapered bobbin with superior winding capacity.",
-    category: "Tapered Bobbins",
-    image: taperedBobbinsNew,
-    features: [
-      "Flange Dia: 170/180mm",
-      "Barrel Dia: 104/110mm",
-      "Traverse: 200mm",
-      "Overall Width: 230mm",
-      "Bore: 22.5mm",
-      "Winding Capacity: 12 kgs"
+      "Ref. No: PT-10",
+      "Flange Dia: 157/180mm (6.18/7.08 inch)",
+      "Barrel Dia: 95/108mm (3.74/4.25 inch)",
+      "Traverse: 202mm (7.95 inch)",
+      "Overall Width: 226mm (8.90 inch)",
+      "Bore: 30mm (1.18 inch)",
+      "Weight Capacity: 10kg (22.0 lbs)"
     ]
   },
   {
@@ -149,12 +139,13 @@ export const products: Product[] = [
     category: "Tapered Bobbins",
     image: taperedBobbinsNew,
     features: [
-      "Flange Dia: 180/200mm",
-      "Barrel Dia: 95/110mm",
-      "Traverse: 201mm",
-      "Overall Width: 225mm",
-      "Bore: 30mm",
-      "Winding Capacity: 15 kgs"
+      "Ref. No: PT-15",
+      "Flange Dia: 180/200mm (7.08/7.87 inch)",
+      "Barrel Dia: 95/110mm (3.74/4.33 inch)",
+      "Traverse: 201mm (7.91 inch)",
+      "Overall Width: 225mm (8.85 inch)",
+      "Bore: 30mm (1.18 inch)",
+      "Weight Capacity: 15kg (33.0 lbs)"
     ]
   },
   {
@@ -164,12 +155,13 @@ export const products: Product[] = [
     category: "Tapered Bobbins",
     image: taperedBobbinsNew,
     features: [
-      "Flange Dia: 212/230mm",
-      "Barrel Dia: 132/150mm",
-      "Traverse: 247mm",
-      "Overall Width: 277mm",
-      "Bore: 32mm",
-      "Winding Capacity: 20 kgs"
+      "Ref. No: PT-20",
+      "Flange Dia: 212/230mm (8.34/9.06 inch)",
+      "Barrel Dia: 132/150mm (5.20/5.91 inch)",
+      "Traverse: 247mm (9.72 inch)",
+      "Overall Width: 277mm (10.90 inch)",
+      "Bore: 32mm (1.25 inch)",
+      "Weight Capacity: 20kg (44.0 lbs)"
     ]
   },
   {
@@ -179,27 +171,13 @@ export const products: Product[] = [
     category: "Tapered Bobbins",
     image: taperedBobbinsNew,
     features: [
-      "Flange Dia: 215/230mm",
-      "Barrel Dia: 110/130mm",
-      "Traverse: 250mm",
-      "Overall Width: 275mm",
-      "Bore: 30mm",
-      "Winding Capacity: 25 kgs"
-    ]
-  },
-  {
-    id: "pt-60",
-    name: "PT-60 Tapered Bobbin",
-    description: "Premium capacity tapered bobbin for large-scale operations.",
-    category: "Tapered Bobbins",
-    image: taperedBobbinsNew,
-    features: [
-      "Flange Dia: 295/257mm",
-      "Barrel Dia: 176/145mm",
-      "Traverse: 347mm",
-      "Overall Width: 395mm",
-      "Bore: 44mm",
-      "Winding Capacity: 60 kgs"
+      "Ref. No: PT-25",
+      "Flange Dia: 215/230mm (8.46/9.05 inch)",
+      "Barrel Dia: 110/130mm (4.33/5.12 inch)",
+      "Traverse: 250mm (9.84 inch)",
+      "Overall Width: 275mm (10.82 inch)",
+      "Bore: 30mm (1.18 inch)",
+      "Weight Capacity: 25kg (55.0 lbs)"
     ]
   },
   {
@@ -209,12 +187,13 @@ export const products: Product[] = [
     category: "Tapered Bobbins",
     image: taperedBobbinsNew,
     features: [
-      "Flange Dia: 236/250mm",
-      "Barrel Dia: 140/160mm",
-      "Traverse: 335mm",
-      "Overall Width: 400mm",
-      "Bore: 100mm",
-      "Winding Capacity: 45 kgs"
+      "Ref. No: PT-45",
+      "Flange Dia: 236/250mm (9.29/9.84 inch)",
+      "Barrel Dia: 140/160mm (5.51/6.30 inch)",
+      "Traverse: 335mm (13.18 inch)",
+      "Overall Width: 400mm (15.75 inch)",
+      "Bore: 100mm (3.93 inch)",
+      "Weight Capacity: 45kg (99.0 lbs)"
     ]
   },
   {
@@ -224,12 +203,13 @@ export const products: Product[] = [
     category: "Tapered Bobbins",
     image: taperedBobbinsNew,
     features: [
-      "Flange Dia: 300/315mm",
-      "Barrel Dia: 180/200mm",
-      "Traverse: 425mm",
-      "Overall Width: 500mm",
-      "Bore: 100mm",
-      "Winding Capacity: 90 kgs"
+      "Ref. No: PT-90",
+      "Flange Dia: 300/315mm (11.81/12.40 inch)",
+      "Barrel Dia: 180/200mm (7.09/7.87 inch)",
+      "Traverse: 425mm (16.73 inch)",
+      "Overall Width: 500mm (19.69 inch)",
+      "Bore: 100mm (3.93 inch)",
+      "Weight Capacity: 90kg (198.0 lbs)"
     ]
   },
 
