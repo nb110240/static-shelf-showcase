@@ -38,6 +38,10 @@ import jumboReel4 from "@/assets/jumbo-reel-4.jpg";
 import jumboReel5 from "@/assets/jumbo-reel-5.jpg";
 import jumboReel6 from "@/assets/jumbo-reel-6.jpg";
 import jumboReel7 from "@/assets/jumbo-reel-7.jpg";
+import jumboReel8 from "@/assets/jumbo-reel-8.jpg";
+import jumboReel9 from "@/assets/jumbo-reel-9.jpg";
+import jumboReel10 from "@/assets/jumbo-reel-10.jpg";
+import jumboReel11 from "@/assets/jumbo-reel-11.jpg";
 import biconicalNew from "@/assets/biconical-new.jpg";
 import monofilamentNew from "@/assets/monofilament-new.jpg";
 import miscReelsNew from "@/assets/misc-reels-new.jpg";
@@ -1058,18 +1062,29 @@ export const products: Product[] = [
 
   // 11. JUMBO REELS
   {
+    id: "jumbo-380",
+    name: "Jumbo Reel 380mm",
+    description: "Compact jumbo plastic reel for medium capacity wire applications.",
+    category: "Jumbo Reels",
+    image: jumboReel8,
+    features: [
+      "Flange Dia: 380mm",
+      "Barrel Dia: 220mm",
+      "Traverse: 155mm",
+      "Bore: 52mm"
+    ]
+  },
+  {
     id: "jumbo-400",
     name: "Jumbo Reel 400mm",
     description: "Jumbo plastic reel for large capacity wire applications.",
     category: "Jumbo Reels",
     image: jumboReel1,
     features: [
-      "Sr.No: 1",
-      "Flange Dia (d1): 400mm",
-      "Barrel Dia (d2): 200mm",
-      "Traverse (L2): 200mm",
-      "Bore (d4): 40mm",
-      "Volume (dm3): 18,84mm"
+      "Flange Dia: 400mm",
+      "Barrel Dia: 200mm",
+      "Traverse: 200mm",
+      "Bore: 40mm"
     ]
   },
   {
@@ -1079,42 +1094,62 @@ export const products: Product[] = [
     category: "Jumbo Reels",
     image: jumboReel2,
     features: [
-      "Sr.No: 2",
-      "Flange Dia (d1): 432mm",
-      "Barrel Dia (d2): 200mm",
-      "Traverse (L2): 265mm",
-      "Bore (d4): 40mm",
-      "Volume (dm3): 30,50mm"
+      "Flange Dia: 432mm",
+      "Barrel Dia: 200mm",
+      "Traverse: 265mm",
+      "Bore: 40mm"
     ]
   },
   {
-    id: "jumbo-450",
-    name: "Jumbo Reel 450mm",
+    id: "jumbo-450-1",
+    name: "Jumbo Reel 450mm - Type 1",
     description: "Large capacity jumbo plastic reel for industrial wire manufacturing.",
     category: "Jumbo Reels",
     image: jumboReel3,
     features: [
-      "Sr.No: 3",
-      "Flange Dia (d1): 450mm",
-      "Barrel Dia (d2): 200mm",
-      "Traverse (L2): 265",
-      "Bore (d4): 40mm",
-      "Volume (dm3): 33,80mm"
+      "Flange Dia: 450mm",
+      "Barrel Dia: 300mm",
+      "Traverse: 265mm",
+      "Bore: 40mm"
+    ]
+  },
+  {
+    id: "jumbo-450-2",
+    name: "Jumbo Reel 450mm - Type 2",
+    description: "Alternative 450mm jumbo reel configuration for specialized applications.",
+    category: "Jumbo Reels",
+    image: jumboReel9,
+    features: [
+      "Flange Dia: 450mm",
+      "Barrel Dia: 280mm",
+      "Traverse: 225mm",
+      "Bore: 40mm"
     ]
   },
   {
     id: "jumbo-500-1",
-    name: "Jumbo Reel 500mm - Type 4",
+    name: "Jumbo Reel 500mm - Type 1",
     description: "Extra large jumbo plastic reel for heavy-duty cable manufacturing.",
     category: "Jumbo Reels",
     image: jumboReel4,
     features: [
-      "Sr.No: 4",
-      "Flange Dia (d1): 500mm",
-      "Barrel Dia (d2): 200,250mm",
-      "Traverse (L2): 265,300mm",
-      "Bore (d4): 40mm",
-      "Volume (dm3): 43,68 / 44,15mm"
+      "Flange Dia: 500mm",
+      "Barrel Dia: 200mm, 250mm",
+      "Traverse: 265mm, 300mm",
+      "Bore: 40mm"
+    ]
+  },
+  {
+    id: "jumbo-500-2",
+    name: "Jumbo Reel 500mm - Type 2",
+    description: "Alternative 500mm jumbo reel for varied capacity requirements.",
+    category: "Jumbo Reels",
+    image: jumboReel10,
+    features: [
+      "Flange Dia: 500mm",
+      "Barrel Dia: 280mm",
+      "Traverse: 210mm",
+      "Bore: 40mm"
     ]
   },
   {
@@ -1124,12 +1159,10 @@ export const products: Product[] = [
     category: "Jumbo Reels",
     image: jumboReel5,
     features: [
-      "Sr.No: 5",
-      "Flange Dia (d1): 560mm",
-      "Barrel Dia (d2): 250,315mm",
-      "Traverse (L2): 250,315mm",
-      "Bore (d4): 40mm",
-      "Volume (dm3): 49,27 / 53,00mm"
+      "Flange Dia: 560mm",
+      "Barrel Dia: 250mm, 315mm",
+      "Traverse: 250mm, 315mm",
+      "Bore: 40mm"
     ]
   },
   {
@@ -1139,27 +1172,36 @@ export const products: Product[] = [
     category: "Jumbo Reels",
     image: jumboReel6,
     features: [
-      "Sr.No: 6",
-      "Flange Dia (d1): 600mm",
-      "Barrel Dia (d2): 315",
-      "Traverse (L2): 315(127)",
-      "Bore (d4): 40mm",
-      "Volume (dm3): 64,48mm"
+      "Flange Dia: 600mm",
+      "Barrel Dia: 300mm",
+      "Traverse: 315mm",
+      "Bore: 40mm"
     ]
   },
   {
     id: "jumbo-630",
     name: "Jumbo Reel 630mm",
-    description: "Largest capacity jumbo plastic reel for maximum volume wire applications.",
+    description: "Ultra-large capacity jumbo plastic reel for maximum volume wire applications.",
     category: "Jumbo Reels",
     image: jumboReel7,
     features: [
-      "Sr.No: 7",
-      "Flange Dia (d1): 630mm",
-      "Barrel Dia (d2): 250,315mm",
-      "Traverse (L2): 250,315mm",
-      "Bore (d4): 40mm",
-      "Volume (dm3): 65,62 / 73,60mm"
+      "Flange Dia: 630mm",
+      "Barrel Dia: 250mm, 315mm",
+      "Traverse: 250mm, 315mm",
+      "Bore: 40mm"
+    ]
+  },
+  {
+    id: "jumbo-700",
+    name: "Jumbo Reel 700mm",
+    description: "Largest capacity jumbo plastic reel for extreme volume wire applications.",
+    category: "Jumbo Reels",
+    image: jumboReel11,
+    features: [
+      "Flange Dia: 700mm",
+      "Barrel Dia: 250mm, 500mm",
+      "Traverse: 250mm, 500mm",
+      "Bore: 40mm"
     ]
   },
 
