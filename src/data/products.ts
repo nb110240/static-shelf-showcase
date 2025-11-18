@@ -710,107 +710,114 @@ export const products: Product[] = [
   },
   {
     id: "din-80",
-    name: "DIN 46399 Type 80",
+    name: "DIN 46399 Type 80 (S-1)",
     description: "Compact DIN 46399 standard spool for cable and wire applications.",
     category: "DIN 46399",
     image: din80,
     features: [
-      "Type: 80",
-      "Flange Dia (d1): 80mm",
-      "Barrel Dia (d2): 50mm",
-      "Overall (L1): 80mm",
-      "Traverse (L2): 64mm",
-      "Bore (d4): 16mm"
+      "Ref. No: S-1",
+      "Flange Dia: 80mm (3.15 inch)",
+      "Barrel Dia: 50mm (1.97 inch)",
+      "Traverse: 64mm (2.52 inch)",
+      "Overall Width: 80mm (3.15 inch)",
+      "Bore: 16mm (0.63 inch)",
+      "Weight Capacity: 0.9kg (2.00 lbs)"
     ]
   },
   {
     id: "din-100",
-    name: "DIN 46399 Type 100",
+    name: "DIN 46399 Type 100 (S-2)",
     description: "Medium capacity DIN 46399 standard spool for wire and cable.",
     category: "DIN 46399",
     image: din100,
     features: [
-      "Type: 100",
-      "Flange Dia (d1): 100mm",
-      "Barrel Dia (d2): 63mm",
-      "Overall (L1): 100mm",
-      "Traverse (L2): 80mm",
-      "Bore (d4): 16mm"
+      "Ref. No: S-2",
+      "Flange Dia: 100mm (3.94 inch)",
+      "Barrel Dia: 63mm (2.48 inch)",
+      "Traverse: 80mm (3.15 inch)",
+      "Overall Width: 100mm (3.94 inch)",
+      "Bore: 16mm (0.63 inch)",
+      "Weight Capacity: 1.6kg (3.50 lbs)"
     ]
   },
   {
     id: "din-125",
-    name: "DIN 46399 Type 125",
+    name: "DIN 46399 Type 125 (S-3)",
     description: "Mid-size DIN 46399 spool for versatile applications.",
     category: "DIN 46399",
     image: din125,
     features: [
-      "Type: 125",
-      "Flange Dia (d1): 125mm",
-      "Barrel Dia (d2): 80mm",
-      "Overall (L1): 125mm",
-      "Traverse (L2): 100mm",
-      "Bore (d4): 16mm"
+      "Ref. No: S-3",
+      "Flange Dia: 125mm (4.92 inch)",
+      "Barrel Dia: 80mm (3.15 inch)",
+      "Traverse: 100mm (3.94 inch)",
+      "Overall Width: 125mm (4.92 inch)",
+      "Bore: 16mm (0.63 inch)",
+      "Weight Capacity: 2.9kg (6.40 lbs)"
     ]
   },
   {
     id: "din-160",
-    name: "DIN 46399 Type 160",
+    name: "DIN 46399 Type 160 (S-6)",
     description: "Large capacity DIN 46399 standard spool.",
     category: "DIN 46399",
     image: din160,
     features: [
-      "Type: 160",
-      "Flange Dia (d1): 160mm",
-      "Barrel Dia (d2): 100mm",
-      "Overall (L1): 160mm",
-      "Traverse (L2): 128mm",
-      "Bore (d4): 22mm"
+      "Ref. No: S-6",
+      "Flange Dia: 160mm (6.30 inch)",
+      "Barrel Dia: 100mm (3.94 inch)",
+      "Traverse: 128mm (5.03 inch)",
+      "Overall Width: 160mm (6.30 inch)",
+      "Bore: 22mm (0.87 inch)",
+      "Weight Capacity: 6.2kg (13.66 lbs)"
     ]
   },
   {
     id: "din-200",
-    name: "DIN 46399 Type 200",
+    name: "DIN 46399 Type 200 (S-12)",
     description: "Extra large DIN 46399 spool for industrial applications.",
     category: "DIN 46399",
     image: din200,
     features: [
-      "Type: 200",
-      "Flange Dia (d1): 200mm",
-      "Barrel Dia (d2): 125mm",
-      "Overall (L1): 200mm",
-      "Traverse (L2): 160mm",
-      "Bore (d4): 22,36mm"
+      "Ref. No: S-12",
+      "Flange Dia: 200mm (7.87 inch)",
+      "Barrel Dia: 125mm (4.92 inch)",
+      "Traverse: 160mm (6.30 inch)",
+      "Overall Width: 200mm (7.87 inch)",
+      "Bore: 22mm (0.87 inch) / 32mm (1.25 inch)",
+      "Weight Capacity: 12kg (26.45 lbs)"
     ]
   },
   {
     id: "din-250",
-    name: "DIN 46399 Type 250",
+    name: "DIN 46399 Type 250 (S-22)",
     description: "Heavy duty DIN 46399 spool for high capacity applications.",
     category: "DIN 46399",
     image: din250,
     features: [
-      "Type: 250",
-      "Flange Dia (d1): 250mm",
-      "Barrel Dia (d2): 160mm",
-      "Overall (L1): 200mm",
-      "Traverse (L2): 160mm",
-      "Bore (d4): 22,36,102mm"
+      "Ref. No: S-22",
+      "Flange Dia: 250mm (9.84 inch)",
+      "Barrel Dia: 160mm (6.30 inch)",
+      "Traverse: 160mm (6.30 inch)",
+      "Overall Width: 200mm (7.87 inch)",
+      "Bore: 36mm (1.42 inch) / 102mm (4.00 inch)",
+      "Weight Capacity: 22kg (48.50 lbs)"
     ]
   },
   {
     id: "din-355",
-    name: "DIN 46399 Type 355",
+    name: "DIN 46399 Type 355 (S-48)",
     description: "Maximum capacity DIN 46399 spool for extended industrial operations.",
     category: "DIN 46399",
     image: din355,
     features: [
-      "Type: 355",
-      "Flange Dia (d1): 355mm",
-      "Barrel Dia (d2): 224mm",
-      "Overall (L1): 200mm",
-      "Traverse (L2): 160mm",
-      "Bore (d4): 36mm"
+      "Ref. No: S-48",
+      "Flange Dia: 355mm (13.98 inch)",
+      "Barrel Dia: 224mm (8.82 inch)",
+      "Traverse: 160mm (6.30 inch)",
+      "Overall Width: 200mm (7.87 inch)",
+      "Bore: 51mm (2.00 inch) / 102mm (4.00 inch)",
+      "Weight Capacity: 48kg (105.80 lbs)"
     ]
   },
 
