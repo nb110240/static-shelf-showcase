@@ -5,14 +5,13 @@ import compositeReelsNew from "@/assets/composite-reels-new.jpg";
 import edmWireNew from "@/assets/edm-wire-new.jpg";
 import stitchingWireNew from "@/assets/stitching-wire-new.jpg";
 import din46399New from "@/assets/din-46399-new.jpg";
-import din63 from "@/assets/din-63.jpg";
-import din80 from "@/assets/din-80.jpg";
-import din100 from "@/assets/din-100.jpg";
-import din125 from "@/assets/din-125.jpg";
-import din160 from "@/assets/din-160.jpg";
-import din200 from "@/assets/din-200.jpg";
-import din250 from "@/assets/din-250.jpg";
-import din355 from "@/assets/din-355.jpg";
+import dinS1 from "@/assets/din-s1.jpg";
+import dinS2 from "@/assets/din-s2.jpg";
+import dinS3 from "@/assets/din-s3.jpg";
+import dinS6 from "@/assets/din-s6.jpg";
+import dinS12 from "@/assets/din-s12.jpg";
+import dinS22 from "@/assets/din-s22.jpg";
+import dinS48 from "@/assets/din-s48.jpg";
 import steelTinselNew from "@/assets/steel-tinsel-new.jpg";
 import aluminumWireNew from "@/assets/aluminum-wire-new.jpg";
 import aluminumReel200 from "@/assets/aluminum-reel-200.jpg";
@@ -674,26 +673,11 @@ export const products: Product[] = [
 
   // 6. DIN 46399 SPOOLS
   {
-    id: "din-63",
-    name: "DIN 46399 Type 63",
-    description: "DIN 46399 standard plastic spool. All dimensions are in millimeter.",
-    category: "DIN 46399",
-    image: din63,
-    features: [
-      "Type: 63",
-      "Flange Dia (d1): 63mm",
-      "Barrel Dia (d2): 40mm",
-      "Overall (L1): 63mm",
-      "Traverse (L2): 49mm",
-      "Bore (d4): 11mm"
-    ]
-  },
-  {
     id: "din-80",
     name: "DIN 46399 Type 80 (S-1)",
     description: "Compact DIN 46399 standard spool for cable and wire applications.",
     category: "DIN 46399",
-    image: din80,
+    image: dinS1,
     features: [
       "Ref. No: S-1",
       "Flange Dia: 80mm (3.15 inch)",
@@ -709,7 +693,7 @@ export const products: Product[] = [
     name: "DIN 46399 Type 100 (S-2)",
     description: "Medium capacity DIN 46399 standard spool for wire and cable.",
     category: "DIN 46399",
-    image: din100,
+    image: dinS2,
     features: [
       "Ref. No: S-2",
       "Flange Dia: 100mm (3.94 inch)",
@@ -725,7 +709,7 @@ export const products: Product[] = [
     name: "DIN 46399 Type 125 (S-3)",
     description: "Mid-size DIN 46399 spool for versatile applications.",
     category: "DIN 46399",
-    image: din125,
+    image: dinS3,
     features: [
       "Ref. No: S-3",
       "Flange Dia: 125mm (4.92 inch)",
@@ -741,7 +725,7 @@ export const products: Product[] = [
     name: "DIN 46399 Type 160 (S-6)",
     description: "Large capacity DIN 46399 standard spool.",
     category: "DIN 46399",
-    image: din160,
+    image: dinS6,
     features: [
       "Ref. No: S-6",
       "Flange Dia: 160mm (6.30 inch)",
@@ -757,7 +741,7 @@ export const products: Product[] = [
     name: "DIN 46399 Type 200 (S-12)",
     description: "Extra large DIN 46399 spool for industrial applications.",
     category: "DIN 46399",
-    image: din200,
+    image: dinS12,
     features: [
       "Ref. No: S-12",
       "Flange Dia: 200mm (7.87 inch)",
@@ -773,7 +757,7 @@ export const products: Product[] = [
     name: "DIN 46399 Type 250 (S-22)",
     description: "Heavy duty DIN 46399 spool for high capacity applications.",
     category: "DIN 46399",
-    image: din250,
+    image: dinS22,
     features: [
       "Ref. No: S-22",
       "Flange Dia: 250mm (9.84 inch)",
@@ -789,7 +773,7 @@ export const products: Product[] = [
     name: "DIN 46399 Type 355 (S-48)",
     description: "Maximum capacity DIN 46399 spool for extended industrial operations.",
     category: "DIN 46399",
-    image: din355,
+    image: dinS48,
     features: [
       "Ref. No: S-48",
       "Flange Dia: 355mm (13.98 inch)",
