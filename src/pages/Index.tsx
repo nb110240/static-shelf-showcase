@@ -2,7 +2,7 @@ import { useState, useMemo } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-import ProductCard from "@/components/ProductCard";
+import CategorySection from "@/components/CategorySection";
 import ProductDetail from "@/components/ProductDetail";
 import ProductSearch from "@/components/ProductSearch";
 import CategoryFilter from "@/components/CategoryFilter";
@@ -47,6 +47,18 @@ const Index = () => {
     });
   }, [selectedCategory, searchTerm, activeFilter]);
 
+  // Group filtered products by category
+  const productsByCategory = useMemo(() => {
+    const grouped: Record<string, Product[]> = {};
+    filteredProducts.forEach((product) => {
+      if (!grouped[product.category]) {
+        grouped[product.category] = [];
+      }
+      grouped[product.category].push(product);
+    });
+    return grouped;
+  }, [filteredProducts]);
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -76,15 +88,15 @@ const Index = () => {
           onCategoryChange={setSelectedCategory}
         />
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredProducts.map((product) => (
-            <ProductCard
-              key={product.id}
-              product={product}
-              onViewDetails={setSelectedProduct}
-            />
-          ))}
-        </div>
+        {Object.entries(productsByCategory).map(([category, categoryProducts]) => (
+          <CategorySection
+            key={category}
+            categoryName={category}
+            products={categoryProducts}
+            categoryImage={categoryProducts[0].image}
+            onViewDetails={setSelectedProduct}
+          />
+        ))}
 
         {filteredProducts.length === 0 && (
           <div className="text-center py-12">
