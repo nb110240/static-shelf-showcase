@@ -37,7 +37,7 @@ const Hero = () => {
               <Button 
                 size="lg" 
                 variant="outline"
-                className="gap-2 border-white/30 text-white hover:bg-white/10"
+                className="gap-2 border-white/30 bg-transparent text-white hover:bg-white/10"
                 onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Learn More About Us
