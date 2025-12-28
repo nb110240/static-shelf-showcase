@@ -132,6 +132,22 @@ export const products: Product[] = [
     ]
   },
   {
+    id: "pt-11",
+    name: "PT-11 Tapered Bobbin",
+    description: "High performance tapered bobbin with 12kg capacity.",
+    category: "Tapered Bobbins",
+    image: taperedBobbinsNew,
+    features: [
+      "Ref. No: PT-11",
+      "Flange Dia: 170/180mm (6.69/7.09 inch)",
+      "Barrel Dia: 104/110mm (4.09/4.33 inch)",
+      "Traverse: 200mm (7.87 inch)",
+      "Overall Width: 230mm (9.06 inch)",
+      "Bore: 22.5mm (0.89 inch)",
+      "Weight Capacity: 12kg (26.5 lbs)"
+    ]
+  },
+  {
     id: "pt-15",
     name: "PT-15 Tapered Bobbin",
     description: "High-performance tapered bobbin for industrial applications.",
@@ -193,6 +209,22 @@ export const products: Product[] = [
       "Overall Width: 400mm (15.75 inch)",
       "Bore: 100mm (3.93 inch)",
       "Weight Capacity: 45kg (99.0 lbs)"
+    ]
+  },
+  {
+    id: "pt-60",
+    name: "PT-60 Tapered Bobbin",
+    description: "Heavy-duty tapered bobbin with 60kg capacity for industrial applications.",
+    category: "Tapered Bobbins",
+    image: taperedBobbinsNew,
+    features: [
+      "Ref. No: PT-60",
+      "Flange Dia: 296/267mm (11.65/10.51 inch)",
+      "Barrel Dia: 176/149mm (6.93/5.87 inch)",
+      "Traverse: 347mm (13.66 inch)",
+      "Overall Width: 395mm (15.55 inch)",
+      "Bore: 44mm (1.73 inch)",
+      "Weight Capacity: 60kg (132 lbs)"
     ]
   },
   {
@@ -452,8 +484,8 @@ export const products: Product[] = [
     ]
   },
   {
-    id: "pf-tc-620a",
-    name: "PF/TC/620 A Composite Reel",
+    id: "pf-tc-630a",
+    name: "PF/TC/630 A Composite Reel",
     description: "Premium capacity composite reel for large-scale cable manufacturing.",
     category: "Composite Reels",
     image: compositeReelsNew,
@@ -673,8 +705,23 @@ export const products: Product[] = [
 
   // 6. DIN 46399 SPOOLS
   {
+    id: "din-63",
+    name: "DIN 46399 Type 63",
+    description: "Compact DIN 46399 standard spool.",
+    category: "DIN 46399",
+    image: dinS1,
+    features: [
+      "Type: 63",
+      "Flange Dia: 63mm",
+      "Barrel Dia: 40mm",
+      "Traverse: 49mm",
+      "Overall Width: 63mm",
+      "Bore: 11mm"
+    ]
+  },
+  {
     id: "din-80",
-    name: "DIN 46399 Type 80 (S-1)",
+    name: "DIN 46399 Type 80",
     description: "Compact DIN 46399 standard spool for cable and wire applications.",
     category: "DIN 46399",
     image: dinS1,
@@ -690,7 +737,7 @@ export const products: Product[] = [
   },
   {
     id: "din-100",
-    name: "DIN 46399 Type 100 (S-2)",
+    name: "DIN 46399 Type 100",
     description: "Medium capacity DIN 46399 standard spool for wire and cable.",
     category: "DIN 46399",
     image: dinS2,
@@ -706,7 +753,7 @@ export const products: Product[] = [
   },
   {
     id: "din-125",
-    name: "DIN 46399 Type 125 (S-3)",
+    name: "DIN 46399 Type 125",
     description: "Mid-size DIN 46399 spool for versatile applications.",
     category: "DIN 46399",
     image: dinS3,
@@ -722,7 +769,7 @@ export const products: Product[] = [
   },
   {
     id: "din-160",
-    name: "DIN 46399 Type 160 (S-6)",
+    name: "DIN 46399 Type 160",
     description: "Large capacity DIN 46399 standard spool.",
     category: "DIN 46399",
     image: dinS6,
@@ -738,7 +785,7 @@ export const products: Product[] = [
   },
   {
     id: "din-200",
-    name: "DIN 46399 Type 200 (S-12)",
+    name: "DIN 46399 Type 200",
     description: "Extra large DIN 46399 spool for industrial applications.",
     category: "DIN 46399",
     image: dinS12,
@@ -754,7 +801,7 @@ export const products: Product[] = [
   },
   {
     id: "din-250",
-    name: "DIN 46399 Type 250 (S-22)",
+    name: "DIN 46399 Type 250",
     description: "Heavy duty DIN 46399 spool for high capacity applications.",
     category: "DIN 46399",
     image: dinS22,
@@ -770,7 +817,7 @@ export const products: Product[] = [
   },
   {
     id: "din-355",
-    name: "DIN 46399 Type 355 (S-48)",
+    name: "DIN 46399 Type 355",
     description: "Maximum capacity DIN 46399 spool for extended industrial operations.",
     category: "DIN 46399",
     image: dinS48,
@@ -801,20 +848,6 @@ export const products: Product[] = [
     ]
   },
   {
-    id: "us-100",
-    name: "US-100 Steel Wire Reel",
-    description: "Medium capacity steel wire delivery reel.",
-    category: "Steel & Tinsel",
-    image: steelTinselNew,
-    features: [
-      "Flange Dia: 180mm",
-      "Barrel Dia: 100mm",
-      "Traverse: 120mm",
-      "Overall: 145mm",
-      "Bore: 25mm"
-    ]
-  },
-  {
     id: "us-200",
     name: "US-200 Steel Wire Reel",
     description: "Heavy-duty reel for stainless steel wire delivery.",
@@ -824,6 +857,20 @@ export const products: Product[] = [
       "Flange Dia: 200mm",
       "Barrel Dia: 114mm",
       "Traverse: 151mm",
+      "Overall: 183mm",
+      "Bore: 32.50mm"
+    ]
+  },
+  {
+    id: "us-250",
+    name: "US-250 Steel Wire Reel",
+    description: "Large capacity heavy-duty steel wire reel.",
+    category: "Steel & Tinsel",
+    image: steelTinselNew,
+    features: [
+      "Flange Dia: 254mm",
+      "Barrel Dia: 102mm",
+      "Traverse: 157.5mm",
       "Overall: 183mm",
       "Bore: 32.50mm"
     ]
@@ -1178,33 +1225,48 @@ export const products: Product[] = [
 
   // 12. BICONICAL SERIES
   {
-    id: "bk-75",
-    name: "BK 75/45 Biconical",
+    id: "bk-76",
+    name: "BK 76/45 Biconical",
     description: "Biconical series spool for specialized technical applications.",
     category: "Biconical",
     image: biconicalNew,
     features: [
-      "Size: BK 75/45",
-      "Flange Dia: 52.7mm",
+      "Size: BK 76/45",
+      "Flange Dia: 62.7mm",
       "Barrel Dia: 44mm",
-      "Traverse: 53mm",
-      "Overall: 85mm",
+      "Traverse: 63mm",
+      "Overall: 86mm",
       "Bore: 16.1mm"
     ]
   },
   {
-    id: "bk-100",
-    name: "BK 100 Biconical",
-    description: "Medium biconical spool for precision winding.",
+    id: "bk-80",
+    name: "BK 80 Biconical",
+    description: "Biconical spool for precision winding applications.",
     category: "Biconical",
     image: biconicalNew,
     features: [
-      "Size: BK 100",
-      "Flange Dia: 99.8mm",
+      "Size: BK 80",
+      "Flange Dia: 79.4mm",
       "Barrel Dia: 55mm",
-      "Traverse: 62mm",
-      "Overall: 115mm",
-      "Bore: 18.2mm"
+      "Traverse: 72mm",
+      "Overall: 100mm",
+      "Bore: 16.3mm"
+    ]
+  },
+  {
+    id: "bk-125",
+    name: "BK 125 Biconical",
+    description: "Larger biconical spool for industrial winding needs.",
+    category: "Biconical",
+    image: biconicalNew,
+    features: [
+      "Size: BK 125",
+      "Flange Dia: 125mm",
+      "Barrel Dia: 71mm",
+      "Traverse: 66mm",
+      "Overall: 125mm",
+      "Bore: 16.1mm"
     ]
   },
   {
@@ -1224,6 +1286,34 @@ export const products: Product[] = [
   },
 
   // 13. MONOFILAMENT
+  {
+    id: "mono-fil1",
+    name: "Fil 1 Monofilament Spool",
+    description: "Compact monofilament spool.",
+    category: "Monofilament",
+    image: monofilamentNew,
+    features: [
+      "Size: Fil 1",
+      "Flange Dia: 100mm",
+      "Barrel Dia: 76mm",
+      "Traverse: 37mm",
+      "Bore: 16.29mm"
+    ]
+  },
+  {
+    id: "mono-fil2",
+    name: "Fil 2 Monofilament Spool",
+    description: "Compact monofilament spool with smaller barrel.",
+    category: "Monofilament",
+    image: monofilamentNew,
+    features: [
+      "Size: Fil 2",
+      "Flange Dia: 100mm",
+      "Barrel Dia: 52mm",
+      "Traverse: 37mm",
+      "Bore: 16.10mm"
+    ]
+  },
   {
     id: "mono-m1",
     name: "M1 Monofilament Spool",
@@ -1250,6 +1340,36 @@ export const products: Product[] = [
       "Barrel Dia: 98mm",
       "Traverse: 22mm",
       "Bore: 16mm"
+    ]
+  },
+  {
+    id: "mono-hand-small",
+    name: "Hand Caster Small",
+    description: "Small hand caster monofilament spool.",
+    category: "Monofilament",
+    image: monofilamentNew,
+    features: [
+      "Size: Hand Caster Small",
+      "Flange Dia: 100.7mm",
+      "Barrel Dia: 60.00mm",
+      "Traverse: 25.7mm",
+      "Overall: 31mm",
+      "Bore: 56.4mm"
+    ]
+  },
+  {
+    id: "mono-hand-medium",
+    name: "Hand Caster Medium",
+    description: "Medium hand caster monofilament spool.",
+    category: "Monofilament",
+    image: monofilamentNew,
+    features: [
+      "Size: Hand Caster Medium",
+      "Flange Dia: 124mm",
+      "Barrel Dia: 78mm",
+      "Traverse: 32mm",
+      "Overall: 37mm",
+      "Bore: 74mm"
     ]
   },
   {
@@ -1325,27 +1445,13 @@ export const products: Product[] = [
     features: [
       "Size: 130mm",
       "Flange Dia (d1): 133mm",
-      "Barrel Dia (d2): 76.1mm",
+      "Barrel Dia (d2): 70.1mm",
       "Traverse (L2): 91mm",
       "Overall (L1): 114mm",
-      "Bore (d4): 22.5mm"
+      "Bore (d4): 22.8mm"
     ]
   },
-  {
-    id: "isi-130l",
-    name: "ISI 130mm L Reel",
-    description: "ISI standard 130mm L series reel with extended traverse.",
-    category: "ISI Reels",
-    image: isiReelsNew,
-    features: [
-      "Size: 130mm L",
-      "Flange Dia (d1): 133mm",
-      "Barrel Dia (d2): 67mm",
-      "Traverse (L2): 127mm",
-      "Overall (L1): 150mm",
-      "Bore (d4): 22mm"
-    ]
-  },
+
   {
     id: "isi-6",
     name: "ISI 6\" Reel",
@@ -1416,6 +1522,21 @@ export const products: Product[] = [
       "Size: 10\"",
       "Flange Dia (d1): 260mm",
       "Barrel Dia (d2): 108mm",
+      "Traverse (L2): 175mm",
+      "Overall (L1): 209mm",
+      "Bore (d4): 41mm"
+    ]
+  },
+  {
+    id: "isi-11",
+    name: "ISI 11\" Reel",
+    description: "ISI standard 11 inch reel.",
+    category: "ISI Reels",
+    image: isiReelsNew,
+    features: [
+      "Size: 11\"",
+      "Flange Dia (d1): 280mm",
+      "Barrel Dia (d2): 140mm",
       "Traverse (L2): 175mm",
       "Overall (L1): 209mm",
       "Bore (d4): 41mm"
