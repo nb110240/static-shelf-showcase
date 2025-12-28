@@ -1473,3 +1473,23 @@ export const products: Product[] = [
 
 // Extract unique categories for filtering
 export const categories = Array.from(new Set(products.map(p => p.category)));
+
+// Category banner images mapping
+export const categoryImages: Record<string, string> = {
+  "Tapered Bobbins": taperedBobbinsNew,
+  "Welding Wire": weldingWireNew,
+  "Composite Reels": compositeReelsNew,
+  "EDM Wire": edmWireNew,
+  "Stitching Wire": stitchingWireNew,
+  "DIN 46399": din46399New,
+  "Steel & Tinsel": steelTinselNew,
+  "Aluminum Wire": aluminumWireNew,
+  "Cable Delivery": cableDeliveryNew,
+  "Super Tough": superToughNew,
+  "Jumbo Reels": jumboReelsNew,
+  "Biconical": biconicalNew,
+  "Monofilament": monofilamentNew,
+  "Misc Reels": miscReelsNew,
+  "ISI Reels": isiReelsNew,
+  "Copper Conductor": copperConductorNew,
+};

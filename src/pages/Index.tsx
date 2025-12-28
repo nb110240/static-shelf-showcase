@@ -6,7 +6,7 @@ import CategorySection from "@/components/CategorySection";
 import ProductDetail from "@/components/ProductDetail";
 import ProductSearch from "@/components/ProductSearch";
 import CategoryFilter from "@/components/CategoryFilter";
-import { products, categories } from "@/data/products";
+import { products, categories, categoryImages } from "@/data/products";
 import { Product } from "@/types/product";
 
 const Index = () => {
@@ -93,7 +93,7 @@ const Index = () => {
             key={category}
             categoryName={category}
             products={categoryProducts}
-            categoryImage={categoryProducts[0].image}
+            categoryImage={categoryImages[category] || categoryProducts[0].image}
             onViewDetails={setSelectedProduct}
           />
         ))}
