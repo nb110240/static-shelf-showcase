@@ -1,10 +1,24 @@
 import { Product } from "@/types/product";
-import taperedBobbinsNew from "@/assets/tapered-bobbins-new.jpg";
-import weldingWireNew from "@/assets/welding-wire-new.jpg";
+import taperedBobbinsNew from "@/assets/tapered-bobbins-studio.jpg";
+import weldingWireNew from "@/assets/welding-wire-studio.jpg";
 import compositeReelsNew from "@/assets/composite-reels-new.jpg";
-import edmWireNew from "@/assets/edm-wire-new.jpg";
-import stitchingWireNew from "@/assets/stitching-wire-new.jpg";
+import compPfTc380 from "@/assets/composite/pf-tc-380.jpg";
+import compPfTc400 from "@/assets/composite/pf-tc-400.jpg";
+import compPfTc432 from "@/assets/composite/pf-tc-432.jpg";
+import compPfTc450 from "@/assets/composite/pf-tc-450.jpg";
+import compPfTc500 from "@/assets/composite/pf-tc-500.jpg";
+import compPfTc550 from "@/assets/composite/pf-tc-550.jpg";
+import compPfTc560 from "@/assets/composite/pf-tc-560.jpg";
+import compPfTc600 from "@/assets/composite/pf-tc-600.jpg";
+import compPfTc630 from "@/assets/composite/pf-tc-630.jpg";
+import compPfTc710 from "@/assets/composite/pf-tc-710.jpg";
+import compPfTc800 from "@/assets/composite/pf-tc-800.jpg";
+import compPfTc1000 from "@/assets/composite/pf-tc-1000.jpg";
+import compPfTc1250 from "@/assets/composite/pf-tc-1250.jpg";
+import edmWireNew from "@/assets/edm-wire-studio.jpg";
+import stitchingWireNew from "@/assets/stitching-wire-studio.jpg";
 import din46399New from "@/assets/din-46399-new.jpg";
+import cylindricalReelsNew from "@/assets/cylindrical-reels-studio.jpg";
 import dinS1 from "@/assets/din-s1.jpg";
 import dinS2 from "@/assets/din-s2.jpg";
 import dinS3 from "@/assets/din-s3.jpg";
@@ -12,16 +26,11 @@ import dinS6 from "@/assets/din-s6.jpg";
 import dinS12 from "@/assets/din-s12.jpg";
 import dinS22 from "@/assets/din-s22.jpg";
 import dinS48 from "@/assets/din-s48.jpg";
-import steelTinselNew from "@/assets/steel-tinsel-new.jpg";
+import steelTinselNew from "@/assets/steel-tinsel-studio.jpg";
 import aluminumWireNew from "@/assets/aluminum-wire-new.jpg";
 import aluminumReel200 from "@/assets/aluminum-reel-200.jpg";
 import aluminumReel320 from "@/assets/aluminum-reel-320.jpg";
-import cableDeliveryNew from "@/assets/cable-delivery-new.jpg";
-import cableReel1 from "@/assets/cable-reel-1.jpg";
-import cableReel2 from "@/assets/cable-reel-2.jpg";
-import cableReel3 from "@/assets/cable-reel-3.jpg";
-import cableReel4 from "@/assets/cable-reel-4.jpg";
-import cableReel5 from "@/assets/cable-reel-5.jpg";
+import cableDeliveryNew from "@/assets/cable-delivery-reels.png";
 import superToughNew from "@/assets/super-tough-new.jpg";
 import superTough1 from "@/assets/super-tough-1.jpg";
 import superTough2 from "@/assets/super-tough-2.jpg";
@@ -29,7 +38,7 @@ import superTough3 from "@/assets/super-tough-3.jpg";
 import superTough4 from "@/assets/super-tough-4.jpg";
 import superTough5 from "@/assets/super-tough-5.jpg";
 import superTough6 from "@/assets/super-tough-6.jpg";
-import jumboReelsNew from "@/assets/jumbo-reels-new.jpg";
+import jumboReelsNew from "@/assets/jumbo-reels-studio.jpg";
 import jumboReel1 from "@/assets/jumbo-reel-1.jpg";
 import jumboReel2 from "@/assets/jumbo-reel-2.jpg";
 import jumboReel3 from "@/assets/jumbo-reel-3.jpg";
@@ -43,11 +52,11 @@ import jumboReel10 from "@/assets/jumbo-reel-10.jpg";
 import jumboReel11 from "@/assets/jumbo-reel-11.jpg";
 import biconicalNew from "@/assets/biconical-new.jpg";
 import monofilamentNew from "@/assets/monofilament-new.jpg";
-import miscReelsNew from "@/assets/misc-reels-new.jpg";
+import miscReelsNew from "@/assets/misc-reels-studio.jpg";
 import miscReel1 from "@/assets/misc-reel-1.jpg";
 import miscReel2 from "@/assets/misc-reel-2.jpg";
-import isiReelsNew from "@/assets/isi-reels-new.jpg";
-import copperConductorNew from "@/assets/copper-conductor-new.jpg";
+import isiReelsNew from "@/assets/isi-reels-studio.jpg";
+import copperConductorNew from "@/assets/copper-conductor-studio.jpg";
 
 export const products: Product[] = [
   // 1. TAPERED BOBBINS (DIN 46383 / IEC 264-3)
@@ -164,6 +173,22 @@ export const products: Product[] = [
     ]
   },
   {
+    id: "pt-18",
+    name: "PT-18 Tapered Bobbin",
+    description: "Medium-capacity tapered bobbin with fine groove reel design. Available in PP.",
+    category: "Tapered Bobbins",
+    image: taperedBobbinsNew,
+    features: [
+      "Ref. No: PT-18",
+      "Flange Dia: 187/207mm (7.36/8.15 inch)",
+      "Barrel Dia: 94/109mm (3.70/4.29 inch)",
+      "Traverse: 209mm (8.23 inch)",
+      "Overall Width: 237mm (9.33 inch)",
+      "Bore: 31mm (1.22 inch)",
+      "Weight Capacity: 18kg (39.7 lbs)"
+    ]
+  },
+  {
     id: "pt-20",
     name: "PT-20 Tapered Bobbin",
     description: "Extra large tapered bobbin for maximum capacity operations.",
@@ -193,6 +218,38 @@ export const products: Product[] = [
       "Overall Width: 275mm (10.82 inch)",
       "Bore: 30mm (1.18 inch)",
       "Weight Capacity: 25kg (55.0 lbs)"
+    ]
+  },
+  {
+    id: "pt-30",
+    name: "PT-30 Tapered Bobbin",
+    description: "High-capacity tapered bobbin with fine groove reel design. Available in PP Black.",
+    category: "Tapered Bobbins",
+    image: taperedBobbinsNew,
+    features: [
+      "Ref. No: PT-30",
+      "Flange Dia: 238/253mm (9.37/9.96 inch)",
+      "Barrel Dia: 150/170mm (5.91/6.69 inch)",
+      "Traverse: 270mm (10.63 inch)",
+      "Overall Width: 310mm (12.20 inch)",
+      "Bore: 32mm (1.26 inch)",
+      "Weight Capacity: 30kg (66.1 lbs)"
+    ]
+  },
+  {
+    id: "pt-35",
+    name: "PT-35 Tapered Bobbin",
+    description: "Heavy-duty tapered bobbin for industrial cable winding. Available in PP.",
+    category: "Tapered Bobbins",
+    image: taperedBobbinsNew,
+    features: [
+      "Ref. No: PT-35",
+      "Flange Dia: 242/257mm (9.53/10.12 inch)",
+      "Barrel Dia: 110/129mm (4.33/5.08 inch)",
+      "Traverse: 275mm (10.83 inch)",
+      "Overall Width: 305mm (12.01 inch)",
+      "Bore: 32mm (1.26 inch)",
+      "Weight Capacity: 35kg (77.2 lbs)"
     ]
   },
   {
@@ -241,6 +298,22 @@ export const products: Product[] = [
       "Overall Width: 500mm (19.69 inch)",
       "Bore: 100mm (3.93 inch)",
       "Weight Capacity: 90kg (198.0 lbs)"
+    ]
+  },
+  {
+    id: "pt-200",
+    name: "PT-200 Tapered Bobbin",
+    description: "Extra-large capacity tapered bobbin with tie rod assembly for heavy industrial cable production. Available in PP.",
+    category: "Tapered Bobbins",
+    image: taperedBobbinsNew,
+    features: [
+      "Ref. No: PT-200",
+      "Flange Dia: 369/395mm (14.53/15.55 inch)",
+      "Barrel Dia: 221.4/246.4mm (8.72/9.70 inch)",
+      "Traverse: 521mm (20.51 inch)",
+      "Overall Width: 617mm (24.29 inch)",
+      "Bore: 100mm (3.94 inch)",
+      "Weight Capacity: 200kg (440.9 lbs)"
     ]
   },
 
@@ -342,215 +415,200 @@ export const products: Product[] = [
     ]
   },
 
-  // 3. COMPOSITE REELS (DIN 46397)
+  // 3. COMPOSITE REELS (ABS Reels)
   {
-    id: "pf-tc-400a",
-    name: "PF/TC/400 A Composite Reel",
-    description: "Composite reel for cable and fiber industry. Dynamically balanced at 1500 rpm as per VDI 2060 Grade 6.3. Available in standard colors.",
+    id: "pf-tc-380",
+    name: "PF/TC/380 ABS Reel",
+    description: "High performance ABS reel for the cable industry. Durable, lightweight, and weather resistant.",
     category: "Composite Reels",
-    image: compositeReelsNew,
+    image: compPfTc380,
     features: [
-      "Flange Dia (d1): 400mm",
-      "Barrel dia (d2)DIN: 200mm",
-      "Traverse (L2): 200-300mm",
-      "Bore (d4): 36-56mm",
-      "Overall (L1): 250-350mm"
+      "Flange Dia (d1): 380mm (14.96\")",
+      "Barrel Dia (d2): 220mm (8.67\")",
+      "Bore (d4): 52mm (2.05\")",
+      "Traverse (l2): 165mm (6.50\")",
+      "Overall (l1): 190mm (7.48\")",
+      "Flange Thickness (ft): 15mm (0.60\")"
     ]
   },
   {
     id: "pf-tc-400",
-    name: "PF/TC/400 Composite Reel",
-    description: "Standard composite reel for cable and fiber applications. Dynamically balanced at 1500 rpm as per VDI 2060 Grade 6.3.",
+    name: "PF/TC/400 ABS Reel",
+    description: "High performance ABS reel for the cable industry. Durable, lightweight, and weather resistant.",
     category: "Composite Reels",
-    image: compositeReelsNew,
+    image: compPfTc400,
     features: [
-      "Flange Dia (d1): 400mm",
-      "Barrel dia (d2)DIN: 142mm",
-      "Traverse (L2): 200-300mm",
-      "Bore (d4): 36-56mm",
-      "Overall (L1): 250-350mm"
+      "Flange Dia (d1): 400mm (15.75\")",
+      "Barrel Dia (d2): 142mm (5.60\")",
+      "Bore (d4): 32 or 40mm (1.25\" or 1.58\")",
+      "Traverse (l2): 250mm (9.84\")",
+      "Overall (l1): 282mm (11.10\")",
+      "Flange Thickness (ft): 16mm (0.63\")"
     ]
   },
   {
     id: "pf-tc-432",
-    name: "PF/TC/432 Composite Reel",
-    description: "Mid-size composite reel for versatile cable and fiber applications.",
+    name: "PF/TC/432 ABS Reel",
+    description: "High performance ABS reel for the cable industry. Durable, lightweight, and weather resistant.",
     category: "Composite Reels",
-    image: compositeReelsNew,
+    image: compPfTc432,
     features: [
-      "Flange Dia (d1): 432mm",
-      "Barrel dia (d2)DIN: 204mm",
-      "Traverse (L2): 200-300mm",
-      "Bore (d4): 36-56mm",
-      "Overall (L1): 250-350mm"
+      "Flange Dia (d1): 432mm (17\")",
+      "Barrel Dia (d2): 204mm (8.03\")",
+      "Bore (d4): 30mm (1.18\")",
+      "Traverse (l2): 250mm (9.84\")",
+      "Overall (l1): 286mm (11.26\")",
+      "Flange Thickness (ft): 18mm (0.71\")"
     ]
   },
   {
     id: "pf-tc-450",
-    name: "PF/TC/450 Composite Reel",
-    description: "Heavy-duty composite reel for industrial cable production.",
+    name: "PF/TC/450 ABS Reel",
+    description: "High performance ABS reel for the cable industry. Durable, lightweight, and weather resistant.",
     category: "Composite Reels",
-    image: compositeReelsNew,
+    image: compPfTc450,
     features: [
-      "Flange Dia (d1): 450mm",
-      "Barrel dia (d2)DIN: 200-300mm",
-      "Traverse (L2): 250-300mm",
-      "Bore (d4): 36-56mm",
-      "Overall (L1): 300-350mm"
+      "Flange Dia (d1): 450mm (17.70\")",
+      "Barrel Dia (d2): 206mm (8.10\")",
+      "Bore (d4): 32 or 56mm (1.25\" or 2.20\")",
+      "Traverse (l2): 250mm (9.84\")",
+      "Overall (l1): 305mm (12.0\")",
+      "Flange Thickness (ft): 27.25mm (1.07\")"
     ]
   },
   {
     id: "pf-tc-500",
-    name: "PF/TC/500 Composite Reel",
-    description: "High capacity composite reel for fiber optic and cable manufacturing.",
+    name: "PF/TC/500 ABS Reel",
+    description: "High performance ABS reel for the cable industry. Available in multiple barrel and bore configurations.",
     category: "Composite Reels",
-    image: compositeReelsNew,
+    image: compPfTc500,
     features: [
-      "Flange Dia (d1): 500mm",
-      "Barrel dia (d2)DIN: 200mm",
-      "Traverse (L2): 250-310mm",
-      "Bore (d4): 36-56mm",
-      "Overall (L1): 300-375mm"
+      "Flange Dia (d1): 500mm (19.69\")",
+      "Barrel Dia (d2): 200mm (7.87\") or 220mm (8.66\") or 250mm (9.84\")",
+      "Bore (d4): 36mm (1.42\") or 42mm (1.65\") or 56mm (2.20\")",
+      "Traverse (l2): 250mm (9.84\")",
+      "Overall (l1): 290mm (11.41\")",
+      "Flange Thickness (ft): 20mm (0.79\") or 27.5mm (1.08\")"
     ]
   },
   {
-    id: "pf-tc-500a",
-    name: "PF/TC/500 A Composite Reel",
-    description: "Alternative configuration PF/TC/500 composite reel for cable applications.",
+    id: "pf-tc-550",
+    name: "PF/TC/550 ABS Reel",
+    description: "High performance ABS reel for the cable industry. CTC certified. Durable and weather resistant.",
     category: "Composite Reels",
-    image: compositeReelsNew,
+    image: compPfTc550,
     features: [
-      "Flange Dia (d1): 500mm",
-      "Barrel dia (d2)DIN: 250mm",
-      "Traverse (L2): 250-310mm",
-      "Bore (d4): 36-56mm",
-      "Overall (L1): 300-375mm"
-    ]
-  },
-  {
-    id: "pf-tc-500b",
-    name: "PF/TC/500 B Composite Reel",
-    description: "Heavy barrel PF/TC/500 composite reel for enhanced capacity.",
-    category: "Composite Reels",
-    image: compositeReelsNew,
-    features: [
-      "Flange Dia (d1): 500mm",
-      "Barrel dia (d2)DIN: 254mm",
-      "Traverse (L2): 250-310mm",
-      "Bore (d4): 36-56mm",
-      "Overall (L1): 300-375mm"
-    ]
-  },
-  {
-    id: "pf-tc-540",
-    name: "PF/TC/540 Composite Reel",
-    description: "Large diameter composite reel for specialized cable applications.",
-    category: "Composite Reels",
-    image: compositeReelsNew,
-    features: [
-      "Flange Dia (d1): 550mm",
-      "Barrel dia (d2)DIN: 150mm",
-      "Traverse (L2): 250-310mm",
-      "Bore (d4): 36-56mm",
-      "Overall (L1): 300-375mm"
+      "Flange Dia (d1): 550mm (21.65\")",
+      "Barrel Dia (d2): 150mm (5.90\")",
+      "Bore (d4): 56mm (2.20\")",
+      "Traverse (l2): 250mm (9.84\")",
+      "Overall (l1): 310mm (12.20\")",
+      "Flange Thickness (ft): 20mm (0.79\")"
     ]
   },
   {
     id: "pf-tc-560",
-    name: "PF/TC/560 Composite Reel",
-    description: "Professional grade composite reel for industrial cable production.",
+    name: "PF/TC/560 ABS Reel",
+    description: "High performance ABS reel for the cable industry. Available in multiple barrel configurations.",
     category: "Composite Reels",
-    image: compositeReelsNew,
+    image: compPfTc560,
     features: [
-      "Flange Dia (d1): 560mm",
-      "Barrel dia (d2)DIN: 254mm",
-      "Traverse (L2): 250-310mm",
-      "Bore (d4): 36-56-127mm",
-      "Overall (L1): 300-375mm"
+      "Flange Dia (d1): 560mm (22\")",
+      "Barrel Dia (d2): 255mm (10\") or 280mm (11\")",
+      "Bore (d4): 56mm (2.20\")",
+      "Traverse (l2): 250mm (9.84\")",
+      "Overall (l1): 305mm (12\")",
+      "Flange Thickness (ft): 27.5mm (1.08\")"
     ]
   },
   {
     id: "pf-tc-600",
-    name: "PF/TC/600 Composite Reel",
-    description: "Extra large composite reel for high-capacity cable operations.",
+    name: "PF/TC/600 ABS Reel",
+    description: "High performance ABS reel for the cable industry. Large capacity for industrial applications.",
     category: "Composite Reels",
-    image: compositeReelsNew,
+    image: compPfTc600,
     features: [
-      "Flange Dia (d1): 600mm",
-      "Barrel dia (d2)DIN: 300mm",
-      "Traverse (L2): 300-350mm",
-      "Bore (d4): 36-80-127mm",
-      "Overall (L1): 350-400mm"
+      "Flange Dia (d1): 600mm (23.62\")",
+      "Barrel Dia (d2): 300mm (11.81\")",
+      "Bore (d4): 127mm (5\")",
+      "Traverse (l2): 254mm (10\")",
+      "Overall (l1): 304mm (11.96\")",
+      "Flange Thickness (ft): 25mm"
     ]
   },
   {
-    id: "pf-tc-630a",
-    name: "PF/TC/630 A Composite Reel",
-    description: "Premium capacity composite reel for large-scale cable manufacturing.",
+    id: "pf-tc-630",
+    name: "PF/TC/630 ABS Reel",
+    description: "High performance ABS reel for the cable industry. Multiple barrel and flange thickness options.",
     category: "Composite Reels",
-    image: compositeReelsNew,
+    image: compPfTc630,
     features: [
-      "Flange Dia (d1): 630mm",
-      "Barrel dia (d2)DIN: 250mm",
-      "Traverse (L2): 350-400mm",
-      "Bore (d4): 36-80-127mm",
-      "Overall (L1): 425-475mm"
-    ]
-  },
-  {
-    id: "pf-tc-630b",
-    name: "PF/TC/630 B Composite Reel",
-    description: "Heavy-duty PF/TC/630 composite reel for industrial operations.",
-    category: "Composite Reels",
-    image: compositeReelsNew,
-    features: [
-      "Flange Dia (d1): 630mm",
-      "Barrel dia (d2)DIN: 315mm",
-      "Traverse (L2): 350-400mm",
-      "Bore (d4): 36-80-127mm",
-      "Overall (L1): 425-475mm"
+      "Flange Dia (d1): 630mm (24.80\")",
+      "Barrel Dia (d2): 250mm (9.84\") or 315mm (12.40\") or 355mm (14\")",
+      "Bore (d4): 56mm (2.20\")",
+      "Traverse (l2): 315mm (12.40\")",
+      "Overall (l1): 370mm (14.56\")",
+      "Flange Thickness (ft): 27.5mm (1.08\") or 25.5mm (1\")"
     ]
   },
   {
     id: "pf-tc-710",
-    name: "PF/TC/710 Composite Reel",
-    description: "Versatile large composite reel with variable barrel and traverse options.",
+    name: "PF/TC/710 ABS Reel",
+    description: "High performance ABS reel for the cable industry. Large format for heavy-duty applications.",
     category: "Composite Reels",
-    image: compositeReelsNew,
+    image: compPfTc710,
     features: [
-      "Flange Dia (d1): 710mm",
-      "Barrel dia (d2)DIN: 250-500mm",
-      "Traverse (L2): 180-400mm",
-      "Bore (d4): 36-80-127mm",
-      "Overall (L1): 250-475mm"
+      "Flange Dia (d1): 710mm (27.95\")",
+      "Barrel Dia (d2): 500mm (19.68\")",
+      "Bore (d4): 56mm (2.20\")",
+      "Traverse (l2): 315mm (12.40\")",
+      "Overall (l1): 375mm (14.76\")",
+      "Flange Thickness (ft): 30mm (1.18\")"
     ]
   },
   {
     id: "pf-tc-800",
-    name: "PF/TC/800 Composite Reel",
-    description: "Extra large composite reel for maximum capacity cable production.",
+    name: "PF/TC/800 ABS Reel",
+    description: "High performance ABS reel for the cable industry. Extra large for maximum capacity.",
     category: "Composite Reels",
-    image: compositeReelsNew,
+    image: compPfTc800,
     features: [
-      "Flange Dia (d1): 800mm",
-      "Barrel dia (d2)DIN: 400mm",
-      "Traverse (L2): 500mm",
-      "Bore (d4): 80-127mm",
-      "Overall (L1): 600mm"
+      "Flange Dia (d1): 800mm (31.49\")",
+      "Barrel Dia (d2): 400mm (15.74\")",
+      "Bore (d4): 80mm (3.15\")",
+      "Traverse (l2): 400mm (15.74\")",
+      "Overall (l1): 480mm (18.90\")",
+      "Flange Thickness (ft): 40mm (1.57\")"
     ]
   },
   {
     id: "pf-tc-1000",
-    name: "PF/TC/1000 Composite Reel",
-    description: "Maximum capacity composite reel for industrial-scale cable manufacturing operations.",
+    name: "PF/TC/1000 ABS Reel",
+    description: "High performance ABS reel for the cable industry. Industrial-scale capacity for large cable operations.",
     category: "Composite Reels",
-    image: compositeReelsNew,
+    image: compPfTc1000,
     features: [
-      "Flange Dia (d1): 1000mm",
-      "Barrel dia (d2)DIN: 500mm",
-      "Traverse (L2): 625mm",
-      "Bore (d4): 80-127mm",
-      "Overall (L1): 750mm"
+      "Flange Dia (d1): 1000mm (39.37\")",
+      "Barrel Dia (d2): 500mm (19.69\")",
+      "Bore (d4): 80mm (3.15\")",
+      "Traverse (l2): 600mm (23.62\")",
+      "Overall (l1): 680mm (26.77\")",
+      "Flange Thickness (ft): 40mm (1.57\")"
+    ]
+  },
+  {
+    id: "pf-tc-1250",
+    name: "PF/TC/1250 ABS Reel",
+    description: "High performance ABS reel for the cable industry. Maximum capacity reel for large-scale manufacturing.",
+    category: "Composite Reels",
+    image: compPfTc1250,
+    features: [
+      "Flange Dia (d1): 1250mm (49.21\")",
+      "Barrel Dia (d2): 625mm (24.60\")",
+      "Bore (d4): 80mm & 127mm (3.15\" & 5\")",
+      "Traverse (l2): 625mm (24.60\")",
+      "Overall (l1): 750mm (29.53\")",
+      "Flange Thickness (ft): 50mm (1.97\")"
     ]
   },
 
@@ -703,13 +761,13 @@ export const products: Product[] = [
     ]
   },
 
-  // 6. DIN 46399 SPOOLS
+  // 6. Cylindrical Reels SPOOLS
   {
     id: "din-63",
-    name: "DIN 46399 Type 63",
-    description: "Compact DIN 46399 standard spool.",
-    category: "DIN 46399",
-    image: dinS1,
+    name: "Cylindrical Reels Type 63",
+    description: "Compact Cylindrical Reels standard spool.",
+    category: "Cylindrical Reels",
+    image: cylindricalReelsNew,
     features: [
       "Type: 63",
       "Flange Dia: 63mm",
@@ -721,10 +779,10 @@ export const products: Product[] = [
   },
   {
     id: "din-80",
-    name: "DIN 46399 Type 80",
-    description: "Compact DIN 46399 standard spool for cable and wire applications.",
-    category: "DIN 46399",
-    image: dinS1,
+    name: "Cylindrical Reels Type 80",
+    description: "Compact Cylindrical Reels standard spool for cable and wire applications.",
+    category: "Cylindrical Reels",
+    image: cylindricalReelsNew,
     features: [
       "Ref. No: S-1",
       "Flange Dia: 80mm (3.15 inch)",
@@ -737,10 +795,10 @@ export const products: Product[] = [
   },
   {
     id: "din-100",
-    name: "DIN 46399 Type 100",
-    description: "Medium capacity DIN 46399 standard spool for wire and cable.",
-    category: "DIN 46399",
-    image: dinS2,
+    name: "Cylindrical Reels Type 100",
+    description: "Medium capacity Cylindrical Reels standard spool for wire and cable.",
+    category: "Cylindrical Reels",
+    image: cylindricalReelsNew,
     features: [
       "Ref. No: S-2",
       "Flange Dia: 100mm (3.94 inch)",
@@ -753,10 +811,10 @@ export const products: Product[] = [
   },
   {
     id: "din-125",
-    name: "DIN 46399 Type 125",
-    description: "Mid-size DIN 46399 spool for versatile applications.",
-    category: "DIN 46399",
-    image: dinS3,
+    name: "Cylindrical Reels Type 125",
+    description: "Mid-size Cylindrical Reels spool for versatile applications.",
+    category: "Cylindrical Reels",
+    image: cylindricalReelsNew,
     features: [
       "Ref. No: S-3",
       "Flange Dia: 125mm (4.92 inch)",
@@ -769,10 +827,10 @@ export const products: Product[] = [
   },
   {
     id: "din-160",
-    name: "DIN 46399 Type 160",
-    description: "Large capacity DIN 46399 standard spool.",
-    category: "DIN 46399",
-    image: dinS6,
+    name: "Cylindrical Reels Type 160",
+    description: "Large capacity Cylindrical Reels standard spool.",
+    category: "Cylindrical Reels",
+    image: cylindricalReelsNew,
     features: [
       "Ref. No: S-6",
       "Flange Dia: 160mm (6.30 inch)",
@@ -785,10 +843,10 @@ export const products: Product[] = [
   },
   {
     id: "din-200",
-    name: "DIN 46399 Type 200",
-    description: "Extra large DIN 46399 spool for industrial applications.",
-    category: "DIN 46399",
-    image: dinS12,
+    name: "Cylindrical Reels Type 200",
+    description: "Extra large Cylindrical Reels spool for industrial applications.",
+    category: "Cylindrical Reels",
+    image: cylindricalReelsNew,
     features: [
       "Ref. No: S-12",
       "Flange Dia: 200mm (7.87 inch)",
@@ -801,10 +859,10 @@ export const products: Product[] = [
   },
   {
     id: "din-250",
-    name: "DIN 46399 Type 250",
-    description: "Heavy duty DIN 46399 spool for high capacity applications.",
-    category: "DIN 46399",
-    image: dinS22,
+    name: "Cylindrical Reels Type 250",
+    description: "Heavy duty Cylindrical Reels spool for high capacity applications.",
+    category: "Cylindrical Reels",
+    image: cylindricalReelsNew,
     features: [
       "Ref. No: S-22",
       "Flange Dia: 250mm (9.84 inch)",
@@ -817,10 +875,10 @@ export const products: Product[] = [
   },
   {
     id: "din-355",
-    name: "DIN 46399 Type 355",
-    description: "Maximum capacity DIN 46399 spool for extended industrial operations.",
-    category: "DIN 46399",
-    image: dinS48,
+    name: "Cylindrical Reels Type 355",
+    description: "Maximum capacity Cylindrical Reels spool for extended industrial operations.",
+    category: "Cylindrical Reels",
+    image: cylindricalReelsNew,
     features: [
       "Ref. No: S-48",
       "Flange Dia: 355mm (13.98 inch)",
@@ -910,171 +968,283 @@ export const products: Product[] = [
 
   // 9. CABLE DELIVERY
   {
-    id: "cd-type-1",
-    name: "Cable Delivery Reel Type 1",
-    description: "Compact cable delivery reel with blue plastic flanges and black barrel. Ideal for small to medium cable distribution applications.",
+    id: "cd-230",
+    name: "CDR 230",
+    description: "Cable despatch reel with 230mm flange and 108mm barrel. Compatible with high-speed coiling machines. Weather and UV resistant.",
     category: "Cable Delivery",
-    image: cableReel1,
-    features: [
-      "Flange Dia (d1): 141mm",
-      "Barrel Dia (d2): 36mm",
-      "Bore (d4): 32mm",
-      "Overall (L1): 55mm",
-      "Traverse (L2): 52mm"
-    ]
-  },
-  {
-    id: "cd-type-2",
-    name: "Cable Delivery Reel Type 2",
-    description: "Medium size cable delivery reel with elongated barrel design. Suitable for versatile cable winding applications.",
-    category: "Cable Delivery",
-    image: cableReel2,
-    features: [
-      "Flange Dia (d1): 141mm",
-      "Barrel Dia (d2): 36mm",
-      "Bore (d4): 32mm",
-      "Overall (L1): 78mm",
-      "Traverse (L2): 75mm"
-    ]
-  },
-  {
-    id: "cd-type-3",
-    name: "Cable Delivery Reel Type 3",
-    description: "Large capacity cable delivery reel with perforated flanges for weight reduction. Professional grade for industrial cable distribution.",
-    category: "Cable Delivery",
-    image: cableReel3,
+    image: cableDeliveryNew,
     features: [
       "Flange Dia (d1): 230mm",
-      "Barrel Dia (d2): 82mm",
-      "Bore (d4): 72mm",
-      "Overall (L1): 120mm",
-      "Traverse (L2): 112mm"
+      "Barrel Dia (d2): 108mm",
+      "Bore (d4): 99mm",
+      "Available Traverse: 127, 165, 190, 255, 300, 380mm"
     ]
   },
   {
-    id: "cd-type-4",
-    name: "Cable Delivery Reel Type 4",
-    description: "Extra large heavy-duty cable delivery reel with reinforced metal frame. Designed for high-capacity cable transportation and storage.",
+    id: "cd-260",
+    name: "CDR 260",
+    description: "Cable despatch reel with 260mm flange and 108mm barrel. Compatible with high-speed coiling machines. Weather and UV resistant.",
     category: "Cable Delivery",
-    image: cableReel4,
+    image: cableDeliveryNew,
     features: [
-      "Flange Dia (d1): 300mm",
-      "Barrel Dia (d2): 102mm",
-      "Bore (d4): 32mm",
-      "Overall (L1): 220mm",
-      "Traverse (L2): 210mm"
+      "Flange Dia (d1): 260mm",
+      "Barrel Dia (d2): 108mm",
+      "Bore (d4): 99mm",
+      "Available Traverse: 127, 165, 190, 255, 300, 380mm"
     ]
   },
   {
-    id: "cd-type-5",
-    name: "Cable Delivery Reel Type 5",
-    description: "Heavy-duty cable delivery reel with square flange design and reinforced construction. Ideal for industrial-scale cable delivery operations.",
+    id: "cd-280",
+    name: "CDR 280",
+    description: "Cable despatch reel with 280mm flange and 108mm barrel. Compatible with high-speed coiling machines. Weather and UV resistant.",
     category: "Cable Delivery",
-    image: cableReel5,
+    image: cableDeliveryNew,
     features: [
-      "Flange Dia (d1): 300mm",
-      "Barrel Dia (d2): 102mm",
-      "Bore (d4): 32mm",
-      "Overall (L1): 220mm",
-      "Traverse (L2): 210mm"
+      "Flange Dia (d1): 280mm",
+      "Barrel Dia (d2): 108mm",
+      "Bore (d4): 99mm",
+      "Available Traverse: 127, 165, 190, 255, 300, 380mm"
+    ]
+  },
+  {
+    id: "cd-295",
+    name: "CDR 295",
+    description: "Cable despatch reel with 295mm flange and 108mm barrel. Compatible with high-speed coiling machines. Weather and UV resistant.",
+    category: "Cable Delivery",
+    image: cableDeliveryNew,
+    features: [
+      "Flange Dia (d1): 295mm",
+      "Barrel Dia (d2): 108mm",
+      "Bore (d4): 99mm",
+      "Available Traverse: 127, 165, 190, 255, 300, 380mm"
+    ]
+  },
+  {
+    id: "cd-325",
+    name: "CDR 325",
+    description: "Cable despatch reel with 325mm flange and 108mm barrel. Compatible with high-speed coiling machines. Weather and UV resistant.",
+    category: "Cable Delivery",
+    image: cableDeliveryNew,
+    features: [
+      "Flange Dia (d1): 325mm",
+      "Barrel Dia (d2): 108mm",
+      "Bore (d4): 99mm",
+      "Available Traverse: 127, 165, 190, 255, 300, 380mm"
+    ]
+  },
+  {
+    id: "cd-355-s",
+    name: "CDR 355 (Small Barrel)",
+    description: "Cable despatch reel with 355mm flange and 108mm barrel. Compatible with high-speed coiling machines. Weather and UV resistant.",
+    category: "Cable Delivery",
+    image: cableDeliveryNew,
+    features: [
+      "Flange Dia (d1): 355mm",
+      "Barrel Dia (d2): 108mm",
+      "Bore (d4): 99mm",
+      "Available Traverse: 127, 165, 190, 255, 300, 380mm"
+    ]
+  },
+  {
+    id: "cd-380",
+    name: "CDR 380",
+    description: "Cable despatch reel with 380mm flange and 108mm barrel. Compatible with high-speed coiling machines. Weather and UV resistant.",
+    category: "Cable Delivery",
+    image: cableDeliveryNew,
+    features: [
+      "Flange Dia (d1): 380mm",
+      "Barrel Dia (d2): 108mm",
+      "Bore (d4): 99mm",
+      "Available Traverse: 127, 165, 190, 255, 300, 380mm"
+    ]
+  },
+  {
+    id: "cd-355-l",
+    name: "CDR 355 (Large Barrel)",
+    description: "Cable despatch reel with 355mm flange and 205mm barrel. Compatible with high-speed coiling machines. Weather and UV resistant.",
+    category: "Cable Delivery",
+    image: cableDeliveryNew,
+    features: [
+      "Flange Dia (d1): 355mm",
+      "Barrel Dia (d2): 205mm",
+      "Bore (d4): 99mm",
+      "Available Traverse: 300, 325, 380mm"
+    ]
+  },
+  {
+    id: "cd-400",
+    name: "CDR 400",
+    description: "Cable despatch reel with 400mm flange and 205mm barrel. Compatible with high-speed coiling machines. Weather and UV resistant.",
+    category: "Cable Delivery",
+    image: cableDeliveryNew,
+    features: [
+      "Flange Dia (d1): 400mm",
+      "Barrel Dia (d2): 205mm",
+      "Bore (d4): 99mm",
+      "Available Traverse: 300, 325, 380mm"
+    ]
+  },
+  {
+    id: "cd-425",
+    name: "CDR 425",
+    description: "Cable despatch reel with 425mm flange and 205mm barrel. Compatible with high-speed coiling machines. Weather and UV resistant.",
+    category: "Cable Delivery",
+    image: cableDeliveryNew,
+    features: [
+      "Flange Dia (d1): 425mm",
+      "Barrel Dia (d2): 205mm",
+      "Bore (d4): 99mm",
+      "Available Traverse: 300, 325, 380mm"
+    ]
+  },
+  {
+    id: "cd-450",
+    name: "CDR 450",
+    description: "Cable despatch reel with 450mm flange and 205mm barrel. Compatible with high-speed coiling machines. Weather and UV resistant.",
+    category: "Cable Delivery",
+    image: cableDeliveryNew,
+    features: [
+      "Flange Dia (d1): 450mm",
+      "Barrel Dia (d2): 205mm",
+      "Bore (d4): 99mm",
+      "Available Traverse: 300, 325, 380mm"
+    ]
+  },
+  {
+    id: "cd-500",
+    name: "CDR 500",
+    description: "Cable despatch reel with 500mm flange and 205mm barrel. Compatible with high-speed coiling machines. Weather and UV resistant.",
+    category: "Cable Delivery",
+    image: cableDeliveryNew,
+    features: [
+      "Flange Dia (d1): 500mm",
+      "Barrel Dia (d2): 205mm",
+      "Bore (d4): 99mm",
+      "Available Traverse: 300, 325, 380mm"
+    ]
+  },
+  {
+    id: "cd-545",
+    name: "CDR 545",
+    description: "Cable despatch reel with 545mm flange and 205mm barrel. Compatible with high-speed coiling machines. Weather and UV resistant.",
+    category: "Cable Delivery",
+    image: cableDeliveryNew,
+    features: [
+      "Flange Dia (d1): 545mm",
+      "Barrel Dia (d2): 205mm",
+      "Bore (d4): 99mm",
+      "Available Traverse: 300, 325, 380mm"
+    ]
+  },
+  {
+    id: "cd-600",
+    name: "CDR 600",
+    description: "Cable despatch reel with 600mm flange and 205mm barrel. Compatible with high-speed coiling machines. Weather and UV resistant.",
+    category: "Cable Delivery",
+    image: cableDeliveryNew,
+    features: [
+      "Flange Dia (d1): 600mm",
+      "Barrel Dia (d2): 205mm",
+      "Bore (d4): 99mm",
+      "Available Traverse: 300, 325, 380mm"
     ]
   },
 
   // 10. SUPER TOUGH REELS
   {
     id: "st-22-1",
-    name: "22\" Super Tough Reel - Type 1",
-    description: "Super tough reel for wire drawing/stranding/bunching. Replacement for metal reels.",
+    name: "22\" Super Tough Reel - 250kg",
+    description: "High performance ABS reel designed for run speeds up to 3000rpm. One-third the weight of equivalent mild steel reels. Ideal for wire drawing, bunching, stranding and transportation.",
     category: "Super Tough",
-    image: superTough1,
+    image: superToughNew,
     features: [
-      "Sr.No: 1",
-      "Flange Dia (d1): 22\"",
-      "Barrel Dia (d2): 14\" (355mm)",
-      "Bore (d4): 5\" (127mm)",
-      "Traverse (L2): 11.00\" (280mm)",
+      "Material: ABS",
+      "Flange Dia: 22\" (560mm)",
+      "Barrel Dia: 14\" (355mm)",
+      "Bore: 5\" (127mm)",
+      "Traverse: 11.00\" (280mm)",
       "Winding Volume: 2486 cu.inch / 40735 c.c",
-      "Winding Weight: 250 k.g."
+      "Winding Weight: 250 kg"
     ]
   },
   {
     id: "st-22-2",
-    name: "22\" Super Tough Reel - Type 2",
-    description: "Enhanced capacity super tough reel for wire drawing/stranding/bunching. Replacement for metal reels.",
+    name: "22\" Super Tough Reel - 300kg",
+    description: "High performance ABS reel designed for run speeds up to 3000rpm. One-third the weight of equivalent mild steel reels. Ideal for wire drawing, bunching, stranding and transportation.",
     category: "Super Tough",
-    image: superTough2,
+    image: superToughNew,
     features: [
-      "Sr.No: 2",
-      "Flange Dia (d1): 22\"",
-      "Barrel Dia (d2): 14\" (355mm)",
-      "Bore (d4): 5\" (127mm)",
-      "Traverse (L2): 13.00\" (330mm)",
+      "Material: ABS",
+      "Flange Dia: 22\" (560mm)",
+      "Barrel Dia: 14\" (355mm)",
+      "Bore: 5\" (127mm)",
+      "Traverse: 13.00\" (330mm)",
       "Winding Volume: 2939 cu.inch / 48141 c.c",
-      "Winding Weight: 300 k.g."
+      "Winding Weight: 300 kg"
     ]
   },
   {
     id: "st-22-3",
-    name: "22\" Super Tough Reel - Type 3",
-    description: "High capacity super tough reel for wire drawing/stranding/bunching. Replacement for metal reels.",
+    name: "22\" Super Tough Reel - 345kg",
+    description: "High performance ABS reel designed for run speeds up to 3000rpm. One-third the weight of equivalent mild steel reels. Ideal for wire drawing, bunching, stranding and transportation.",
     category: "Super Tough",
-    image: superTough3,
+    image: superToughNew,
     features: [
-      "Sr.No: 3",
-      "Flange Dia (d1): 22\"",
-      "Barrel Dia (d2): 14\" (355mm)",
-      "Bore (d4): 5\" (127mm)",
-      "Traverse (L2): 15.00\" (381mm)",
+      "Material: ABS",
+      "Flange Dia: 22\" (560mm)",
+      "Barrel Dia: 14\" (355mm)",
+      "Bore: 5\" (127mm)",
+      "Traverse: 15.00\" (381mm)",
       "Winding Volume: 3391 cu.inch / 55547 c.c",
-      "Winding Weight: 345 k.g."
+      "Winding Weight: 345 kg"
     ]
   },
   {
     id: "st-25-1",
-    name: "25\" Super Tough Reel - Type 4",
-    description: "Large capacity super tough reel for wire drawing/stranding/bunching. Replacement for metal reels.",
+    name: "25\" Super Tough Reel - 390kg",
+    description: "High performance ABS reel designed for run speeds up to 3000rpm. One-third the weight of equivalent mild steel reels. Ideal for wire drawing, bunching, stranding and transportation.",
     category: "Super Tough",
-    image: superTough4,
+    image: superToughNew,
     features: [
-      "Sr.No: 4",
-      "Flange Dia (d1): 25\"",
-      "Barrel Dia (d2): 14\" (355mm)",
-      "Bore (d4): 5\" (127mm)",
-      "Traverse (L2): 11.40\" (290mm)",
+      "Material: ABS",
+      "Flange Dia: 25\" (630mm)",
+      "Barrel Dia: 14\" (355mm)",
+      "Bore: 5\" (127mm)",
+      "Traverse: 11.40\" (290mm)",
       "Winding Volume: 3839 cu.inch / 62884 c.c",
-      "Winding Weight: 390 k.g."
+      "Winding Weight: 390 kg"
     ]
   },
   {
     id: "st-25-2",
-    name: "25\" Super Tough Reel - Type 5",
-    description: "Extra large super tough reel for heavy duty wire drawing/stranding/bunching. Replacement for metal reels.",
+    name: "25\" Super Tough Reel - 450kg",
+    description: "High performance ABS reel designed for run speeds up to 3000rpm. One-third the weight of equivalent mild steel reels. Ideal for wire drawing, bunching, stranding and transportation.",
     category: "Super Tough",
-    image: superTough5,
+    image: superToughNew,
     features: [
-      "Sr.No: 5",
-      "Flange Dia (d1): 25\"",
-      "Barrel Dia (d2): 14\" (355mm)",
-      "Bore (d4): 5\" (127mm)",
-      "Traverse (L2): 13.00\" (340mm)",
+      "Material: ABS",
+      "Flange Dia: 25\" (630mm)",
+      "Barrel Dia: 14\" (355mm)",
+      "Bore: 5\" (127mm)",
+      "Traverse: 13.40\" (340mm)",
       "Winding Volume: 4512 cu.inch / 73917 c.c",
-      "Winding Weight: 450 k.g."
+      "Winding Weight: 450 kg"
     ]
   },
   {
     id: "st-25-3",
-    name: "25\" Super Tough Reel - Type 6",
-    description: "Maximum capacity super tough reel for heavy industrial wire drawing/stranding/bunching. Replacement for metal reels.",
+    name: "25\" Super Tough Reel - 525kg",
+    description: "High performance ABS reel designed for run speeds up to 3000rpm. One-third the weight of equivalent mild steel reels. Ideal for wire drawing, bunching, stranding and transportation.",
     category: "Super Tough",
-    image: superTough6,
+    image: superToughNew,
     features: [
-      "Sr.No: 6",
-      "Flange Dia (d1): 25\"",
-      "Barrel Dia (d2): 14\" (355mm)",
-      "Bore (d4): 5\" (127mm)",
-      "Traverse (L2): 15.40\" (391mm)",
+      "Material: ABS",
+      "Flange Dia: 25\" (630mm)",
+      "Barrel Dia: 14\" (355mm)",
+      "Bore: 5\" (127mm)",
+      "Traverse: 15.40\" (391mm)",
       "Winding Volume: 5186 cu.inch / 84946 c.c",
-      "Winding Weight: 525 k.g."
+      "Winding Weight: 525 kg"
     ]
   },
 
@@ -1082,10 +1252,11 @@ export const products: Product[] = [
   {
     id: "jumbo-380",
     name: "Jumbo Reel 380mm",
-    description: "Compact jumbo plastic reel for medium capacity wire applications.",
+    description: "High performance delivery reel for shipment of round, rectangular and core wires. 100% recyclable plastic — perfect replacement for wooden reels and metal reels. No fumigation needed for export.",
     category: "Jumbo Reels",
-    image: jumboReel8,
+    image: jumboReelsNew,
     features: [
+      "Material: 100% Recyclable Plastic",
       "Flange Dia: 380mm",
       "Barrel Dia: 220mm",
       "Traverse: 155mm",
@@ -1095,130 +1266,119 @@ export const products: Product[] = [
   {
     id: "jumbo-400",
     name: "Jumbo Reel 400mm",
-    description: "Jumbo plastic reel for large capacity wire applications.",
+    description: "High performance delivery reel for shipment of round, rectangular and core wires. 100% recyclable plastic — perfect replacement for wooden reels and metal reels. No fumigation needed for export.",
     category: "Jumbo Reels",
-    image: jumboReel1,
+    image: jumboReelsNew,
     features: [
+      "Material: 100% Recyclable Plastic",
       "Flange Dia: 400mm",
       "Barrel Dia: 200mm",
       "Traverse: 200mm",
-      "Bore: 40mm"
+      "Bore: 40mm",
+      "Volume: 18.84 dm³"
     ]
   },
   {
     id: "jumbo-432",
     name: "Jumbo Reel 432mm",
-    description: "Enhanced capacity jumbo plastic reel for wire and cable applications.",
+    description: "High performance delivery reel for shipment of round, rectangular and core wires. 100% recyclable plastic — perfect replacement for wooden reels and metal reels. No fumigation needed for export.",
     category: "Jumbo Reels",
-    image: jumboReel2,
+    image: jumboReelsNew,
     features: [
+      "Material: 100% Recyclable Plastic",
       "Flange Dia: 432mm",
       "Barrel Dia: 200mm",
       "Traverse: 265mm",
-      "Bore: 40mm"
+      "Bore: 40mm",
+      "Volume: 30.50 dm³"
     ]
   },
   {
-    id: "jumbo-450-1",
-    name: "Jumbo Reel 450mm - Type 1",
-    description: "Large capacity jumbo plastic reel for industrial wire manufacturing.",
+    id: "jumbo-450",
+    name: "Jumbo Reel 450mm",
+    description: "High performance delivery reel for shipment of round, rectangular and core wires. 100% recyclable plastic — perfect replacement for wooden reels and metal reels. No fumigation needed for export.",
     category: "Jumbo Reels",
-    image: jumboReel3,
+    image: jumboReelsNew,
     features: [
+      "Material: 100% Recyclable Plastic",
       "Flange Dia: 450mm",
-      "Barrel Dia: 300mm",
+      "Barrel Dia: 200mm",
       "Traverse: 265mm",
-      "Bore: 40mm"
+      "Bore: 40mm",
+      "Volume: 33.80 dm³"
     ]
   },
   {
-    id: "jumbo-450-2",
-    name: "Jumbo Reel 450mm - Type 2",
-    description: "Alternative 450mm jumbo reel configuration for specialized applications.",
+    id: "jumbo-500",
+    name: "Jumbo Reel 500mm",
+    description: "High performance delivery reel for shipment of round, rectangular and core wires. 100% recyclable plastic — perfect replacement for wooden reels and metal reels. Available in 100–350kg wire packings.",
     category: "Jumbo Reels",
-    image: jumboReel9,
+    image: jumboReelsNew,
     features: [
-      "Flange Dia: 450mm",
-      "Barrel Dia: 280mm",
-      "Traverse: 225mm",
-      "Bore: 40mm"
-    ]
-  },
-  {
-    id: "jumbo-500-1",
-    name: "Jumbo Reel 500mm - Type 1",
-    description: "Extra large jumbo plastic reel for heavy-duty cable manufacturing.",
-    category: "Jumbo Reels",
-    image: jumboReel4,
-    features: [
+      "Material: 100% Recyclable Plastic",
       "Flange Dia: 500mm",
-      "Barrel Dia: 200mm, 250mm",
-      "Traverse: 265mm, 300mm",
-      "Bore: 40mm"
-    ]
-  },
-  {
-    id: "jumbo-500-2",
-    name: "Jumbo Reel 500mm - Type 2",
-    description: "Alternative 500mm jumbo reel for varied capacity requirements.",
-    category: "Jumbo Reels",
-    image: jumboReel10,
-    features: [
-      "Flange Dia: 500mm",
-      "Barrel Dia: 280mm",
-      "Traverse: 210mm",
-      "Bore: 40mm"
+      "Barrel Dia: 200mm / 250mm",
+      "Traverse: 265mm / 300mm",
+      "Bore: 40mm",
+      "Volume: 43.68 / 44.15 dm³"
     ]
   },
   {
     id: "jumbo-560",
     name: "Jumbo Reel 560mm",
-    description: "Heavy capacity jumbo plastic reel for large scale wire production.",
+    description: "High performance delivery reel for shipment of round, rectangular and core wires. 100% recyclable plastic — perfect replacement for wooden reels and metal reels. Available in 100–350kg wire packings.",
     category: "Jumbo Reels",
-    image: jumboReel5,
+    image: jumboReelsNew,
     features: [
+      "Material: 100% Recyclable Plastic",
       "Flange Dia: 560mm",
-      "Barrel Dia: 250mm, 315mm",
-      "Traverse: 250mm, 315mm",
-      "Bore: 40mm"
+      "Barrel Dia: 250mm / 315mm",
+      "Traverse: 250mm / 315mm",
+      "Bore: 40mm",
+      "Volume: 49.27 / 53.00 dm³"
     ]
   },
   {
     id: "jumbo-600",
     name: "Jumbo Reel 600mm",
-    description: "Maximum capacity jumbo plastic reel for industrial cable production.",
+    description: "High performance delivery reel for shipment of round, rectangular and core wires. 100% recyclable plastic — perfect replacement for wooden reels and metal reels. Available in 100–350kg wire packings.",
     category: "Jumbo Reels",
-    image: jumboReel6,
+    image: jumboReelsNew,
     features: [
+      "Material: 100% Recyclable Plastic",
       "Flange Dia: 600mm",
-      "Barrel Dia: 300mm",
+      "Barrel Dia: 315mm",
       "Traverse: 315mm",
-      "Bore: 40mm"
+      "Bore: 40mm",
+      "Volume: 64.48 dm³"
     ]
   },
   {
     id: "jumbo-630",
     name: "Jumbo Reel 630mm",
-    description: "Ultra-large capacity jumbo plastic reel for maximum volume wire applications.",
+    description: "High performance delivery reel for shipment of round, rectangular and core wires. 100% recyclable plastic — perfect replacement for wooden reels and metal reels. Available in 100–350kg wire packings.",
     category: "Jumbo Reels",
-    image: jumboReel7,
+    image: jumboReelsNew,
     features: [
+      "Material: 100% Recyclable Plastic",
       "Flange Dia: 630mm",
-      "Barrel Dia: 250mm, 315mm",
-      "Traverse: 250mm, 315mm",
-      "Bore: 40mm"
+      "Barrel Dia: 250mm / 315mm",
+      "Traverse: 250mm / 315mm",
+      "Bore: 40mm",
+      "Volume: 65.62 / 73.60 dm³"
     ]
   },
   {
     id: "jumbo-700",
     name: "Jumbo Reel 700mm",
-    description: "Largest capacity jumbo plastic reel for extreme volume wire applications.",
+    description: "Largest capacity jumbo plastic delivery reel. 100% recyclable plastic — perfect replacement for wooden reels and metal reels. Available in 100–350kg wire packings.",
     category: "Jumbo Reels",
-    image: jumboReel11,
+    image: jumboReelsNew,
     features: [
+      "Material: 100% Recyclable Plastic",
       "Flange Dia: 700mm",
-      "Barrel Dia: 250mm, 500mm",
-      "Traverse: 250mm, 500mm",
+      "Barrel Dia: 250mm / 500mm",
+      "Traverse: 250mm / 500mm",
       "Bore: 40mm"
     ]
   },
@@ -1394,7 +1554,7 @@ export const products: Product[] = [
     name: "MISC Reel 2/2\"",
     description: "Compact miscellaneous reel for various industrial applications. Durable construction with precise specifications.",
     category: "Misc Reels",
-    image: miscReel1,
+    image: miscReelsNew,
     features: [
       "Model: 2/2\"",
       "Flange: 60mm",
@@ -1409,7 +1569,7 @@ export const products: Product[] = [
     name: "MISC Connector Reel",
     description: "Versatile connector reel for specialized winding applications. Professional grade construction.",
     category: "Misc Reels",
-    image: miscReel2,
+    image: miscReelsNew,
     features: [
       "Model: Connector",
       "Flange: 50mm",
@@ -1599,10 +1759,10 @@ export const categories = Array.from(new Set(products.map(p => p.category)));
 export const categoryImages: Record<string, string> = {
   "Tapered Bobbins": taperedBobbinsNew,
   "Welding Wire": weldingWireNew,
-  "Composite Reels": compositeReelsNew,
+  "Composite Reels": compPfTc400,
   "EDM Wire": edmWireNew,
   "Stitching Wire": stitchingWireNew,
-  "DIN 46399": din46399New,
+  "Cylindrical Reels": cylindricalReelsNew,
   "Steel & Tinsel": steelTinselNew,
   "Aluminum Wire": aluminumWireNew,
   "Cable Delivery": cableDeliveryNew,

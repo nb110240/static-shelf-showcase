@@ -2,113 +2,173 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* ─── Design System: "Precision Blueprint" ──────────────────────────────────
+   Brand blue: #178fbe  ·  Copper accent: #c9956b  ·  Dark navy: #0a1628
+   Display: Syne (geometric, engineered)  ·  Body: Outfit (clean, modern)
+   Mono: IBM Plex Mono (technical specs)
+──────────────────────────────────────────────────────────────────────────── */
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
-    --foreground: 220 20% 15%;
+    --background: 210 25% 96%;
+    --foreground: 215 40% 12%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 20% 15%;
+    --card: 210 20% 98%;
+    --card-foreground: 215 40% 12%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 15%;
+    --popover: 210 20% 98%;
+    --popover-foreground: 215 40% 12%;
 
-    --primary: 200 85% 45%;
+    /* Brand primary — #178fbe */
+    --primary: 200 79% 42%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 15% 92%;
-    --secondary-foreground: 220 20% 15%;
-
-    --muted: 220 15% 95%;
-    --muted-foreground: 220 10% 45%;
-
-    --accent: 200 85% 45%;
+    /* Lighter brand accent — #39b9d6 */
+    --accent: 196 65% 52%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --secondary: 210 18% 90%;
+    --secondary-foreground: 215 40% 12%;
 
-    --border: 220 15% 88%;
-    --input: 220 15% 88%;
-    --ring: 200 85% 45%;
+    --muted: 210 16% 93%;
+    --muted-foreground: 215 15% 48%;
 
-    --radius: 0.75rem;
-    
-    --gradient-hero: linear-gradient(135deg, hsl(200 85% 45%), hsl(200 75% 55%));
-    --shadow-card: 0 4px 20px -4px hsl(220 20% 15% / 0.08);
-    --shadow-card-hover: 0 8px 30px -6px hsl(220 20% 15% / 0.15);
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --sidebar-background: 0 0% 98%;
+    --border: 210 18% 86%;
+    --input: 210 18% 86%;
+    --ring: 200 79% 42%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    --radius: 0.5rem;
 
-    --sidebar-primary: 240 5.9% 10%;
+    --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.04), 0 1px 2px -1px rgb(0 0 0 / 0.04);
+    --shadow-card-hover: 0 10px 40px -10px hsl(200 79% 42% / 0.15), 0 4px 12px -4px rgb(0 0 0 / 0.06);
 
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 220 25% 8%;
-    --foreground: 220 15% 95%;
-
-    --card: 220 20% 12%;
-    --card-foreground: 220 15% 95%;
-
-    --popover: 220 20% 12%;
-    --popover-foreground: 220 15% 95%;
-
-    --primary: 200 85% 55%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 220 20% 18%;
-    --secondary-foreground: 220 15% 95%;
-
-    --muted: 220 20% 16%;
-    --muted-foreground: 220 10% 60%;
-
-    --accent: 200 85% 55%;
-    --accent-foreground: 0 0% 100%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 220 20% 18%;
-    --input: 220 20% 18%;
-    --ring: 200 85% 55%;
-    
-    --gradient-hero: linear-gradient(135deg, hsl(200 85% 25%), hsl(200 75% 35%));
-    --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
-    --shadow-card-hover: 0 8px 30px -6px hsl(0 0% 0% / 0.5);
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-background: 210 20% 98%;
+    --sidebar-foreground: 215 40% 12%;
+    --sidebar-primary: 200 79% 42%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 210 18% 90%;
+    --sidebar-accent-foreground: 215 40% 12%;
+    --sidebar-border: 210 18% 86%;
+    --sidebar-ring: 200 79% 42%;
   }
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; font-size: 18px; }
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Outfit', system-ui, sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
+}
+
+/* ─── Typography ────────────────────────────────────────────────────────── */
+
+.font-display {
+  font-family: 'Syne', system-ui, sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.font-mono {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+/* ─── Blueprint dot-grid background ─────────────────────────────────────── */
+
+.bg-blueprint-grid {
+  background-image: radial-gradient(circle, hsl(200 79% 42% / 0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-blueprint-grid-dark {
+  background-image: radial-gradient(circle, hsl(200 79% 42% / 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* ─── Noise texture overlay ─────────────────────────────────────────────── */
+
+.noise-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ─── Animations ─────────────────────────────────────────────────────────── */
+
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .animate-fade-up-delay-1 { animation: fadeUp 0.7s 0.1s cubic-bezier(0.16, 1, 0.3, 1) both; }
+  .animate-fade-up-delay-2 { animation: fadeUp 0.7s 0.2s cubic-bezier(0.16, 1, 0.3, 1) both; }
+  .animate-fade-up-delay-3 { animation: fadeUp 0.7s 0.35s cubic-bezier(0.16, 1, 0.3, 1) both; }
+  .animate-fade-up-delay-4 { animation: fadeUp 0.7s 0.5s cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease both;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  /* Slide in from left */
+  .animate-slide-in-left {
+    animation: slideInLeft 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  @keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-40px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+
+  /* Scale reveal */
+  .animate-scale-in {
+    animation: scaleIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  @keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.92); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+}
+
+/* ─── Scrollbar styling ──────────────────────────────────────────────────── */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(200 79% 42% / 0.2);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(200 79% 42% / 0.35);
+}
+
+/* ─── Selection ──────────────────────────────────────────────────────────── */
+
+::selection {
+  background: hsl(200 79% 42% / 0.2);
+  color: hsl(215 40% 12%);
 }

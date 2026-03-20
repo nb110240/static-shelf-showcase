@@ -19,20 +19,14 @@ const searchFilters = [
 ];
 
 const ProductSearch = ({ searchTerm, onSearchChange, activeFilter, onFilterChange }: ProductSearchProps) => {
-  const handleFilterClick = (searchKey: string, label: string) => {
+  const handleFilterClick = (searchKey: string) => {
     if (activeFilter === searchKey) {
-      // If clicking the same filter, deactivate it
       onFilterChange(null);
       onSearchChange("");
     } else {
-      // Activate new filter and clear search
       onFilterChange(searchKey);
       onSearchChange("");
     }
-  };
-
-  const handleSearchChange = (value: string) => {
-    onSearchChange(value);
   };
 
   const clearFilter = () => {
@@ -45,19 +39,19 @@ const ProductSearch = ({ searchTerm, onSearchChange, activeFilter, onFilterChang
       const filter = searchFilters.find(f => f.searchKey === activeFilter);
       return `Search by ${filter?.label} (e.g., "400mm", "5 inch", "40mm")...`;
     }
-    return "Search by name, description, or specifications (e.g., '400mm', '5 inch', 'bore 40mm')...";
+    return "Search by name, description, or specifications...";
   };
 
   return (
     <div className="w-full max-w-2xl mx-auto mb-8">
       <div className="relative">
-        <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+        <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
         <Input
           type="text"
           placeholder={getPlaceholder()}
           value={searchTerm}
-          onChange={(e) => handleSearchChange(e.target.value)}
-          className="pl-11 pr-10 h-12 text-base"
+          onChange={(e) => onSearchChange(e.target.value)}
+          className="pl-11 pr-10 h-12 text-sm bg-card border-border rounded-lg focus:border-primary/40 focus:ring-primary/20"
         />
         {(searchTerm || activeFilter) && (
           <Button
@@ -70,26 +64,26 @@ const ProductSearch = ({ searchTerm, onSearchChange, activeFilter, onFilterChang
           </Button>
         )}
       </div>
-      
+
       {activeFilter && (
         <div className="mt-3 text-center">
-          <Badge variant="default" className="text-xs">
+          <Badge variant="default" className="text-[10px] tracking-wider">
             Searching by: {searchFilters.find(f => f.searchKey === activeFilter)?.label}
           </Badge>
         </div>
       )}
 
       <div className="flex flex-wrap gap-2 mt-3 justify-center">
-        <Badge variant="outline" className="text-xs pointer-events-none">
-          <Search className="h-3 w-3 mr-1" />
-          Click to filter by:
-        </Badge>
+        <span className="font-mono text-[10px] tracking-[0.15em] uppercase text-muted-foreground/60 flex items-center gap-1.5 pr-2">
+          <Search className="h-3 w-3" />
+          Filter by:
+        </span>
         {searchFilters.map((filter) => (
           <Badge
             key={filter.searchKey}
             variant={activeFilter === filter.searchKey ? "default" : "secondary"}
-            className="text-xs cursor-pointer hover:bg-primary hover:text-primary-foreground transition-colors"
-            onClick={() => handleFilterClick(filter.searchKey, filter.label)}
+            className="text-[10px] tracking-wider cursor-pointer hover:bg-primary hover:text-primary-foreground transition-colors"
+            onClick={() => handleFilterClick(filter.searchKey)}
           >
             {filter.label}
           </Badge>

@@ -1,85 +1,70 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Factory, Award, Globe } from "lucide-react";
-import heroProducts from "@/assets/hero-products.png";
+import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import logoWordmark from "@/assets/logo.png";
 
 const Hero = () => {
   return (
-    <section className="relative py-16 md:py-24 overflow-hidden">
-      {/* Gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-800 to-blue-900" />
-      
-      <div className="container relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left content */}
-          <div className="text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/90 text-sm font-medium mb-6 backdrop-blur-sm">
-              <Factory className="h-4 w-4" />
-              Trusted Industrial Partner Since 1995
-            </div>
-            
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white tracking-tight">
-              Bobbins India
-            </h1>
-            
-            <p className="text-lg md:text-xl text-white/80 max-w-xl mb-8 leading-relaxed">
-              Premier manufacturer of precision-engineered spools, bobbins, and reels for the cable and wire industry. Delivering quality solutions worldwide.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Button 
-                size="lg" 
-                className="gap-2 bg-white text-slate-900 hover:bg-white/90"
-                onClick={() => document.getElementById('catalog')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                View Product Catalog
-                <ArrowRight className="h-5 w-5" />
-              </Button>
-              <Button 
-                size="lg" 
-                className="gap-2 bg-white text-slate-900 hover:bg-white/90"
-                onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Learn More About Us
-              </Button>
-            </div>
-            
-            {/* Trust indicators */}
-            <div className="grid grid-cols-3 gap-4 pt-6 border-t border-white/20">
-              <div className="flex flex-col items-center gap-1">
-                <Factory className="h-5 w-5 text-blue-300" />
-                <span className="font-semibold text-white text-sm">30+ Years</span>
-                <span className="text-xs text-white/60">Experience</span>
-              </div>
-              <div className="flex flex-col items-center gap-1">
-                <Award className="h-5 w-5 text-blue-300" />
-                <span className="font-semibold text-white text-sm">ISO Certified</span>
-                <span className="text-xs text-white/60">Quality</span>
-              </div>
-              <div className="flex flex-col items-center gap-1">
-                <Globe className="h-5 w-5 text-blue-300" />
-                <span className="font-semibold text-white text-sm">Global</span>
-                <span className="text-xs text-white/60">Exports</span>
-              </div>
-            </div>
+    <section className="relative min-h-[92vh] flex items-center">
+      {/* Background image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: "url('/hero-main.png')" }}
+      />
+      {/* Dark overlay for text readability */}
+      <div className="absolute inset-0 bg-black/60" />
+
+      <div className="container relative z-10 pt-24 pb-20">
+        <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
+
+          {/* Eyebrow */}
+          <div className="animate-fade-up flex items-center gap-4 mb-8">
+            <div className="h-[2px] w-10 bg-[#178fbe]" />
+            <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-[#178fbe]">
+              Mumbai, India · Since 1995
+            </span>
+            <div className="h-[2px] w-10 bg-[#178fbe]" />
           </div>
-          
-          {/* Right image */}
-          <div className="relative flex justify-center lg:justify-end">
-            <img 
-              src={heroProducts} 
-              alt="Bobbins India - Various industrial spools and bobbins" 
-              className="max-w-full h-auto object-contain drop-shadow-2xl"
-            />
-          </div>
-        </div>
-        
-        {/* Tagline */}
-        <div className="text-center mt-12 pt-8 border-t border-white/10">
-          <p className="text-xl md:text-2xl text-blue-300 font-medium italic">
-            "We believe in Quality rather than Quantity"
+
+          <img
+            src={logoWordmark}
+            alt="Bobbins India"
+            className="animate-fade-up-delay-1 h-14 md:h-[4.5rem] w-auto object-contain mb-8"
+            style={{ filter: "brightness(0) saturate(100%) invert(100%)" }}
+          />
+
+          <p className="animate-fade-up-delay-2 text-white/75 text-base md:text-lg leading-[1.7] max-w-xl mb-12">
+            16 product categories. 100+ variants. Custom moulds developed in-house. The largest range of spools, bobbins and reels under one roof.
           </p>
+
+          <div className="animate-fade-up-delay-3 mb-16">
+            <Link
+              to="/products"
+              className="inline-flex items-center justify-center gap-3 px-10 py-4 bg-white text-black text-[11px] font-semibold tracking-[0.2em] uppercase rounded-sm hover:bg-primary hover:text-white transition-all duration-300 group"
+            >
+              View Catalog
+              <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+
+          {/* Technical stats strip */}
+          <div className="animate-fade-up-delay-4 flex items-center gap-6 md:gap-10">
+            {[
+              { val: "30+", lab: "Years" },
+              { val: "100+", lab: "Variants" },
+              { val: "ISO", lab: "Certified" },
+            ].map(({ val, lab }, i) => (
+              <div key={val} className="flex items-center gap-3">
+                {i > 0 && <div className="w-px h-8 bg-white/20" />}
+                <div className={i > 0 ? "pl-3" : ""}>
+                  <div className="font-display text-lg md:text-xl text-primary leading-none">{val}</div>
+                  <div className="font-mono text-[9px] tracking-[0.2em] uppercase text-white/50 mt-1">{lab}</div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
+
     </section>
   );
 };

@@ -1,65 +1,64 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Users, Cpu, Award } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
+import productCollage from "@/assets/home-studio.png";
+
+const highlights = [
+  "Largest range of spools under one roof",
+  "In-house tool design & mould shop for rapid custom development",
+  "Minimal lead times with maintained inventory",
+  "Exports to clients across India and worldwide",
+];
 
 const About = () => {
-  const features = [
-    {
-      icon: Users,
-      title: "OUR TEAM",
-      description: "Bobbinsindia contains mixed team of youth and experience, who have been working hand in hand to serve our clients well, and thus making this our greatest asset."
-    },
-    {
-      icon: Cpu,
-      title: "NEW TECHNOLOGY",
-      description: "Latest Technology is used by Bobbinsindia to manufacture flexible, durable and best quality spools."
-    },
-    {
-      icon: Award,
-      title: "USP",
-      description: "Bobbins India has its own tool designing and mould shop and is eager to develop any reel required by the industry."
-    }
-  ];
-
   return (
-    <section id="about" className="py-16 bg-muted/30">
-      <div className="container">
-        <div className="max-w-4xl mx-auto text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
-            Bobbinsindia an-insight
-          </h2>
-          <div className="text-muted-foreground space-y-4 text-left">
-            <p>
-              Bobbinsindia is a pioneer company in the field of spool manufacturing. The spools manufactured by us are used by the cable and wire industry. We have the largest range of spools under one roof. We believe in keeping adequate inventory of entire range of spools, reducing the lead time required in most cases to the minimum.
-            </p>
-            <p>
-              The promoters of Bobbinsindia have 25 years of experience in the field of spool manufacturing, thus enabling Bobbinsindia in producing spools of best quality.
-            </p>
-            <p>
-              Bobbinsindia is based in Andheri, Mumbai, and the financial capital of India.
-            </p>
-          </div>
+    <section id="about" className="relative py-28">
+      <div className="absolute inset-0 bg-blueprint-grid" />
+
+      <div className="container relative">
+        {/* Section label */}
+        <div className="flex items-center gap-4 mb-5">
+          <div className="h-[2px] w-10 bg-[#178fbe]" />
+          <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-[#178fbe]">
+            Who We Are
+          </span>
         </div>
 
-        <h3 className="text-2xl md:text-3xl font-bold text-center mb-8 text-foreground">
-          We'll give your business chance to grow!
-        </h3>
+        <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div>
+            <h2 className="font-display text-[clamp(1.4rem,3vw,2.2rem)] leading-[1.2] tracking-wider text-foreground mb-8">
+              PIONEER IN<br />
+              <span className="text-primary">SPOOL MANUFACTURING</span>
+            </h2>
+            <p className="text-muted-foreground text-sm leading-[1.8] mb-5">
+              Bobbinsindia is a pioneer company in the field of spool manufacturing. Our spools are trusted by cable and wire manufacturers globally. We maintain the largest range under one roof to minimise lead times and maximise reliability.
+            </p>
+            <p className="text-muted-foreground text-sm leading-[1.8] mb-10">
+              We operate our own tool design and mould shop — enabling rapid development of custom reels tailored to your exact specifications. This in-house capability is what sets us apart from every other spool manufacturer.
+            </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {features.map((feature, index) => (
-            <Card key={index} className="border-border">
-              <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-accent/10 flex items-center justify-center">
-                  <feature.icon className="h-8 w-8 text-accent" />
-                </div>
-                <h4 className="text-lg font-semibold mb-3 text-accent uppercase tracking-wide">
-                  {feature.title}
-                </h4>
-                <p className="text-sm text-muted-foreground">
-                  {feature.description}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
+            <ul className="space-y-4">
+              {highlights.map((item) => (
+                <li key={item} className="flex items-center gap-3">
+                  <div className="w-5 h-5 rounded-sm bg-primary/10 flex items-center justify-center shrink-0">
+                    <CheckCircle2 className="h-3 w-3 text-primary" />
+                  </div>
+                  <span className="text-sm text-foreground/75">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Product range image */}
+          <div className="relative rounded-lg overflow-hidden border border-border bg-white">
+            <img
+              src={productCollage}
+              alt="Bobbins India product range — spools, bobbins and reels"
+              className="w-full h-full object-contain p-8 min-h-[360px]"
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-white to-transparent pt-12 pb-5 px-6 text-center">
+              <span className="font-display text-2xl text-foreground tracking-wider">30+</span>
+              <span className="font-mono text-[10px] text-muted-foreground uppercase tracking-[0.2em] ml-2">Years of Expertise</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
