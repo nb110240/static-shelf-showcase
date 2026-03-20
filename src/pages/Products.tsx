@@ -1,5 +1,6 @@
 import { useState, useMemo, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
+import { ChevronDown, ChevronUp, HelpCircle } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import EnquiryForm from "@/components/EnquiryForm";
@@ -7,6 +8,7 @@ import CategorySection from "@/components/CategorySection";
 import ProductDetail from "@/components/ProductDetail";
 import ProductSearch from "@/components/ProductSearch";
 import CategoryFilter from "@/components/CategoryFilter";
+import ProductFinder from "@/components/ProductFinder";
 import { products, categories, categoryImages } from "@/data/products";
 import { Product } from "@/types/product";
 
@@ -14,6 +16,7 @@ const Products = () => {
   const [searchParams] = useSearchParams();
   const initialCategory = searchParams.get("category") ?? "All";
 
+  const [finderOpen, setFinderOpen] = useState(false);
   const [selectedProduct, setSelectedProduct]     = useState<Product | null>(null);
   const [selectedCategory, setSelectedCategory]   = useState<string>(
     categories.includes(initialCategory) ? initialCategory : "All"
@@ -83,6 +86,28 @@ const Products = () => {
       {/* Catalog */}
       <section id="catalog" className="py-16">
         <div className="container">
+          {/* Collapsible Product Finder */}
+          <div className="mb-8">
+            <button
+              onClick={() => setFinderOpen(!finderOpen)}
+              className="flex items-center gap-2 text-[11px] font-medium tracking-[0.14em] uppercase text-primary hover:text-primary/80 transition-colors py-2"
+              style={{ fontFamily: "'IBM Plex Mono', monospace" }}
+            >
+              <HelpCircle className="h-3.5 w-3.5" />
+              Need help finding the right reel?
+              {finderOpen ? (
+                <ChevronUp className="h-3.5 w-3.5" />
+              ) : (
+                <ChevronDown className="h-3.5 w-3.5" />
+              )}
+            </button>
+            {finderOpen && (
+              <div className="mt-2 -mx-4 sm:-mx-6 lg:-mx-8">
+                <ProductFinder />
+              </div>
+            )}
+          </div>
+
           <ProductSearch
             searchTerm={searchTerm}
             onSearchChange={setSearchTerm}

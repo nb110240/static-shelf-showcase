@@ -1,6 +1,6 @@
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { useEffect } from "react";
-import { Check, MessageCircle, ArrowLeft } from "lucide-react";
+import { Check, MessageCircle, ArrowLeft, Package } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { products } from "@/data/products";
@@ -26,6 +26,10 @@ const ProductPage = () => {
 
   const whatsAppUrl = `https://wa.me/919820712083?text=${encodeURIComponent(
     `Hi, I'd like to enquire about: ${product.name}`
+  )}`;
+
+  const sampleWhatsAppUrl = `https://wa.me/919820712083?text=${encodeURIComponent(
+    `Hi, I'd like to request a sample of: ${product.name}\nCategory: ${product.category}\n\nShipping details:\nName: \nCompany: \nAddress: `
   )}`;
 
   return (
@@ -131,16 +135,27 @@ const ProductPage = () => {
                 </ul>
               </div>
 
-              {/* WhatsApp CTA */}
-              <a
-                href={whatsAppUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-[11px] font-semibold tracking-[0.16em] uppercase rounded-sm bg-[#25D366] text-white hover:bg-[#1ebe57] transition-all duration-300 w-full sm:w-auto"
-              >
-                <MessageCircle className="h-4 w-4" />
-                Enquire on WhatsApp
-              </a>
+              {/* CTA Buttons */}
+              <div className="flex flex-col gap-3 w-full sm:w-auto">
+                <a
+                  href={whatsAppUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-[11px] font-semibold tracking-[0.16em] uppercase rounded-sm bg-[#25D366] text-white hover:bg-[#1ebe57] transition-all duration-300 w-full"
+                >
+                  <MessageCircle className="h-4 w-4" />
+                  Enquire on WhatsApp
+                </a>
+                <a
+                  href={sampleWhatsAppUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-[11px] font-semibold tracking-[0.16em] uppercase rounded-sm border border-primary/20 text-primary hover:border-primary/40 hover:bg-primary/5 transition-all duration-300 w-full"
+                >
+                  <Package className="h-4 w-4" />
+                  Request Sample
+                </a>
+              </div>
             </div>
           </div>
         </div>
