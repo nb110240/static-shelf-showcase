@@ -1,14 +1,17 @@
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { useEffect } from "react";
-import { Check, MessageCircle, ArrowLeft, Package } from "lucide-react";
+import { Check, MessageCircle, ArrowLeft, Package, GitCompareArrows } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { products } from "@/data/products";
 import { Product } from "@/types/product";
+import { useCompare } from "@/hooks/useCompare";
+import { toast } from "sonner";
 
 const ProductPage = () => {
   const { productId } = useParams<{ productId: string }>();
   const navigate = useNavigate();
+  const { addToCompare, removeFromCompare, isInCompare } = useCompare();
 
   const product = products.find((p) => p.id === productId);
 
@@ -155,6 +158,31 @@ const ProductPage = () => {
                   <Package className="h-4 w-4" />
                   Request Sample
                 </a>
+                <button
+                  onClick={() => {
+                    if (isInCompare(product.id)) {
+                      removeFromCompare(product.id);
+                    } else {
+                      const added = addToCompare(product.id);
+                      if (!added) {
+                        toast("Maximum 3 products for comparison", {
+                          description: "Remove a product before adding another.",
+                        });
+                      }
+                    }
+                  }}
+                  className={`inline-flex items-center justify-center gap-2 px-6 py-3.5 text-[11px] font-semibold tracking-[0.16em] uppercase rounded-sm transition-all duration-300 w-full ${
+                    isInCompare(product.id)
+                      ? "border-2 border-[#178fbe] text-[#178fbe] bg-[#178fbe]/5"
+                      : "border border-border text-muted-foreground hover:border-primary/40 hover:text-primary hover:bg-primary/5"
+                  }`}
+                >
+                  {isInCompare(product.id) ? (
+                    <><Check className="h-4 w-4" /> Added to Compare</>
+                  ) : (
+                    <><GitCompareArrows className="h-4 w-4" /> Add to Compare</>
+                  )}
+                </button>
               </div>
             </div>
           </div>

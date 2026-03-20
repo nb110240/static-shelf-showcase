@@ -1,7 +1,9 @@
 import { Product } from "@/types/product";
-import { Eye, ChevronDown, ChevronUp, MessageCircle } from "lucide-react";
+import { Eye, ChevronDown, ChevronUp, MessageCircle, Check, GitCompareArrows } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useCompare } from "@/hooks/useCompare";
+import { toast } from "sonner";
 
 interface CategorySectionProps {
   categoryName: string;
@@ -20,6 +22,7 @@ function extractSpec(features: string[], key: string): string | null {
 const CategorySection = ({ categoryName, products, categoryImage, onViewDetails }: CategorySectionProps) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const navigate = useNavigate();
+  const { addToCompare, removeFromCompare, isInCompare } = useCompare();
   const displayedProducts = isExpanded ? products : products.slice(0, 6);
   const hasMore = products.length > 6;
 
@@ -118,6 +121,32 @@ const CategorySection = ({ categoryName, products, categoryImage, onViewDetails 
                   >
                     <Eye className="h-3 w-3" />
                     Details
+                  </button>
+                  <button
+                    className={`flex items-center justify-center gap-1.5 text-[10px] font-medium transition-colors py-2 px-3 tracking-wider uppercase rounded-sm ${
+                      isInCompare(product.id)
+                        ? "border-2 border-[#178fbe] text-[#178fbe] bg-[#178fbe]/5"
+                        : "border border-border text-muted-foreground hover:border-primary/40 hover:text-primary"
+                    }`}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      if (isInCompare(product.id)) {
+                        removeFromCompare(product.id);
+                      } else {
+                        const added = addToCompare(product.id);
+                        if (!added) {
+                          toast("Maximum 3 products for comparison", {
+                            description: "Remove a product before adding another.",
+                          });
+                        }
+                      }
+                    }}
+                  >
+                    {isInCompare(product.id) ? (
+                      <><Check className="h-3 w-3" /> Added</>
+                    ) : (
+                      <><GitCompareArrows className="h-3 w-3" /> Compare</>
+                    )}
                   </button>
                   <a
                     href={`https://wa.me/919820712083?text=${encodeURIComponent(`Hi, I'd like to enquire about: ${product.name}`)}`}
