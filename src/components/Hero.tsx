@@ -25,6 +25,7 @@ const Hero = () => {
             <div className="h-[2px] w-10 bg-[#178fbe]" />
           </div>
 
+          <h1 className="sr-only">Bobbins India — Precision Spools & Reels Manufacturer</h1>
           <img
             src={logoWordmark}
             alt="Bobbins India"
