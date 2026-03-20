@@ -74,7 +74,7 @@ const Header = () => {
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-8">
           {NAV.map((link) => {
-            const cls = `relative text-[11px] font-medium tracking-[0.18em] uppercase transition-colors group/nav ${
+            const cls = `relative py-3 text-[11px] font-medium tracking-[0.18em] uppercase transition-colors group/nav ${
               scrolled
                 ? "text-foreground/50 hover:text-foreground"
                 : "text-white/60 hover:text-white"
