@@ -97,19 +97,19 @@ const Footer = () => {
           <p className="font-mono text-[10px] tracking-[0.1em] text-background/30">
             &copy; {new Date().getFullYear()} Bobbins India. All rights reserved.
           </p>
-          <div className="flex items-center gap-8">
-            <a href="#about" className="text-[10px] text-background/40 hover:text-background transition-colors uppercase tracking-[0.15em]">
+          <div className="flex items-center gap-4 md:gap-8">
+            <a href="#about" className="py-2 px-1 text-[10px] text-background/40 hover:text-background transition-colors uppercase tracking-[0.15em]">
               Company
             </a>
-            <Link to="/products" className="text-[10px] text-background/40 hover:text-background transition-colors uppercase tracking-[0.15em]">
+            <Link to="/products" className="py-2 px-1 text-[10px] text-background/40 hover:text-background transition-colors uppercase tracking-[0.15em]">
               Products
             </Link>
-            <a href="#contact" className="text-[10px] text-background/40 hover:text-background transition-colors uppercase tracking-[0.15em]">
+            <a href="#contact" className="py-2 px-1 text-[10px] text-background/40 hover:text-background transition-colors uppercase tracking-[0.15em]">
               Contact
             </a>
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className="flex items-center gap-1.5 text-[10px] text-background/40 hover:text-background transition-colors uppercase tracking-[0.15em]"
+              className="flex items-center gap-1.5 py-2 px-1 text-[10px] text-background/40 hover:text-background transition-colors uppercase tracking-[0.15em]"
             >
               <ArrowUp className="h-3 w-3" />
               Top
