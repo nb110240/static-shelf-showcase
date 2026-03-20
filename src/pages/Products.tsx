@@ -2,6 +2,7 @@ import { useState, useMemo, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import EnquiryForm from "@/components/EnquiryForm";
 import CategorySection from "@/components/CategorySection";
 import ProductDetail from "@/components/ProductDetail";
 import ProductSearch from "@/components/ProductSearch";
@@ -145,6 +146,7 @@ const Products = () => {
         onClose={() => setSelectedProduct(null)}
       />
 
+      <EnquiryForm />
       <Footer />
     </div>
   );

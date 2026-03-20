@@ -30,7 +30,7 @@ import steelTinselNew from "@/assets/steel-tinsel-studio.jpg";
 import aluminumWireNew from "@/assets/aluminum-wire-new.jpg";
 import aluminumReel200 from "@/assets/aluminum-reel-200.jpg";
 import aluminumReel320 from "@/assets/aluminum-reel-320.jpg";
-import cableDeliveryNew from "@/assets/cable-delivery-reels.png";
+import cableDeliveryNew from "@/assets/cable-delivery-reels.webp";
 import superToughNew from "@/assets/super-tough-new.jpg";
 import superTough1 from "@/assets/super-tough-1.jpg";
 import superTough2 from "@/assets/super-tough-2.jpg";

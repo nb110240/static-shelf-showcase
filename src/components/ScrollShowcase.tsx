@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 import imgSuperTough    from "@/assets/super-tough-1.jpg";
 import imgJumbo         from "@/assets/jumbo-reels-studio.jpg";
-import imgCableDelivery from "@/assets/cable-delivery-reels.png";
+import imgCableDelivery from "@/assets/cable-delivery-reels.webp";
 import imgIsi           from "@/assets/isi-reels-studio.jpg";
 import imgDin           from "@/assets/cylindrical-reels-studio.jpg";
 import imgComposite     from "@/assets/composite/pf-tc-400.jpg";
@@ -81,6 +81,71 @@ function CornerTick({ pos }: { pos: "tl" | "tr" | "bl" | "br" }) {
         borderRight:  pos.endsWith("r")   ? "2px solid #178fbe" : "none",
       }}
     />
+  );
+}
+
+function MobileCategoryGrid() {
+  return (
+    <div className="md:hidden py-12 px-4" style={{ background: "#f0f4f8" }}>
+      {/* Eyebrow */}
+      <div className="flex items-center gap-4 mb-6 px-2">
+        <div className="h-[2px] w-8" style={{ background: "#178fbe" }} />
+        <span
+          className="text-[10px] tracking-[0.3em] uppercase"
+          style={{ color: "#178fbe", fontFamily: "'IBM Plex Mono', monospace" }}
+        >
+          Product Showcase
+        </span>
+      </div>
+      <h2
+        className="px-2 mb-8"
+        style={{
+          fontSize: "1.75rem",
+          lineHeight: 1.1,
+          color: "#0d3548",
+          letterSpacing: "0.04em",
+          fontFamily: "'Syne', system-ui, sans-serif",
+          fontWeight: 800,
+          textTransform: "uppercase",
+        }}
+      >
+        Browse by Category
+      </h2>
+
+      <div className="grid grid-cols-2 gap-3">
+        {PHASES.map((phase, i) => (
+          <Link
+            key={phase.category}
+            to={`/products?category=${encodeURIComponent(phase.category)}`}
+            className="relative rounded-lg border border-black/[0.06] overflow-hidden group"
+          >
+            <div className="aspect-[4/3] bg-[#e8ecf0]">
+              <img
+                src={FRAME_SRCS[i]}
+                alt={phase.category}
+                loading="lazy"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            {/* Text overlay at bottom */}
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent pt-10 pb-3 px-3">
+              <span
+                className="block text-[9px] tracking-[0.2em] uppercase mb-0.5"
+                style={{ fontFamily: "'IBM Plex Mono', monospace", color: "#178fbe" }}
+              >
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <span
+                className="block text-sm text-white leading-tight"
+                style={{ fontFamily: "'Syne', system-ui, sans-serif", fontWeight: 700 }}
+              >
+                {phase.category}
+              </span>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </div>
   );
 }
 
@@ -201,7 +266,9 @@ export default function ScrollShowcase() {
   };
 
   return (
-    <div ref={containerRef} style={{ height: "700vh" }} className="relative">
+    <>
+    <MobileCategoryGrid />
+    <div ref={containerRef} style={{ height: "700vh" }} className="relative hidden md:block">
 
       {/* ── Sticky viewport ──────────────────────────────────────── */}
       <div className="sticky top-0 h-screen overflow-hidden" style={{ background: "#f0f4f8" }}>
@@ -382,6 +449,7 @@ export default function ScrollShowcase() {
 
       {loaded && <VertBarSync progressRef={progressRef} />}
     </div>
+    </>
   );
 }
 

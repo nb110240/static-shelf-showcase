@@ -1,6 +1,7 @@
 import { Product } from "@/types/product";
 import { Eye, ChevronDown, ChevronUp, MessageCircle } from "lucide-react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 interface CategorySectionProps {
   categoryName: string;
@@ -18,6 +19,7 @@ function extractSpec(features: string[], key: string): string | null {
 
 const CategorySection = ({ categoryName, products, categoryImage, onViewDetails }: CategorySectionProps) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const navigate = useNavigate();
   const displayedProducts = isExpanded ? products : products.slice(0, 6);
   const hasMore = products.length > 6;
 
@@ -57,7 +59,7 @@ const CategorySection = ({ categoryName, products, categoryImage, onViewDetails 
             <div
               key={product.id}
               className="rounded-lg border border-border bg-card hover:border-primary/25 hover:shadow-[var(--shadow-card-hover)] transition-all duration-300 cursor-pointer group overflow-hidden"
-              onClick={() => onViewDetails(product)}
+              onClick={() => navigate(`/products/${product.id}`)}
             >
               {/* Image */}
               <div className="aspect-[4/3] overflow-hidden bg-[#f3f5f7]">

@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import ScrollShowcase from "@/components/ScrollShowcase";
 import About from "@/components/About";
 import Footer from "@/components/Footer";
+import EnquiryForm from "@/components/EnquiryForm";
 
 const Index = () => {
   return (
@@ -14,6 +15,7 @@ const Index = () => {
       <ScrollShowcase />
       <div style={{ overflowX: "clip" }}>
         <About />
+        <EnquiryForm />
         <Footer />
       </div>
     </div>
