@@ -274,7 +274,7 @@ export default function ScrollShowcase() {
                     </p>
                     <button
                       onClick={() => goToProducts(phase.category)}
-                      className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase transition-opacity hover:opacity-70"
+                      className="inline-flex items-center gap-2 py-3 text-xs font-semibold tracking-widest uppercase transition-opacity hover:opacity-70"
                       style={{ color: "#178fbe", fontFamily: "'IBM Plex Mono', monospace" }}
                     >
                       View Collection
