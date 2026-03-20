@@ -224,10 +224,10 @@ export default function ScrollShowcase() {
         )}
 
         {loaded && (
-          <div className="absolute inset-0 flex items-center px-8 md:px-16 lg:px-24 z-10">
+          <div className="absolute inset-0 flex flex-col md:flex-row items-center px-6 md:px-16 lg:px-24 z-10">
 
             {/* ── Left: editorial text ────────────────────────── */}
-            <div className="relative flex flex-col justify-center w-full md:w-2/5 lg:w-[38%] pr-4 md:pr-12 shrink-0 z-20">
+            <div className="relative flex flex-col justify-center w-full md:w-2/5 lg:w-[38%] pt-20 md:pt-0 pr-0 md:pr-12 shrink-0 z-20">
 
               {/* Eyebrow */}
               <div className="flex items-center gap-4 mb-8" style={{ fontFamily: "'IBM Plex Mono', monospace" }}>
@@ -242,7 +242,7 @@ export default function ScrollShowcase() {
                 <span
                   ref={counterRef}
                   className="leading-none"
-                  style={{ fontSize: "clamp(4rem, 10vw, 7.5rem)", fontWeight: 300, color: "#178fbe", letterSpacing: "-0.02em", fontFamily: "'IBM Plex Mono', monospace" }}
+                  style={{ fontSize: "clamp(2.5rem, 8vw, 7.5rem)", fontWeight: 300, color: "#178fbe", letterSpacing: "-0.02em", fontFamily: "'IBM Plex Mono', monospace" }}
                 >
                   01
                 </span>
@@ -252,7 +252,7 @@ export default function ScrollShowcase() {
               </div>
 
               {/* Phase text */}
-              <div className="relative" style={{ height: "clamp(6rem, 14vw, 11rem)" }}>
+              <div className="relative" style={{ height: "clamp(8rem, 14vw, 11rem)" }}>
                 {PHASES.map((phase, i) => (
                   <div
                     key={i}
@@ -296,10 +296,10 @@ export default function ScrollShowcase() {
             </div>
 
             {/* ── Right: canvas ───────────────────────────────── */}
-            <div className="relative flex-1 flex items-center justify-center md:justify-end">
+            <div className="relative flex-1 flex items-center justify-center md:justify-end mt-4 md:mt-0">
               <div
                 className="relative"
-                style={{ width: "clamp(240px, 52vmin, 520px)", height: "clamp(240px, 52vmin, 520px)" }}
+                style={{ width: "clamp(180px, 45vmin, 520px)", height: "clamp(180px, 45vmin, 520px)" }}
               >
                 <CornerTick pos="tl" />
                 <CornerTick pos="tr" />
