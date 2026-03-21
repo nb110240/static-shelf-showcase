@@ -1,5 +1,5 @@
 import { CheckCircle2 } from "lucide-react";
-import productCollage from "@/assets/home-studio.png";
+import productCollage from "@/assets/home-studio.webp";
 
 const highlights = [
   "Largest range of spools under one roof",
@@ -52,6 +52,7 @@ const About = () => {
             <img
               src={productCollage}
               alt="Bobbins India product range — spools, bobbins and reels"
+              loading="lazy"
               className="w-full h-full object-contain p-8 min-h-[360px]"
             />
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-white to-transparent pt-12 pb-5 px-6 text-center">

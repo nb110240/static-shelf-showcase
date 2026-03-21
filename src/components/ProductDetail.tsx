@@ -1,5 +1,6 @@
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Product } from "@/types/product";
+import { WHATSAPP_PHONE } from "@/lib/constants";
 import { Check, MessageCircle, ArrowRight } from "lucide-react";
 
 interface ProductDetailProps {
@@ -61,7 +62,7 @@ const ProductDetail = ({ product, open, onClose }: ProductDetailProps) => {
 
             <div className="mt-auto pt-5 border-t border-border">
               <a
-                href={`https://wa.me/919820712083?text=${encodeURIComponent(`Hi, I'd like to enquire about: ${product?.name || "your products"}`)}`}
+                href={`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(`Hi, I'd like to enquire about: ${product?.name || "your products"}`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-3 w-full px-6 py-3.5 bg-[#25D366] text-white text-[11px] font-semibold tracking-[0.2em] uppercase rounded-sm hover:bg-[#1ebe57] transition-all duration-300 group"

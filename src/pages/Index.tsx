@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ProductFinder from "@/components/ProductFinder";
@@ -9,6 +10,7 @@ import EnquiryForm from "@/components/EnquiryForm";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet><title>Bobbins India | Precision Spools & Reels Manufacturer</title></Helmet>
       <div style={{ overflowX: "clip" }}>
         <Header />
         <Hero />

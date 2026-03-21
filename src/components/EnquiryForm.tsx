@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ArrowRight, MessageCircle } from "lucide-react";
+import { WHATSAPP_PHONE } from "@/lib/constants";
 
 const EnquiryForm = () => {
   const [form, setForm] = useState({
@@ -29,7 +30,7 @@ const EnquiryForm = () => {
       .filter((l) => l !== null)
       .join("\n");
 
-    const url = `https://wa.me/919820712083?text=${encodeURIComponent(lines)}`;
+    const url = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(lines)}`;
     window.open(url, "_blank", "noopener,noreferrer");
   };
 

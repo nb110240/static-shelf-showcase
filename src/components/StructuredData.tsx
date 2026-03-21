@@ -2,7 +2,7 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Bobbins India",
-  url: "https://static-shelf-showcase.vercel.app",
+  url: "https://bobbinsindia.net",
   description:
     "India's leading manufacturer of precision plastic reels, bobbins, and spools for the cable & wire industry since 1995.",
   foundingDate: "1995",

@@ -1,4 +1,5 @@
 import { Product } from "@/types/product";
+import { WHATSAPP_PHONE } from "@/lib/constants";
 import { Eye, ChevronDown, ChevronUp, MessageCircle, Check, GitCompareArrows } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -149,7 +150,7 @@ const CategorySection = ({ categoryName, products, categoryImage, onViewDetails 
                     )}
                   </button>
                   <a
-                    href={`https://wa.me/919820712083?text=${encodeURIComponent(`Hi, I'd like to enquire about: ${product.name}`)}`}
+                    href={`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(`Hi, I'd like to enquire about: ${product.name}`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-1.5 text-[10px] font-medium text-white bg-[#25D366] hover:bg-[#1ebe57] transition-colors py-2 px-3 tracking-wider uppercase rounded-sm"

@@ -1,5 +1,6 @@
 import { Mail, Phone, MapPin, ArrowUp, ArrowRight, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
+import { WHATSAPP_PHONE } from "@/lib/constants";
 
 const Footer = () => {
   return (
@@ -29,7 +30,7 @@ const Footer = () => {
                 Need a specific reel or a custom mould? Tell us your requirements and our team will respond within 24 hours.
               </p>
               <a
-                href="https://wa.me/919820712083?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20products."
+                href={`https://wa.me/${WHATSAPP_PHONE}?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20products.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-8 py-4 bg-[#25D366] text-white text-[11px] font-semibold tracking-[0.2em] uppercase rounded-sm hover:bg-[#1ebe57] transition-all duration-300 group"

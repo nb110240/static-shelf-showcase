@@ -1,8 +1,10 @@
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { Check, MessageCircle, ArrowLeft, Package, GitCompareArrows } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { WHATSAPP_PHONE } from "@/lib/constants";
 import { products } from "@/data/products";
 import { Product } from "@/types/product";
 import { useCompare } from "@/hooks/useCompare";
@@ -27,16 +29,17 @@ const ProductPage = () => {
     .filter((p) => p.category === product.category && p.id !== product.id)
     .slice(0, 3);
 
-  const whatsAppUrl = `https://wa.me/919820712083?text=${encodeURIComponent(
+  const whatsAppUrl = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(
     `Hi, I'd like to enquire about: ${product.name}`
   )}`;
 
-  const sampleWhatsAppUrl = `https://wa.me/919820712083?text=${encodeURIComponent(
+  const sampleWhatsAppUrl = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(
     `Hi, I'd like to request a sample of: ${product.name}\nCategory: ${product.category}\n\nShipping details:\nName: \nCompany: \nAddress: `
   )}`;
 
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
+      <Helmet><title>{product.name} | Bobbins India</title></Helmet>
       <Header />
 
       {/* Breadcrumb */}

@@ -1,4 +1,5 @@
 import { useState, useMemo, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { useSearchParams } from "react-router-dom";
 import { ChevronDown, ChevronUp, HelpCircle } from "lucide-react";
 import Header from "@/components/Header";
@@ -10,6 +11,7 @@ import ProductSearch from "@/components/ProductSearch";
 import CategoryFilter from "@/components/CategoryFilter";
 import ProductFinder from "@/components/ProductFinder";
 import { products, categories, categoryImages } from "@/data/products";
+import { WHATSAPP_PHONE } from "@/lib/constants";
 import { Product } from "@/types/product";
 
 const Products = () => {
@@ -59,6 +61,7 @@ const Products = () => {
 
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
+      <Helmet><title>Product Catalog | Bobbins India</title></Helmet>
       <Header />
 
       {/* Page hero */}
@@ -152,7 +155,7 @@ const Products = () => {
                   View All Products
                 </button>
                 <a
-                  href="https://wa.me/919820712083?text=Hi%2C%20I%27m%20looking%20for%20a%20specific%20product.%20Can%20you%20help%3F"
+                  href={`https://wa.me/${WHATSAPP_PHONE}?text=Hi%2C%20I%27m%20looking%20for%20a%20specific%20product.%20Can%20you%20help%3F`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 px-5 py-2.5 text-[11px] font-semibold tracking-[0.16em] uppercase rounded-sm bg-[#25D366] text-white hover:bg-[#1ebe57] transition-all duration-300"
