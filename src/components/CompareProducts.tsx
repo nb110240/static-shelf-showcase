@@ -1,7 +1,7 @@
 import { useCompare } from "@/hooks/useCompare";
 import { products } from "@/data/products";
 import { Product } from "@/types/product";
-import { WHATSAPP_PHONE } from "@/lib/constants";
+import { whatsappUrl } from "@/lib/constants";
 import { X, Plus, MessageCircle, Search } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useMemo } from "react";
@@ -188,7 +188,7 @@ const CompareProducts = () => {
   const whatsAppMessage = `Hi, I'd like to compare and enquire about these products:\n${selectedProducts
     .map((p) => `- ${p.name} (${p.category})`)
     .join("\n")}`;
-  const whatsAppUrl = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(whatsAppMessage)}`;
+  const whatsAppUrl = whatsappUrl(whatsAppMessage);
 
   // Empty state
   if (selectedProducts.length === 0) {

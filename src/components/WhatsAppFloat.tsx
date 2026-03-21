@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { MessageCircle } from "lucide-react";
 import { useLocation } from "react-router-dom";
-import { WHATSAPP_PHONE } from "@/lib/constants";
+import { whatsappUrl } from "@/lib/constants";
 
 const WhatsAppFloat = () => {
   const [visible, setVisible] = useState(true);
@@ -27,7 +27,7 @@ const WhatsAppFloat = () => {
 
   return (
     <a
-      href={`https://wa.me/${WHATSAPP_PHONE}?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20products.`}
+      href={whatsappUrl("Hi, I'd like to enquire about your products.")}
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg hover:bg-[#1ebe57] transition-colors duration-300 animate-pulse-subtle"

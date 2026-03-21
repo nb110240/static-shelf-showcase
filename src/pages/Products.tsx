@@ -11,7 +11,7 @@ import ProductSearch from "@/components/ProductSearch";
 import CategoryFilter from "@/components/CategoryFilter";
 import ProductFinder from "@/components/ProductFinder";
 import { products, categories, categoryImages } from "@/data/products";
-import { WHATSAPP_PHONE, SITE_URL } from "@/lib/constants";
+import { whatsappUrl, SITE_URL } from "@/lib/constants";
 import { Product } from "@/types/product";
 
 const Products = () => {
@@ -162,7 +162,7 @@ const Products = () => {
                   View All Products
                 </button>
                 <a
-                  href={`https://wa.me/${WHATSAPP_PHONE}?text=Hi%2C%20I%27m%20looking%20for%20a%20specific%20product.%20Can%20you%20help%3F`}
+                  href={whatsappUrl("Hi, I'm looking for a specific product. Can you help?")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 px-5 py-2.5 text-[11px] font-semibold tracking-[0.16em] uppercase rounded-sm bg-[#25D366] text-white hover:bg-[#1ebe57] transition-all duration-300"

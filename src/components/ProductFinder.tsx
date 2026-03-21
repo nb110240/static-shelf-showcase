@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Check, RotateCcw, MessageCircle } from "lucide-react";
-import { WHATSAPP_PHONE } from "@/lib/constants";
+import { whatsappUrl } from "@/lib/constants";
 import { products } from "@/data/products";
 import { Product } from "@/types/product";
 
@@ -369,7 +369,7 @@ const ProductFinder = () => {
                     Browse All Products
                   </Link>
                   <a
-                    href={`https://wa.me/${WHATSAPP_PHONE}?text=Hi%2C%20I%20need%20help%20finding%20the%20right%20reel.%20Can%20you%20help%3F`}
+                    href={whatsappUrl("Hi, I need help finding the right reel. Can you help?")}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 px-5 py-2.5 text-[11px] font-semibold tracking-[0.16em] uppercase rounded-sm bg-[#25D366] text-white hover:bg-[#1ebe57] transition-all duration-300"
