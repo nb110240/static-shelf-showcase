@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CompareProducts from "@/components/CompareProducts";
@@ -17,6 +18,9 @@ const ComparePage = () => {
 
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
+      <Helmet>
+        <meta name="robots" content="noindex" />
+      </Helmet>
       <Header />
       <div className="pt-20">
         <CompareProducts />

@@ -162,11 +162,21 @@ export default function ScrollShowcase() {
   const [loaded, setLoaded]           = useState(false);
   const [loadPct, setLoadPct]         = useState(0);
   const [activePhase, setActivePhase] = useState<number>(0);
+  const [isDesktop, setIsDesktop]     = useState(window.matchMedia("(min-width: 768px)").matches);
 
   const navigate = useNavigate();
 
+  // ── Track desktop media query ──────────────────────────────────────────
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 768px)");
+    const handler = (e: MediaQueryListEvent) => setIsDesktop(e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
+
   // ── Preload ──────────────────────────────────────────────────────────────
   useEffect(() => {
+    if (!isDesktop) return;
     let done = 0;
     framesRef.current = FRAME_SRCS.map((src) => {
       const img = new Image();
@@ -176,13 +186,18 @@ export default function ScrollShowcase() {
         setLoadPct(Math.round((done / TOTAL) * 100));
         if (done === TOTAL) setLoaded(true);
       };
+      img.onerror = () => {
+        done++;
+        setLoadPct(Math.round((done / TOTAL) * 100));
+        if (done === TOTAL) setLoaded(true);
+      };
       return img;
     });
-  }, []);
+  }, [isDesktop]);
 
   // ── Scroll + rAF ─────────────────────────────────────────────────────────
   useEffect(() => {
-    if (!loaded) return;
+    if (!isDesktop || !loaded) return;
     const canvas = canvasRef.current!;
     const ctx    = canvas.getContext("2d")!;
 
@@ -251,7 +266,7 @@ export default function ScrollShowcase() {
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", resize);
     };
-  }, [loaded]);
+  }, [isDesktop, loaded]);
 
   const scrollToPhase = (i: number) => {
     const el = containerRef.current;

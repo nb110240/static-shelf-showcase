@@ -11,7 +11,7 @@ import ProductSearch from "@/components/ProductSearch";
 import CategoryFilter from "@/components/CategoryFilter";
 import ProductFinder from "@/components/ProductFinder";
 import { products, categories, categoryImages } from "@/data/products";
-import { WHATSAPP_PHONE } from "@/lib/constants";
+import { WHATSAPP_PHONE, SITE_URL } from "@/lib/constants";
 import { Product } from "@/types/product";
 
 const Products = () => {
@@ -28,7 +28,11 @@ const Products = () => {
 
   useEffect(() => {
     const cat = searchParams.get("category");
-    if (cat && categories.includes(cat)) setSelectedCategory(cat);
+    if (cat && categories.includes(cat)) {
+      setSelectedCategory(cat);
+    } else if (!cat) {
+      setSelectedCategory("All");
+    }
   }, [searchParams]);
 
   const filteredProducts = useMemo(() => {
@@ -61,7 +65,10 @@ const Products = () => {
 
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
-      <Helmet><title>Product Catalog | Bobbins India</title></Helmet>
+      <Helmet>
+        <title>Product Catalog | Bobbins India</title>
+        <link rel="canonical" href={`${SITE_URL}/products`} />
+      </Helmet>
       <Header />
 
       {/* Page hero */}

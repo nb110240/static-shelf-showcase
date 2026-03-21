@@ -27,6 +27,20 @@ const Header = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, [scrollThreshold]);
 
+  const scrollToElement = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) { el.scrollIntoView({ behavior: "smooth" }); return; }
+    // Poll for element (max 2 seconds)
+    let attempts = 0;
+    const interval = setInterval(() => {
+      const el = document.getElementById(id);
+      if (el || ++attempts > 20) {
+        clearInterval(interval);
+        el?.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
+  };
+
   const handleAnchorNav = (href: string) => {
     setMobileOpen(false);
     if (href === "/") {
@@ -34,7 +48,7 @@ const Header = () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
       } else {
         navigate("/");
-        setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 100);
+        scrollToElement("hero");
       }
     } else if (href.startsWith("/#")) {
       const id = href.slice(2);
@@ -42,7 +56,7 @@ const Header = () => {
         document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
       } else {
         navigate("/");
-        setTimeout(() => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" }), 300);
+        scrollToElement(id);
       }
     }
   };
@@ -108,6 +122,8 @@ const Header = () => {
             Get in Touch
           </button>
           <button
+            aria-label="Toggle menu"
+            aria-expanded={mobileOpen}
             className={`md:hidden p-2 transition-colors ${scrolled ? "text-foreground/50 hover:text-primary" : "text-white/70 hover:text-white"}`}
             onClick={() => setMobileOpen(!mobileOpen)}
           >

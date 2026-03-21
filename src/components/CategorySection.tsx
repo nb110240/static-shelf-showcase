@@ -1,5 +1,5 @@
 import { Product } from "@/types/product";
-import { WHATSAPP_PHONE } from "@/lib/constants";
+import { whatsappUrl } from "@/lib/constants";
 import { Eye, ChevronDown, ChevronUp, MessageCircle, Check, GitCompareArrows } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -37,6 +37,11 @@ const CategorySection = ({ categoryName, products, categoryImage, onViewDetails 
             alt={categoryName}
             loading="lazy"
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+            onError={(e) => {
+              const target = e.target as HTMLImageElement;
+              target.style.display = 'none';
+              target.parentElement?.classList.add('bg-muted');
+            }}
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent flex items-center">
@@ -62,7 +67,10 @@ const CategorySection = ({ categoryName, products, categoryImage, onViewDetails 
           return (
             <div
               key={product.id}
-              className="rounded-lg border border-border bg-card hover:border-primary/25 hover:shadow-[var(--shadow-card-hover)] transition-all duration-300 cursor-pointer group overflow-hidden"
+              role="article"
+              tabIndex={0}
+              onKeyDown={(e) => { if (e.key === 'Enter') navigate(`/products/${product.id}`); }}
+              className="rounded-lg border border-border bg-card hover:border-primary/25 hover:shadow-[var(--shadow-card-hover)] transition-all duration-300 cursor-pointer group overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary/40"
               onClick={() => navigate(`/products/${product.id}`)}
             >
               {/* Image */}
@@ -72,6 +80,11 @@ const CategorySection = ({ categoryName, products, categoryImage, onViewDetails 
                   alt={product.name}
                   loading="lazy"
                   className="w-full h-full object-contain object-center p-2 group-hover:scale-105 transition-transform duration-500"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                    target.parentElement?.classList.add('bg-muted');
+                  }}
                 />
               </div>
 
@@ -150,7 +163,7 @@ const CategorySection = ({ categoryName, products, categoryImage, onViewDetails 
                     )}
                   </button>
                   <a
-                    href={`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(`Hi, I'd like to enquire about: ${product.name}`)}`}
+                    href={whatsappUrl(`Hi, I'd like to enquire about: ${product.name}`)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-1.5 text-[10px] font-medium text-white bg-[#25D366] hover:bg-[#1ebe57] transition-colors py-2 px-3 tracking-wider uppercase rounded-sm"

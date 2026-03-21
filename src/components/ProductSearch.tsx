@@ -48,6 +48,7 @@ const ProductSearch = ({ searchTerm, onSearchChange, activeFilter, onFilterChang
         <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
         <Input
           type="text"
+          aria-label="Search products"
           placeholder={getPlaceholder()}
           value={searchTerm}
           onChange={(e) => onSearchChange(e.target.value)}
@@ -57,6 +58,7 @@ const ProductSearch = ({ searchTerm, onSearchChange, activeFilter, onFilterChang
           <Button
             variant="ghost"
             size="sm"
+            aria-label="Clear search"
             onClick={clearFilter}
             className="absolute right-2 top-1/2 -translate-y-1/2 h-8 w-8 p-0"
           >

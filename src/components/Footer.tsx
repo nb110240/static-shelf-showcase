@@ -1,8 +1,28 @@
 import { Mail, Phone, MapPin, ArrowUp, ArrowRight, MessageCircle } from "lucide-react";
-import { Link } from "react-router-dom";
-import { WHATSAPP_PHONE } from "@/lib/constants";
+import { Link, useNavigate, useLocation } from "react-router-dom";
+import { whatsappUrl } from "@/lib/constants";
 
 const Footer = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleAnchorNav = (id: string) => {
+    if (location.pathname === "/") {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate("/");
+      // Poll for element (max 2 seconds)
+      let attempts = 0;
+      const interval = setInterval(() => {
+        const el = document.getElementById(id);
+        if (el || ++attempts > 20) {
+          clearInterval(interval);
+          el?.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    }
+  };
+
   return (
     <>
       {/* Contact Section */}
@@ -30,7 +50,7 @@ const Footer = () => {
                 Need a specific reel or a custom mould? Tell us your requirements and our team will respond within 24 hours.
               </p>
               <a
-                href={`https://wa.me/${WHATSAPP_PHONE}?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20products.`}
+                href={whatsappUrl("Hi, I'd like to enquire about your products.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-8 py-4 bg-[#25D366] text-white text-[11px] font-semibold tracking-[0.2em] uppercase rounded-sm hover:bg-[#1ebe57] transition-all duration-300 group"
@@ -99,15 +119,15 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} Bobbins India. All rights reserved.
           </p>
           <div className="flex items-center gap-4 md:gap-8">
-            <a href="#about" className="py-2 px-1 text-[10px] text-background/40 hover:text-background transition-colors uppercase tracking-[0.15em]">
+            <button onClick={() => handleAnchorNav("about")} className="py-2 px-1 text-[10px] text-background/40 hover:text-background transition-colors uppercase tracking-[0.15em]">
               Company
-            </a>
+            </button>
             <Link to="/products" className="py-2 px-1 text-[10px] text-background/40 hover:text-background transition-colors uppercase tracking-[0.15em]">
               Products
             </Link>
-            <a href="#contact" className="py-2 px-1 text-[10px] text-background/40 hover:text-background transition-colors uppercase tracking-[0.15em]">
+            <button onClick={() => handleAnchorNav("contact")} className="py-2 px-1 text-[10px] text-background/40 hover:text-background transition-colors uppercase tracking-[0.15em]">
               Contact
-            </a>
+            </button>
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               className="flex items-center gap-1.5 py-2 px-1 text-[10px] text-background/40 hover:text-background transition-colors uppercase tracking-[0.15em]"

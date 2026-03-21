@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ArrowRight, MessageCircle } from "lucide-react";
-import { WHATSAPP_PHONE } from "@/lib/constants";
+import { whatsappUrl } from "@/lib/constants";
 
 const EnquiryForm = () => {
   const [form, setForm] = useState({
@@ -30,8 +30,7 @@ const EnquiryForm = () => {
       .filter((l) => l !== null)
       .join("\n");
 
-    const url = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(lines)}`;
-    window.open(url, "_blank", "noopener,noreferrer");
+    window.open(whatsappUrl(lines), "_blank", "noopener,noreferrer");
   };
 
   const inputClasses =
@@ -67,13 +66,15 @@ const EnquiryForm = () => {
           <div className="grid sm:grid-cols-2 gap-5 mb-5">
             {/* Name */}
             <div>
-              <label className="block font-mono text-[10px] text-muted-foreground uppercase tracking-[0.2em] mb-2">
+              <label htmlFor="enquiry-name" className="block font-mono text-[10px] text-muted-foreground uppercase tracking-[0.2em] mb-2">
                 Name *
               </label>
               <input
                 type="text"
                 name="name"
+                id="enquiry-name"
                 required
+                maxLength={100}
                 value={form.name}
                 onChange={handleChange}
                 placeholder="Your name"
@@ -83,13 +84,16 @@ const EnquiryForm = () => {
 
             {/* Phone */}
             <div>
-              <label className="block font-mono text-[10px] text-muted-foreground uppercase tracking-[0.2em] mb-2">
+              <label htmlFor="enquiry-phone" className="block font-mono text-[10px] text-muted-foreground uppercase tracking-[0.2em] mb-2">
                 Phone *
               </label>
               <input
                 type="tel"
                 name="phone"
+                id="enquiry-phone"
                 required
+                maxLength={20}
+                pattern="[0-9+\-\s]+"
                 value={form.phone}
                 onChange={handleChange}
                 placeholder="+91 98201 12345"
@@ -100,12 +104,14 @@ const EnquiryForm = () => {
 
           {/* Email */}
           <div className="mb-5">
-            <label className="block font-mono text-[10px] text-muted-foreground uppercase tracking-[0.2em] mb-2">
+            <label htmlFor="enquiry-email" className="block font-mono text-[10px] text-muted-foreground uppercase tracking-[0.2em] mb-2">
               Email
             </label>
             <input
               type="email"
               name="email"
+              id="enquiry-email"
+              maxLength={100}
               value={form.email}
               onChange={handleChange}
               placeholder="you@company.com"
@@ -115,18 +121,23 @@ const EnquiryForm = () => {
 
           {/* Requirement */}
           <div className="mb-8">
-            <label className="block font-mono text-[10px] text-muted-foreground uppercase tracking-[0.2em] mb-2">
+            <label htmlFor="enquiry-requirement" className="block font-mono text-[10px] text-muted-foreground uppercase tracking-[0.2em] mb-2">
               Requirement *
             </label>
             <textarea
               name="requirement"
+              id="enquiry-requirement"
               required
               rows={4}
+              maxLength={500}
               value={form.requirement}
               onChange={handleChange}
               placeholder="Describe your reel/bobbin requirement — dimensions, material, quantity..."
               className={inputClasses + " resize-none"}
             />
+            <p className="mt-1.5 text-right font-mono text-[10px] text-muted-foreground/50 tracking-wider">
+              {500 - form.requirement.length} characters remaining
+            </p>
           </div>
 
           {/* Submit */}

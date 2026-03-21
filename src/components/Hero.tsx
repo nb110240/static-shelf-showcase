@@ -8,7 +8,7 @@ const Hero = () => {
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/hero-main.webp')" }}
+        style={{ backgroundImage: "url('/hero-main.webp')", backgroundColor: "#0a1628" }}
       />
       {/* Dark overlay for text readability */}
       <div className="absolute inset-0 bg-black/60" />

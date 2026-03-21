@@ -54,6 +54,11 @@ const About = () => {
               alt="Bobbins India product range — spools, bobbins and reels"
               loading="lazy"
               className="w-full h-full object-contain p-8 min-h-[360px]"
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                target.style.display = 'none';
+                target.parentElement?.classList.add('bg-muted');
+              }}
             />
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-white to-transparent pt-12 pb-5 px-6 text-center">
               <span className="font-display text-2xl text-foreground tracking-wider">30+</span>

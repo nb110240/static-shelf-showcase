@@ -1,13 +1,18 @@
 import { useState, useEffect } from "react";
 import { MessageCircle } from "lucide-react";
+import { useLocation } from "react-router-dom";
 import { WHATSAPP_PHONE } from "@/lib/constants";
 
 const WhatsAppFloat = () => {
   const [visible, setVisible] = useState(true);
+  const location = useLocation();
 
   useEffect(() => {
     const target = document.getElementById("contact");
-    if (!target) return;
+    if (!target) {
+      setVisible(true);
+      return;
+    }
 
     const observer = new IntersectionObserver(
       ([entry]) => setVisible(!entry.isIntersecting),
@@ -16,7 +21,7 @@ const WhatsAppFloat = () => {
 
     observer.observe(target);
     return () => observer.disconnect();
-  }, []);
+  }, [location.pathname]);
 
   if (!visible) return null;
 

@@ -47,13 +47,18 @@ const applicationCategoryMap: Record<string, string[]> = {
 };
 
 function extractFlangeMm(features: string[]): number | null {
-  const flangeFeature = features.find((f) => f.toLowerCase().includes("flange"));
+  // Prefer features explicitly labeled "Flange:" or "Flange diameter:"
+  const flangeFeature =
+    features.find((f) => /^flange\s*(diameter)?\s*:/i.test(f.trim())) ||
+    features.find((f) => f.toLowerCase().includes("flange"));
   if (!flangeFeature) return null;
+  // Prefer value after colon if present
+  const afterColon = flangeFeature.includes(":") ? flangeFeature.split(":")[1] : flangeFeature;
   // Try to extract a number followed by mm
-  const match = flangeFeature.match(/(\d+(?:\.\d+)?)\s*mm/i);
+  const match = afterColon.match(/(\d+(?:\.\d+)?)\s*mm/i);
   if (match) return parseFloat(match[1]);
   // Try to extract a number followed by " (inches) and convert
-  const inchMatch = flangeFeature.match(/(\d+(?:\.\d+)?)\s*(?:inch|")/i);
+  const inchMatch = afterColon.match(/(\d+(?:\.\d+)?)\s*(?:inch|")/i);
   if (inchMatch) return parseFloat(inchMatch[1]) * 25.4;
   return null;
 }
@@ -78,16 +83,18 @@ function matchesSize(features: string[], sizeOption: Step2): boolean {
 
 function matchesMaterial(product: Product, materialOption: Step3): boolean {
   if (materialOption === "Any / Not sure") return true;
-  const searchText = (product.description + " " + product.features.join(" ")).toLowerCase();
+  const searchText = product.description + " " + product.features.join(" ");
+  // Use word-boundary regex to avoid false positives (e.g. "pp" matching "shipped")
+  const wordMatch = (term: string) => new RegExp(`\\b${term}\\b`, "i").test(searchText);
   switch (materialOption) {
     case "PP (Polypropylene)":
-      return searchText.includes("pp") || searchText.includes("polypropylene");
+      return wordMatch("PP") || wordMatch("polypropylene");
     case "ABS":
-      return searchText.includes("abs");
+      return wordMatch("ABS");
     case "HDPE":
-      return searchText.includes("hdpe");
+      return wordMatch("HDPE");
     case "PS (Polystyrene)":
-      return searchText.includes("ps") || searchText.includes("polystyrene");
+      return wordMatch("PS") || wordMatch("polystyrene");
     default:
       return true;
   }

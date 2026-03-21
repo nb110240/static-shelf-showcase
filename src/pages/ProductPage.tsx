@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet-async";
 import { Check, MessageCircle, ArrowLeft, Package, GitCompareArrows } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { WHATSAPP_PHONE } from "@/lib/constants";
+import { whatsappUrl, SITE_URL } from "@/lib/constants";
 import { products } from "@/data/products";
 import { Product } from "@/types/product";
 import { useCompare } from "@/hooks/useCompare";
@@ -29,17 +29,18 @@ const ProductPage = () => {
     .filter((p) => p.category === product.category && p.id !== product.id)
     .slice(0, 3);
 
-  const whatsAppUrl = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(
-    `Hi, I'd like to enquire about: ${product.name}`
-  )}`;
+  const whatsAppUrl = whatsappUrl(`Hi, I'd like to enquire about: ${product.name}`);
 
-  const sampleWhatsAppUrl = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(
+  const sampleWhatsAppUrl = whatsappUrl(
     `Hi, I'd like to request a sample of: ${product.name}\nCategory: ${product.category}\n\nShipping details:\nName: \nCompany: \nAddress: `
-  )}`;
+  );
 
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
-      <Helmet><title>{product.name} | Bobbins India</title></Helmet>
+      <Helmet>
+        <title>{product.name} | Bobbins India</title>
+        <link rel="canonical" href={`${SITE_URL}/products/${productId}`} />
+      </Helmet>
       <Header />
 
       {/* Breadcrumb */}
@@ -76,6 +77,11 @@ const ProductPage = () => {
                 src={product.image}
                 alt={product.name}
                 className="w-full h-full object-contain p-6"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                  target.parentElement?.classList.add('bg-muted');
+                }}
               />
             </div>
 
@@ -219,6 +225,11 @@ const ProductPage = () => {
                       alt={rp.name}
                       loading="lazy"
                       className="w-full h-full object-contain object-center p-2 group-hover:scale-105 transition-transform duration-500"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.style.display = 'none';
+                        target.parentElement?.classList.add('bg-muted');
+                      }}
                     />
                   </div>
                   <div className="p-4">

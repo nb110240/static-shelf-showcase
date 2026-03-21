@@ -1,12 +1,17 @@
 import { useCompare } from "@/hooks/useCompare";
 import { useNavigate } from "react-router-dom";
 import { X, ArrowRight } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const CompareFloatingBar = () => {
   const { compareItems, clearCompare } = useCompare();
   const navigate = useNavigate();
   const [dismissed, setDismissed] = useState(false);
+
+  // Reset dismissed state when new items are added
+  useEffect(() => {
+    if (compareItems.length > 0) setDismissed(false);
+  }, [compareItems.length]);
 
   if (compareItems.length === 0 || dismissed) return null;
 
