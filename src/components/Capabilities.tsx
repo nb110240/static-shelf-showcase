@@ -34,13 +34,13 @@ const Capabilities = () => (
       <div className="mb-12 max-w-3xl">
         <div className="mb-5 flex items-center gap-4">
           <div className="h-[2px] w-10 bg-primary" />
-          <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-primary">Manufacturing Capability</span>
+          <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-primary">Manufacturing Capability</span>
         </div>
         <h2 className="font-display text-[clamp(1.45rem,7vw,3rem)] leading-[1.12] tracking-wider">
           ENGINEERED AROUND YOUR<br />
           <span className="text-primary">WINDING PROCESS</span>
         </h2>
-        <p className="mt-6 max-w-2xl text-sm leading-7 text-white/60">
+        <p className="mt-6 max-w-2xl text-sm leading-7 text-white/75">
           Start with a standard reel or bring us a specific winding requirement. Our catalog and in-house development capability support both paths.
         </p>
       </div>
@@ -55,18 +55,18 @@ const Capabilities = () => (
               <span className="font-mono text-[10px] tracking-[0.18em] text-white/25">0{index + 1}</span>
             </div>
             <h3 className="mb-3 text-sm font-semibold uppercase tracking-[0.12em] text-white">{title}</h3>
-            <p className="text-sm leading-6 text-white/50">{text}</p>
+            <p className="text-sm leading-6 text-white/70">{text}</p>
           </article>
         ))}
       </div>
 
       <div className="mt-8 grid gap-6 rounded-lg border border-white/10 bg-white/[0.04] p-6 lg:grid-cols-[1fr_auto] lg:items-center lg:p-8">
         <div>
-          <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-primary">For a faster recommendation</p>
+          <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-primary">For a faster recommendation</p>
           <h3 className="mt-2 text-lg font-semibold text-white">Send the key dimensions with your enquiry</h3>
           <div className="mt-4 flex flex-wrap gap-2">
             {quoteSpecs.map((spec) => (
-              <span key={spec} className="rounded-full border border-white/10 bg-white/[0.05] px-3 py-1.5 font-mono text-[9px] uppercase tracking-[0.12em] text-white/60">
+              <span key={spec} className="rounded-full border border-white/15 bg-white/[0.06] px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.12em] text-white/75">
                 {spec}
               </span>
             ))}

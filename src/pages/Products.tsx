@@ -10,7 +10,9 @@ import ProductDetail from "@/components/ProductDetail";
 import ProductSearch from "@/components/ProductSearch";
 import CategoryFilter from "@/components/CategoryFilter";
 import ProductFinder from "@/components/ProductFinder";
+import CategoryOverview from "@/components/CategoryOverview";
 import { products, categories, categoryImages } from "@/data/products";
+import { categoryToSlug } from "@/data/categoryContent";
 import { SITE_URL } from "@/lib/constants";
 import { Product } from "@/types/product";
 
@@ -63,6 +65,7 @@ const Products = () => {
     });
     return grouped;
   }, [filteredProducts]);
+  const showCategoryOverview = selectedCategory === "All" && !searchTerm.trim() && !activeFilter;
 
   return (
     <div id="main-content" className="min-h-screen bg-background overflow-x-hidden">
@@ -73,6 +76,15 @@ const Products = () => {
           content="Browse 111 industrial spools, bobbins and reels by application and dimensions. Compare specifications or request a custom quote from Bobbins India."
         />
         <link rel="canonical" href={`${SITE_URL}/products`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Industrial Bobbins, Spools & Reels Catalog | Bobbins India" />
+        <meta property="og:description" content="Browse 111 industrial spools, bobbins and reels by application and dimensions. Compare specifications or request a custom quote." />
+        <meta property="og:url" content={`${SITE_URL}/products`} />
+        <meta property="og:image" content={`${SITE_URL}/og-default.png`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Industrial Bobbins, Spools & Reels Catalog | Bobbins India" />
+        <meta name="twitter:description" content="Browse 111 industrial spool, reel and bobbin models across 16 application families." />
+        <meta name="twitter:image" content={`${SITE_URL}/og-default.png`} />
       </Helmet>
       <Header />
 
@@ -84,15 +96,15 @@ const Products = () => {
         <div className="container relative">
           <div className="flex items-center gap-4 mb-5">
             <div className="h-[2px] w-10 bg-[#178fbe]" />
-            <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-[#178fbe]">
+            <span className="font-mono text-[11px] tracking-[0.3em] uppercase text-[#178fbe]">
               Full Catalogue
             </span>
           </div>
           <h1 className="font-display text-[clamp(2rem,5vw,3.5rem)] leading-none tracking-wider text-white mb-4">
             Product Catalog
           </h1>
-          <p className="text-white/40 text-sm max-w-md leading-[1.7]" style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}>
-            {products.length} products across {categories.length} categories. Industrial spools, bobbins and reels manufactured to international standards.
+          <p className="text-white/75 text-sm max-w-md leading-[1.7]" style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}>
+            {products.length} products across {categories.length} application families. Compare dimensions, shortlist products and request a quotation.
           </p>
         </div>
 
@@ -134,6 +146,10 @@ const Products = () => {
             categories={categories}
             selectedCategory={selectedCategory}
             onCategoryChange={(category) => {
+              if (category !== "All") {
+                navigate(`/products/category/${categoryToSlug(category)}`);
+                return;
+              }
               setSelectedCategory(category);
               const next = new URLSearchParams(searchParams);
               if (category === "All") next.delete("category");
@@ -143,15 +159,19 @@ const Products = () => {
             products={products}
           />
 
-          {Object.entries(productsByCategory).map(([category, categoryProducts]) => (
-            <CategorySection
-              key={category}
-              categoryName={category}
-              products={categoryProducts}
-              categoryImage={categoryImages[category] || categoryProducts[0].image}
-              onViewDetails={setSelectedProduct}
-            />
-          ))}
+          {showCategoryOverview ? (
+            <CategoryOverview />
+          ) : (
+            Object.entries(productsByCategory).map(([category, categoryProducts]) => (
+              <CategorySection
+                key={category}
+                categoryName={category}
+                products={categoryProducts}
+                categoryImage={categoryImages[category] || categoryProducts[0].image}
+                onViewDetails={setSelectedProduct}
+              />
+            ))
+          )}
 
           {filteredProducts.length === 0 && (
             <div className="text-center py-20 max-w-sm mx-auto">

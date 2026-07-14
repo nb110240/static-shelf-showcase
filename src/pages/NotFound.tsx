@@ -16,7 +16,7 @@ const NotFound = () => {
         <meta name="robots" content="noindex" />
       </Helmet>
       <div className="max-w-lg rounded-lg border border-border bg-card p-10 text-center shadow-sm">
-        <p className="mb-3 font-mono text-[10px] uppercase tracking-[0.25em] text-primary">Error 404</p>
+        <p className="mb-3 font-mono text-[11px] uppercase tracking-[0.25em] text-primary">Error 404</p>
         <h1 className="mb-4 font-display text-3xl tracking-wider text-foreground">PAGE NOT FOUND</h1>
         <p className="mb-8 text-sm leading-relaxed text-muted-foreground">
           The page may have moved. Continue to the product catalog or return to the homepage.

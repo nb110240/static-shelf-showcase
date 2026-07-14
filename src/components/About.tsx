@@ -17,7 +17,7 @@ const About = () => {
         {/* Section label */}
         <div className="flex items-center gap-4 mb-5">
           <div className="h-[2px] w-10 bg-[#178fbe]" />
-          <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-[#178fbe]">
+          <span className="font-mono text-[11px] tracking-[0.3em] uppercase text-[#178fbe]">
             Who We Are
           </span>
         </div>
@@ -62,7 +62,7 @@ const About = () => {
             />
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-white to-transparent pt-12 pb-5 px-6 text-center">
               <span className="font-display text-2xl text-foreground tracking-wider">30+</span>
-              <span className="font-mono text-[10px] text-muted-foreground uppercase tracking-[0.2em] ml-2">Years of Expertise</span>
+              <span className="font-mono text-[11px] text-muted-foreground uppercase tracking-[0.2em] ml-2">Years of Expertise</span>
             </div>
           </div>
         </div>

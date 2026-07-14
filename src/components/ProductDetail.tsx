@@ -30,7 +30,7 @@ const ProductDetail = ({ product, open, onClose }: ProductDetailProps) => {
         <DialogHeader className="px-6 pt-6 pb-5 border-b border-border">
           <div className="flex items-center gap-3 mb-2">
             <div className="h-[2px] w-6 bg-[#178fbe]" />
-            <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-[#178fbe]">
+            <span className="font-mono text-[11px] tracking-[0.3em] uppercase text-[#178fbe]">
               {product.category}
             </span>
           </div>
@@ -56,7 +56,7 @@ const ProductDetail = ({ product, open, onClose }: ProductDetailProps) => {
             </p>
 
             <div>
-              <h3 className="font-mono text-[10px] tracking-[0.3em] uppercase text-primary mb-4">
+              <h3 className="font-mono text-[11px] tracking-[0.3em] uppercase text-primary mb-4">
                 Key Features
               </h3>
               <ul className="space-y-3">

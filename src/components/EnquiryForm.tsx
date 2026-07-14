@@ -1,13 +1,15 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { ArrowRight, Mail, CheckCircle, Loader2, MessageCircle } from "lucide-react";
 import { useSearchParams } from "react-router-dom";
 import { COMPANY_EMAIL, whatsappUrl } from "@/lib/constants";
+import { track } from "@vercel/analytics";
 
-const FORM_ENDPOINT = `https://formsubmit.co/ajax/${COMPANY_EMAIL}`;
+const FORM_ENDPOINT = "/api/enquiry";
 const SUBMIT_TIMEOUT_MS = 12_000;
 
 const EnquiryForm = () => {
   const [searchParams, setSearchParams] = useSearchParams();
+  const startedAt = useRef(Date.now());
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [form, setForm] = useState({
     name: "",
@@ -82,16 +84,12 @@ const EnquiryForm = () => {
           company: form.company || "Not provided",
           phone: form.phone,
           email: form.email || "Not provided",
-          _replyto: form.email || undefined,
           product: form.product || "General enquiry",
           quantity: form.quantity || "Not provided",
           requirement: form.requirement,
-          _url: window.location.href,
-          _template: "table",
-          _honey: form.website,
-          _subject: form.product
-            ? `Website Enquiry: ${form.product}`
-            : "Website Product Enquiry",
+          website: form.website,
+          sourceUrl: window.location.href,
+          startedAt: startedAt.current,
         }),
       });
 
@@ -99,12 +97,16 @@ const EnquiryForm = () => {
       const ok = res.ok && data && String(data.success).toLowerCase() === "true";
       if (ok) {
         setStatus("sent");
+        track("enquiry_submitted", { product: form.product || "General enquiry" });
         setForm({ name: "", company: "", phone: "", email: "", product: "", quantity: "", requirement: "", website: "" });
+        startedAt.current = Date.now();
       } else {
         setStatus("error");
+        track("enquiry_failed", { reason: data?.error || `HTTP ${res.status}` });
       }
     } catch {
       setStatus("error");
+      track("enquiry_failed", { reason: "Network or timeout" });
     } finally {
       window.clearTimeout(timeout);
     }
@@ -122,7 +124,7 @@ const EnquiryForm = () => {
         {/* Label */}
         <div className="flex items-center gap-4 mb-5">
           <div className="h-[2px] w-10 bg-[#178fbe]" />
-          <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-[#178fbe]">
+          <span className="font-mono text-[11px] tracking-[0.3em] uppercase text-[#178fbe]">
             Enquiry
           </span>
         </div>
@@ -154,7 +156,7 @@ const EnquiryForm = () => {
         ) : (
           <form
             onSubmit={handleSubmit}
-            action={`https://formsubmit.co/${COMPANY_EMAIL}`}
+            action="/api/enquiry"
             method="POST"
             className="max-w-2xl rounded-lg border border-border bg-card p-6 sm:p-8"
             style={{ boxShadow: "var(--shadow-card)" }}
@@ -174,7 +176,7 @@ const EnquiryForm = () => {
             <div className="grid sm:grid-cols-2 gap-5 mb-5">
               {/* Name */}
               <div>
-                <label htmlFor="enquiry-name" className="block font-mono text-[10px] text-muted-foreground uppercase tracking-[0.2em] mb-2">
+                <label htmlFor="enquiry-name" className="block font-mono text-[11px] text-muted-foreground uppercase tracking-[0.2em] mb-2">
                   Name *
                 </label>
                 <input
@@ -193,7 +195,7 @@ const EnquiryForm = () => {
 
               {/* Company */}
               <div>
-                <label htmlFor="enquiry-company" className="block font-mono text-[10px] text-muted-foreground uppercase tracking-[0.2em] mb-2">
+                <label htmlFor="enquiry-company" className="block font-mono text-[11px] text-muted-foreground uppercase tracking-[0.2em] mb-2">
                   Company
                 </label>
                 <input
@@ -213,7 +215,7 @@ const EnquiryForm = () => {
             <div className="grid sm:grid-cols-2 gap-5 mb-5">
               {/* Phone */}
               <div>
-                <label htmlFor="enquiry-phone" className="block font-mono text-[10px] text-muted-foreground uppercase tracking-[0.2em] mb-2">
+                <label htmlFor="enquiry-phone" className="block font-mono text-[11px] text-muted-foreground uppercase tracking-[0.2em] mb-2">
                   Phone *
                 </label>
                 <input
@@ -233,7 +235,7 @@ const EnquiryForm = () => {
 
               {/* Email */}
               <div>
-                <label htmlFor="enquiry-email" className="block font-mono text-[10px] text-muted-foreground uppercase tracking-[0.2em] mb-2">
+                <label htmlFor="enquiry-email" className="block font-mono text-[11px] text-muted-foreground uppercase tracking-[0.2em] mb-2">
                   Email
                 </label>
                 <input
@@ -254,7 +256,7 @@ const EnquiryForm = () => {
             <div className="grid sm:grid-cols-2 gap-5 mb-5">
               {/* Product */}
               <div>
-                <label htmlFor="enquiry-product" className="block font-mono text-[10px] text-muted-foreground uppercase tracking-[0.2em] mb-2">
+                <label htmlFor="enquiry-product" className="block font-mono text-[11px] text-muted-foreground uppercase tracking-[0.2em] mb-2">
                   Product
                 </label>
                 <input
@@ -271,7 +273,7 @@ const EnquiryForm = () => {
 
               {/* Quantity */}
               <div>
-                <label htmlFor="enquiry-quantity" className="block font-mono text-[10px] text-muted-foreground uppercase tracking-[0.2em] mb-2">
+                <label htmlFor="enquiry-quantity" className="block font-mono text-[11px] text-muted-foreground uppercase tracking-[0.2em] mb-2">
                   Estimated Quantity
                 </label>
                 <input
@@ -289,7 +291,7 @@ const EnquiryForm = () => {
 
             {/* Requirement */}
             <div className="mb-8">
-              <label htmlFor="enquiry-requirement" className="block font-mono text-[10px] text-muted-foreground uppercase tracking-[0.2em] mb-2">
+              <label htmlFor="enquiry-requirement" className="block font-mono text-[11px] text-muted-foreground uppercase tracking-[0.2em] mb-2">
                 Requirement *
               </label>
               <textarea
@@ -303,7 +305,7 @@ const EnquiryForm = () => {
                 placeholder="Describe your reel/bobbin requirement — dimensions, material, quantity..."
                 className={inputClasses + " resize-none"}
               />
-              <p className="mt-1.5 text-right font-mono text-[10px] text-muted-foreground/50 tracking-wider">
+              <p className="mt-1.5 text-right font-mono text-[11px] text-muted-foreground tracking-wider">
                 {500 - form.requirement.length} characters remaining
               </p>
             </div>

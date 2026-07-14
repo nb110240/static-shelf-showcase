@@ -5,10 +5,11 @@ import logoWordmark from "@/assets/logo.png";
 const Hero = () => {
   return (
     <section className="relative min-h-[92vh] flex items-center">
-      {/* Background image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/hero-main.webp')", backgroundColor: "#0a1628" }}
+      <img
+        src="/hero-main.webp"
+        alt="Industrial plastic spools, bobbins and reels manufactured by Bobbins India"
+        fetchPriority="high"
+        className="absolute inset-0 h-full w-full object-cover object-center"
       />
       {/* Dark overlay for text readability */}
       <div className="absolute inset-0 bg-black/60" />
@@ -19,7 +20,7 @@ const Hero = () => {
           {/* Eyebrow */}
           <div className="animate-fade-up flex items-center gap-4 mb-8">
             <div className="h-[2px] w-10 bg-[#178fbe]" />
-            <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-[#178fbe]">
+            <span className="font-mono text-[11px] tracking-[0.24em] uppercase text-[#49b7df]">
               Mumbai, India · Since 1995
             </span>
             <div className="h-[2px] w-10 bg-[#178fbe]" />
@@ -54,7 +55,7 @@ const Hero = () => {
             </a>
           </div>
 
-          <p className="animate-fade-up-delay-3 font-mono text-[9px] tracking-[0.14em] uppercase text-white/45 mb-14">
+          <p className="animate-fade-up-delay-3 font-mono text-[11px] tracking-[0.14em] uppercase text-white/70 mb-14">
             Standard sizes · Custom moulds · Export enquiries
           </p>
 
@@ -69,7 +70,7 @@ const Hero = () => {
                 {i > 0 && <div className="w-px h-8 bg-white/20" />}
                 <div className={i > 0 ? "pl-3" : ""}>
                   <div className="font-display text-lg md:text-xl text-primary leading-none">{val}</div>
-                  <div className="font-mono text-[9px] tracking-[0.2em] uppercase text-white/50 mt-1">{lab}</div>
+                  <div className="font-mono text-[11px] tracking-[0.16em] uppercase text-white/70 mt-1">{lab}</div>
                 </div>
               </div>
             ))}

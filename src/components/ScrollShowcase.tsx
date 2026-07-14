@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
+import { categoryToSlug } from "@/data/categoryContent";
 
 import imgSuperTough    from "@/assets/super-tough-photo.jpg";
 import imgJumbo         from "@/assets/jumbo-reels-studio.jpg";
@@ -91,7 +92,7 @@ function MobileCategoryGrid() {
       <div className="flex items-center gap-4 mb-6 px-2">
         <div className="h-[2px] w-8" style={{ background: "#178fbe" }} />
         <span
-          className="text-[10px] tracking-[0.3em] uppercase"
+          className="text-[11px] tracking-[0.3em] uppercase"
           style={{ color: "#178fbe", fontFamily: "'IBM Plex Mono', monospace" }}
         >
           Product Showcase
@@ -116,7 +117,7 @@ function MobileCategoryGrid() {
         {PHASES.map((phase, i) => (
           <Link
             key={phase.category}
-            to={`/products?category=${encodeURIComponent(phase.category)}`}
+            to={`/products/category/${categoryToSlug(phase.category)}`}
             className="relative rounded-lg border border-black/[0.06] overflow-hidden group"
           >
             <div className="aspect-[4/3] bg-[#e8ecf0]">
@@ -130,7 +131,7 @@ function MobileCategoryGrid() {
             {/* Text overlay at bottom */}
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent pt-10 pb-3 px-3">
               <span
-                className="block text-[9px] tracking-[0.2em] uppercase mb-0.5"
+                className="block text-[11px] tracking-[0.2em] uppercase mb-0.5"
                 style={{ fontFamily: "'IBM Plex Mono', monospace", color: "#178fbe" }}
               >
                 {String(i + 1).padStart(2, "0")}
@@ -277,7 +278,7 @@ export default function ScrollShowcase() {
   };
 
   const goToProducts = (category: string) => {
-    navigate(`/products?category=${encodeURIComponent(category)}`);
+    navigate(`/products/category/${categoryToSlug(category)}`);
   };
 
   return (

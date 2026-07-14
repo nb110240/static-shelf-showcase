@@ -156,7 +156,7 @@ const ProductFinder = () => {
         <div className="flex items-center gap-3 mb-4">
           <div className="h-[2px] w-8" style={{ background: "#178fbe" }} />
           <span
-            className="text-[10px] tracking-[0.3em] uppercase"
+            className="text-[11px] tracking-[0.3em] uppercase"
             style={{ color: "#178fbe", fontFamily: "'IBM Plex Mono', monospace" }}
           >
             Find Your Reel
@@ -182,7 +182,7 @@ const ProductFinder = () => {
         {step < 4 && (
           <p
             className="text-[11px] tracking-[0.15em] uppercase mb-6"
-            style={{ color: "rgba(0,80,120,0.5)", fontFamily: "'IBM Plex Mono', monospace" }}
+            style={{ color: "rgba(0,80,120,0.72)", fontFamily: "'IBM Plex Mono', monospace" }}
           >
             Step {step} of 3
           </p>
@@ -281,7 +281,7 @@ const ProductFinder = () => {
             <div className="flex items-center justify-between mb-6">
               <p
                 className="text-[11px] tracking-[0.15em] uppercase"
-                style={{ color: "rgba(0,80,120,0.5)", fontFamily: "'IBM Plex Mono', monospace" }}
+                style={{ color: "rgba(0,80,120,0.72)", fontFamily: "'IBM Plex Mono', monospace" }}
               >
                 {results.length > 0
                   ? `${results.length} match${results.length !== 1 ? "es" : ""} found`
@@ -289,7 +289,7 @@ const ProductFinder = () => {
               </p>
               <button
                 onClick={reset}
-                className="flex items-center gap-1.5 text-[10px] font-medium text-primary hover:text-primary/80 transition-colors tracking-wider uppercase"
+                className="flex items-center gap-1.5 text-[11px] font-medium text-primary hover:text-primary/80 transition-colors tracking-wider uppercase"
                 style={{ fontFamily: "'IBM Plex Mono', monospace" }}
               >
                 <RotateCcw className="h-3 w-3" />
@@ -319,7 +319,7 @@ const ProductFinder = () => {
                       </div>
                       <div className="p-3">
                         <span
-                          className="text-[9px] tracking-[0.2em] uppercase block mb-1"
+                          className="text-[11px] tracking-[0.2em] uppercase block mb-1"
                           style={{ color: "#178fbe", fontFamily: "'IBM Plex Mono', monospace" }}
                         >
                           {product.category}
@@ -331,7 +331,7 @@ const ProductFinder = () => {
                           <div className="flex gap-3 mt-2">
                             {flange && (
                               <div>
-                                <span className="font-mono text-[9px] text-muted-foreground uppercase tracking-wider">
+                                <span className="font-mono text-[11px] text-muted-foreground uppercase tracking-wider">
                                   Flange
                                 </span>
                                 <p className="font-mono text-xs text-foreground/80">{flange}</p>
@@ -339,7 +339,7 @@ const ProductFinder = () => {
                             )}
                             {barrel && (
                               <div>
-                                <span className="font-mono text-[9px] text-muted-foreground uppercase tracking-wider">
+                                <span className="font-mono text-[11px] text-muted-foreground uppercase tracking-wider">
                                   Barrel
                                 </span>
                                 <p className="font-mono text-xs text-foreground/80">{barrel}</p>

@@ -19,6 +19,15 @@ const Index = () => {
           content="Precision industrial spools, bobbins and reels manufactured in Mumbai since 1995. Browse 100+ variants or request a custom mould and quote."
         />
         <link rel="canonical" href={`${SITE_URL}/`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Bobbins India | Precision Spools & Reels Manufacturer" />
+        <meta property="og:description" content="Precision industrial spools, bobbins and reels manufactured in Mumbai since 1995. Browse 100+ variants or request a custom mould and quote." />
+        <meta property="og:url" content={`${SITE_URL}/`} />
+        <meta property="og:image" content={`${SITE_URL}/og-default.png`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Bobbins India | Precision Spools & Reels Manufacturer" />
+        <meta name="twitter:description" content="Industrial spools, bobbins and reels for cable, wire, welding, EDM and specialty winding applications." />
+        <meta name="twitter:image" content={`${SITE_URL}/og-default.png`} />
       </Helmet>
       <div style={{ overflowX: "clip" }}>
         <Header />

@@ -16,9 +16,10 @@ const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // On non-home pages, the hero is shorter so we need the solid header sooner
   const isHome = location.pathname === "/";
-  const scrollThreshold = isHome ? 60 : 10;
+  const hasDarkHero = isHome || location.pathname === "/products" || location.pathname.startsWith("/products/category/");
+  const scrollThreshold = isHome ? 60 : hasDarkHero ? 120 : 0;
+  const solidHeader = scrolled || !hasDarkHero;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > scrollThreshold);
@@ -64,7 +65,7 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
+        solidHeader
           ? "bg-white/90 backdrop-blur-xl border-b border-black/[0.06] shadow-[0_1px_8px_-2px_rgba(0,0,0,0.06)]"
           : "bg-transparent"
       }`}
@@ -78,7 +79,7 @@ const Header = () => {
             alt="Bobbins India"
             className="h-8 w-auto object-contain transition-all duration-500"
             style={{
-              filter: scrolled
+              filter: solidHeader
                 ? "brightness(0) saturate(100%) invert(46%) sepia(62%) saturate(502%) hue-rotate(163deg) brightness(94%) contrast(96%)"
                 : "brightness(0) saturate(100%) invert(100%)",
             }}
@@ -89,12 +90,12 @@ const Header = () => {
         <nav aria-label="Primary navigation" className="hidden md:flex items-center gap-8">
           {NAV.map((link) => {
             const cls = `relative py-3 text-[11px] font-medium tracking-[0.18em] uppercase transition-colors group/nav ${
-              scrolled
-                ? "text-foreground/50 hover:text-foreground"
-                : "text-white/60 hover:text-white"
+              solidHeader
+                ? "text-foreground/70 hover:text-foreground"
+                : "text-white/75 hover:text-white"
             }`;
             const underline = `absolute -bottom-1 left-0 w-0 h-px transition-all duration-300 group-hover/nav:w-full ${
-              scrolled ? "bg-primary" : "bg-white"
+              solidHeader ? "bg-primary" : "bg-white"
             }`;
             return link.href === "/" || link.href.startsWith("/#") ? (
               <button
@@ -124,7 +125,7 @@ const Header = () => {
           <button
             onClick={() => handleAnchorNav("/#contact")}
             className={`hidden md:inline-flex items-center gap-2 px-5 py-2.5 text-[11px] font-semibold tracking-[0.16em] uppercase rounded-sm transition-all duration-300 ${
-              scrolled
+              solidHeader
                 ? "bg-foreground text-background hover:bg-primary"
                 : "bg-white/15 text-white border border-white/25 hover:bg-white/25"
             }`}
@@ -134,7 +135,7 @@ const Header = () => {
           <button
             aria-label="Toggle menu"
             aria-expanded={mobileOpen}
-            className={`md:hidden p-2 transition-colors ${scrolled ? "text-foreground/50 hover:text-primary" : "text-white/70 hover:text-white"}`}
+            className={`md:hidden p-2 transition-colors ${solidHeader ? "text-foreground/70 hover:text-primary" : "text-white/80 hover:text-white"}`}
             onClick={() => setMobileOpen(!mobileOpen)}
           >
             {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}

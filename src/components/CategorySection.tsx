@@ -5,9 +5,12 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useCompare } from "@/hooks/useCompare";
 import { toast } from "sonner";
+import { categoryToSlug } from "@/data/categoryContent";
+import { track } from "@vercel/analytics";
 
 interface CategorySectionProps {
   categoryName: string;
+  categorySlug?: string;
   products: Product[];
   categoryImage: string;
   onViewDetails: (product: Product) => void;
@@ -20,7 +23,7 @@ function extractSpec(features: string[], key: string): string | null {
   return parts.length > 1 ? parts[1].trim() : null;
 }
 
-const CategorySection = ({ categoryName, products, categoryImage, onViewDetails }: CategorySectionProps) => {
+const CategorySection = ({ categoryName, categorySlug, products, categoryImage, onViewDetails }: CategorySectionProps) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const navigate = useNavigate();
   const { addToCompare, removeFromCompare, isInCompare } = useCompare();
@@ -46,12 +49,12 @@ const CategorySection = ({ categoryName, products, categoryImage, onViewDetails 
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent flex items-center">
           <div className="px-8 md:px-10">
-            <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-[#178fbe] block mb-2">
+            <span className="font-mono text-[11px] tracking-[0.22em] uppercase text-[#49b7df] block mb-2">
               {products.length} Product{products.length !== 1 ? "s" : ""}
             </span>
-            <h3 className="font-display text-3xl md:text-4xl tracking-wider text-white">
-              {categoryName}
-            </h3>
+            <h2 className="font-display text-3xl md:text-4xl tracking-wider text-white">
+              <Link to={`/products/category/${categorySlug ?? categoryToSlug(categoryName)}`} className="hover:text-primary transition-colors">{categoryName}</Link>
+            </h2>
           </div>
         </div>
       </div>
@@ -94,9 +97,9 @@ const CategorySection = ({ categoryName, products, categoryImage, onViewDetails 
                   to={`/products/${product.id}`}
                   className="block rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
                 >
-                  <h4 className="font-semibold text-foreground/85 text-sm mb-1 truncate group-hover:text-primary transition-colors">
+                  <h3 className="font-semibold text-foreground/85 text-sm mb-1 truncate group-hover:text-primary transition-colors">
                     {product.name}
-                  </h4>
+                  </h3>
                   <p className="text-muted-foreground text-xs line-clamp-2 mb-3 min-h-8">
                     {product.description}
                   </p>
@@ -107,25 +110,25 @@ const CategorySection = ({ categoryName, products, categoryImage, onViewDetails 
                   <div className="grid grid-cols-2 gap-x-4 gap-y-1.5 mb-3 py-2.5 px-3 rounded bg-muted/50 border border-border/50">
                     {flange && (
                       <div>
-                        <span className="font-mono text-[9px] text-muted-foreground uppercase tracking-wider">Flange</span>
+                        <span className="font-mono text-[11px] text-muted-foreground uppercase tracking-wider">Flange</span>
                         <p className="font-mono text-xs text-foreground/80">{flange}</p>
                       </div>
                     )}
                     {barrel && (
                       <div>
-                        <span className="font-mono text-[9px] text-muted-foreground uppercase tracking-wider">Barrel</span>
+                        <span className="font-mono text-[11px] text-muted-foreground uppercase tracking-wider">Barrel</span>
                         <p className="font-mono text-xs text-foreground/80">{barrel}</p>
                       </div>
                     )}
                     {bore && (
                       <div>
-                        <span className="font-mono text-[9px] text-muted-foreground uppercase tracking-wider">Bore</span>
+                        <span className="font-mono text-[11px] text-muted-foreground uppercase tracking-wider">Bore</span>
                         <p className="font-mono text-xs text-foreground/80">{bore}</p>
                       </div>
                     )}
                     {traverse && (
                       <div>
-                        <span className="font-mono text-[9px] text-muted-foreground uppercase tracking-wider">Traverse</span>
+                        <span className="font-mono text-[11px] text-muted-foreground uppercase tracking-wider">Traverse</span>
                         <p className="font-mono text-xs text-foreground/80">{traverse}</p>
                       </div>
                     )}
@@ -137,7 +140,7 @@ const CategorySection = ({ categoryName, products, categoryImage, onViewDetails 
                   <button
                     type="button"
                     aria-label={`Quick view ${product.name}`}
-                    className="flex min-h-10 items-center justify-center gap-1.5 rounded-sm border border-primary/20 py-2 text-[10px] font-medium uppercase tracking-wider text-primary transition-colors hover:border-primary/40 hover:text-primary/80"
+                    className="flex min-h-10 items-center justify-center gap-1.5 rounded-sm border border-primary/20 py-2 text-[11px] font-medium uppercase tracking-wider text-primary transition-colors hover:border-primary/40 hover:text-primary/80"
                     onClick={(e) => { e.stopPropagation(); onViewDetails(product); }}
                   >
                     <Eye className="h-3 w-3" />
@@ -146,7 +149,7 @@ const CategorySection = ({ categoryName, products, categoryImage, onViewDetails 
                   <button
                     type="button"
                     aria-label={isInCompare(product.id) ? `Remove ${product.name} from comparison` : `Add ${product.name} to comparison`}
-                    className={`flex min-h-10 items-center justify-center gap-1.5 rounded-sm px-3 py-2 text-[10px] font-medium uppercase tracking-wider transition-colors ${
+                    className={`flex min-h-10 items-center justify-center gap-1.5 rounded-sm px-3 py-2 text-[11px] font-medium uppercase tracking-wider transition-colors ${
                       isInCompare(product.id)
                         ? "border-2 border-[#178fbe] text-[#178fbe] bg-[#178fbe]/5"
                         : "border border-border text-muted-foreground hover:border-primary/40 hover:text-primary"
@@ -174,9 +177,10 @@ const CategorySection = ({ categoryName, products, categoryImage, onViewDetails 
                   <button
                     type="button"
                     aria-label={`Request a quote for ${product.name}`}
-                    className="col-span-2 flex min-h-11 items-center justify-center gap-1.5 rounded-sm bg-[#178fbe] px-3 py-2 text-[10px] font-medium uppercase tracking-wider text-white transition-colors hover:bg-[#136fa0] cursor-pointer"
+                    className="col-span-2 flex min-h-11 items-center justify-center gap-1.5 rounded-sm bg-[#178fbe] px-3 py-2 text-[11px] font-medium uppercase tracking-wider text-white transition-colors hover:bg-[#136fa0] cursor-pointer"
                     onClick={(e) => {
                       e.stopPropagation();
+                      track("quote_intent", { product: product.name, source: "catalog_card" });
                       navigate(`/?enquiry=${encodeURIComponent(product.name)}`);
                       setTimeout(() => {
                         document.getElementById("enquiry-form")?.scrollIntoView({ behavior: "smooth" });
@@ -196,7 +200,7 @@ const CategorySection = ({ categoryName, products, categoryImage, onViewDetails 
       {hasMore && (
         <div className="flex justify-center mt-6">
           <button
-            className="flex items-center gap-2 font-mono text-[10px] text-primary hover:text-primary/80 transition-colors uppercase tracking-[0.2em]"
+            className="flex items-center gap-2 font-mono text-[11px] text-primary hover:text-primary/80 transition-colors uppercase tracking-[0.2em]"
             onClick={() => setIsExpanded(!isExpanded)}
           >
             {isExpanded ? (

@@ -33,7 +33,7 @@ const Footer = () => {
           {/* Label */}
           <div className="flex items-center gap-4 mb-5">
             <div className="h-[2px] w-10 bg-[#178fbe]" />
-            <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-[#178fbe]">
+            <span className="font-mono text-[11px] tracking-[0.3em] uppercase text-[#178fbe]">
               Get In Touch
             </span>
           </div>
@@ -91,7 +91,7 @@ const Footer = () => {
                     <Icon className="h-4 w-4 text-primary" />
                   </div>
                   <div>
-                    <p className="font-mono text-[10px] text-muted-foreground uppercase tracking-[0.2em] mb-1">{label}</p>
+                    <p className="font-mono text-[11px] text-muted-foreground uppercase tracking-[0.2em] mb-1">{label}</p>
                     {label === "Phone" ? (
                       <div className="flex flex-col items-start gap-1 text-sm leading-relaxed">
                         <div>
@@ -123,27 +123,30 @@ const Footer = () => {
       </section>
 
       {/* Footer bar */}
-      <footer className="bg-foreground text-background/60">
+      <footer className="bg-foreground text-background/75">
         <div className="container flex flex-col md:flex-row items-center justify-between gap-4 py-6">
-          <span className="font-display text-sm tracking-[0.15em] text-background/40">
+          <span className="font-display text-sm tracking-[0.15em] text-background/75">
             BOBBINS INDIA
           </span>
-          <p className="font-mono text-[10px] tracking-[0.1em] text-background/30">
+          <p className="font-mono text-[11px] tracking-[0.1em] text-background/65">
             &copy; {new Date().getFullYear()} Bobbins India. All rights reserved.
           </p>
           <div className="flex items-center gap-4 md:gap-8">
-            <button onClick={() => handleAnchorNav("about")} className="py-2 px-1 text-[10px] text-background/40 hover:text-background transition-colors uppercase tracking-[0.15em]">
+            <button onClick={() => handleAnchorNav("about")} className="py-2 px-1 text-[11px] text-background/70 hover:text-background transition-colors uppercase tracking-[0.15em]">
               About
             </button>
-            <Link to="/products" className="py-2 px-1 text-[10px] text-background/40 hover:text-background transition-colors uppercase tracking-[0.15em]">
+            <Link to="/products" className="py-2 px-1 text-[11px] text-background/70 hover:text-background transition-colors uppercase tracking-[0.15em]">
               Products
             </Link>
-            <button onClick={() => handleAnchorNav("contact")} className="py-2 px-1 text-[10px] text-background/40 hover:text-background transition-colors uppercase tracking-[0.15em]">
+            <Link to="/privacy" className="py-2 px-1 text-[11px] text-background/70 hover:text-background transition-colors uppercase tracking-[0.15em]">
+              Privacy
+            </Link>
+            <button onClick={() => handleAnchorNav("contact")} className="py-2 px-1 text-[11px] text-background/70 hover:text-background transition-colors uppercase tracking-[0.15em]">
               Contact
             </button>
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className="flex items-center gap-1.5 py-2 px-1 text-[10px] text-background/40 hover:text-background transition-colors uppercase tracking-[0.15em]"
+              className="flex items-center gap-1.5 py-2 px-1 text-[11px] text-background/70 hover:text-background transition-colors uppercase tracking-[0.15em]"
             >
               <ArrowUp className="h-3 w-3" />
               Top
