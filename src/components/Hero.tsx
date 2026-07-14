@@ -34,7 +34,7 @@ const Hero = () => {
           />
 
           <p className="animate-fade-up-delay-2 text-white/75 text-base md:text-lg leading-[1.7] max-w-xl mb-12">
-            16 product categories. 100+ variants. Custom moulds developed in-house. The largest range of spools, bobbins and reels under one roof.
+            16 product categories. 100+ variants. Custom moulds developed in-house for wire, cable, welding, textile and industrial applications.
           </p>
 
           <div className="animate-fade-up-delay-3 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 mb-5 w-full sm:w-auto">
@@ -63,7 +63,7 @@ const Hero = () => {
             {[
               { val: "30+", lab: "Years" },
               { val: "100+", lab: "Variants" },
-              { val: "ISO", lab: "Certified" },
+              { val: "16", lab: "Categories" },
             ].map(({ val, lab }, i) => (
               <div key={val} className="flex items-center gap-3">
                 {i > 0 && <div className="w-px h-8 bg-white/20" />}

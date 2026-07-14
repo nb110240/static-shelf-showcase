@@ -4,21 +4,26 @@ const organizationSchema = {
   name: "Bobbins India",
   url: "https://bobbinsindia.net",
   description:
-    "India's leading manufacturer of precision plastic reels, bobbins, and spools for the cable & wire industry since 1995.",
+    "Manufacturer of plastic reels, bobbins, and spools for wire, cable, welding, textile, and industrial applications since 1995.",
   foundingDate: "1995",
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Mumbai",
+    streetAddress: "12 B, Chandivali, Off Saki Vihar Road",
+    addressLocality: "Andheri East",
+    addressRegion: "Maharashtra",
+    postalCode: "400072",
     addressCountry: "IN",
   },
   telephone: "+912228473744",
   email: "sales@bobbinsindia.com",
-  inLanguage: "en",
-  areaServed: {
-    "@type": "Country",
-    name: "India",
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "sales",
+    telephone: "+918928154150",
+    email: "sales@bobbinsindia.com",
+    availableLanguage: "English",
   },
-  sameAs: [],
+  inLanguage: "en",
 };
 
 export default function StructuredData() {

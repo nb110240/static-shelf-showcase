@@ -46,7 +46,7 @@ const Footer = () => {
                 <span className="text-primary">QUOTE</span>
               </h2>
               <p className="text-muted-foreground text-sm leading-[1.8] max-w-sm mb-8">
-                Need a specific reel or a custom mould? Tell us your requirements and our team will respond within 24 hours.
+                Need a specific reel or a custom mould? Tell us the application, dimensions and quantity so we can review the right option.
               </p>
               <button
                 onClick={() => {
@@ -133,7 +133,7 @@ const Footer = () => {
           </p>
           <div className="flex items-center gap-4 md:gap-8">
             <button onClick={() => handleAnchorNav("about")} className="py-2 px-1 text-[10px] text-background/40 hover:text-background transition-colors uppercase tracking-[0.15em]">
-              Company
+              About
             </button>
             <Link to="/products" className="py-2 px-1 text-[10px] text-background/40 hover:text-background transition-colors uppercase tracking-[0.15em]">
               Products

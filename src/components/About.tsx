@@ -2,10 +2,10 @@ import { CheckCircle2 } from "lucide-react";
 import productCollage from "@/assets/home-studio.webp";
 
 const highlights = [
-  "Largest range of spools under one roof",
-  "In-house tool design & mould shop for rapid custom development",
-  "Minimal lead times with maintained inventory",
-  "Exports to clients worldwide",
+  "Broad catalog across demanding winding applications",
+  "In-house tool design and mould-development capability",
+  "Standard and custom reel conversations under one roof",
+  "Direct support for domestic and international enquiries",
 ];
 
 const About = () => {
@@ -29,10 +29,10 @@ const About = () => {
               <span className="text-primary">SPOOL MANUFACTURING</span>
             </h2>
             <p className="text-muted-foreground text-sm leading-[1.8] mb-5">
-              Bobbinsindia is a pioneer company in the field of spool manufacturing. Our spools are trusted by cable and wire manufacturers globally. We maintain the largest range under one roof to minimise lead times and maximise reliability.
+              Since 1995, Bobbins India has focused on spools, bobbins and reels for cable, wire and industrial winding applications. The range spans compact precision bobbins through large-format delivery reels.
             </p>
             <p className="text-muted-foreground text-sm leading-[1.8] mb-10">
-              We operate our own tool design and mould shop — enabling rapid development of custom reels tailored to your exact specifications. This in-house capability is what sets us apart from every other spool manufacturer.
+              Our in-house tool design and mould shop extends that standard range with custom development for buyers who need a specific geometry, material or application fit.
             </p>
 
             <ul className="space-y-4">

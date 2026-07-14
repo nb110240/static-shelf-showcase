@@ -1,7 +1,7 @@
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import { Check, Mail, ArrowLeft, Package, GitCompareArrows } from "lucide-react";
+import { Check, Mail, ArrowLeft, Package, GitCompareArrows, Ruler, CircleDot, Boxes } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { SITE_URL } from "@/lib/constants";
@@ -29,6 +29,18 @@ const ProductPage = () => {
     .filter((p) => p.category === product.category && p.id !== product.id)
     .slice(0, 3);
 
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.name,
+    image: product.image.startsWith("http") ? product.image : `${SITE_URL}${product.image}`,
+    description: product.description,
+    sku: product.id,
+    category: product.category,
+    brand: { "@type": "Brand", name: "Bobbins India" },
+    manufacturer: { "@type": "Organization", name: "Bobbins India", url: SITE_URL },
+  };
+
   const handleEnquire = () => {
     navigate(`/?enquiry=${encodeURIComponent(product.name)}`);
     setTimeout(() => {
@@ -49,6 +61,7 @@ const ProductPage = () => {
         <title>{product.name} | Bobbins India</title>
         <meta name="description" content={`${product.description} View specifications and request a quote from Bobbins India.`} />
         <link rel="canonical" href={`${SITE_URL}/products/${productId}`} />
+        <script type="application/ld+json">{JSON.stringify(productSchema)}</script>
       </Helmet>
       <Header />
 
@@ -156,6 +169,22 @@ const ProductPage = () => {
                 </ul>
               </div>
 
+              <div className="mb-6 rounded-lg border border-primary/15 bg-primary/[0.04] p-4">
+                <p className="font-mono text-[9px] uppercase tracking-[0.18em] text-primary">For an accurate quotation</p>
+                <div className="mt-3 grid grid-cols-3 gap-3 text-center">
+                  {[
+                    { icon: Ruler, label: "Dimensions" },
+                    { icon: CircleDot, label: "Application" },
+                    { icon: Boxes, label: "Quantity" },
+                  ].map(({ icon: Icon, label }) => (
+                    <div key={label} className="rounded-md border border-border/70 bg-card p-2.5">
+                      <Icon className="mx-auto mb-1.5 h-4 w-4 text-primary" aria-hidden="true" />
+                      <span className="text-[10px] text-muted-foreground">{label}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
               {/* CTA Buttons */}
               <div className="flex flex-col gap-3 w-full sm:w-auto">
                 <button
@@ -163,14 +192,14 @@ const ProductPage = () => {
                   className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-[11px] font-semibold tracking-[0.16em] uppercase rounded-sm bg-[#178fbe] text-white hover:bg-[#136fa0] transition-all duration-300 w-full cursor-pointer"
                 >
                   <Mail className="h-4 w-4" />
-                  Enquire
+                  Request a Quote
                 </button>
                 <button
                   onClick={handleSampleRequest}
                   className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-[11px] font-semibold tracking-[0.16em] uppercase rounded-sm border border-primary/20 text-primary hover:border-primary/40 hover:bg-primary/5 transition-all duration-300 w-full cursor-pointer"
                 >
                   <Package className="h-4 w-4" />
-                  Request Sample
+                  Ask About a Sample
                 </button>
                 <button
                   onClick={() => {

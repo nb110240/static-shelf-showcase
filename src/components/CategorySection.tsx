@@ -133,11 +133,11 @@ const CategorySection = ({ categoryName, products, categoryImage, onViewDetails 
                 )}
 
                 {/* Actions */}
-                <div className="flex items-center gap-2">
+                <div className="grid grid-cols-2 gap-2">
                   <button
                     type="button"
                     aria-label={`Quick view ${product.name}`}
-                    className="flex-1 flex items-center justify-center gap-1.5 text-[10px] font-medium text-primary hover:text-primary/80 transition-colors py-2 tracking-wider uppercase border border-primary/20 rounded-sm hover:border-primary/40"
+                    className="flex min-h-10 items-center justify-center gap-1.5 rounded-sm border border-primary/20 py-2 text-[10px] font-medium uppercase tracking-wider text-primary transition-colors hover:border-primary/40 hover:text-primary/80"
                     onClick={(e) => { e.stopPropagation(); onViewDetails(product); }}
                   >
                     <Eye className="h-3 w-3" />
@@ -146,7 +146,7 @@ const CategorySection = ({ categoryName, products, categoryImage, onViewDetails 
                   <button
                     type="button"
                     aria-label={isInCompare(product.id) ? `Remove ${product.name} from comparison` : `Add ${product.name} to comparison`}
-                    className={`flex items-center justify-center gap-1.5 text-[10px] font-medium transition-colors py-2 px-3 tracking-wider uppercase rounded-sm ${
+                    className={`flex min-h-10 items-center justify-center gap-1.5 rounded-sm px-3 py-2 text-[10px] font-medium uppercase tracking-wider transition-colors ${
                       isInCompare(product.id)
                         ? "border-2 border-[#178fbe] text-[#178fbe] bg-[#178fbe]/5"
                         : "border border-border text-muted-foreground hover:border-primary/40 hover:text-primary"
@@ -173,8 +173,8 @@ const CategorySection = ({ categoryName, products, categoryImage, onViewDetails 
                   </button>
                   <button
                     type="button"
-                    aria-label={`Enquire about ${product.name}`}
-                    className="flex items-center justify-center gap-1.5 text-[10px] font-medium text-white bg-[#178fbe] hover:bg-[#136fa0] transition-colors py-2 px-3 tracking-wider uppercase rounded-sm cursor-pointer"
+                    aria-label={`Request a quote for ${product.name}`}
+                    className="col-span-2 flex min-h-11 items-center justify-center gap-1.5 rounded-sm bg-[#178fbe] px-3 py-2 text-[10px] font-medium uppercase tracking-wider text-white transition-colors hover:bg-[#136fa0] cursor-pointer"
                     onClick={(e) => {
                       e.stopPropagation();
                       navigate(`/?enquiry=${encodeURIComponent(product.name)}`);
@@ -184,7 +184,7 @@ const CategorySection = ({ categoryName, products, categoryImage, onViewDetails 
                     }}
                   >
                     <Mail className="h-3 w-3" />
-                    Enquire
+                    Request Quote
                   </button>
                 </div>
               </div>

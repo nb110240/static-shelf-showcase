@@ -6,6 +6,7 @@ import ScrollShowcase from "@/components/ScrollShowcase";
 import About from "@/components/About";
 import Footer from "@/components/Footer";
 import EnquiryForm from "@/components/EnquiryForm";
+import Capabilities from "@/components/Capabilities";
 import { SITE_URL } from "@/lib/constants";
 
 const Index = () => {
@@ -25,6 +26,7 @@ const Index = () => {
       </div>
       <ProductFinder />
       <ScrollShowcase />
+      <Capabilities />
       <div style={{ overflowX: "clip" }}>
         <About />
         <EnquiryForm />

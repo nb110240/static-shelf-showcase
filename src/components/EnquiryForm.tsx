@@ -11,9 +11,11 @@ const EnquiryForm = () => {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [form, setForm] = useState({
     name: "",
+    company: "",
     phone: "",
     email: "",
     product: "",
+    quantity: "",
     requirement: "",
     website: "",
   });
@@ -44,9 +46,11 @@ const EnquiryForm = () => {
     "Hello Bobbins India, I'd like to make an enquiry.",
     "",
     `Name: ${form.name}`,
+    form.company ? `Company: ${form.company}` : null,
     `Phone: ${form.phone}`,
     form.email ? `Email: ${form.email}` : null,
     `Product: ${form.product || "General enquiry"}`,
+    form.quantity ? `Estimated quantity: ${form.quantity}` : null,
     "",
     "Requirement:",
     form.requirement,
@@ -75,10 +79,12 @@ const EnquiryForm = () => {
         signal: controller.signal,
         body: JSON.stringify({
           name: form.name,
+          company: form.company || "Not provided",
           phone: form.phone,
           email: form.email || "Not provided",
           _replyto: form.email || undefined,
           product: form.product || "General enquiry",
+          quantity: form.quantity || "Not provided",
           requirement: form.requirement,
           _url: window.location.href,
           _template: "table",
@@ -93,7 +99,7 @@ const EnquiryForm = () => {
       const ok = res.ok && data && String(data.success).toLowerCase() === "true";
       if (ok) {
         setStatus("sent");
-        setForm({ name: "", phone: "", email: "", product: "", requirement: "", website: "" });
+        setForm({ name: "", company: "", phone: "", email: "", product: "", quantity: "", requirement: "", website: "" });
       } else {
         setStatus("error");
       }
@@ -126,7 +132,7 @@ const EnquiryForm = () => {
           <span className="text-primary">ENQUIRY</span>
         </h2>
         <p className="text-muted-foreground text-sm leading-[1.8] max-w-md mb-12">
-          Need a specific reel, custom mould, or a quote? Fill in the form below and our team will respond within 24 hours.
+          Need a specific reel, custom mould, or a quote? Share the application, dimensions and estimated quantity so our team can match the right product.
         </p>
 
         {status === "sent" ? (
@@ -136,7 +142,7 @@ const EnquiryForm = () => {
               ENQUIRY SENT
             </h3>
             <p className="text-muted-foreground text-sm mb-6">
-              Thank you! Our team will get back to you within 24 hours.
+              Thank you. Your requirement has reached our team and we will follow up using the contact details provided.
             </p>
             <button
               onClick={() => setStatus("idle")}
@@ -185,6 +191,26 @@ const EnquiryForm = () => {
                 />
               </div>
 
+              {/* Company */}
+              <div>
+                <label htmlFor="enquiry-company" className="block font-mono text-[10px] text-muted-foreground uppercase tracking-[0.2em] mb-2">
+                  Company
+                </label>
+                <input
+                  type="text"
+                  name="company"
+                  id="enquiry-company"
+                  maxLength={120}
+                  autoComplete="organization"
+                  value={form.company}
+                  onChange={handleChange}
+                  placeholder="Company name"
+                  className={inputClasses}
+                />
+              </div>
+            </div>
+
+            <div className="grid sm:grid-cols-2 gap-5 mb-5">
               {/* Phone */}
               <div>
                 <label htmlFor="enquiry-phone" className="block font-mono text-[10px] text-muted-foreground uppercase tracking-[0.2em] mb-2">
@@ -204,9 +230,7 @@ const EnquiryForm = () => {
                   className={inputClasses}
                 />
               </div>
-            </div>
 
-            <div className="grid sm:grid-cols-2 gap-5 mb-5">
               {/* Email */}
               <div>
                 <label htmlFor="enquiry-email" className="block font-mono text-[10px] text-muted-foreground uppercase tracking-[0.2em] mb-2">
@@ -225,6 +249,9 @@ const EnquiryForm = () => {
                 />
               </div>
 
+            </div>
+
+            <div className="grid sm:grid-cols-2 gap-5 mb-5">
               {/* Product */}
               <div>
                 <label htmlFor="enquiry-product" className="block font-mono text-[10px] text-muted-foreground uppercase tracking-[0.2em] mb-2">
@@ -238,6 +265,23 @@ const EnquiryForm = () => {
                   value={form.product}
                   onChange={handleChange}
                   placeholder="e.g. BK 80, Super Tough 25&quot;"
+                  className={inputClasses}
+                />
+              </div>
+
+              {/* Quantity */}
+              <div>
+                <label htmlFor="enquiry-quantity" className="block font-mono text-[10px] text-muted-foreground uppercase tracking-[0.2em] mb-2">
+                  Estimated Quantity
+                </label>
+                <input
+                  type="text"
+                  name="quantity"
+                  id="enquiry-quantity"
+                  maxLength={60}
+                  value={form.quantity}
+                  onChange={handleChange}
+                  placeholder="e.g. 5,000 pieces"
                   className={inputClasses}
                 />
               </div>
@@ -280,6 +324,10 @@ const EnquiryForm = () => {
                 <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
               )}
             </button>
+
+            <p className="mt-4 max-w-xl text-xs leading-5 text-muted-foreground">
+              Your details are used only to respond to this product or quotation enquiry. For faster matching, include flange, barrel, bore and traverse dimensions where available.
+            </p>
 
             <div aria-live="polite" aria-atomic="true">
               {status === "error" && (

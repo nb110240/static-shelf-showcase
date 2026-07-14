@@ -77,7 +77,7 @@ const ProductDetail = ({ product, open, onClose }: ProductDetailProps) => {
                 className="flex items-center justify-center gap-3 w-full px-6 py-3.5 bg-[#178fbe] text-white text-[11px] font-semibold tracking-[0.2em] uppercase rounded-sm hover:bg-[#136fa0] transition-all duration-300 group cursor-pointer"
               >
                 <Mail className="h-3.5 w-3.5" />
-                Enquire
+                Request a Quote
                 <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
               </button>
             </div>

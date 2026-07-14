@@ -6,7 +6,7 @@ import logoImg from "@/assets/logo.png";
 const NAV = [
   { label: "Home",     href: "/",         external: false },
   { label: "Products", href: "/products", external: false },
-  { label: "Company",  href: "/#about",   external: false },
+  { label: "Capabilities", href: "/#capabilities", external: false },
   { label: "Contact",  href: "/#contact", external: false },
 ];
 
@@ -86,7 +86,7 @@ const Header = () => {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav aria-label="Primary navigation" className="hidden md:flex items-center gap-8">
           {NAV.map((link) => {
             const cls = `relative py-3 text-[11px] font-medium tracking-[0.18em] uppercase transition-colors group/nav ${
               scrolled
@@ -145,7 +145,7 @@ const Header = () => {
       {/* Mobile menu */}
       {mobileOpen && (
         <div className="md:hidden bg-white/95 backdrop-blur-xl border-t border-border/50">
-          <nav className="container py-6 flex flex-col gap-1">
+          <nav aria-label="Mobile navigation" className="container py-6 flex flex-col gap-1">
             {NAV.map((link) =>
               link.href.startsWith("/#") ? (
                 <button
