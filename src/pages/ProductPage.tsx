@@ -1,10 +1,10 @@
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import { Check, MessageCircle, ArrowLeft, Package, GitCompareArrows } from "lucide-react";
+import { Check, Mail, ArrowLeft, Package, GitCompareArrows } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { whatsappUrl, SITE_URL } from "@/lib/constants";
+import { SITE_URL } from "@/lib/constants";
 import { products } from "@/data/products";
 import { Product } from "@/types/product";
 import { useCompare } from "@/hooks/useCompare";
@@ -29,16 +29,25 @@ const ProductPage = () => {
     .filter((p) => p.category === product.category && p.id !== product.id)
     .slice(0, 3);
 
-  const whatsAppUrl = whatsappUrl(`Hi, I'd like to enquire about: ${product.name}`);
+  const handleEnquire = () => {
+    navigate(`/?enquiry=${encodeURIComponent(product.name)}`);
+    setTimeout(() => {
+      document.getElementById("enquiry-form")?.scrollIntoView({ behavior: "smooth" });
+    }, 400);
+  };
 
-  const sampleWhatsAppUrl = whatsappUrl(
-    `Hi, I'd like to request a sample of: ${product.name}\nCategory: ${product.category}\n\nShipping details:\nName: \nCompany: \nAddress: `
-  );
+  const handleSampleRequest = () => {
+    navigate(`/?enquiry=${encodeURIComponent(`Sample Request: ${product.name}`)}`);
+    setTimeout(() => {
+      document.getElementById("enquiry-form")?.scrollIntoView({ behavior: "smooth" });
+    }, 400);
+  };
 
   return (
-    <div className="min-h-screen bg-background overflow-x-hidden">
+    <div id="main-content" className="min-h-screen bg-background overflow-x-hidden">
       <Helmet>
         <title>{product.name} | Bobbins India</title>
+        <meta name="description" content={`${product.description} View specifications and request a quote from Bobbins India.`} />
         <link rel="canonical" href={`${SITE_URL}/products/${productId}`} />
       </Helmet>
       <Header />
@@ -149,24 +158,20 @@ const ProductPage = () => {
 
               {/* CTA Buttons */}
               <div className="flex flex-col gap-3 w-full sm:w-auto">
-                <a
-                  href={whatsAppUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-[11px] font-semibold tracking-[0.16em] uppercase rounded-sm bg-[#25D366] text-white hover:bg-[#1ebe57] transition-all duration-300 w-full"
+                <button
+                  onClick={handleEnquire}
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-[11px] font-semibold tracking-[0.16em] uppercase rounded-sm bg-[#178fbe] text-white hover:bg-[#136fa0] transition-all duration-300 w-full cursor-pointer"
                 >
-                  <MessageCircle className="h-4 w-4" />
-                  Enquire on WhatsApp
-                </a>
-                <a
-                  href={sampleWhatsAppUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-[11px] font-semibold tracking-[0.16em] uppercase rounded-sm border border-primary/20 text-primary hover:border-primary/40 hover:bg-primary/5 transition-all duration-300 w-full"
+                  <Mail className="h-4 w-4" />
+                  Enquire
+                </button>
+                <button
+                  onClick={handleSampleRequest}
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-[11px] font-semibold tracking-[0.16em] uppercase rounded-sm border border-primary/20 text-primary hover:border-primary/40 hover:bg-primary/5 transition-all duration-300 w-full cursor-pointer"
                 >
                   <Package className="h-4 w-4" />
                   Request Sample
-                </a>
+                </button>
                 <button
                   onClick={() => {
                     if (isInCompare(product.id)) {

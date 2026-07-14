@@ -1,6 +1,5 @@
-import { Mail, Phone, MapPin, ArrowUp, ArrowRight, MessageCircle } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowUp, ArrowRight } from "lucide-react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import { whatsappUrl } from "@/lib/constants";
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -40,7 +39,7 @@ const Footer = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-20 items-start">
-            {/* Left copy + WhatsApp CTA */}
+            {/* Left copy + Email CTA */}
             <div>
               <h2 className="font-display text-[clamp(1.8rem,4vw,3rem)] leading-[1.2] tracking-wider text-foreground mb-8">
                 GET A<br />
@@ -49,16 +48,16 @@ const Footer = () => {
               <p className="text-muted-foreground text-sm leading-[1.8] max-w-sm mb-8">
                 Need a specific reel or a custom mould? Tell us your requirements and our team will respond within 24 hours.
               </p>
-              <a
-                href={whatsappUrl("Hi, I'd like to enquire about your products.")}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-[#25D366] text-white text-[11px] font-semibold tracking-[0.2em] uppercase rounded-sm hover:bg-[#1ebe57] transition-all duration-300 group"
+              <button
+                onClick={() => {
+                  document.getElementById("enquiry-form")?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="inline-flex items-center gap-3 px-8 py-4 bg-[#178fbe] text-white text-[11px] font-semibold tracking-[0.2em] uppercase rounded-sm hover:bg-[#136fa0] transition-all duration-300 group cursor-pointer"
               >
-                <MessageCircle className="h-3.5 w-3.5" />
-                WhatsApp Us
+                <Mail className="h-3.5 w-3.5" />
+                Request a Quote
                 <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
-              </a>
+              </button>
             </div>
 
             {/* Right contact cards */}
@@ -67,7 +66,7 @@ const Footer = () => {
                 {
                   icon: MapPin,
                   label: "Address",
-                  value: "12 B, Chandivali, Off Saki Vihar Road\nAndheri (E), Mumbai - 400072\nMaharashtra, India",
+                  value: "Sudhir Enterprise\n12 B, Chandivali, Off Saki Vihar Road\nAndheri (E), Mumbai - 400072\nMaharashtra, India",
                   href: "https://maps.google.com/?q=12+B+Chandivali+Off+Saki+Vihar+Road+Andheri+East+Mumbai+400072",
                 },
                 {
@@ -93,8 +92,22 @@ const Footer = () => {
                   </div>
                   <div>
                     <p className="font-mono text-[10px] text-muted-foreground uppercase tracking-[0.2em] mb-1">{label}</p>
-                    {href ? (
-                      <a href={href} className="text-sm text-foreground hover:text-primary transition-colors whitespace-pre-line leading-relaxed">
+                    {label === "Phone" ? (
+                      <div className="flex flex-col items-start gap-1 text-sm leading-relaxed">
+                        <div>
+                          <a href="tel:+912228473744" className="text-foreground hover:text-primary transition-colors">+91-22-2847 3744</a>
+                          <span className="text-muted-foreground"> / </span>
+                          <a href="tel:+912228471795" className="text-foreground hover:text-primary transition-colors">1795</a>
+                        </div>
+                        <a href="tel:+918928154150" className="text-foreground hover:text-primary transition-colors">+91 89281 54150</a>
+                      </div>
+                    ) : href ? (
+                      <a
+                        href={href}
+                        target={label === "Address" ? "_blank" : undefined}
+                        rel={label === "Address" ? "noopener noreferrer" : undefined}
+                        className="text-sm text-foreground hover:text-primary transition-colors whitespace-pre-line leading-relaxed"
+                      >
                         {value}
                       </a>
                     ) : (

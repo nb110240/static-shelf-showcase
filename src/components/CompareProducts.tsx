@@ -1,8 +1,8 @@
 import { useCompare } from "@/hooks/useCompare";
 import { products } from "@/data/products";
 import { Product } from "@/types/product";
-import { whatsappUrl } from "@/lib/constants";
-import { X, Plus, MessageCircle, Search } from "lucide-react";
+import { X, Plus, Mail, Search } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useState, useMemo } from "react";
 
@@ -184,11 +184,8 @@ const CompareProducts = () => {
     return "-";
   }
 
-  // WhatsApp CTA
-  const whatsAppMessage = `Hi, I'd like to compare and enquire about these products:\n${selectedProducts
-    .map((p) => `- ${p.name} (${p.category})`)
-    .join("\n")}`;
-  const whatsAppUrl = whatsappUrl(whatsAppMessage);
+  const nav = useNavigate();
+  const productNames = selectedProducts.map((p) => p.name).join(", ");
 
   // Empty state
   if (selectedProducts.length === 0) {
@@ -353,18 +350,21 @@ const CompareProducts = () => {
           </div>
         )}
 
-        {/* WhatsApp CTA */}
+        {/* Enquiry CTA */}
         {selectedProducts.length >= 2 && (
           <div className="flex justify-center">
-            <a
-              href={whatsAppUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 text-[11px] font-semibold tracking-[0.16em] uppercase rounded-sm bg-[#25D366] text-white hover:bg-[#1ebe57] transition-all duration-300"
+            <button
+              onClick={() => {
+                nav(`/?enquiry=${encodeURIComponent(productNames)}`);
+                setTimeout(() => {
+                  document.getElementById("enquiry-form")?.scrollIntoView({ behavior: "smooth" });
+                }, 400);
+              }}
+              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 text-[11px] font-semibold tracking-[0.16em] uppercase rounded-sm bg-[#178fbe] text-white hover:bg-[#136fa0] transition-all duration-300 cursor-pointer"
             >
-              <MessageCircle className="h-4 w-4" />
+              <Mail className="h-4 w-4" />
               Enquire About These Products
-            </a>
+            </button>
           </div>
         )}
       </div>

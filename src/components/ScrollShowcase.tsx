@@ -1,22 +1,22 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 
-import imgSuperTough    from "@/assets/super-tough-1.jpg";
+import imgSuperTough    from "@/assets/super-tough-photo.jpg";
 import imgJumbo         from "@/assets/jumbo-reels-studio.jpg";
 import imgCableDelivery from "@/assets/cable-delivery-reels.webp";
 import imgIsi           from "@/assets/isi-reels-studio.jpg";
 import imgDin           from "@/assets/cylindrical-reels-studio.jpg";
 import imgComposite     from "@/assets/composite/pf-tc-400.jpg";
-import imgTapered       from "@/assets/tapered-bobbins-studio.jpg";
-import imgAluminum      from "@/assets/aluminum-wire-new.jpg";
-import imgBiconical     from "@/assets/biconical-new.jpg";
+import imgTapered       from "@/assets/taper-reels-photo.jpg";
+import imgAluminum      from "@/assets/aluminum-wire-photo.jpg";
+import imgBiconical     from "@/assets/biconical-photo.jpg";
 import imgMonofilament  from "@/assets/monofilament-new.jpg";
 import imgMisc          from "@/assets/misc-reels-studio.jpg";
 import imgSteel         from "@/assets/steel-tinsel-studio.jpg";
 import imgWelding       from "@/assets/welding-wire-studio.jpg";
 import imgEdm           from "@/assets/edm-wire-studio.jpg";
 import imgStitching     from "@/assets/stitching-wire-studio.jpg";
-import imgCopper        from "@/assets/copper-conductor-studio.jpg";
+import imgCopper        from "@/assets/copper-conductor-photo.jpg";
 
 // One representative frame per product category — order matches PHASES
 const FRAME_SRCS = [
@@ -257,7 +257,7 @@ export default function ScrollShowcase() {
       }
       ctx.globalAlpha = 1;
 
-      canvas.style.transform = `rotate(${-4 + progress * 8}deg) scale(1.06)`;
+      canvas.style.transform = `scale(1.06)`;
     };
     tick();
 

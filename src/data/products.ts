@@ -1,5 +1,5 @@
 import { Product } from "@/types/product";
-import taperedBobbinsNew from "@/assets/tapered-bobbins-studio.jpg";
+import taperedBobbinsNew from "@/assets/taper-reels-photo.jpg";
 import weldingWireNew from "@/assets/welding-wire-studio.jpg";
 import compositeReelsNew from "@/assets/composite-reels-new.jpg";
 import compPfTc380 from "@/assets/composite/pf-tc-380.jpg";
@@ -27,11 +27,11 @@ import dinS12 from "@/assets/din-s12.jpg";
 import dinS22 from "@/assets/din-s22.jpg";
 import dinS48 from "@/assets/din-s48.jpg";
 import steelTinselNew from "@/assets/steel-tinsel-studio.jpg";
-import aluminumWireNew from "@/assets/aluminum-wire-new.jpg";
+import aluminumWireNew from "@/assets/aluminum-wire-photo.jpg";
 import aluminumReel200 from "@/assets/aluminum-reel-200.jpg";
 import aluminumReel320 from "@/assets/aluminum-reel-320.jpg";
 import cableDeliveryNew from "@/assets/cable-delivery-reels.webp";
-import superToughNew from "@/assets/super-tough-new.jpg";
+import superToughNew from "@/assets/super-tough-photo.jpg";
 import superTough1 from "@/assets/super-tough-1.jpg";
 import superTough2 from "@/assets/super-tough-2.jpg";
 import superTough3 from "@/assets/super-tough-3.jpg";
@@ -50,13 +50,13 @@ import jumboReel8 from "@/assets/jumbo-reel-8.jpg";
 import jumboReel9 from "@/assets/jumbo-reel-9.jpg";
 import jumboReel10 from "@/assets/jumbo-reel-10.jpg";
 import jumboReel11 from "@/assets/jumbo-reel-11.jpg";
-import biconicalNew from "@/assets/biconical-new.jpg";
+import biconicalNew from "@/assets/biconical-photo.jpg";
 import monofilamentNew from "@/assets/monofilament-new.jpg";
 import miscReelsNew from "@/assets/misc-reels-studio.jpg";
 import miscReel1 from "@/assets/misc-reel-1.jpg";
 import miscReel2 from "@/assets/misc-reel-2.jpg";
 import isiReelsNew from "@/assets/isi-reels-studio.jpg";
-import copperConductorNew from "@/assets/copper-conductor-studio.jpg";
+import copperConductorNew from "@/assets/copper-conductor-photo.jpg";
 
 export const products: Product[] = [
   // 1. TAPERED BOBBINS (DIN 46383 / IEC 264-3)
@@ -940,7 +940,7 @@ export const products: Product[] = [
     name: "AL-200 Aluminum Wire Reel",
     description: "Heavy-duty reel for delivery of aluminum wire with precision-engineered construction and circular hole pattern for weight reduction.",
     category: "Aluminum Wire",
-    image: aluminumReel200,
+    image: aluminumWireNew,
     features: [
       "Ref.No: AL-200",
       "Flange Dia (d1): 200mm",
@@ -955,7 +955,7 @@ export const products: Product[] = [
     name: "AL-320 Aluminum Wire Reel",
     description: "Large capacity reel for aluminum wire distribution with reinforced hexagonal center design for enhanced durability.",
     category: "Aluminum Wire",
-    image: aluminumReel320,
+    image: aluminumWireNew,
     features: [
       "Ref.No: AL-320",
       "Flange Dia (d1): 320mm",

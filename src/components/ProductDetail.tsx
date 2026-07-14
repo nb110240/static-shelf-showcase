@@ -1,7 +1,7 @@
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Product } from "@/types/product";
-import { whatsappUrl } from "@/lib/constants";
-import { Check, MessageCircle, ArrowRight } from "lucide-react";
+import { Check, Mail, ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 interface ProductDetailProps {
   product: Product | null;
@@ -10,7 +10,18 @@ interface ProductDetailProps {
 }
 
 const ProductDetail = ({ product, open, onClose }: ProductDetailProps) => {
+  const navigate = useNavigate();
+
   if (!product) return null;
+
+  const handleEnquire = () => {
+    onClose();
+    // Navigate to homepage with product pre-filled in the enquiry form
+    navigate(`/?enquiry=${encodeURIComponent(product.name)}`);
+    setTimeout(() => {
+      document.getElementById("enquiry-form")?.scrollIntoView({ behavior: "smooth" });
+    }, 400);
+  };
 
   return (
     <Dialog open={open} onOpenChange={onClose}>
@@ -61,16 +72,14 @@ const ProductDetail = ({ product, open, onClose }: ProductDetailProps) => {
             </div>
 
             <div className="mt-auto pt-5 border-t border-border">
-              <a
-                href={whatsappUrl(`Hi, I'd like to enquire about: ${product?.name || "your products"}`)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-3 w-full px-6 py-3.5 bg-[#25D366] text-white text-[11px] font-semibold tracking-[0.2em] uppercase rounded-sm hover:bg-[#1ebe57] transition-all duration-300 group"
+              <button
+                onClick={handleEnquire}
+                className="flex items-center justify-center gap-3 w-full px-6 py-3.5 bg-[#178fbe] text-white text-[11px] font-semibold tracking-[0.2em] uppercase rounded-sm hover:bg-[#136fa0] transition-all duration-300 group cursor-pointer"
               >
-                <MessageCircle className="h-3.5 w-3.5" />
-                Enquire on WhatsApp
+                <Mail className="h-3.5 w-3.5" />
+                Enquire
                 <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
-              </a>
+              </button>
             </div>
           </div>
         </div>

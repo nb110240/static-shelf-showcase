@@ -13,7 +13,7 @@ const organizationSchema = {
   },
   telephone: "+912228473744",
   email: "sales@bobbinsindia.com",
-  inLanguage: ["en", "hi"],
+  inLanguage: "en",
   areaServed: {
     "@type": "Country",
     name: "India",

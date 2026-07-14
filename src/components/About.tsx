@@ -5,7 +5,7 @@ const highlights = [
   "Largest range of spools under one roof",
   "In-house tool design & mould shop for rapid custom development",
   "Minimal lead times with maintained inventory",
-  "Exports to clients across India and worldwide",
+  "Exports to clients worldwide",
 ];
 
 const About = () => {

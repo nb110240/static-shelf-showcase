@@ -1,8 +1,8 @@
 import { Product } from "@/types/product";
-import { whatsappUrl } from "@/lib/constants";
-import { Eye, ChevronDown, ChevronUp, MessageCircle, Check, GitCompareArrows } from "lucide-react";
+// emailUrl no longer used — enquiry goes to form
+import { Eye, ChevronDown, ChevronUp, Mail, Check, GitCompareArrows } from "lucide-react";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useCompare } from "@/hooks/useCompare";
 import { toast } from "sonner";
 
@@ -65,16 +65,16 @@ const CategorySection = ({ categoryName, products, categoryImage, onViewDetails 
           const traverse = extractSpec(product.features, "traverse");
 
           return (
-            <div
+            <article
               key={product.id}
-              role="article"
-              tabIndex={0}
-              onKeyDown={(e) => { if (e.key === 'Enter') navigate(`/products/${product.id}`); }}
-              className="rounded-lg border border-border bg-card hover:border-primary/25 hover:shadow-[var(--shadow-card-hover)] transition-all duration-300 cursor-pointer group overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary/40"
-              onClick={() => navigate(`/products/${product.id}`)}
+              className="rounded-lg border border-border bg-card hover:border-primary/25 hover:shadow-[var(--shadow-card-hover)] transition-all duration-300 group overflow-hidden"
             >
               {/* Image */}
-              <div className="aspect-[4/3] overflow-hidden bg-[#f3f5f7]">
+              <Link
+                to={`/products/${product.id}`}
+                className="block aspect-[4/3] overflow-hidden bg-[#f3f5f7] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary/50"
+                aria-label={`View ${product.name}`}
+              >
                 <img
                   src={product.image}
                   alt={product.name}
@@ -86,16 +86,21 @@ const CategorySection = ({ categoryName, products, categoryImage, onViewDetails 
                     target.parentElement?.classList.add('bg-muted');
                   }}
                 />
-              </div>
+              </Link>
 
               {/* Info */}
               <div className="p-4">
-                <h4 className="font-semibold text-foreground/85 text-sm mb-1 truncate">
-                  {product.name}
-                </h4>
-                <p className="text-muted-foreground text-xs line-clamp-1 mb-3">
-                  {product.description}
-                </p>
+                <Link
+                  to={`/products/${product.id}`}
+                  className="block rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
+                >
+                  <h4 className="font-semibold text-foreground/85 text-sm mb-1 truncate group-hover:text-primary transition-colors">
+                    {product.name}
+                  </h4>
+                  <p className="text-muted-foreground text-xs line-clamp-2 mb-3 min-h-8">
+                    {product.description}
+                  </p>
+                </Link>
 
                 {/* Inline specs */}
                 {(flange || barrel || bore || traverse) && (
@@ -130,6 +135,8 @@ const CategorySection = ({ categoryName, products, categoryImage, onViewDetails 
                 {/* Actions */}
                 <div className="flex items-center gap-2">
                   <button
+                    type="button"
+                    aria-label={`Quick view ${product.name}`}
                     className="flex-1 flex items-center justify-center gap-1.5 text-[10px] font-medium text-primary hover:text-primary/80 transition-colors py-2 tracking-wider uppercase border border-primary/20 rounded-sm hover:border-primary/40"
                     onClick={(e) => { e.stopPropagation(); onViewDetails(product); }}
                   >
@@ -137,6 +144,8 @@ const CategorySection = ({ categoryName, products, categoryImage, onViewDetails 
                     Details
                   </button>
                   <button
+                    type="button"
+                    aria-label={isInCompare(product.id) ? `Remove ${product.name} from comparison` : `Add ${product.name} to comparison`}
                     className={`flex items-center justify-center gap-1.5 text-[10px] font-medium transition-colors py-2 px-3 tracking-wider uppercase rounded-sm ${
                       isInCompare(product.id)
                         ? "border-2 border-[#178fbe] text-[#178fbe] bg-[#178fbe]/5"
@@ -162,19 +171,24 @@ const CategorySection = ({ categoryName, products, categoryImage, onViewDetails 
                       <><GitCompareArrows className="h-3 w-3" /> Compare</>
                     )}
                   </button>
-                  <a
-                    href={whatsappUrl(`Hi, I'd like to enquire about: ${product.name}`)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-1.5 text-[10px] font-medium text-white bg-[#25D366] hover:bg-[#1ebe57] transition-colors py-2 px-3 tracking-wider uppercase rounded-sm"
-                    onClick={(e) => e.stopPropagation()}
+                  <button
+                    type="button"
+                    aria-label={`Enquire about ${product.name}`}
+                    className="flex items-center justify-center gap-1.5 text-[10px] font-medium text-white bg-[#178fbe] hover:bg-[#136fa0] transition-colors py-2 px-3 tracking-wider uppercase rounded-sm cursor-pointer"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      navigate(`/?enquiry=${encodeURIComponent(product.name)}`);
+                      setTimeout(() => {
+                        document.getElementById("enquiry-form")?.scrollIntoView({ behavior: "smooth" });
+                      }, 400);
+                    }}
                   >
-                    <MessageCircle className="h-3 w-3" />
+                    <Mail className="h-3 w-3" />
                     Enquire
-                  </a>
+                  </button>
                 </div>
               </div>
-            </div>
+            </article>
           );
         })}
       </div>

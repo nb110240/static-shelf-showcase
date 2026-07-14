@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, MessageSquareText } from "lucide-react";
 import { Link } from "react-router-dom";
 import logoWordmark from "@/assets/logo.png";
 
@@ -37,15 +37,26 @@ const Hero = () => {
             16 product categories. 100+ variants. Custom moulds developed in-house. The largest range of spools, bobbins and reels under one roof.
           </p>
 
-          <div className="animate-fade-up-delay-3 mb-16">
+          <div className="animate-fade-up-delay-3 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 mb-5 w-full sm:w-auto">
             <Link
               to="/products"
-              className="inline-flex items-center justify-center gap-3 px-10 py-4 bg-white text-black text-[11px] font-semibold tracking-[0.2em] uppercase rounded-sm hover:bg-primary hover:text-white transition-all duration-300 group"
+              className="inline-flex min-h-12 items-center justify-center gap-3 px-8 py-4 bg-white text-black text-[11px] font-semibold tracking-[0.2em] uppercase rounded-sm hover:bg-primary hover:text-white transition-all duration-300 group"
             >
-              View Catalog
+              Browse Products
               <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
             </Link>
+            <a
+              href="#enquiry-form"
+              className="inline-flex min-h-12 items-center justify-center gap-3 px-8 py-4 border border-white/35 bg-white/10 text-white text-[11px] font-semibold tracking-[0.2em] uppercase rounded-sm hover:bg-white/20 hover:border-white/60 transition-all duration-300"
+            >
+              <MessageSquareText className="h-3.5 w-3.5" />
+              Request a Quote
+            </a>
           </div>
+
+          <p className="animate-fade-up-delay-3 font-mono text-[9px] tracking-[0.14em] uppercase text-white/45 mb-14">
+            Standard sizes · Custom moulds · Export enquiries
+          </p>
 
           {/* Technical stats strip */}
           <div className="animate-fade-up-delay-4 flex items-center gap-6 md:gap-10">

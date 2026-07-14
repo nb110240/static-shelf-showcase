@@ -1,6 +1,6 @@
 import { useState, useMemo, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import { useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { ChevronDown, ChevronUp, HelpCircle } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -11,11 +11,12 @@ import ProductSearch from "@/components/ProductSearch";
 import CategoryFilter from "@/components/CategoryFilter";
 import ProductFinder from "@/components/ProductFinder";
 import { products, categories, categoryImages } from "@/data/products";
-import { whatsappUrl, SITE_URL } from "@/lib/constants";
+import { SITE_URL } from "@/lib/constants";
 import { Product } from "@/types/product";
 
 const Products = () => {
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const navigate = useNavigate();
   const initialCategory = searchParams.get("category") ?? "All";
 
   const [finderOpen, setFinderOpen] = useState(false);
@@ -64,9 +65,13 @@ const Products = () => {
   }, [filteredProducts]);
 
   return (
-    <div className="min-h-screen bg-background overflow-x-hidden">
+    <div id="main-content" className="min-h-screen bg-background overflow-x-hidden">
       <Helmet>
         <title>Product Catalog | Bobbins India</title>
+        <meta
+          name="description"
+          content="Browse 111 industrial spools, bobbins and reels by application and dimensions. Compare specifications or request a custom quote from Bobbins India."
+        />
         <link rel="canonical" href={`${SITE_URL}/products`} />
       </Helmet>
       <Header />
@@ -123,11 +128,18 @@ const Products = () => {
             onSearchChange={setSearchTerm}
             activeFilter={activeFilter}
             onFilterChange={setActiveFilter}
+            resultsCount={filteredProducts.length}
           />
           <CategoryFilter
             categories={categories}
             selectedCategory={selectedCategory}
-            onCategoryChange={setSelectedCategory}
+            onCategoryChange={(category) => {
+              setSelectedCategory(category);
+              const next = new URLSearchParams(searchParams);
+              if (category === "All") next.delete("category");
+              else next.set("category", category);
+              setSearchParams(next, { replace: true });
+            }}
             products={products}
           />
 
@@ -161,14 +173,12 @@ const Products = () => {
                 >
                   View All Products
                 </button>
-                <a
-                  href={whatsappUrl("Hi, I'm looking for a specific product. Can you help?")}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-5 py-2.5 text-[11px] font-semibold tracking-[0.16em] uppercase rounded-sm bg-[#25D366] text-white hover:bg-[#1ebe57] transition-all duration-300"
+                <button
+                  onClick={() => navigate(`/?enquiry=${encodeURIComponent(searchTerm)}`)}
+                  className="inline-flex items-center justify-center gap-2 px-5 py-2.5 text-[11px] font-semibold tracking-[0.16em] uppercase rounded-sm bg-[#178fbe] text-white hover:bg-[#136fa0] transition-all duration-300 cursor-pointer"
                 >
-                  Ask on WhatsApp
-                </a>
+                  Send Enquiry
+                </button>
               </div>
             </div>
           )}

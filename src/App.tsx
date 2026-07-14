@@ -9,19 +9,25 @@ import ProductPage from "./pages/ProductPage";
 import ComparePage from "./pages/ComparePage";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
-import WhatsAppFloat from "./components/WhatsAppFloat";
+import EmailFloat from "./components/WhatsAppFloat";
 import CompareFloatingBar from "./components/CompareFloatingBar";
 import StructuredData from "./components/StructuredData";
 
 const App = () => (
   <HelmetProvider>
   <TooltipProvider>
+    <a
+      href="#main-content"
+      className="fixed left-4 top-3 z-[100] -translate-y-20 rounded-sm bg-primary px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white transition-transform focus:translate-y-0"
+    >
+      Skip to content
+    </a>
     <Toaster />
     <Sonner />
     <BrowserRouter>
       <StructuredData />
       <ScrollToTop />
-      <WhatsAppFloat />
+      <EmailFloat />
       <CompareFloatingBar />
       <Routes>
         <Route path="/" element={<Index />} />

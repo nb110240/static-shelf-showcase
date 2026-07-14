@@ -8,6 +8,7 @@ interface ProductSearchProps {
   onSearchChange: (value: string) => void;
   activeFilter: string | null;
   onFilterChange: (filter: string | null) => void;
+  resultsCount: number;
 }
 
 const searchFilters = [
@@ -18,7 +19,7 @@ const searchFilters = [
   { label: "Volume", searchKey: "Volume" },
 ];
 
-const ProductSearch = ({ searchTerm, onSearchChange, activeFilter, onFilterChange }: ProductSearchProps) => {
+const ProductSearch = ({ searchTerm, onSearchChange, activeFilter, onFilterChange, resultsCount }: ProductSearchProps) => {
   const handleFilterClick = (searchKey: string) => {
     if (activeFilter === searchKey) {
       onFilterChange(null);
@@ -43,7 +44,7 @@ const ProductSearch = ({ searchTerm, onSearchChange, activeFilter, onFilterChang
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto mb-8">
+    <div className="w-full max-w-3xl mx-auto mb-8">
       <div className="relative">
         <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
         <Input
@@ -75,22 +76,31 @@ const ProductSearch = ({ searchTerm, onSearchChange, activeFilter, onFilterChang
         </div>
       )}
 
-      <div className="flex flex-wrap gap-2 mt-3 justify-center">
+      <div className="flex flex-wrap gap-2 mt-3 justify-center" aria-label="Search by specification">
         <span className="font-mono text-[10px] tracking-[0.15em] uppercase text-muted-foreground/60 flex items-center gap-1.5 pr-2">
           <Search className="h-3 w-3" />
           Filter by:
         </span>
         {searchFilters.map((filter) => (
-          <Badge
+          <button
             key={filter.searchKey}
-            variant={activeFilter === filter.searchKey ? "default" : "secondary"}
-            className="text-[10px] tracking-wider cursor-pointer hover:bg-primary hover:text-primary-foreground transition-colors"
+            type="button"
+            aria-pressed={activeFilter === filter.searchKey}
+            className={`inline-flex items-center rounded-full border px-3 py-1 text-[10px] font-semibold tracking-wider transition-colors ${
+              activeFilter === filter.searchKey
+                ? "border-primary bg-primary text-primary-foreground"
+                : "border-transparent bg-secondary text-secondary-foreground hover:border-primary/30 hover:bg-primary hover:text-primary-foreground"
+            }`}
             onClick={() => handleFilterClick(filter.searchKey)}
           >
             {filter.label}
-          </Badge>
+          </button>
         ))}
       </div>
+
+      <p className="mt-4 text-center font-mono text-[10px] tracking-[0.14em] uppercase text-muted-foreground" aria-live="polite">
+        {resultsCount} {resultsCount === 1 ? "product" : "products"} available
+      </p>
     </div>
   );
 };

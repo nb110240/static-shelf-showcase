@@ -97,12 +97,22 @@ const Header = () => {
               scrolled ? "bg-primary" : "bg-white"
             }`;
             return link.href === "/" || link.href.startsWith("/#") ? (
-              <button key={link.href} onClick={() => handleAnchorNav(link.href)} className={cls}>
+              <button
+                key={link.href}
+                onClick={() => handleAnchorNav(link.href)}
+                className={cls}
+                aria-current={link.href === "/" && isHome ? "page" : undefined}
+              >
                 {link.label}
                 <span className={underline} />
               </button>
             ) : (
-              <Link key={link.href} to={link.href} className={cls}>
+              <Link
+                key={link.href}
+                to={link.href}
+                className={cls}
+                aria-current={location.pathname.startsWith(link.href) ? "page" : undefined}
+              >
                 {link.label}
                 <span className={underline} />
               </Link>
@@ -119,7 +129,7 @@ const Header = () => {
                 : "bg-white/15 text-white border border-white/25 hover:bg-white/25"
             }`}
           >
-            Get in Touch
+            Get a Quote
           </button>
           <button
             aria-label="Toggle menu"
@@ -161,7 +171,7 @@ const Header = () => {
               onClick={() => handleAnchorNav("/#contact")}
               className="flex items-center justify-center gap-2 px-5 py-3 text-[11px] font-semibold tracking-[0.16em] uppercase rounded-sm bg-foreground text-background hover:bg-primary transition-all"
             >
-              Get in Touch
+              Get a Quote
             </button>
           </nav>
         </div>

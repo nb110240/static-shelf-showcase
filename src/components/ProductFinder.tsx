@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Check, RotateCcw, MessageCircle } from "lucide-react";
-import { whatsappUrl } from "@/lib/constants";
+import { Check, RotateCcw, Mail } from "lucide-react";
 import { products } from "@/data/products";
 import { Product } from "@/types/product";
 
@@ -359,7 +358,7 @@ const ProductFinder = () => {
                   className="text-sm text-muted-foreground mb-6"
                   style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}
                 >
-                  No exact match — browse all products or WhatsApp us for help.
+                  No exact match — browse all products or send us an enquiry.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
                   <Link
@@ -368,15 +367,15 @@ const ProductFinder = () => {
                   >
                     Browse All Products
                   </Link>
-                  <a
-                    href={whatsappUrl("Hi, I need help finding the right reel. Can you help?")}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 px-5 py-2.5 text-[11px] font-semibold tracking-[0.16em] uppercase rounded-sm bg-[#25D366] text-white hover:bg-[#1ebe57] transition-all duration-300"
+                  <button
+                    onClick={() => {
+                      document.getElementById("enquiry-form")?.scrollIntoView({ behavior: "smooth" });
+                    }}
+                    className="inline-flex items-center justify-center gap-2 px-5 py-2.5 text-[11px] font-semibold tracking-[0.16em] uppercase rounded-sm bg-[#178fbe] text-white hover:bg-[#136fa0] transition-all duration-300 cursor-pointer"
                   >
-                    <MessageCircle className="h-3.5 w-3.5" />
-                    WhatsApp Us
-                  </a>
+                    <Mail className="h-3.5 w-3.5" />
+                    Send Enquiry
+                  </button>
                 </div>
               </div>
             )}

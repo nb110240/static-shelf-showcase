@@ -13,22 +13,23 @@ const CategoryFilter = ({ categories, selectedCategory, onCategoryChange, produc
   const countByCategory = (cat: string) => products.filter((p) => p.category === cat).length;
 
   return (
-    <div className="w-full mb-10">
+    <div className="w-full mb-10" aria-label="Product categories">
       <ScrollArea className="w-full whitespace-nowrap">
         <ToggleGroup
           type="single"
           value={selectedCategory}
           onValueChange={(value) => value && onCategoryChange(value)}
-          className="justify-start gap-1.5 flex-wrap"
+          aria-label="Choose a product category"
+          className="justify-start gap-1.5 flex-nowrap w-max min-w-full pb-2"
         >
-          <ToggleGroupItem value="All" className="px-5 py-2.5 text-[11px] tracking-wider rounded-sm border border-border text-foreground font-semibold data-[state=on]:bg-primary data-[state=on]:text-white data-[state=on]:border-primary">
+          <ToggleGroupItem value="All" className="px-5 py-2.5 text-[11px] tracking-wider rounded-sm border border-border text-foreground font-semibold data-[state=on]:bg-primary data-[state=on]:text-white data-[state=on]:border-primary focus-visible:ring-2 focus-visible:ring-primary/40">
             All Products ({products.length})
           </ToggleGroupItem>
           {categories.map((category) => (
             <ToggleGroupItem
               key={category}
               value={category}
-              className="px-5 py-2.5 text-[11px] tracking-wider rounded-sm border border-border text-foreground font-semibold data-[state=on]:bg-primary data-[state=on]:text-white data-[state=on]:border-primary"
+              className="px-5 py-2.5 text-[11px] tracking-wider rounded-sm border border-border text-foreground font-semibold data-[state=on]:bg-primary data-[state=on]:text-white data-[state=on]:border-primary focus-visible:ring-2 focus-visible:ring-primary/40"
             >
               {category} ({countByCategory(category)})
             </ToggleGroupItem>

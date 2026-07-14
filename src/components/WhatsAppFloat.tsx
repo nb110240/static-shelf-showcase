@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
-import { MessageCircle } from "lucide-react";
-import { useLocation } from "react-router-dom";
-import { whatsappUrl } from "@/lib/constants";
+import { Mail } from "lucide-react";
+import { useLocation, useNavigate } from "react-router-dom";
 
-const WhatsAppFloat = () => {
+const EmailFloat = () => {
   const [visible, setVisible] = useState(true);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const target = document.getElementById("contact");
+    const target = document.getElementById("enquiry-form");
     if (!target) {
       setVisible(true);
       return;
@@ -25,27 +25,35 @@ const WhatsAppFloat = () => {
 
   if (!visible) return null;
 
+  const scrollToForm = () => {
+    const el = document.getElementById("enquiry-form");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    } else {
+      // Navigate to homepage with enquiry param
+      navigate("/?enquiry=");
+    }
+  };
+
   return (
-    <a
-      href={whatsappUrl("Hi, I'd like to enquire about your products.")}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg hover:bg-[#1ebe57] transition-colors duration-300 animate-pulse-subtle"
-      aria-label="Chat on WhatsApp"
+    <button
+      onClick={scrollToForm}
+      className="fixed bottom-6 right-6 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#178fbe] text-white shadow-lg hover:bg-[#136fa0] transition-colors duration-300 animate-pulse-subtle cursor-pointer"
+      aria-label="Send Enquiry"
     >
-      <MessageCircle className="h-6 w-6" />
+      <Mail className="h-6 w-6" />
 
       <style>{`
         @keyframes pulse-subtle {
-          0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
-          50% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+          0%, 100% { box-shadow: 0 0 0 0 rgba(23, 143, 190, 0.5); }
+          50% { box-shadow: 0 0 0 10px rgba(23, 143, 190, 0); }
         }
         .animate-pulse-subtle {
           animation: pulse-subtle 2.5s ease-in-out infinite;
         }
       `}</style>
-    </a>
+    </button>
   );
 };
 
-export default WhatsAppFloat;
+export default EmailFloat;

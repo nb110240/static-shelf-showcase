@@ -17,7 +17,7 @@ const ComparePage = () => {
   }, [compareItems, navigate]);
 
   return (
-    <div className="min-h-screen bg-background overflow-x-hidden">
+    <div id="main-content" className="min-h-screen bg-background overflow-x-hidden">
       <Helmet>
         <meta name="robots" content="noindex" />
       </Helmet>
