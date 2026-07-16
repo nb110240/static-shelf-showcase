@@ -1,20 +1,37 @@
 # Bobbins India Website
 
-Production website and product catalog for **Bobbins India / Sudhir Enterprise**, a Mumbai manufacturer of industrial bobbins, spools and reels.
+Production website and product catalog for **Bobbins India**, the public-facing brand of **Sudhir Enterprise**, a Mumbai manufacturer of industrial bobbins, spools and reels.
 
 - Live site: [bobbinsindia.net](https://bobbinsindia.net)
 - GitHub: [nb110240/static-shelf-showcase](https://github.com/nb110240/static-shelf-showcase)
 - Hosting: Vercel project `static-shelf-showcase`
 - Production branch: `main`
 
-This README is the operating guide for the next maintainer. Read the access checklist before making production changes.
+This README is the operating guide for maintainers. Read the access checklist before making production changes.
+
+## Start here
+
+| If you need to… | Read… |
+| --- | --- |
+| Set up the website locally | [First-time local setup](#first-time-local-setup) |
+| Change products, categories or images | [Updating products](#updating-products), [categories](#adding-or-changing-a-category) and [images](#updating-images) |
+| Change the contact form | [Contact form and email delivery](#contact-form-and-email-delivery) |
+| Understand SEO or GEO | [SEO and GEO architecture](#seo-and-geo-architecture) |
+| Release a change | [Git and release workflow](#git-and-release-workflow) and the [release checklist](#release-checklist) |
+| Make design, copy or code changes | [`CONTRIBUTING.md`](CONTRIBUTING.md) |
+
+Documentation responsibilities are intentionally separated:
+
+- `README.md` explains setup, content maintenance, deployment and troubleshooting.
+- `CONTRIBUTING.md` defines design, writing, accessibility and engineering standards.
+- `CLAUDE.md` gives AI coding assistants a short set of repository-specific instructions and points them to the two documents above.
 
 ## What is in the repository
 
 The site includes:
 
 - A responsive marketing homepage
-- A searchable catalog of 111 products across 16 product families
+- A searchable catalog of 111 products across 16 product families at the time of writing
 - Permanent category and product URLs
 - Product comparison and enquiry flows
 - Static HTML prerendering for SEO and AI/search discovery
@@ -48,27 +65,31 @@ Grant account access directly. Do not send passwords or API keys in GitHub issue
 - Resend for enquiry email delivery
 - Vercel Analytics and Speed Insights
 
-Use a current Node.js LTS release. Node.js 20 or newer and npm are supported for local development.
+Use Node.js 22 and npm, matching GitHub Actions. If you use `nvm`, the included `.nvmrc` selects the correct major version.
 
 ## First-time local setup
+
+Install Git, Node.js 22 and npm. Then run:
 
 ```bash
 git clone https://github.com/nb110240/static-shelf-showcase.git
 cd static-shelf-showcase
-npm install
-cp .env.example .env.local
+npm ci
 npm run dev
 ```
 
 The Vite development site runs at [http://localhost:8080](http://localhost:8080).
 
-`npm run dev` serves the React site, but it does not emulate the Vercel serverless function. Use `npx vercel dev` when testing `/api/enquiry` locally.
+If you use `nvm`, run `nvm use` before `npm ci`. Use `npm ci` for a clean, reproducible install from `package-lock.json`; use `npm install` only when intentionally changing dependencies.
+
+`npm run dev` serves the React site, but it does not emulate the Vercel serverless function. To test `/api/enquiry`, copy `.env.example` to `.env.local`, replace the placeholder values with development credentials and run `npx vercel dev`.
 
 ## Commands
 
 | Command | Purpose |
 | --- | --- |
 | `npm run dev` | Start the local Vite development server with hot reload |
+| `npm run docs:check` | Check documentation structure and local links |
 | `npm run typecheck` | Run TypeScript without producing files |
 | `npm run lint` | Run ESLint |
 | `npm run build` | Generate the sitemap, build Vite and prerender all public routes |
@@ -90,6 +111,7 @@ public/
   robots.txt                 Search and AI crawler rules
   sitemap.xml                Generated during npm run build
 scripts/
+  check-documentation.mjs     Validates documentation structure and local links
   generate-sitemap.mjs       Builds sitemap URLs from catalog data
   prerender.mjs              Produces crawlable HTML for every public route
 src/
@@ -101,7 +123,10 @@ src/
   pages/                     Route-level React pages and metadata
   App.tsx                    Application routes and global services
 vercel.json                  Clean URLs and production security headers
-CLAUDE.md                    Brand, audience and design principles
+CONTRIBUTING.md              Design, copy, accessibility and code standards
+CLAUDE.md                    Instructions for AI coding assistants
+.env.example                 Safe template for local enquiry-email settings
+.nvmrc                       Node.js version used by maintainers and CI
 ```
 
 Do not edit `dist/`; it is generated and ignored by Git. Do not manually edit `public/sitemap.xml`; the build regenerates it from the catalog.
@@ -221,14 +246,15 @@ Environment variables are documented in `.env.example`:
 | Variable | Required | Purpose |
 | --- | --- | --- |
 | `RESEND_API_KEY` | Yes | Resend API credential |
-| `ENQUIRY_TO_EMAIL` | Recommended | Inbox that receives enquiries; defaults to `sales@bobbinsindia.com` |
-| `ENQUIRY_FROM_EMAIL` | Yes for production | Sender using a Resend-verified domain |
+| `ENQUIRY_TO_EMAIL` | Recommended | Inbox that receives enquiries. The API defaults to `sales@bobbinsindia.com`. |
+| `ENQUIRY_FROM_EMAIL` | Required for branded production email | Sender on a Resend-verified domain. The development fallback is Resend's onboarding sender. |
 
 Configure production values in **Vercel → Project Settings → Environment Variables**. Never commit the real values.
 
 Example Vercel CLI setup:
 
 ```bash
+npx vercel link
 npx vercel env add RESEND_API_KEY production
 npx vercel env add ENQUIRY_TO_EMAIL production
 npx vercel env add ENQUIRY_FROM_EMAIL production
@@ -245,7 +271,7 @@ After deployment, submit a clearly labeled test enquiry and confirm that it reac
 
 ## SEO and GEO architecture
 
-The site is a React application, but public pages are also emitted as static HTML so crawlers do not need JavaScript to understand the catalog.
+SEO means search engine optimization. GEO means generative engine optimization: making the site's factual content easy for AI-powered search and answer systems to discover and understand. The site is a React application, but public pages are also emitted as static HTML so crawlers do not need JavaScript to understand the catalog.
 
 `npm run build` performs three stages:
 
@@ -351,6 +377,6 @@ Run the full production build and confirm `scripts/prerender.mjs` reports the ex
 
 That is expected with `npm run dev`. Use `npx vercel dev` to emulate Vercel functions.
 
-## Design direction
+## Contribution and design standards
 
-Before major visual changes, read [`CLAUDE.md`](CLAUDE.md). The intended personality is professional, established and technically precise. Prioritize factual specifications, mobile performance, restrained presentation and clear quotation actions over decorative effects.
+Before changing visuals, copy or shared behavior, read [`CONTRIBUTING.md`](CONTRIBUTING.md). It defines the brand direction, preferred terminology, accessibility requirements and definition of done. Keep this README focused on operating the website; update `CONTRIBUTING.md` when a team-wide standard changes.

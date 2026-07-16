@@ -27,5 +27,5 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Type-check, lint and build
+      - name: Check documentation, type-check, lint and build
         run: npm run check

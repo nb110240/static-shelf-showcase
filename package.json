@@ -1,16 +1,21 @@
 {
-  "name": "vite_react_shadcn_ts",
+  "name": "bobbins-india-website",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Production website and product catalog for Bobbins India.",
   "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "dev": "vite",
     "build": "node scripts/generate-sitemap.mjs && vite build && node scripts/prerender.mjs",
     "build:dev": "vite build --mode development",
+    "docs:check": "node scripts/check-documentation.mjs",
     "lint": "eslint .",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
-    "check": "npm run typecheck && npm run lint && npm run build"
+    "check": "npm run docs:check && npm run typecheck && npm run lint && npm run build"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

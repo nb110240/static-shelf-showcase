@@ -1,34 +1,21 @@
-# Bobbins India — Product Showcase
+# Bobbins India AI contributor instructions
 
-## Design Context
+This file is for AI coding assistants. Human maintainers should begin with [`README.md`](README.md).
 
-### Users
-B2B buyers at cable and wire manufacturing companies. They arrive via WhatsApp links, Google searches, or direct referrals. They are comparing spool/reel suppliers and need to quickly assess product range, specs, and credibility. They often browse on mobile (WhatsApp link sharing is common in Indian B2B). Their job: find the right reel, confirm specs, and initiate an enquiry.
+## Read before changing the website
 
-### Brand Personality
-**Professional, Established, Trusted.** Bobbins India is a 30+ year manufacturer — not a startup, not a reseller. The site should communicate deep expertise and reliability without being stiff or corporate. Think: confident engineer, not slick salesperson.
+1. Read [`README.md`](README.md) for setup, content sources, deployment and troubleshooting.
+2. Read [`CONTRIBUTING.md`](CONTRIBUTING.md) for design, writing, accessibility and engineering standards.
+3. Inspect the relevant implementation before editing. If the documentation and code disagree, verify the intended behavior, fix the implementation or documentation as appropriate, and keep both synchronized.
 
-### Emotional Goal
-**Confidence & trust.** The buyer should feel: "These people know what they're doing, I can rely on them." Every design decision should reinforce credibility — clean layouts, precise typography, visible specs, real product photography.
+## Non-negotiable rules
 
-### Aesthetic Direction
-- **Visual tone:** Technical precision meets clean modernity. The "Precision Blueprint" theme — dot-grid backgrounds, monospace spec labels, engineered typography — is the foundation.
-- **Theme:** Light mode only. Brand blue `#178fbe`, dark navy `#0a1628`, neutral grays.
-- **Typography:** Syne (display/headings), Outfit (body), IBM Plex Mono (specs/labels).
-- **Anti-references:**
-  - NOT Alibaba/IndiaMart-style dense product dumps
-  - NOT generic corporate templates with stock photos
-  - NOT over-designed/flashy (no gratuitous animations, glowing gradients, glassmorphism)
-  - NOT outdated (no heavy borders, dated fonts, early-2000s layouts)
+- Treat `src/data/products.ts` as the product source of truth and `src/data/categoryContent.ts` as the category-content source of truth.
+- Do not invent dimensions, materials, standards, certifications, prices, availability, ratings, reviews or company claims.
+- Preserve existing product IDs and category slugs unless a redirect from the old URL is added.
+- Keep visible company details, metadata, structured data and prerendered equivalents synchronized.
+- Never commit secrets, environment files, customer enquiries or private reference material.
+- Preserve mobile usability, keyboard access, semantic HTML and reduced-motion behavior.
+- Run `npm run check` before committing. Review affected routes in the Vercel preview before merging to `main`.
 
-### Design Principles
-
-1. **Specs over storytelling.** B2B buyers want dimensions, materials, and standards — not marketing fluff. Lead with technical data. Every product card should show key specs inline without requiring a click.
-
-2. **Credibility through restraint.** Trust comes from clarity, not decoration. Use whitespace deliberately. Let product photography and precise typography do the work. Avoid visual noise.
-
-3. **One clear next action.** Every screen should have an obvious primary action. On product pages: enquire via WhatsApp. On the homepage: browse the catalog. Never compete two CTAs at equal weight.
-
-4. **Fast on any device.** Indian B2B buyers are often on variable mobile connections. Compress images aggressively, lazy-load below the fold, minimize JS bundle size. Performance is a design decision.
-
-5. **Consistent product presentation.** Normalize product photography with uniform backgrounds, consistent aspect ratios, and contained object-fit. Visual consistency signals quality control — which is exactly what a spool buyer cares about.
+Keep this file short. Put operational guidance in `README.md` and reusable contribution standards in `CONTRIBUTING.md` so instructions have one clear home.
