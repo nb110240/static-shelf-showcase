@@ -12,7 +12,11 @@ function safeGetItem(key: string): string | null {
 }
 
 function safeSetItem(key: string, value: string) {
-  try { localStorage.setItem(key, value); } catch {}
+  try {
+    localStorage.setItem(key, value);
+  } catch {
+    return;
+  }
 }
 
 function readStorage(): string[] {

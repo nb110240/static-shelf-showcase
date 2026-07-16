@@ -11,6 +11,8 @@ node_modules
 dist
 dist-ssr
 *.local
+.env*
+!.env.example
 
 # Editor directories and files
 .vscode/*
@@ -24,3 +26,9 @@ dist-ssr
 *.sw?
 .vercel
 .gstack/
+
+# Local QA and source-reference artifacts (not used by the website build)
+output/
+qa-*.png
+Bobbins_India_*.jpg
+aluminum-wire-fixed.png
