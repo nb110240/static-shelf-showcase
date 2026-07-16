@@ -47,7 +47,7 @@ The repository contains the application code, images, configuration and deployme
 The maintainer should have access to:
 
 1. **GitHub repository** — collaborator or organization access to `nb110240/static-shelf-showcase`.
-2. **Vercel project** — access to `static-shelf-showcase` in the `nb110240s-projects` team.
+2. **Vercel project** — access to `static-shelf-showcase` in the `nb110240s-projects` team. GitHub access is enough to trigger deployments, but Vercel access is needed to inspect logs, manage domains and change environment variables.
 3. **Domain and DNS** — access to the registrar/DNS provider for `bobbinsindia.net` and `bobbinsindia.com`.
 4. **Resend** — access to the email-delivery account and its verified sending domain.
 5. **Search tools** — Google Search Console and Bing Webmaster Tools, if accounts have been created.
@@ -306,7 +306,20 @@ git push -u origin update/descriptive-name
 
 Open a pull request, review the preview deployment and merge into `main` only when it is ready.
 
-The GitHub/Vercel integration automatically deploys `main` to production. Merging to `main` can therefore change the live website. Branches and pull requests should receive preview deployments without replacing production.
+### Automatic Vercel deployments
+
+The repository is connected to Vercel through Vercel's native GitHub integration. No maintainer's computer, local Vercel CLI session or separate deploy workflow is required.
+
+```text
+Push a branch → GitHub validation + Vercel preview → review and merge → Vercel production deployment
+```
+
+- A branch or pull-request push creates a Vercel preview without replacing production.
+- A merge or direct push to `main` creates a production deployment and updates the production domains when the build succeeds.
+- The GitHub Actions workflow validates documentation, TypeScript, lint and the production build. Vercel performs the deployment separately and reports it as a GitHub deployment.
+- Direct pushes to `main` work, but pull requests are recommended so the validation and preview can be reviewed first.
+
+Do not add a second token-based GitHub Actions deployment while the native integration is active. It would create duplicate builds and require a long-lived `VERCEL_TOKEN` secret. If the native connection is ever removed, reconnect the GitHub repository in **Vercel → Project Settings → Git** rather than committing credentials.
 
 Production domains:
 
