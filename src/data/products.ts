@@ -10,6 +10,7 @@ import pt20TaperedBobbin from "@/assets/pt-20-tapered-bobbin.jpg";
 import pt25TaperedBobbin from "@/assets/pt-25-tapered-bobbin.jpg";
 import pt35TaperedBobbin from "@/assets/pt-35-tapered-bobbin.jpg";
 import pt45TaperedBobbin from "@/assets/pt-45-tapered-bobbin.jpg";
+import pt90TaperedBobbin from "@/assets/pt-90-tapered-bobbin.jpg";
 import weldingWireNew from "@/assets/welding-wire-studio.jpg";
 import compositeReelsNew from "@/assets/composite-reels-new.jpg";
 import compPfTc380 from "@/assets/composite/pf-tc-380.jpg";
@@ -299,7 +300,7 @@ export const products: Product[] = [
     name: "PT-90 Tapered Bobbin",
     description: "Maximum capacity tapered bobbin for industrial-scale cable production.",
     category: "Tapered Bobbins",
-    image: taperedBobbinsNew,
+    image: pt90TaperedBobbin,
     features: [
       "Ref. No: PT-90",
       "Flange Dia: 300/315mm (11.81/12.40 inch)",
