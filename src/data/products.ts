@@ -11,6 +11,7 @@ import pt25TaperedBobbin from "@/assets/pt-25-tapered-bobbin.jpg";
 import pt35TaperedBobbin from "@/assets/pt-35-tapered-bobbin.jpg";
 import pt45TaperedBobbin from "@/assets/pt-45-tapered-bobbin.jpg";
 import pt90TaperedBobbin from "@/assets/pt-90-tapered-bobbin.jpg";
+import pt200TaperedBobbin from "@/assets/pt-200-tapered-bobbin.jpg";
 import weldingWireNew from "@/assets/welding-wire-studio.jpg";
 import compositeReelsNew from "@/assets/composite-reels-new.jpg";
 import compPfTc380 from "@/assets/composite/pf-tc-380.jpg";
@@ -316,7 +317,7 @@ export const products: Product[] = [
     name: "PT-200 Tapered Bobbin",
     description: "Extra-large capacity tapered bobbin with tie rod assembly for heavy industrial cable production. Available in PP.",
     category: "Tapered Bobbins",
-    image: taperedBobbinsNew,
+    image: pt200TaperedBobbin,
     features: [
       "Ref. No: PT-200",
       "Flange Dia: 369/395mm (14.53/15.55 inch)",
