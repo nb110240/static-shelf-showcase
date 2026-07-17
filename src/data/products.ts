@@ -1,6 +1,7 @@
 import { Product } from "@/types/product";
 import taperedBobbinsNew from "@/assets/taper-reels-photo.jpg";
 import pt1TaperedBobbin from "@/assets/pt-1-tapered-bobbin.jpg";
+import pt10TaperedBobbin from "@/assets/pt-10-tapered-bobbin.jpg";
 import weldingWireNew from "@/assets/welding-wire-studio.jpg";
 import compositeReelsNew from "@/assets/composite-reels-new.jpg";
 import compPfTc380 from "@/assets/composite/pf-tc-380.jpg";
@@ -130,7 +131,7 @@ export const products: Product[] = [
     name: "PT-10 Tapered Bobbin",
     description: "Large capacity tapered bobbin for professional cable manufacturing.",
     category: "Tapered Bobbins",
-    image: taperedBobbinsNew,
+    image: pt10TaperedBobbin,
     features: [
       "Ref. No: PT-10",
       "Flange Dia: 157/180mm (6.18/7.08 inch)",
