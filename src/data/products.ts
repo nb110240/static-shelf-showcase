@@ -8,6 +8,7 @@ import pt11TaperedBobbin from "@/assets/pt-11-tapered-bobbin.jpg";
 import pt15TaperedBobbin from "@/assets/pt-15-tapered-bobbin.jpg";
 import pt20TaperedBobbin from "@/assets/pt-20-tapered-bobbin.jpg";
 import pt25TaperedBobbin from "@/assets/pt-25-tapered-bobbin.jpg";
+import pt35TaperedBobbin from "@/assets/pt-35-tapered-bobbin.jpg";
 import weldingWireNew from "@/assets/welding-wire-studio.jpg";
 import compositeReelsNew from "@/assets/composite-reels-new.jpg";
 import compPfTc380 from "@/assets/composite/pf-tc-380.jpg";
@@ -249,7 +250,7 @@ export const products: Product[] = [
     name: "PT-35 Tapered Bobbin",
     description: "Heavy-duty tapered bobbin for industrial cable winding. Available in PP.",
     category: "Tapered Bobbins",
-    image: taperedBobbinsNew,
+    image: pt35TaperedBobbin,
     features: [
       "Ref. No: PT-35",
       "Flange Dia: 242/257mm (9.53/10.12 inch)",
