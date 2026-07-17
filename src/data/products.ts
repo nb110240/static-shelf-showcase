@@ -1,5 +1,6 @@
 import { Product } from "@/types/product";
 import taperedBobbinsNew from "@/assets/taper-reels-photo.jpg";
+import pt1TaperedBobbin from "@/assets/pt-1-tapered-bobbin.jpg";
 import weldingWireNew from "@/assets/welding-wire-studio.jpg";
 import compositeReelsNew from "@/assets/composite-reels-new.jpg";
 import compPfTc380 from "@/assets/composite/pf-tc-380.jpg";
@@ -65,7 +66,7 @@ export const products: Product[] = [
     name: "PT-1 Tapered Bobbin",
     description: "DIN 46383 / IEC 264-3 compliant plastic taper reel. Available in P.P, A.B.S and P.S in standard colors.",
     category: "Tapered Bobbins",
-    image: taperedBobbinsNew,
+    image: pt1TaperedBobbin,
     features: [
       "Ref. No: PT-1",
       "Flange Dia: 93.5/103mm (3.68/4.06 inch)",
