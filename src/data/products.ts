@@ -1,6 +1,7 @@
 import { Product } from "@/types/product";
 import taperedBobbinsNew from "@/assets/taper-reels-photo.jpg";
 import pt1TaperedBobbin from "@/assets/pt-1-tapered-bobbin.jpg";
+import pt4TaperedBobbin from "@/assets/pt-4-tapered-bobbin.jpg";
 import pt6TaperedBobbin from "@/assets/pt-6-tapered-bobbin.jpg";
 import pt10TaperedBobbin from "@/assets/pt-10-tapered-bobbin.jpg";
 import pt15TaperedBobbin from "@/assets/pt-15-tapered-bobbin.jpg";
@@ -101,7 +102,7 @@ export const products: Product[] = [
     name: "PT-4 Tapered Bobbin",
     description: "High capacity tapered spool for industrial cable manufacturing.",
     category: "Tapered Bobbins",
-    image: taperedBobbinsNew,
+    image: pt4TaperedBobbin,
     features: [
       "Ref. No: PT-4",
       "Flange Dia: 122/140mm (4.80/5.51 inch)",
