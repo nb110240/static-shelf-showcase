@@ -6,6 +6,7 @@ import pt6TaperedBobbin from "@/assets/pt-6-tapered-bobbin.jpg";
 import pt10TaperedBobbin from "@/assets/pt-10-tapered-bobbin.jpg";
 import pt11TaperedBobbin from "@/assets/pt-11-tapered-bobbin.jpg";
 import pt15TaperedBobbin from "@/assets/pt-15-tapered-bobbin.jpg";
+import pt20TaperedBobbin from "@/assets/pt-20-tapered-bobbin.jpg";
 import pt25TaperedBobbin from "@/assets/pt-25-tapered-bobbin.jpg";
 import weldingWireNew from "@/assets/welding-wire-studio.jpg";
 import compositeReelsNew from "@/assets/composite-reels-new.jpg";
@@ -200,7 +201,7 @@ export const products: Product[] = [
     name: "PT-20 Tapered Bobbin",
     description: "Extra large tapered bobbin for maximum capacity operations.",
     category: "Tapered Bobbins",
-    image: taperedBobbinsNew,
+    image: pt20TaperedBobbin,
     features: [
       "Ref. No: PT-20",
       "Flange Dia: 212/230mm (8.34/9.06 inch)",
