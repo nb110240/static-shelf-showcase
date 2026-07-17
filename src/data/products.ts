@@ -3,6 +3,7 @@ import taperedBobbinsNew from "@/assets/taper-reels-photo.jpg";
 import pt1TaperedBobbin from "@/assets/pt-1-tapered-bobbin.jpg";
 import pt6TaperedBobbin from "@/assets/pt-6-tapered-bobbin.jpg";
 import pt10TaperedBobbin from "@/assets/pt-10-tapered-bobbin.jpg";
+import pt15TaperedBobbin from "@/assets/pt-15-tapered-bobbin.jpg";
 import weldingWireNew from "@/assets/welding-wire-studio.jpg";
 import compositeReelsNew from "@/assets/composite-reels-new.jpg";
 import compPfTc380 from "@/assets/composite/pf-tc-380.jpg";
@@ -164,7 +165,7 @@ export const products: Product[] = [
     name: "PT-15 Tapered Bobbin",
     description: "High-performance tapered bobbin for industrial applications.",
     category: "Tapered Bobbins",
-    image: taperedBobbinsNew,
+    image: pt15TaperedBobbin,
     features: [
       "Ref. No: PT-15",
       "Flange Dia: 180/200mm (7.08/7.87 inch)",
