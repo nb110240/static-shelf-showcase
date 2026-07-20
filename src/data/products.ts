@@ -16,6 +16,7 @@ import weldingWireNew from "@/assets/welding-wire-studio.jpg";
 import sd100WeldingWireSpool from "@/assets/sd-100-welding-wire-spool.jpg";
 import sd200WeldingWireSpool from "@/assets/sd-200-welding-wire-spool.jpg";
 import sd270WeldingWireSpool from "@/assets/sd-270-welding-wire-spool.jpg";
+import sd300LightWeldingWireSpool from "@/assets/sd-300-light-welding-wire-spool.jpg";
 import compositeReelsNew from "@/assets/composite-reels-new.jpg";
 import compPfTc380 from "@/assets/composite/pf-tc-380.jpg";
 import compPfTc400 from "@/assets/composite/pf-tc-400.jpg";
@@ -402,10 +403,10 @@ export const products: Product[] = [
   },
   {
     id: "sd-300-alt",
-    name: "SD300 Welding Wire Spool (Alternative)",
+    name: "SD300 (Light)",
     description: "Alternative configuration SD300 welding wire spool. Available in A.B.S / H.I.P.S / Polypropylene quality.",
     category: "Welding Wire",
-    image: weldingWireNew,
+    image: sd300LightWeldingWireSpool,
     features: [
       "Flange Dia (d1): 300mm",
       "Barrel Dia (d2): 205mm",
