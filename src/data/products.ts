@@ -13,6 +13,7 @@ import pt45TaperedBobbin from "@/assets/pt-45-tapered-bobbin.jpg";
 import pt90TaperedBobbin from "@/assets/pt-90-tapered-bobbin.jpg";
 import pt200TaperedBobbin from "@/assets/pt-200-tapered-bobbin.jpg";
 import weldingWireNew from "@/assets/welding-wire-studio.jpg";
+import sd200WeldingWireSpool from "@/assets/sd-200-welding-wire-spool.jpg";
 import compositeReelsNew from "@/assets/composite-reels-new.jpg";
 import compPfTc380 from "@/assets/composite/pf-tc-380.jpg";
 import compPfTc400 from "@/assets/composite/pf-tc-400.jpg";
@@ -351,7 +352,7 @@ export const products: Product[] = [
     name: "SD200 Welding Wire Spool",
     description: "Medium capacity welding wire spool for industrial applications. Available in A.B.S / H.I.P.S / Polypropylene quality.",
     category: "Welding Wire",
-    image: weldingWireNew,
+    image: sd200WeldingWireSpool,
     features: [
       "Flange Dia (d1): 200mm",
       "Barrel Dia (d2): 105mm",
