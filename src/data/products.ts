@@ -31,6 +31,7 @@ import compPfTc800 from "@/assets/composite/pf-tc-800.jpg";
 import compPfTc1000 from "@/assets/composite/pf-tc-1000.jpg";
 import compPfTc1250 from "@/assets/composite/pf-tc-1250.jpg";
 import edmWireNew from "@/assets/edm-wire-studio.jpg";
+import ep1EdmWireReel from "@/assets/ep-1-edm-wire-reel.jpg";
 import ep5EdmWireReel from "@/assets/ep-5-edm-wire-reel.jpg";
 import stitchingWireNew from "@/assets/stitching-wire-studio.jpg";
 import din46399New from "@/assets/din-46399-new.jpg";
@@ -634,7 +635,7 @@ export const products: Product[] = [
     name: "EP-1 EDM Wire Reel",
     description: "Plastic reel suitable for EDM wire applications. Precision manufactured for electrical discharge machining.",
     category: "EDM Wire",
-    image: edmWireNew,
+    image: ep1EdmWireReel,
     features: [
       "Flange Dia (d1): 130(5.12)mm",
       "Barrel Dia (d2): 60(2.36)mm",
