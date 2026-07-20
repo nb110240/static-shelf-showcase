@@ -13,6 +13,7 @@ import pt45TaperedBobbin from "@/assets/pt-45-tapered-bobbin.jpg";
 import pt90TaperedBobbin from "@/assets/pt-90-tapered-bobbin.jpg";
 import pt200TaperedBobbin from "@/assets/pt-200-tapered-bobbin.jpg";
 import weldingWireNew from "@/assets/welding-wire-studio.jpg";
+import sd100WeldingWireSpool from "@/assets/sd-100-welding-wire-spool.jpg";
 import sd200WeldingWireSpool from "@/assets/sd-200-welding-wire-spool.jpg";
 import sd270WeldingWireSpool from "@/assets/sd-270-welding-wire-spool.jpg";
 import compositeReelsNew from "@/assets/composite-reels-new.jpg";
@@ -338,7 +339,7 @@ export const products: Product[] = [
     name: "SD100 Welding Wire Spool",
     description: "DIN 8559 compliant welding wire spool. Available in A.B.S / H.I.P.S / Polypropylene quality. General colors are cream and black, other colors available on request.",
     category: "Welding Wire",
-    image: weldingWireNew,
+    image: sd100WeldingWireSpool,
     features: [
       "Flange Dia (d1): 100mm",
       "Barrel Dia (d2): 38mm",
