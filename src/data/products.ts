@@ -14,6 +14,7 @@ import pt90TaperedBobbin from "@/assets/pt-90-tapered-bobbin.jpg";
 import pt200TaperedBobbin from "@/assets/pt-200-tapered-bobbin.jpg";
 import weldingWireNew from "@/assets/welding-wire-studio.jpg";
 import sd200WeldingWireSpool from "@/assets/sd-200-welding-wire-spool.jpg";
+import sd270WeldingWireSpool from "@/assets/sd-270-welding-wire-spool.jpg";
 import compositeReelsNew from "@/assets/composite-reels-new.jpg";
 import compPfTc380 from "@/assets/composite/pf-tc-380.jpg";
 import compPfTc400 from "@/assets/composite/pf-tc-400.jpg";
@@ -368,7 +369,7 @@ export const products: Product[] = [
     name: "SD270 Welding Wire Spool",
     description: "Large capacity welding wire spool for heavy-duty operations. Available in A.B.S / H.I.P.S / Polypropylene quality.",
     category: "Welding Wire",
-    image: weldingWireNew,
+    image: sd270WeldingWireSpool,
     features: [
       "Flange Dia (d1): 270mm",
       "Barrel Dia (d2): 148mm",
