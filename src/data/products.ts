@@ -16,6 +16,7 @@ import weldingWireNew from "@/assets/welding-wire-studio.jpg";
 import sd100WeldingWireSpool from "@/assets/sd-100-welding-wire-spool.jpg";
 import sd200WeldingWireSpool from "@/assets/sd-200-welding-wire-spool.jpg";
 import sd270WeldingWireSpool from "@/assets/sd-270-welding-wire-spool.jpg";
+import sd300WeldingWireSpool from "@/assets/sd-300-welding-wire-spool.jpg";
 import sd300LightWeldingWireSpool from "@/assets/sd-300-light-welding-wire-spool.jpg";
 import sd300HeavyWeldingWireSpool from "@/assets/sd-300-heavy-welding-wire-spool.jpg";
 import compositeReelsNew from "@/assets/composite-reels-new.jpg";
@@ -391,7 +392,7 @@ export const products: Product[] = [
     name: "SD300 Welding Wire Spool",
     description: "High-capacity welding wire spool for professional applications. Available in A.B.S / H.I.P.S / Polypropylene quality.",
     category: "Welding Wire",
-    image: weldingWireNew,
+    image: sd300WeldingWireSpool,
     features: [
       "Flange Dia (d1): 300mm",
       "Barrel Dia (d2): 212mm",
