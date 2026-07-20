@@ -33,6 +33,7 @@ import compPfTc1250 from "@/assets/composite/pf-tc-1250.jpg";
 import edmWireNew from "@/assets/edm-wire-studio.jpg";
 import ep1EdmWireReel from "@/assets/ep-1-edm-wire-reel.jpg";
 import ep5EdmWireReel from "@/assets/ep-5-edm-wire-reel.jpg";
+import ep10EdmWireReel from "@/assets/ep-10-edm-wire-reel.jpg";
 import stitchingWireNew from "@/assets/stitching-wire-studio.jpg";
 import din46399New from "@/assets/din-46399-new.jpg";
 import cylindricalReelsNew from "@/assets/cylindrical-reels-studio.jpg";
@@ -665,7 +666,7 @@ export const products: Product[] = [
     name: "EP-10 EDM Wire Reel",
     description: "High capacity EDM wire reel for industrial precision machining operations.",
     category: "EDM Wire",
-    image: edmWireNew,
+    image: ep10EdmWireReel,
     features: [
       "Flange Dia (d1): 200(7.87)mm",
       "Barrel Dia (d2): 90(3.54)mm",
