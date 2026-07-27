@@ -40,6 +40,7 @@ import ep10EdmWireReel from "@/assets/ep-10-edm-wire-reel.jpg";
 import stitchingWireNew from "@/assets/stitching-wire-studio.jpg";
 import sd2StitchingWireReel from "@/assets/sd-2-stitching-wire-reel.jpg";
 import sd3StitchingWireReel from "@/assets/sd-3-stitching-wire-reel.jpg";
+import sd4StitchingWireReel from "@/assets/sd-4-stitching-wire-reel.jpg";
 import din46399New from "@/assets/din-46399-new.jpg";
 import cylindricalReelsNew from "@/assets/cylindrical-reels-studio.jpg";
 import dinS1 from "@/assets/din-s1.jpg";
@@ -746,7 +747,7 @@ export const products: Product[] = [
     name: "SD-4 Stitching Wire Reel",
     description: "Medium capacity stitching wire reel for textile and packaging industries.",
     category: "Stitching Wire",
-    image: stitchingWireNew,
+    image: sd4StitchingWireReel,
     features: [
       "Flange Dia (d1): 154mm",
       "Barrel Dia (d2): 67mm",
