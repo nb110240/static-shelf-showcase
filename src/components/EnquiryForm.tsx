@@ -6,6 +6,7 @@ import { track } from "@vercel/analytics";
 
 const FORM_ENDPOINT = "/api/enquiry";
 const SUBMIT_TIMEOUT_MS = 12_000;
+const EMAIL_DELIVERY_ENABLED = import.meta.env.VITE_ENQUIRY_EMAIL_ENABLED === "true";
 
 const EnquiryForm = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -62,15 +63,35 @@ const EnquiryForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus("sending");
+    const submitter = (e.nativeEvent as SubmitEvent).submitter as HTMLButtonElement | null;
+    const channel = submitter?.value || "whatsapp";
 
     // A filled honeypot indicates an automated submission. Return a neutral
     // success state so bots do not learn how the filter works.
     if (form.website) {
-      setStatus("sent");
+      if (channel === "email-api") setStatus("sent");
       return;
     }
 
+    if (channel === "whatsapp") {
+      const url = whatsappUrl(enquiryMessage);
+      const opened = window.open(url, "_blank");
+      if (opened) opened.opener = null;
+      else window.location.assign(url);
+      track("enquiry_whatsapp_opened", { product: form.product || "General enquiry" });
+      return;
+    }
+
+    if (channel === "email-app") {
+      const subject = form.product ? `Website Enquiry: ${form.product}` : "Website Product Enquiry";
+      window.location.assign(
+        `mailto:${COMPANY_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(enquiryMessage)}`,
+      );
+      track("enquiry_email_app_opened", { product: form.product || "General enquiry" });
+      return;
+    }
+
+    setStatus("sending");
     const controller = new AbortController();
     const timeout = window.setTimeout(() => controller.abort(), SUBMIT_TIMEOUT_MS);
 
@@ -311,24 +332,37 @@ const EnquiryForm = () => {
             </div>
 
             {/* Submit */}
-            <button
-              type="submit"
-              disabled={status === "sending"}
-              className="inline-flex items-center gap-3 px-8 py-4 bg-[#178fbe] text-white text-[11px] font-semibold tracking-[0.2em] uppercase rounded-sm hover:bg-[#136fa0] transition-all duration-300 group disabled:opacity-60 disabled:cursor-not-allowed"
-            >
-              {status === "sending" ? (
-                <Loader2 className="h-3.5 w-3.5 animate-spin" />
-              ) : (
-                <Mail className="h-3.5 w-3.5" />
-              )}
-              {status === "sending" ? "Sending..." : "Send Enquiry"}
-              {status !== "sending" && (
-                <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
-              )}
-            </button>
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <button
+                type="submit"
+                name="channel"
+                value="whatsapp"
+                disabled={status === "sending"}
+                className="inline-flex min-h-12 items-center justify-center gap-3 rounded-sm bg-[#25D366] px-8 py-3 text-xs font-semibold uppercase tracking-[0.16em] text-white transition-all duration-300 hover:bg-[#1ebe57] group disabled:cursor-not-allowed disabled:opacity-60"
+              >
+                <MessageCircle className="h-4 w-4" />
+                Continue in WhatsApp
+                <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+              </button>
+
+              <button
+                type="submit"
+                name="channel"
+                value={EMAIL_DELIVERY_ENABLED ? "email-api" : "email-app"}
+                disabled={status === "sending"}
+                className="inline-flex min-h-12 items-center justify-center gap-3 rounded-sm border border-border bg-white px-6 py-3 text-xs font-semibold uppercase tracking-[0.16em] text-foreground transition-all duration-300 hover:border-primary/40 hover:text-primary disabled:cursor-not-allowed disabled:opacity-60"
+              >
+                {status === "sending" ? (
+                  <Loader2 className="h-4 w-4 animate-spin" />
+                ) : (
+                  <Mail className="h-4 w-4" />
+                )}
+                {status === "sending" ? "Sending..." : EMAIL_DELIVERY_ENABLED ? "Send by Email" : "Open Email App"}
+              </button>
+            </div>
 
             <p className="mt-4 max-w-xl text-xs leading-5 text-muted-foreground">
-              Your details are used only to respond to this product or quotation enquiry. For faster matching, include flange, barrel, bore and traverse dimensions where available.
+              WhatsApp or your email app will open with a prepared message. Review it before sending. Your details are used only to respond to this product or quotation enquiry.
             </p>
 
             <div aria-live="polite" aria-atomic="true">

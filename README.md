@@ -239,12 +239,15 @@ Keep the visible contact details and structured data synchronized.
 
 ## Contact form and email delivery
 
-The browser submits enquiries to `POST /api/enquiry`. The function validates the submission, filters obvious spam, rate-limits repeated requests and sends an email through Resend.
+The enquiry form is WhatsApp-first by default and also lets a visitor open a prepared message in their email app. This keeps the production form useful even when no third-party email service is configured.
+
+Automatic server-side email delivery is optional. When enabled, the browser submits email enquiries to `POST /api/enquiry`. The function validates the submission, filters obvious spam, rate-limits repeated requests and sends an email through Resend.
 
 Environment variables are documented in `.env.example`:
 
 | Variable | Required | Purpose |
 | --- | --- | --- |
+| `VITE_ENQUIRY_EMAIL_ENABLED` | No | Set to `true` only after the Resend variables are configured. Defaults to WhatsApp plus the visitor's email app. |
 | `RESEND_API_KEY` | Yes | Resend API credential |
 | `ENQUIRY_TO_EMAIL` | Recommended | Inbox that receives enquiries. The API defaults to `sales@bobbinsindia.com`. |
 | `ENQUIRY_FROM_EMAIL` | Required for branded production email | Sender on a Resend-verified domain. The development fallback is Resend's onboarding sender. |
@@ -255,6 +258,7 @@ Example Vercel CLI setup:
 
 ```bash
 npx vercel link
+npx vercel env add VITE_ENQUIRY_EMAIL_ENABLED production
 npx vercel env add RESEND_API_KEY production
 npx vercel env add ENQUIRY_TO_EMAIL production
 npx vercel env add ENQUIRY_FROM_EMAIL production
@@ -267,7 +271,7 @@ The sending address must belong to a domain verified in Resend. A suitable value
 Bobbins India Website <website@send.bobbinsindia.net>
 ```
 
-After deployment, submit a clearly labeled test enquiry and confirm that it reaches the destination inbox. When delivery is unavailable, the interface shows direct WhatsApp and email alternatives instead of claiming success.
+After deployment, submit a clearly labeled test enquiry and confirm that it reaches the destination inbox. Keep `VITE_ENQUIRY_EMAIL_ENABLED=false` until that test succeeds; visitors will continue to get reliable WhatsApp and direct-email options in the meantime.
 
 ## SEO and GEO architecture
 
