@@ -41,6 +41,7 @@ import stitchingWireNew from "@/assets/stitching-wire-studio.jpg";
 import sd2StitchingWireReel from "@/assets/sd-2-stitching-wire-reel.jpg";
 import sd3StitchingWireReel from "@/assets/sd-3-stitching-wire-reel.jpg";
 import sd4StitchingWireReel from "@/assets/sd-4-stitching-wire-reel.jpg";
+import sd5StitchingWireReel from "@/assets/sd-5-stitching-wire-reel.jpg";
 import din46399New from "@/assets/din-46399-new.jpg";
 import cylindricalReelsNew from "@/assets/cylindrical-reels-studio.jpg";
 import dinS1 from "@/assets/din-s1.jpg";
@@ -761,7 +762,7 @@ export const products: Product[] = [
     name: "SD-5 Stitching Wire Reel",
     description: "High capacity stitching wire reel for heavy-duty industrial applications.",
     category: "Stitching Wire",
-    image: stitchingWireNew,
+    image: sd5StitchingWireReel,
     features: [
       "Flange Dia (d1): 171mm",
       "Barrel Dia (d2): 72mm",
