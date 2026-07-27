@@ -44,6 +44,7 @@ import sd4StitchingWireReel from "@/assets/sd-4-stitching-wire-reel.jpg";
 import sd5StitchingWireReel from "@/assets/sd-5-stitching-wire-reel.jpg";
 import din46399New from "@/assets/din-46399-new.jpg";
 import cylindricalReelsNew from "@/assets/cylindrical-reels-studio.jpg";
+import type63CylindricalReel from "@/assets/type-63-cylindrical-reel.jpg";
 import dinS1 from "@/assets/din-s1.jpg";
 import dinS2 from "@/assets/din-s2.jpg";
 import dinS3 from "@/assets/din-s3.jpg";
@@ -792,7 +793,7 @@ export const products: Product[] = [
     name: "Cylindrical Reels Type 63",
     description: "Compact Cylindrical Reels standard spool.",
     category: "Cylindrical Reels",
-    image: cylindricalReelsNew,
+    image: type63CylindricalReel,
     features: [
       "Type: 63",
       "Flange Dia: 63mm",
