@@ -45,6 +45,7 @@ import sd5StitchingWireReel from "@/assets/sd-5-stitching-wire-reel.jpg";
 import din46399New from "@/assets/din-46399-new.jpg";
 import cylindricalReelsNew from "@/assets/cylindrical-reels-studio.jpg";
 import type63CylindricalReel from "@/assets/type-63-cylindrical-reel.jpg";
+import type80CylindricalReel from "@/assets/type-80-cylindrical-reel.jpg";
 import dinS1 from "@/assets/din-s1.jpg";
 import dinS2 from "@/assets/din-s2.jpg";
 import dinS3 from "@/assets/din-s3.jpg";
@@ -808,7 +809,7 @@ export const products: Product[] = [
     name: "Cylindrical Reels Type 80",
     description: "Compact Cylindrical Reels standard spool for cable and wire applications.",
     category: "Cylindrical Reels",
-    image: cylindricalReelsNew,
+    image: type80CylindricalReel,
     features: [
       "Ref. No: S-1",
       "Flange Dia: 80mm (3.15 inch)",
