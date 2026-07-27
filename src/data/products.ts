@@ -46,6 +46,7 @@ import din46399New from "@/assets/din-46399-new.jpg";
 import cylindricalReelsNew from "@/assets/cylindrical-reels-studio.jpg";
 import type63CylindricalReel from "@/assets/type-63-cylindrical-reel.jpg";
 import type80CylindricalReel from "@/assets/type-80-cylindrical-reel.jpg";
+import type100CylindricalReel from "@/assets/type-100-cylindrical-reel.jpg";
 import dinS1 from "@/assets/din-s1.jpg";
 import dinS2 from "@/assets/din-s2.jpg";
 import dinS3 from "@/assets/din-s3.jpg";
@@ -825,7 +826,7 @@ export const products: Product[] = [
     name: "Cylindrical Reels Type 100",
     description: "Medium capacity Cylindrical Reels standard spool for wire and cable.",
     category: "Cylindrical Reels",
-    image: cylindricalReelsNew,
+    image: type100CylindricalReel,
     features: [
       "Ref. No: S-2",
       "Flange Dia: 100mm (3.94 inch)",
