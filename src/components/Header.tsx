@@ -89,7 +89,7 @@ const Header = () => {
         {/* Desktop nav */}
         <nav aria-label="Primary navigation" className="hidden md:flex items-center gap-8">
           {NAV.map((link) => {
-            const cls = `relative py-3 text-[11px] font-medium tracking-[0.18em] uppercase transition-colors group/nav ${
+            const cls = `relative py-3 text-xs font-medium tracking-[0.16em] uppercase transition-colors group/nav ${
               solidHeader
                 ? "text-foreground/70 hover:text-foreground"
                 : "text-white/75 hover:text-white"
@@ -124,7 +124,7 @@ const Header = () => {
         <div className="flex items-center gap-3">
           <button
             onClick={() => handleAnchorNav("/#contact")}
-            className={`hidden md:inline-flex items-center gap-2 px-5 py-2.5 text-[11px] font-semibold tracking-[0.16em] uppercase rounded-sm transition-all duration-300 ${
+            className={`hidden md:inline-flex items-center gap-2 px-5 py-2.5 text-xs font-semibold tracking-[0.14em] uppercase rounded-sm transition-all duration-300 ${
               solidHeader
                 ? "bg-foreground text-background hover:bg-primary"
                 : "bg-white/15 text-white border border-white/25 hover:bg-white/25"
@@ -133,9 +133,10 @@ const Header = () => {
             Get a Quote
           </button>
           <button
-            aria-label="Toggle menu"
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileOpen}
-            className={`md:hidden p-2 transition-colors ${solidHeader ? "text-foreground/70 hover:text-primary" : "text-white/80 hover:text-white"}`}
+            aria-controls="mobile-navigation"
+            className={`md:hidden flex h-11 w-11 items-center justify-center rounded-sm transition-colors ${solidHeader ? "text-foreground/70 hover:bg-muted hover:text-primary" : "text-white/80 hover:bg-white/10 hover:text-white"}`}
             onClick={() => setMobileOpen(!mobileOpen)}
           >
             {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -145,14 +146,14 @@ const Header = () => {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-white/95 backdrop-blur-xl border-t border-border/50">
+        <div id="mobile-navigation" className="md:hidden bg-white/95 backdrop-blur-xl border-t border-border/50">
           <nav aria-label="Mobile navigation" className="container py-6 flex flex-col gap-1">
             {NAV.map((link) =>
               link.href.startsWith("/#") ? (
                 <button
                   key={link.href}
                   onClick={() => handleAnchorNav(link.href)}
-                  className="px-4 py-3 text-[11px] font-medium tracking-[0.18em] uppercase text-foreground/50 hover:text-foreground hover:bg-muted/50 rounded transition-colors text-left"
+                  className="px-4 py-3 text-xs font-medium tracking-[0.16em] uppercase text-foreground/60 hover:text-foreground hover:bg-muted/50 rounded transition-colors text-left"
                 >
                   {link.label}
                 </button>
@@ -161,7 +162,7 @@ const Header = () => {
                   key={link.href}
                   to={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="px-4 py-3 text-[11px] font-medium tracking-[0.18em] uppercase text-foreground/50 hover:text-foreground hover:bg-muted/50 rounded transition-colors"
+                  className="px-4 py-3 text-xs font-medium tracking-[0.16em] uppercase text-foreground/60 hover:text-foreground hover:bg-muted/50 rounded transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -170,7 +171,7 @@ const Header = () => {
             <div className="h-px bg-border mt-4 mb-2" />
             <button
               onClick={() => handleAnchorNav("/#contact")}
-              className="flex items-center justify-center gap-2 px-5 py-3 text-[11px] font-semibold tracking-[0.16em] uppercase rounded-sm bg-foreground text-background hover:bg-primary transition-all"
+              className="flex min-h-11 items-center justify-center gap-2 px-5 py-3 text-xs font-semibold tracking-[0.14em] uppercase rounded-sm bg-foreground text-background hover:bg-primary transition-all"
             >
               Get a Quote
             </button>

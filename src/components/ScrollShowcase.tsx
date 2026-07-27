@@ -284,7 +284,7 @@ export default function ScrollShowcase() {
   return (
     <>
     <MobileCategoryGrid />
-    <div ref={containerRef} style={{ height: "700vh" }} className="relative hidden md:block">
+    <div ref={containerRef} style={{ height: "500vh" }} className="relative hidden md:block">
 
       {/* ── Sticky viewport ──────────────────────────────────────── */}
       <div className="sticky top-0 h-screen overflow-hidden" style={{ background: "#f0f4f8" }}>
