@@ -1,6 +1,24 @@
 import { Product } from "@/types/product";
 import taperedBobbinsNew from "@/assets/taper-reels-photo.jpg";
+import pt1TaperedBobbin from "@/assets/pt-1-tapered-bobbin.jpg";
+import pt4TaperedBobbin from "@/assets/pt-4-tapered-bobbin.jpg";
+import pt6TaperedBobbin from "@/assets/pt-6-tapered-bobbin.jpg";
+import pt10TaperedBobbin from "@/assets/pt-10-tapered-bobbin.jpg";
+import pt11TaperedBobbin from "@/assets/pt-11-tapered-bobbin.jpg";
+import pt15TaperedBobbin from "@/assets/pt-15-tapered-bobbin.jpg";
+import pt20TaperedBobbin from "@/assets/pt-20-tapered-bobbin.jpg";
+import pt25TaperedBobbin from "@/assets/pt-25-tapered-bobbin.jpg";
+import pt35TaperedBobbin from "@/assets/pt-35-tapered-bobbin.jpg";
+import pt45TaperedBobbin from "@/assets/pt-45-tapered-bobbin.jpg";
+import pt90TaperedBobbin from "@/assets/pt-90-tapered-bobbin.jpg";
+import pt200TaperedBobbin from "@/assets/pt-200-tapered-bobbin.jpg";
 import weldingWireNew from "@/assets/welding-wire-studio.jpg";
+import sd100WeldingWireSpool from "@/assets/sd-100-welding-wire-spool.jpg";
+import sd200WeldingWireSpool from "@/assets/sd-200-welding-wire-spool.jpg";
+import sd270WeldingWireSpool from "@/assets/sd-270-welding-wire-spool.jpg";
+import sd300WeldingWireSpool from "@/assets/sd-300-welding-wire-spool.jpg";
+import sd300LightWeldingWireSpool from "@/assets/sd-300-light-welding-wire-spool.jpg";
+import sd300HeavyWeldingWireSpool from "@/assets/sd-300-heavy-welding-wire-spool.jpg";
 import compositeReelsNew from "@/assets/composite-reels-new.jpg";
 import compPfTc380 from "@/assets/composite/pf-tc-380.jpg";
 import compPfTc400 from "@/assets/composite/pf-tc-400.jpg";
@@ -16,9 +34,24 @@ import compPfTc800 from "@/assets/composite/pf-tc-800.jpg";
 import compPfTc1000 from "@/assets/composite/pf-tc-1000.jpg";
 import compPfTc1250 from "@/assets/composite/pf-tc-1250.jpg";
 import edmWireNew from "@/assets/edm-wire-studio.jpg";
+import ep1EdmWireReel from "@/assets/ep-1-edm-wire-reel.jpg";
+import ep5EdmWireReel from "@/assets/ep-5-edm-wire-reel.jpg";
+import ep10EdmWireReel from "@/assets/ep-10-edm-wire-reel.jpg";
 import stitchingWireNew from "@/assets/stitching-wire-studio.jpg";
+import sd2StitchingWireReel from "@/assets/sd-2-stitching-wire-reel.jpg";
+import sd3StitchingWireReel from "@/assets/sd-3-stitching-wire-reel.jpg";
+import sd4StitchingWireReel from "@/assets/sd-4-stitching-wire-reel.jpg";
+import sd5StitchingWireReel from "@/assets/sd-5-stitching-wire-reel.jpg";
+import sd10StitchingWireReel from "@/assets/sd-10-stitching-wire-reel.jpg";
 import din46399New from "@/assets/din-46399-new.jpg";
 import cylindricalReelsNew from "@/assets/cylindrical-reels-studio.jpg";
+import type63CylindricalReel from "@/assets/type-63-cylindrical-reel.jpg";
+import type80CylindricalReel from "@/assets/type-80-cylindrical-reel.jpg";
+import type100CylindricalReel from "@/assets/type-100-cylindrical-reel.jpg";
+import type125CylindricalReel from "@/assets/type-125-cylindrical-reel.jpg";
+import type160CylindricalReel from "@/assets/type-160-cylindrical-reel.jpg";
+import type200CylindricalReel from "@/assets/type-200-cylindrical-reel.jpg";
+import type250CylindricalReel from "@/assets/type-250-cylindrical-reel.jpg";
 import dinS1 from "@/assets/din-s1.jpg";
 import dinS2 from "@/assets/din-s2.jpg";
 import dinS3 from "@/assets/din-s3.jpg";
@@ -65,7 +98,7 @@ export const products: Product[] = [
     name: "PT-1 Tapered Bobbin",
     description: "DIN 46383 / IEC 264-3 compliant plastic taper reel. Available in P.P, A.B.S and P.S in standard colors.",
     category: "Tapered Bobbins",
-    image: taperedBobbinsNew,
+    image: pt1TaperedBobbin,
     features: [
       "Ref. No: PT-1",
       "Flange Dia: 93.5/103mm (3.68/4.06 inch)",
@@ -97,7 +130,7 @@ export const products: Product[] = [
     name: "PT-4 Tapered Bobbin",
     description: "High capacity tapered spool for industrial cable manufacturing.",
     category: "Tapered Bobbins",
-    image: taperedBobbinsNew,
+    image: pt4TaperedBobbin,
     features: [
       "Ref. No: PT-4",
       "Flange Dia: 122/140mm (4.80/5.51 inch)",
@@ -113,7 +146,7 @@ export const products: Product[] = [
     name: "PT-6 Tapered Bobbin",
     description: "Heavy-duty tapered bobbin for large-scale cable production.",
     category: "Tapered Bobbins",
-    image: taperedBobbinsNew,
+    image: pt6TaperedBobbin,
     features: [
       "Ref. No: PT-6",
       "Flange Dia: 147/160mm (5.78/6.30 inch)",
@@ -129,7 +162,7 @@ export const products: Product[] = [
     name: "PT-10 Tapered Bobbin",
     description: "Large capacity tapered bobbin for professional cable manufacturing.",
     category: "Tapered Bobbins",
-    image: taperedBobbinsNew,
+    image: pt10TaperedBobbin,
     features: [
       "Ref. No: PT-10",
       "Flange Dia: 157/180mm (6.18/7.08 inch)",
@@ -145,7 +178,7 @@ export const products: Product[] = [
     name: "PT-11 Tapered Bobbin",
     description: "High performance tapered bobbin with 12kg capacity.",
     category: "Tapered Bobbins",
-    image: taperedBobbinsNew,
+    image: pt11TaperedBobbin,
     features: [
       "Ref. No: PT-11",
       "Flange Dia: 170/180mm (6.69/7.09 inch)",
@@ -161,7 +194,7 @@ export const products: Product[] = [
     name: "PT-15 Tapered Bobbin",
     description: "High-performance tapered bobbin for industrial applications.",
     category: "Tapered Bobbins",
-    image: taperedBobbinsNew,
+    image: pt15TaperedBobbin,
     features: [
       "Ref. No: PT-15",
       "Flange Dia: 180/200mm (7.08/7.87 inch)",
@@ -193,7 +226,7 @@ export const products: Product[] = [
     name: "PT-20 Tapered Bobbin",
     description: "Extra large tapered bobbin for maximum capacity operations.",
     category: "Tapered Bobbins",
-    image: taperedBobbinsNew,
+    image: pt20TaperedBobbin,
     features: [
       "Ref. No: PT-20",
       "Flange Dia: 212/230mm (8.34/9.06 inch)",
@@ -209,7 +242,7 @@ export const products: Product[] = [
     name: "PT-25 Tapered Bobbin",
     description: "Industrial grade tapered bobbin for heavy-duty cable production.",
     category: "Tapered Bobbins",
-    image: taperedBobbinsNew,
+    image: pt25TaperedBobbin,
     features: [
       "Ref. No: PT-25",
       "Flange Dia: 215/230mm (8.46/9.05 inch)",
@@ -241,7 +274,7 @@ export const products: Product[] = [
     name: "PT-35 Tapered Bobbin",
     description: "Heavy-duty tapered bobbin for industrial cable winding. Available in PP.",
     category: "Tapered Bobbins",
-    image: taperedBobbinsNew,
+    image: pt35TaperedBobbin,
     features: [
       "Ref. No: PT-35",
       "Flange Dia: 242/257mm (9.53/10.12 inch)",
@@ -257,7 +290,7 @@ export const products: Product[] = [
     name: "PT-45 Tapered Bobbin",
     description: "High-capacity tapered bobbin for professional cable manufacturing.",
     category: "Tapered Bobbins",
-    image: taperedBobbinsNew,
+    image: pt45TaperedBobbin,
     features: [
       "Ref. No: PT-45",
       "Flange Dia: 236/250mm (9.29/9.84 inch)",
@@ -289,7 +322,7 @@ export const products: Product[] = [
     name: "PT-90 Tapered Bobbin",
     description: "Maximum capacity tapered bobbin for industrial-scale cable production.",
     category: "Tapered Bobbins",
-    image: taperedBobbinsNew,
+    image: pt90TaperedBobbin,
     features: [
       "Ref. No: PT-90",
       "Flange Dia: 300/315mm (11.81/12.40 inch)",
@@ -305,7 +338,7 @@ export const products: Product[] = [
     name: "PT-200 Tapered Bobbin",
     description: "Extra-large capacity tapered bobbin with tie rod assembly for heavy industrial cable production. Available in PP.",
     category: "Tapered Bobbins",
-    image: taperedBobbinsNew,
+    image: pt200TaperedBobbin,
     features: [
       "Ref. No: PT-200",
       "Flange Dia: 369/395mm (14.53/15.55 inch)",
@@ -323,7 +356,7 @@ export const products: Product[] = [
     name: "SD100 Welding Wire Spool",
     description: "DIN 8559 compliant welding wire spool. Available in A.B.S / H.I.P.S / Polypropylene quality. General colors are cream and black, other colors available on request.",
     category: "Welding Wire",
-    image: weldingWireNew,
+    image: sd100WeldingWireSpool,
     features: [
       "Flange Dia (d1): 100mm",
       "Barrel Dia (d2): 38mm",
@@ -339,7 +372,7 @@ export const products: Product[] = [
     name: "SD200 Welding Wire Spool",
     description: "Medium capacity welding wire spool for industrial applications. Available in A.B.S / H.I.P.S / Polypropylene quality.",
     category: "Welding Wire",
-    image: weldingWireNew,
+    image: sd200WeldingWireSpool,
     features: [
       "Flange Dia (d1): 200mm",
       "Barrel Dia (d2): 105mm",
@@ -355,7 +388,7 @@ export const products: Product[] = [
     name: "SD270 Welding Wire Spool",
     description: "Large capacity welding wire spool for heavy-duty operations. Available in A.B.S / H.I.P.S / Polypropylene quality.",
     category: "Welding Wire",
-    image: weldingWireNew,
+    image: sd270WeldingWireSpool,
     features: [
       "Flange Dia (d1): 270mm",
       "Barrel Dia (d2): 148mm",
@@ -371,7 +404,7 @@ export const products: Product[] = [
     name: "SD300 Welding Wire Spool",
     description: "High-capacity welding wire spool for professional applications. Available in A.B.S / H.I.P.S / Polypropylene quality.",
     category: "Welding Wire",
-    image: weldingWireNew,
+    image: sd300WeldingWireSpool,
     features: [
       "Flange Dia (d1): 300mm",
       "Barrel Dia (d2): 212mm",
@@ -384,10 +417,10 @@ export const products: Product[] = [
   },
   {
     id: "sd-300-alt",
-    name: "SD300 Welding Wire Spool (Alternative)",
+    name: "SD300 (Light)",
     description: "Alternative configuration SD300 welding wire spool. Available in A.B.S / H.I.P.S / Polypropylene quality.",
     category: "Welding Wire",
-    image: weldingWireNew,
+    image: sd300LightWeldingWireSpool,
     features: [
       "Flange Dia (d1): 300mm",
       "Barrel Dia (d2): 205mm",
@@ -400,10 +433,10 @@ export const products: Product[] = [
   },
   {
     id: "sd-300-os",
-    name: "SD300 OS Welding Wire Spool",
+    name: "SD 300(Heavy)",
     description: "Premium SD300 OS welding wire spool for professional applications. Available in A.B.S / H.I.P.S / Polypropylene quality.",
     category: "Welding Wire",
-    image: weldingWireNew,
+    image: sd300HeavyWeldingWireSpool,
     features: [
       "Flange Dia (d1): 300mm",
       "Barrel Dia (d2): 212mm",
@@ -618,7 +651,7 @@ export const products: Product[] = [
     name: "EP-1 EDM Wire Reel",
     description: "Plastic reel suitable for EDM wire applications. Precision manufactured for electrical discharge machining.",
     category: "EDM Wire",
-    image: edmWireNew,
+    image: ep1EdmWireReel,
     features: [
       "Flange Dia (d1): 130(5.12)mm",
       "Barrel Dia (d2): 60(2.36)mm",
@@ -633,7 +666,7 @@ export const products: Product[] = [
     name: "EP-5 EDM Wire Reel",
     description: "Medium capacity EDM wire reel for precision machining applications.",
     category: "EDM Wire",
-    image: edmWireNew,
+    image: ep5EdmWireReel,
     features: [
       "Flange Dia (d1): 160(6.3)mm",
       "Barrel Dia (d2): 90(3.54)mm",
@@ -648,7 +681,7 @@ export const products: Product[] = [
     name: "EP-10 EDM Wire Reel",
     description: "High capacity EDM wire reel for industrial precision machining operations.",
     category: "EDM Wire",
-    image: edmWireNew,
+    image: ep10EdmWireReel,
     features: [
       "Flange Dia (d1): 200(7.87)mm",
       "Barrel Dia (d2): 90(3.54)mm",
@@ -695,7 +728,7 @@ export const products: Product[] = [
     name: "SD-2 Stitching Wire Reel",
     description: "Compact stitching wire reel for textile and packaging applications.",
     category: "Stitching Wire",
-    image: stitchingWireNew,
+    image: sd2StitchingWireReel,
     features: [
       "Flange Dia (d1): 133mm",
       "Barrel Dia (d2): 53mm",
@@ -709,7 +742,7 @@ export const products: Product[] = [
     name: "SD-3 Stitching Wire Reel",
     description: "Standard capacity stitching wire reel for industrial sewing operations.",
     category: "Stitching Wire",
-    image: stitchingWireNew,
+    image: sd3StitchingWireReel,
     features: [
       "Flange Dia (d1): 138mm",
       "Barrel Dia (d2): 53mm",
@@ -723,7 +756,7 @@ export const products: Product[] = [
     name: "SD-4 Stitching Wire Reel",
     description: "Medium capacity stitching wire reel for textile and packaging industries.",
     category: "Stitching Wire",
-    image: stitchingWireNew,
+    image: sd4StitchingWireReel,
     features: [
       "Flange Dia (d1): 154mm",
       "Barrel Dia (d2): 67mm",
@@ -737,7 +770,7 @@ export const products: Product[] = [
     name: "SD-5 Stitching Wire Reel",
     description: "High capacity stitching wire reel for heavy-duty industrial applications.",
     category: "Stitching Wire",
-    image: stitchingWireNew,
+    image: sd5StitchingWireReel,
     features: [
       "Flange Dia (d1): 171mm",
       "Barrel Dia (d2): 72mm",
@@ -751,7 +784,7 @@ export const products: Product[] = [
     name: "SD-10 Stitching Wire Reel",
     description: "Maximum capacity stitching wire reel for extended production runs.",
     category: "Stitching Wire",
-    image: stitchingWireNew,
+    image: sd10StitchingWireReel,
     features: [
       "Flange Dia (d1): 225mm",
       "Barrel Dia (d2): 72mm",
@@ -767,7 +800,7 @@ export const products: Product[] = [
     name: "Cylindrical Reels Type 63",
     description: "Compact Cylindrical Reels standard spool.",
     category: "Cylindrical Reels",
-    image: cylindricalReelsNew,
+    image: type63CylindricalReel,
     features: [
       "Type: 63",
       "Flange Dia: 63mm",
@@ -782,7 +815,7 @@ export const products: Product[] = [
     name: "Cylindrical Reels Type 80",
     description: "Compact Cylindrical Reels standard spool for cable and wire applications.",
     category: "Cylindrical Reels",
-    image: cylindricalReelsNew,
+    image: type80CylindricalReel,
     features: [
       "Ref. No: S-1",
       "Flange Dia: 80mm (3.15 inch)",
@@ -798,7 +831,7 @@ export const products: Product[] = [
     name: "Cylindrical Reels Type 100",
     description: "Medium capacity Cylindrical Reels standard spool for wire and cable.",
     category: "Cylindrical Reels",
-    image: cylindricalReelsNew,
+    image: type100CylindricalReel,
     features: [
       "Ref. No: S-2",
       "Flange Dia: 100mm (3.94 inch)",
@@ -814,7 +847,7 @@ export const products: Product[] = [
     name: "Cylindrical Reels Type 125",
     description: "Mid-size Cylindrical Reels spool for versatile applications.",
     category: "Cylindrical Reels",
-    image: cylindricalReelsNew,
+    image: type125CylindricalReel,
     features: [
       "Ref. No: S-3",
       "Flange Dia: 125mm (4.92 inch)",
@@ -830,7 +863,7 @@ export const products: Product[] = [
     name: "Cylindrical Reels Type 160",
     description: "Large capacity Cylindrical Reels standard spool.",
     category: "Cylindrical Reels",
-    image: cylindricalReelsNew,
+    image: type160CylindricalReel,
     features: [
       "Ref. No: S-6",
       "Flange Dia: 160mm (6.30 inch)",
@@ -846,7 +879,7 @@ export const products: Product[] = [
     name: "Cylindrical Reels Type 200",
     description: "Extra large Cylindrical Reels spool for industrial applications.",
     category: "Cylindrical Reels",
-    image: cylindricalReelsNew,
+    image: type200CylindricalReel,
     features: [
       "Ref. No: S-12",
       "Flange Dia: 200mm (7.87 inch)",
@@ -862,7 +895,7 @@ export const products: Product[] = [
     name: "Cylindrical Reels Type 250",
     description: "Heavy duty Cylindrical Reels spool for high capacity applications.",
     category: "Cylindrical Reels",
-    image: cylindricalReelsNew,
+    image: type250CylindricalReel,
     features: [
       "Ref. No: S-22",
       "Flange Dia: 250mm (9.84 inch)",
