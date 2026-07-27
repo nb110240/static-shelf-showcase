@@ -50,6 +50,7 @@ import type100CylindricalReel from "@/assets/type-100-cylindrical-reel.jpg";
 import type125CylindricalReel from "@/assets/type-125-cylindrical-reel.jpg";
 import type160CylindricalReel from "@/assets/type-160-cylindrical-reel.jpg";
 import type200CylindricalReel from "@/assets/type-200-cylindrical-reel.jpg";
+import type250CylindricalReel from "@/assets/type-250-cylindrical-reel.jpg";
 import dinS1 from "@/assets/din-s1.jpg";
 import dinS2 from "@/assets/din-s2.jpg";
 import dinS3 from "@/assets/din-s3.jpg";
@@ -893,7 +894,7 @@ export const products: Product[] = [
     name: "Cylindrical Reels Type 250",
     description: "Heavy duty Cylindrical Reels spool for high capacity applications.",
     category: "Cylindrical Reels",
-    image: cylindricalReelsNew,
+    image: type250CylindricalReel,
     features: [
       "Ref. No: S-22",
       "Flange Dia: 250mm (9.84 inch)",
