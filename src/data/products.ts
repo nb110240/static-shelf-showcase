@@ -39,6 +39,7 @@ import ep5EdmWireReel from "@/assets/ep-5-edm-wire-reel.jpg";
 import ep10EdmWireReel from "@/assets/ep-10-edm-wire-reel.jpg";
 import stitchingWireNew from "@/assets/stitching-wire-studio.jpg";
 import sd2StitchingWireReel from "@/assets/sd-2-stitching-wire-reel.jpg";
+import sd3StitchingWireReel from "@/assets/sd-3-stitching-wire-reel.jpg";
 import din46399New from "@/assets/din-46399-new.jpg";
 import cylindricalReelsNew from "@/assets/cylindrical-reels-studio.jpg";
 import dinS1 from "@/assets/din-s1.jpg";
@@ -731,7 +732,7 @@ export const products: Product[] = [
     name: "SD-3 Stitching Wire Reel",
     description: "Standard capacity stitching wire reel for industrial sewing operations.",
     category: "Stitching Wire",
-    image: stitchingWireNew,
+    image: sd3StitchingWireReel,
     features: [
       "Flange Dia (d1): 138mm",
       "Barrel Dia (d2): 53mm",
