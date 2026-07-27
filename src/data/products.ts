@@ -48,6 +48,8 @@ import type63CylindricalReel from "@/assets/type-63-cylindrical-reel.jpg";
 import type80CylindricalReel from "@/assets/type-80-cylindrical-reel.jpg";
 import type100CylindricalReel from "@/assets/type-100-cylindrical-reel.jpg";
 import type125CylindricalReel from "@/assets/type-125-cylindrical-reel.jpg";
+import type160CylindricalReel from "@/assets/type-160-cylindrical-reel.jpg";
+import type200CylindricalReel from "@/assets/type-200-cylindrical-reel.jpg";
 import dinS1 from "@/assets/din-s1.jpg";
 import dinS2 from "@/assets/din-s2.jpg";
 import dinS3 from "@/assets/din-s3.jpg";
@@ -859,7 +861,7 @@ export const products: Product[] = [
     name: "Cylindrical Reels Type 160",
     description: "Large capacity Cylindrical Reels standard spool.",
     category: "Cylindrical Reels",
-    image: cylindricalReelsNew,
+    image: type160CylindricalReel,
     features: [
       "Ref. No: S-6",
       "Flange Dia: 160mm (6.30 inch)",
@@ -875,7 +877,7 @@ export const products: Product[] = [
     name: "Cylindrical Reels Type 200",
     description: "Extra large Cylindrical Reels spool for industrial applications.",
     category: "Cylindrical Reels",
-    image: cylindricalReelsNew,
+    image: type200CylindricalReel,
     features: [
       "Ref. No: S-12",
       "Flange Dia: 200mm (7.87 inch)",
