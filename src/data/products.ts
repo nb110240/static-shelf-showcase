@@ -60,6 +60,7 @@ import dinS12 from "@/assets/din-s12.jpg";
 import dinS22 from "@/assets/din-s22.jpg";
 import dinS48 from "@/assets/din-s48.jpg";
 import steelTinselNew from "@/assets/steel-tinsel-studio.jpg";
+import us250SteelWireReel from "@/assets/us-250-steel-wire-reel.jpg";
 import aluminumWireNew from "@/assets/aluminum-wire-photo.jpg";
 import aluminumReel200 from "@/assets/aluminum-reel-200.jpg";
 import aluminumReel320 from "@/assets/aluminum-reel-320.jpg";
@@ -957,7 +958,7 @@ export const products: Product[] = [
     name: "US-250 Steel Wire Reel",
     description: "Large capacity heavy-duty steel wire reel.",
     category: "Steel & Tinsel",
-    image: steelTinselNew,
+    image: us250SteelWireReel,
     features: [
       "Flange Dia: 254mm",
       "Barrel Dia: 102mm",
