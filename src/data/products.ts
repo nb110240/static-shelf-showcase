@@ -66,6 +66,13 @@ import aluminumReel200 from "@/assets/aluminum-reel-200.jpg";
 import aluminumReel320 from "@/assets/aluminum-reel-320.jpg";
 import cableDeliveryNew from "@/assets/cable-delivery-reels.webp";
 import cdr230CableDeliveryReel from "@/assets/cdr-230-cable-delivery-reel.jpg";
+import cdr260CableDeliveryReel from "@/assets/cdr-260-cable-delivery-reel.jpg";
+import cdr280CableDeliveryReel from "@/assets/cdr-280-cable-delivery-reel.jpg";
+import cdr295CableDeliveryReel from "@/assets/cdr-295-cable-delivery-reel.jpg";
+import cdr355SmallBarrelCableDeliveryReel from "@/assets/cdr-355-cable-delivery-reel.jpg";
+import cdr355LargeBarrelCableDeliveryReel from "@/assets/cdr-355-large-barrel-cable-delivery-reel.jpg";
+import cdr380CableDeliveryReel from "@/assets/cdr-380-cable-delivery-reel.jpg";
+import cdr500CableDeliveryReel from "@/assets/cdr-500-cable-delivery-reel.jpg";
 import superToughNew from "@/assets/super-tough-photo.jpg";
 import superTough1 from "@/assets/super-tough-1.jpg";
 import superTough2 from "@/assets/super-tough-2.jpg";
@@ -1018,9 +1025,9 @@ export const products: Product[] = [
   {
     id: "cd-260",
     name: "CDR 260",
-    description: "Cable despatch reel with 260mm flange and 108mm barrel. Compatible with high-speed coiling machines. Weather and UV resistant.",
+    description: "Cable Delivery Reel (CDR) with 260mm flange and 108mm barrel. Compatible with high-speed coiling machines. Weather and UV resistant.",
     category: "Cable Delivery",
-    image: cableDeliveryNew,
+    image: cdr260CableDeliveryReel,
     features: [
       "Flange Dia (d1): 260mm",
       "Barrel Dia (d2): 108mm",
@@ -1031,9 +1038,9 @@ export const products: Product[] = [
   {
     id: "cd-280",
     name: "CDR 280",
-    description: "Cable despatch reel with 280mm flange and 108mm barrel. Compatible with high-speed coiling machines. Weather and UV resistant.",
+    description: "Cable Delivery Reel (CDR) with 280mm flange and 108mm barrel. Compatible with high-speed coiling machines. Weather and UV resistant.",
     category: "Cable Delivery",
-    image: cableDeliveryNew,
+    image: cdr280CableDeliveryReel,
     features: [
       "Flange Dia (d1): 280mm",
       "Barrel Dia (d2): 108mm",
@@ -1044,9 +1051,9 @@ export const products: Product[] = [
   {
     id: "cd-295",
     name: "CDR 295",
-    description: "Cable despatch reel with 295mm flange and 108mm barrel. Compatible with high-speed coiling machines. Weather and UV resistant.",
+    description: "Cable Delivery Reel (CDR) with 295mm flange and 108mm barrel. Compatible with high-speed coiling machines. Weather and UV resistant.",
     category: "Cable Delivery",
-    image: cableDeliveryNew,
+    image: cdr295CableDeliveryReel,
     features: [
       "Flange Dia (d1): 295mm",
       "Barrel Dia (d2): 108mm",
@@ -1070,9 +1077,9 @@ export const products: Product[] = [
   {
     id: "cd-355-s",
     name: "CDR 355 (Small Barrel)",
-    description: "Cable despatch reel with 355mm flange and 108mm barrel. Compatible with high-speed coiling machines. Weather and UV resistant.",
+    description: "Cable Delivery Reel (CDR) with 355mm flange and 108mm barrel. Compatible with high-speed coiling machines. Weather and UV resistant.",
     category: "Cable Delivery",
-    image: cableDeliveryNew,
+    image: cdr355SmallBarrelCableDeliveryReel,
     features: [
       "Flange Dia (d1): 355mm",
       "Barrel Dia (d2): 108mm",
@@ -1083,9 +1090,9 @@ export const products: Product[] = [
   {
     id: "cd-380",
     name: "CDR 380",
-    description: "Cable despatch reel with 380mm flange and 108mm barrel. Compatible with high-speed coiling machines. Weather and UV resistant.",
+    description: "Cable Delivery Reel (CDR) with 380mm flange and 108mm barrel. Compatible with high-speed coiling machines. Weather and UV resistant.",
     category: "Cable Delivery",
-    image: cableDeliveryNew,
+    image: cdr380CableDeliveryReel,
     features: [
       "Flange Dia (d1): 380mm",
       "Barrel Dia (d2): 108mm",
@@ -1096,9 +1103,9 @@ export const products: Product[] = [
   {
     id: "cd-355-l",
     name: "CDR 355 (Large Barrel)",
-    description: "Cable despatch reel with 355mm flange and 205mm barrel. Compatible with high-speed coiling machines. Weather and UV resistant.",
+    description: "Cable Delivery Reel (CDR) with 355mm flange and 205mm barrel. Compatible with high-speed coiling machines. Weather and UV resistant.",
     category: "Cable Delivery",
-    image: cableDeliveryNew,
+    image: cdr355LargeBarrelCableDeliveryReel,
     features: [
       "Flange Dia (d1): 355mm",
       "Barrel Dia (d2): 205mm",
@@ -1148,9 +1155,9 @@ export const products: Product[] = [
   {
     id: "cd-500",
     name: "CDR 500",
-    description: "Cable despatch reel with 500mm flange and 205mm barrel. Compatible with high-speed coiling machines. Weather and UV resistant.",
+    description: "Cable Delivery Reel (CDR) with 500mm flange and 205mm barrel. Compatible with high-speed coiling machines. Weather and UV resistant.",
     category: "Cable Delivery",
-    image: cableDeliveryNew,
+    image: cdr500CableDeliveryReel,
     features: [
       "Flange Dia (d1): 500mm",
       "Barrel Dia (d2): 205mm",
