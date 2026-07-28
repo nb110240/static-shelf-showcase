@@ -65,6 +65,7 @@ import aluminumWireNew from "@/assets/aluminum-wire-photo.jpg";
 import aluminumReel200 from "@/assets/aluminum-reel-200.jpg";
 import aluminumReel320 from "@/assets/aluminum-reel-320.jpg";
 import cableDeliveryNew from "@/assets/cable-delivery-reels.webp";
+import cdr230CableDeliveryReel from "@/assets/cdr-230-cable-delivery-reel.jpg";
 import superToughNew from "@/assets/super-tough-photo.jpg";
 import superTough1 from "@/assets/super-tough-1.jpg";
 import superTough2 from "@/assets/super-tough-2.jpg";
@@ -1004,9 +1005,9 @@ export const products: Product[] = [
   {
     id: "cd-230",
     name: "CDR 230",
-    description: "Cable despatch reel with 230mm flange and 108mm barrel. Compatible with high-speed coiling machines. Weather and UV resistant.",
+    description: "Cable Delivery Reel (CDR) with 230mm flange and 108mm barrel. Compatible with high-speed coiling machines. Weather and UV resistant.",
     category: "Cable Delivery",
-    image: cableDeliveryNew,
+    image: cdr230CableDeliveryReel,
     features: [
       "Flange Dia (d1): 230mm",
       "Barrel Dia (d2): 108mm",
