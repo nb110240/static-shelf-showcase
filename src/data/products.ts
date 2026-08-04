@@ -104,6 +104,7 @@ import isi130mmReel from "@/assets/isi-130mm-reel.jpg";
 import isi6Reel from "@/assets/isi-6-reel.jpg";
 import isi8Reel from "@/assets/isi-8-reel.jpg";
 import isi10Reel from "@/assets/isi-10-reel.jpg";
+import isi10Point5Reel from "@/assets/isi-10-5-reel.jpg";
 import al335AluminumWireReel from "@/assets/al-335-aluminum-wire-reel.jpg";
 import copperConductorNew from "@/assets/copper-conductor-photo.jpg";
 
@@ -1735,6 +1736,14 @@ export const products: Product[] = [
       "Overall (L1): 209mm",
       "Bore (d4): 41mm"
     ]
+  },
+  {
+    id: "isi-10-5",
+    name: "ISI 10.5\" Reel",
+    description: "ISI standard 10.5 inch reel for industrial wire winding.",
+    category: "ISI Reels",
+    image: isi10Point5Reel,
+    features: []
   },
   {
     id: "isi-11",
