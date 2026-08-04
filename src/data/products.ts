@@ -97,6 +97,7 @@ import monofilamentNew from "@/assets/monofilament-new.jpg";
 import miscReelsNew from "@/assets/misc-reels-studio.jpg";
 import miscReel1 from "@/assets/misc-reel-1.jpg";
 import miscReel2 from "@/assets/misc-reel-2.jpg";
+import miscConnectorReel from "@/assets/misc-connector-reel.jpg";
 import isiReelsNew from "@/assets/isi-reels-studio.jpg";
 import copperConductorNew from "@/assets/copper-conductor-photo.jpg";
 
@@ -1611,7 +1612,7 @@ export const products: Product[] = [
     name: "MISC Connector Reel",
     description: "Versatile connector reel for specialized winding applications. Professional grade construction.",
     category: "Misc Reels",
-    image: miscReelsNew,
+    image: miscConnectorReel,
     features: [
       "Model: Connector",
       "Flange: 50mm",
