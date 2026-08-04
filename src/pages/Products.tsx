@@ -14,6 +14,7 @@ import CategoryOverview from "@/components/CategoryOverview";
 import { products, categories, categoryImages } from "@/data/products";
 import { categoryToSlug } from "@/data/categoryContent";
 import { SITE_URL } from "@/lib/constants";
+import { searchProducts } from "@/lib/productSearch";
 import { Product } from "@/types/product";
 
 const Products = () => {
@@ -38,24 +39,25 @@ const Products = () => {
     }
   }, [searchParams]);
 
-  const filteredProducts = useMemo(() => {
-    return products.filter((product) => {
-      const matchesCategory = selectedCategory === "All" || product.category === selectedCategory;
-      if (!searchTerm) return matchesCategory;
-      const searchLower = searchTerm.toLowerCase().trim();
-      if (activeFilter) {
-        return matchesCategory && product.features.some(f =>
-          f.toLowerCase().includes(activeFilter.toLowerCase()) && f.toLowerCase().includes(searchLower)
-        );
-      }
-      return matchesCategory && (
-        product.name.toLowerCase().includes(searchLower) ||
-        product.description.toLowerCase().includes(searchLower) ||
-        product.category.toLowerCase().includes(searchLower) ||
-        product.features.some(f => f.toLowerCase().includes(searchLower))
-      );
-    });
+  const searchResult = useMemo(() => {
+    return searchProducts(products, selectedCategory, searchTerm, activeFilter);
   }, [selectedCategory, searchTerm, activeFilter]);
+  const filteredProducts = searchResult.products;
+
+  const searchFeedback = useMemo(() => {
+    if (
+      searchResult.mode !== "nearest-flange" ||
+      searchResult.requestedFlangeDiameter === null ||
+      searchResult.nearestFlangeDiameters.length === 0
+    ) {
+      return null;
+    }
+
+    const nearestSizes = searchResult.nearestFlangeDiameters
+      .map((diameter) => `${diameter}mm`)
+      .join(" and ");
+    return `No exact ${searchResult.requestedFlangeDiameter}mm flange diameter found. Showing nearest available flange diameters: ${nearestSizes}.`;
+  }, [searchResult]);
 
   const productsByCategory = useMemo(() => {
     const grouped: Record<string, Product[]> = {};
@@ -141,6 +143,7 @@ const Products = () => {
             activeFilter={activeFilter}
             onFilterChange={setActiveFilter}
             resultsCount={filteredProducts.length}
+            searchFeedback={searchFeedback}
           />
           <CategoryFilter
             categories={categories}
