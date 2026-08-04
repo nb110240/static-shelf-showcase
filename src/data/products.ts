@@ -100,6 +100,7 @@ import miscReel2 from "@/assets/misc-reel-2.jpg";
 import miscConnectorReel from "@/assets/misc-connector-reel.jpg";
 import isiReelsNew from "@/assets/isi-reels-studio.jpg";
 import isi5Reel from "@/assets/isi-5-125mm-reel.jpg";
+import isi6Reel from "@/assets/isi-6-reel.jpg";
 import copperConductorNew from "@/assets/copper-conductor-photo.jpg";
 
 export const products: Product[] = [
@@ -1661,7 +1662,7 @@ export const products: Product[] = [
     name: "ISI 6\" Reel",
     description: "ISI standard 6 inch reel for medium capacity applications.",
     category: "ISI Reels",
-    image: isiReelsNew,
+    image: isi6Reel,
     features: [
       "Size: 6\"",
       "Flange Dia (d1): 160mm",
