@@ -102,6 +102,7 @@ import isiReelsNew from "@/assets/isi-reels-studio.jpg";
 import isi5Reel from "@/assets/isi-5-125mm-reel.jpg";
 import isi6Reel from "@/assets/isi-6-reel.jpg";
 import isi8Reel from "@/assets/isi-8-reel.jpg";
+import isi10Reel from "@/assets/isi-10-reel.jpg";
 import copperConductorNew from "@/assets/copper-conductor-photo.jpg";
 
 export const products: Product[] = [
@@ -1723,7 +1724,7 @@ export const products: Product[] = [
     name: "ISI 10\" Reel",
     description: "ISI standard 10 inch reel for high capacity wire winding.",
     category: "ISI Reels",
-    image: isiReelsNew,
+    image: isi10Reel,
     features: [
       "Size: 10\"",
       "Flange Dia (d1): 260mm",
