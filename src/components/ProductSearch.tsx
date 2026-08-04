@@ -9,6 +9,7 @@ interface ProductSearchProps {
   activeFilter: string | null;
   onFilterChange: (filter: string | null) => void;
   resultsCount: number;
+  searchFeedback?: string | null;
 }
 
 const searchFilters = [
@@ -19,7 +20,7 @@ const searchFilters = [
   { label: "Volume", searchKey: "Volume" },
 ];
 
-const ProductSearch = ({ searchTerm, onSearchChange, activeFilter, onFilterChange, resultsCount }: ProductSearchProps) => {
+const ProductSearch = ({ searchTerm, onSearchChange, activeFilter, onFilterChange, resultsCount, searchFeedback }: ProductSearchProps) => {
   const handleFilterClick = (searchKey: string) => {
     if (activeFilter === searchKey) {
       onFilterChange(null);
@@ -101,6 +102,11 @@ const ProductSearch = ({ searchTerm, onSearchChange, activeFilter, onFilterChang
       <p className="mt-4 text-center font-mono text-[10px] tracking-[0.14em] uppercase text-muted-foreground" aria-live="polite">
         {resultsCount} {resultsCount === 1 ? "product" : "products"} available
       </p>
+      {searchFeedback && (
+        <p className="mt-2 text-center text-sm text-foreground" role="status">
+          {searchFeedback}
+        </p>
+      )}
     </div>
   );
 };
