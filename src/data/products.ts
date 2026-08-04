@@ -99,6 +99,7 @@ import miscReel1 from "@/assets/misc-reel-1.jpg";
 import miscReel2 from "@/assets/misc-reel-2.jpg";
 import miscConnectorReel from "@/assets/misc-connector-reel.jpg";
 import isiReelsNew from "@/assets/isi-reels-studio.jpg";
+import isi5Reel from "@/assets/isi-5-125mm-reel.jpg";
 import copperConductorNew from "@/assets/copper-conductor-photo.jpg";
 
 export const products: Product[] = [
@@ -1626,10 +1627,10 @@ export const products: Product[] = [
   // 15. ISI REELS
   {
     id: "isi-5",
-    name: "ISI 5\" Reel",
+    name: "ISI 5\" (125mm)",
     description: "ISI standard reel for wire and cable applications. All dimensions in millimeter.",
     category: "ISI Reels",
-    image: isiReelsNew,
+    image: isi5Reel,
     features: [
       "Size: 5\"",
       "Flange Dia (d1): 125mm",
