@@ -103,6 +103,7 @@ import isi5Reel from "@/assets/isi-5-125mm-reel.jpg";
 import isi6Reel from "@/assets/isi-6-reel.jpg";
 import isi8Reel from "@/assets/isi-8-reel.jpg";
 import isi10Reel from "@/assets/isi-10-reel.jpg";
+import al335AluminumWireReel from "@/assets/al-335-aluminum-wire-reel.jpg";
 import copperConductorNew from "@/assets/copper-conductor-photo.jpg";
 
 export const products: Product[] = [
@@ -1751,11 +1752,12 @@ export const products: Product[] = [
   },
   {
     id: "isi-13",
-    name: "ISI 13\" Reel",
-    description: "ISI standard 13 inch reel for heavy industrial applications.",
-    category: "ISI Reels",
-    image: isiReelsNew,
+    name: "AL 335 Aluminum Wire Reel",
+    description: "AL 335 reel for aluminum wire winding and heavy industrial applications.",
+    category: "Aluminum Wire",
+    image: al335AluminumWireReel,
     features: [
+      "Ref.No: AL 335",
       "Size: 13\"",
       "Flange Dia (d1): 336mm",
       "Barrel Dia (d2): 116.7mm",
