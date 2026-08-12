@@ -22,11 +22,11 @@ const About = () => {
           </span>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-16 items-center">
-          <div>
+        <div className="grid min-w-0 grid-cols-[minmax(0,1fr)] items-center gap-16 md:grid-cols-2">
+          <div className="min-w-0">
             <h2 className="font-display text-[clamp(1.4rem,3vw,2.2rem)] leading-[1.2] tracking-wider text-foreground mb-8">
               PIONEER IN<br />
-              <span className="text-primary">SPOOL MANUFACTURING</span>
+              <span className="block text-[clamp(1rem,4.5vw,2.2rem)] text-primary">SPOOL MANUFACTURING</span>
             </h2>
             <p className="text-muted-foreground text-sm leading-[1.8] mb-5">
               Since 1995, Bobbins India has focused on spools, bobbins and reels for cable, wire and industrial winding applications. The range spans compact precision bobbins through large-format delivery reels.

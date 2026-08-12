@@ -139,9 +139,11 @@ function writeRoute(path, html) {
 }
 
 const organization = {
-  "@context": "https://schema.org", "@type": "Organization", name: "Bobbins India", legalName: "Sudhir Enterprise",
-  url: SITE, logo: `${SITE}/apple-touch-icon.png`, foundingDate: "1995", email: "sales@bobbinsindia.com", telephone: "+912228473744",
+  "@context": "https://schema.org", "@type": ["Organization", "LocalBusiness"], name: "Bobbins India", legalName: "Sudhir Enterprise",
+  url: SITE, logo: `${SITE}/apple-touch-icon.png`, image: `${SITE}/og-default.png`, foundingDate: "1995", email: "sales@bobbinsindia.com", telephone: "+912228473744", priceRange: "Quotation based",
   address: { "@type": "PostalAddress", streetAddress: "12 B, Chandivali, Off Saki Vihar Road", addressLocality: "Andheri East", addressRegion: "Maharashtra", postalCode: "400072", addressCountry: "IN" },
+  areaServed: [{ "@type": "Country", name: "India" }, { "@type": "Place", name: "International" }],
+  hasMap: "https://maps.google.com/?q=12+B+Chandivali+Off+Saki+Vihar+Road+Andheri+East+Mumbai+400072",
 };
 const breadcrumb = (items) => ({
   "@context": "https://schema.org", "@type": "BreadcrumbList",
@@ -198,7 +200,11 @@ writeRoute("/privacy", pageHtml({
   title: "Privacy Notice | Bobbins India", description: "How Bobbins India handles information submitted through its website and product enquiry forms.", path: "/privacy",
   content: `<main class="prerender-shell"><h1>Privacy Notice</h1><p>Information submitted through the website is used to review product requirements, respond to questions and prepare quotations. For privacy questions, email <a href="mailto:sales@bobbinsindia.com">sales@bobbinsindia.com</a>.</p></main>`,
 }));
+writeRoute("/thank-you", pageHtml({
+  title: "Thank You for Your Enquiry | Bobbins India", description: "Thank you for contacting Bobbins India. Our team aims to acknowledge website enquiries within one business day.", path: "/thank-you", robots: "noindex,follow",
+  content: `<main class="prerender-shell"><h1>Thank you for your enquiry</h1><p>Your requirement has reached Bobbins India. We aim to acknowledge website enquiries within one business day.</p><p><a href="/products">Browse products</a> or <a href="/">return home</a>.</p></main>`,
+}));
 writeRoute("/compare", pageHtml({ title: "Compare Products | Bobbins India", description: "Compare selected Bobbins India products.", path: "/compare", robots: "noindex,nofollow", content: `<main class="prerender-shell"><h1>Compare products</h1><p><a href="/products">Choose products from the catalog</a>.</p></main>` }));
 writeFileSync(join(DIST, "404.html"), pageHtml({ title: "Page Not Found | Bobbins India", description: "The requested page could not be found.", path: "/404", robots: "noindex,nofollow", content: `<main class="prerender-shell"><h1>Page not found</h1><p>The page may have moved. <a href="/products">Browse the product catalog</a> or <a href="/">return home</a>.</p></main>` }));
 
-console.log(`Prerendered ${products.length + categories.length + 5} HTML routes.`);
+console.log(`Prerendered ${products.length + categories.length + 6} HTML routes.`);

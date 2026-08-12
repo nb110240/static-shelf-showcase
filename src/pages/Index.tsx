@@ -7,9 +7,21 @@ import About from "@/components/About";
 import Footer from "@/components/Footer";
 import EnquiryForm from "@/components/EnquiryForm";
 import Capabilities from "@/components/Capabilities";
+import BusinessFaq from "@/components/BusinessFaq";
+import { businessFaqs } from "@/data/businessFaqs";
 import { SITE_URL } from "@/lib/constants";
 
 const Index = () => {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: businessFaqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: { "@type": "Answer", text: faq.answer },
+    })),
+  };
+
   return (
     <div id="main-content" className="min-h-screen bg-background">
       <Helmet>
@@ -28,6 +40,7 @@ const Index = () => {
         <meta name="twitter:title" content="Bobbins India | Precision Spools & Reels Manufacturer" />
         <meta name="twitter:description" content="Industrial spools, bobbins and reels for cable, wire, welding, EDM and specialty winding applications." />
         <meta name="twitter:image" content={`${SITE_URL}/og-default.png`} />
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <div style={{ overflowX: "clip" }}>
         <Header />
@@ -36,6 +49,7 @@ const Index = () => {
       <ProductFinder />
       <ScrollShowcase />
       <Capabilities />
+      <BusinessFaq />
       <div style={{ overflowX: "clip" }}>
         <About />
         <EnquiryForm />

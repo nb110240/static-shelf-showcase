@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
-import { ArrowRight, Mail, CheckCircle, Loader2, MessageCircle } from "lucide-react";
-import { useSearchParams } from "react-router-dom";
+import { ArrowRight, Mail, Loader2, MessageCircle, CheckCircle } from "lucide-react";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { COMPANY_EMAIL, whatsappUrl } from "@/lib/constants";
 import { track } from "@vercel/analytics";
 
@@ -10,6 +10,7 @@ const EMAIL_DELIVERY_ENABLED = import.meta.env.VITE_ENQUIRY_EMAIL_ENABLED === "t
 
 const EnquiryForm = () => {
   const [searchParams, setSearchParams] = useSearchParams();
+  const navigate = useNavigate();
   const startedAt = useRef(Date.now());
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [form, setForm] = useState({
@@ -117,10 +118,8 @@ const EnquiryForm = () => {
       const data = await res.json().catch(() => null);
       const ok = res.ok && data && String(data.success).toLowerCase() === "true";
       if (ok) {
-        setStatus("sent");
         track("enquiry_submitted", { product: form.product || "General enquiry" });
-        setForm({ name: "", company: "", phone: "", email: "", product: "", quantity: "", requirement: "", website: "" });
-        startedAt.current = Date.now();
+        navigate("/thank-you");
       } else {
         setStatus("error");
         track("enquiry_failed", { reason: data?.error || `HTTP ${res.status}` });
@@ -137,7 +136,7 @@ const EnquiryForm = () => {
     "w-full rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/40 transition-colors duration-200";
 
   return (
-    <section id="enquiry-form" className="relative py-28">
+    <section id="enquiry-form" className="relative overflow-hidden py-28">
       <div className="absolute inset-0 bg-blueprint-grid" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-primary/[0.03] blur-[100px] pointer-events-none" />
 
@@ -156,6 +155,9 @@ const EnquiryForm = () => {
         </h2>
         <p className="text-muted-foreground text-sm leading-[1.8] max-w-md mb-12">
           Need a specific reel, custom mould, or a quote? Share the application, dimensions and estimated quantity so our team can match the right product.
+        </p>
+        <p className="-mt-8 mb-10 max-w-md rounded-md border border-primary/15 bg-primary/[0.04] px-4 py-3 text-xs leading-5 text-foreground/75">
+          Response promise: we aim to acknowledge website enquiries within one business day.
         </p>
 
         {status === "sent" ? (
@@ -182,7 +184,7 @@ const EnquiryForm = () => {
             className="max-w-2xl rounded-lg border border-border bg-card p-6 sm:p-8"
             style={{ boxShadow: "var(--shadow-card)" }}
           >
-            <div className="absolute -left-[10000px]" aria-hidden="true">
+            <div className="pointer-events-none absolute h-px w-px overflow-hidden opacity-0" aria-hidden="true">
               <label htmlFor="enquiry-website">Website</label>
               <input
                 id="enquiry-website"

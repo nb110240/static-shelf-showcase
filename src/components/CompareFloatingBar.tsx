@@ -16,7 +16,7 @@ const CompareFloatingBar = () => {
   if (compareItems.length === 0 || dismissed) return null;
 
   return (
-    <div className="fixed bottom-0 inset-x-0 z-40 flex justify-center pb-4 px-4 pointer-events-none">
+    <div className="fixed bottom-16 inset-x-0 z-40 flex justify-center pb-4 px-4 pointer-events-none md:bottom-0">
       <div className="pointer-events-auto bg-foreground text-background rounded-lg shadow-2xl px-5 py-3 flex items-center gap-4 max-w-md w-full">
         <span
           className="text-xs tracking-wide flex-1"

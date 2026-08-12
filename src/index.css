@@ -58,10 +58,11 @@
 
 @layer base {
   * { @apply border-border; }
-  html { scroll-behavior: smooth; font-size: 18px; }
+  html { scroll-behavior: smooth; font-size: 18px; overflow-x: hidden; }
 
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden;
     font-family: 'Outfit', system-ui, sans-serif;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;

@@ -1,6 +1,6 @@
 const organizationSchema = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": ["Organization", "LocalBusiness"],
   name: "Bobbins India",
   legalName: "Sudhir Enterprise",
   url: "https://bobbinsindia.net",
@@ -17,6 +17,14 @@ const organizationSchema = {
     addressCountry: "IN",
   },
   telephone: "+912228473744",
+  image: "https://bobbinsindia.net/og-default.png",
+  priceRange: "Quotation based",
+  areaServed: [
+    { "@type": "Country", name: "India" },
+    { "@type": "Place", name: "International" },
+  ],
+  hasMap:
+    "https://maps.google.com/?q=12+B+Chandivali+Off+Saki+Vihar+Road+Andheri+East+Mumbai+400072",
   email: "sales@bobbinsindia.com",
   contactPoint: {
     "@type": "ContactPoint",
