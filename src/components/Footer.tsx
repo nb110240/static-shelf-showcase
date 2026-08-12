@@ -25,7 +25,7 @@ const Footer = () => {
   return (
     <>
       {/* Contact Section */}
-      <section id="contact" className="relative py-28">
+      <section id="contact" className="relative overflow-hidden py-28">
         <div className="absolute inset-0 bg-blueprint-grid" />
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-primary/[0.03] blur-[100px] pointer-events-none" />
 
@@ -123,7 +123,7 @@ const Footer = () => {
       </section>
 
       {/* Footer bar */}
-      <footer className="bg-foreground text-background/75">
+      <footer className="bg-foreground pb-16 text-background/75 md:pb-0">
         <div className="container flex flex-col md:flex-row items-center justify-between gap-4 py-6">
           <span className="font-display text-sm tracking-[0.15em] text-background/75">
             BOBBINS INDIA
@@ -131,7 +131,7 @@ const Footer = () => {
           <p className="font-mono text-[11px] tracking-[0.1em] text-background/65">
             &copy; {new Date().getFullYear()} Bobbins India. All rights reserved.
           </p>
-          <div className="flex items-center gap-4 md:gap-8">
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 md:gap-8">
             <button onClick={() => handleAnchorNav("about")} className="py-2 px-1 text-[11px] text-background/70 hover:text-background transition-colors uppercase tracking-[0.15em]">
               About
             </button>

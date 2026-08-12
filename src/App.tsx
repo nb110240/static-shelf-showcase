@@ -10,6 +10,7 @@ import EmailFloat from "./components/WhatsAppFloat";
 import CompareFloatingBar from "./components/CompareFloatingBar";
 import StructuredData from "./components/StructuredData";
 import AppErrorBoundary from "./components/AppErrorBoundary";
+import MobileQuoteBar from "./components/MobileQuoteBar";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 
@@ -18,6 +19,7 @@ const ProductPage = lazy(() => import("./pages/ProductPage"));
 const CategoryPage = lazy(() => import("./pages/CategoryPage"));
 const ComparePage = lazy(() => import("./pages/ComparePage"));
 const Privacy = lazy(() => import("./pages/Privacy"));
+const ThankYou = lazy(() => import("./pages/ThankYou"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const PageFallback = () => <div className="min-h-screen bg-background" aria-label="Loading page" />;
@@ -38,6 +40,7 @@ const App = () => (
       <StructuredData />
       <ScrollToTop />
       <EmailFloat />
+      <MobileQuoteBar />
       <CompareFloatingBar />
       <Suspense fallback={<PageFallback />}>
         <Routes>
@@ -47,6 +50,7 @@ const App = () => (
           <Route path="/products" element={<Products />} />
           <Route path="/compare" element={<ComparePage />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="/thank-you" element={<ThankYou />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
