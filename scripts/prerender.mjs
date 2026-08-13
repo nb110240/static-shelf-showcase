@@ -97,7 +97,7 @@ function parseCategories() {
 
 const { products, categoryImages } = parseProducts();
 const categories = parseCategories();
-const manifestImage = (source) => source && manifest[source]?.file ? `${SITE}/${manifest[source].file}` : `${SITE}/og-default.png`;
+const manifestImage = (source) => source && manifest[source]?.file ? `${SITE}/${manifest[source].file}` : `${SITE}/bobbins-india-share-2026.png`;
 const productImage = (product) => manifestImage(product.imageSource || categoryImages.get(product.category));
 
 const fallbackStyle = `<style id="prerender-shell-style">.prerender-shell{max-width:1120px;margin:0 auto;padding:96px 24px 48px;font:16px/1.65 system-ui,sans-serif;color:#18394a}.prerender-shell h1{font-size:clamp(2rem,6vw,3.5rem);line-height:1.1}.prerender-shell h2{margin-top:2rem}.prerender-shell a{color:#087eaa}.prerender-shell ul{padding-left:1.25rem}.prerender-shell .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}.prerender-shell article{padding:18px;border:1px solid #dce5ea;border-radius:8px}.prerender-shell img{max-width:440px;width:100%;height:auto}</style>`;
@@ -106,7 +106,7 @@ const stripDynamicMeta = (html) => html
   .replace(/\s*<meta\s+(?:name|property)="(?:description|robots|og:[^"]+|twitter:[^"]+)"[^>]*>/gi, "")
   .replace(/\s*<link\s+rel="canonical"[^>]*>/gi, "");
 
-function pageHtml({ title, description, path, image = `${SITE}/og-default.png`, type = "website", robots = "index,follow,max-image-preview:large", schemas = [], content }) {
+function pageHtml({ title, description, path, image = `${SITE}/bobbins-india-share-2026.png`, type = "website", robots = "index,follow,max-image-preview:large", schemas = [], content }) {
   const canonical = `${SITE}${path === "/" ? "/" : path}`;
   const metadata = `
     <title>${escapeHtml(title)}</title>
@@ -140,7 +140,7 @@ function writeRoute(path, html) {
 
 const organization = {
   "@context": "https://schema.org", "@type": ["Organization", "LocalBusiness"], name: "Bobbins India", legalName: "Sudhir Enterprise",
-  url: SITE, logo: `${SITE}/bobbins-b-192.png`, image: `${SITE}/og-default.png`, foundingDate: "1995", email: "sales@bobbinsindia.com", telephone: "+912228473744", priceRange: "Quotation based",
+  url: SITE, logo: `${SITE}/bobbins-b-192.png`, image: `${SITE}/bobbins-india-share-2026.png`, foundingDate: "1995", email: "sales@bobbinsindia.com", telephone: "+912228473744", priceRange: "Quotation based",
   address: { "@type": "PostalAddress", streetAddress: "12 B, Chandivali, Off Saki Vihar Road", addressLocality: "Andheri East", addressRegion: "Maharashtra", postalCode: "400072", addressCountry: "IN" },
   areaServed: [{ "@type": "Country", name: "India" }, { "@type": "Place", name: "International" }],
   hasMap: "https://maps.google.com/?q=12+B+Chandivali+Off+Saki+Vihar+Road+Andheri+East+Mumbai+400072",
