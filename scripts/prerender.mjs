@@ -140,7 +140,7 @@ function writeRoute(path, html) {
 
 const organization = {
   "@context": "https://schema.org", "@type": ["Organization", "LocalBusiness"], name: "Bobbins India", legalName: "Sudhir Enterprise",
-  url: SITE, logo: `${SITE}/apple-touch-icon.png`, image: `${SITE}/og-default.png`, foundingDate: "1995", email: "sales@bobbinsindia.com", telephone: "+912228473744", priceRange: "Quotation based",
+  url: SITE, logo: `${SITE}/bobbins-b-192.png`, image: `${SITE}/og-default.png`, foundingDate: "1995", email: "sales@bobbinsindia.com", telephone: "+912228473744", priceRange: "Quotation based",
   address: { "@type": "PostalAddress", streetAddress: "12 B, Chandivali, Off Saki Vihar Road", addressLocality: "Andheri East", addressRegion: "Maharashtra", postalCode: "400072", addressCountry: "IN" },
   areaServed: [{ "@type": "Country", name: "India" }, { "@type": "Place", name: "International" }],
   hasMap: "https://maps.google.com/?q=12+B+Chandivali+Off+Saki+Vihar+Road+Andheri+East+Mumbai+400072",
