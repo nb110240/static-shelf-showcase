@@ -1740,10 +1740,20 @@ export const products: Product[] = [
   {
     id: "isi-10-5",
     name: "ISI 10.5\" Reel",
-    description: "ISI standard 10.5 inch reel for industrial wire winding.",
+    description: "ISI 10.5 inch polypropylene reel with a 27kg copper-wire capacity at 0.6mm diameter, designed for industrial wire winding.",
     category: "ISI Reels",
     image: isi10Point5Reel,
-    features: []
+    features: [
+      "Size: 10.5\"",
+      "Flange Dia (d1): 260mm",
+      "Barrel Dia (d2): 120mm",
+      "Traverse (L2): 120mm",
+      "Overall (L1): 150mm",
+      "Bore (d4): 40mm",
+      "Material: PP",
+      "Reel Weight: 870g (approx.)",
+      "Wire Capacity: 27kg Cu at 0.6mm"
+    ]
   },
   {
     id: "isi-11",
