@@ -4,7 +4,7 @@ const organizationSchema = {
   name: "Bobbins India",
   legalName: "Sudhir Enterprise",
   url: "https://bobbinsindia.net",
-  logo: "https://bobbinsindia.net/apple-touch-icon.png",
+  logo: "https://bobbinsindia.net/bobbins-b-192.png",
   description:
     "Manufacturer of plastic reels, bobbins, and spools for wire, cable, welding, textile, and industrial applications since 1995.",
   foundingDate: "1995",
