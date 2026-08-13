@@ -82,11 +82,11 @@ const Products = () => {
         <meta property="og:title" content="Industrial Bobbins, Spools & Reels Catalog | Bobbins India" />
         <meta property="og:description" content="Browse 111 industrial spools, bobbins and reels by application and dimensions. Compare specifications or request a custom quote." />
         <meta property="og:url" content={`${SITE_URL}/products`} />
-        <meta property="og:image" content={`${SITE_URL}/og-default.png`} />
+        <meta property="og:image" content={`${SITE_URL}/bobbins-india-share-2026.png`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Industrial Bobbins, Spools & Reels Catalog | Bobbins India" />
         <meta name="twitter:description" content="Browse 111 industrial spool, reel and bobbin models across 16 application families." />
-        <meta name="twitter:image" content={`${SITE_URL}/og-default.png`} />
+        <meta name="twitter:image" content={`${SITE_URL}/bobbins-india-share-2026.png`} />
       </Helmet>
       <Header />
 

@@ -17,7 +17,7 @@ const organizationSchema = {
     addressCountry: "IN",
   },
   telephone: "+912228473744",
-  image: "https://bobbinsindia.net/og-default.png",
+  image: "https://bobbinsindia.net/bobbins-india-share-2026.png",
   priceRange: "Quotation based",
   areaServed: [
     { "@type": "Country", name: "India" },
