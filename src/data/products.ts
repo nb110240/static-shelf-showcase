@@ -102,6 +102,7 @@ import isiReelsNew from "@/assets/isi-reels-studio.jpg";
 import isi5Reel from "@/assets/isi-5-125mm-reel.jpg";
 import isi130mmReel from "@/assets/isi-130mm-reel.jpg";
 import isi6Reel from "@/assets/isi-6-reel.jpg";
+import isi7Reel from "@/assets/isi-7-reel.jpg";
 import isi8Reel from "@/assets/isi-8-reel.jpg";
 import isi10Reel from "@/assets/isi-10-reel.jpg";
 import isi10Point5Reel from "@/assets/isi-10-5-reel.jpg";
@@ -1682,7 +1683,7 @@ export const products: Product[] = [
     name: "ISI 7\" Reel",
     description: "ISI standard 7 inch reel for heavy-duty wire applications.",
     category: "ISI Reels",
-    image: isiReelsNew,
+    image: isi7Reel,
     features: [
       "Size: 7\"",
       "Flange Dia (d1): 178mm",
