@@ -74,6 +74,8 @@ import cdr355LargeBarrelCableDeliveryReel from "@/assets/cdr-355-large-barrel-ca
 import cdr380CableDeliveryReel from "@/assets/cdr-380-cable-delivery-reel.jpg";
 import cdr500CableDeliveryReel from "@/assets/cdr-500-cable-delivery-reel.jpg";
 import superToughNew from "@/assets/super-tough-photo.jpg";
+import superTough22 from "@/assets/super-tough-22.jpg";
+import superTough25 from "@/assets/super-tough-25.jpg";
 import superTough1 from "@/assets/super-tough-1.jpg";
 import superTough2 from "@/assets/super-tough-2.jpg";
 import superTough3 from "@/assets/super-tough-3.jpg";
@@ -1207,7 +1209,7 @@ export const products: Product[] = [
     name: "22\" Super Tough Reel - 250kg",
     description: "High performance ABS reel designed for run speeds up to 3000rpm. One-third the weight of equivalent mild steel reels. Ideal for wire drawing, bunching, stranding and transportation.",
     category: "Super Tough",
-    image: superToughNew,
+    image: superTough22,
     features: [
       "Material: ABS",
       "Flange Dia: 22\" (560mm)",
@@ -1223,7 +1225,7 @@ export const products: Product[] = [
     name: "22\" Super Tough Reel - 300kg",
     description: "High performance ABS reel designed for run speeds up to 3000rpm. One-third the weight of equivalent mild steel reels. Ideal for wire drawing, bunching, stranding and transportation.",
     category: "Super Tough",
-    image: superToughNew,
+    image: superTough22,
     features: [
       "Material: ABS",
       "Flange Dia: 22\" (560mm)",
@@ -1239,7 +1241,7 @@ export const products: Product[] = [
     name: "22\" Super Tough Reel - 345kg",
     description: "High performance ABS reel designed for run speeds up to 3000rpm. One-third the weight of equivalent mild steel reels. Ideal for wire drawing, bunching, stranding and transportation.",
     category: "Super Tough",
-    image: superToughNew,
+    image: superTough22,
     features: [
       "Material: ABS",
       "Flange Dia: 22\" (560mm)",
@@ -1255,7 +1257,7 @@ export const products: Product[] = [
     name: "25\" Super Tough Reel - 390kg",
     description: "High performance ABS reel designed for run speeds up to 3000rpm. One-third the weight of equivalent mild steel reels. Ideal for wire drawing, bunching, stranding and transportation.",
     category: "Super Tough",
-    image: superToughNew,
+    image: superTough25,
     features: [
       "Material: ABS",
       "Flange Dia: 25\" (630mm)",
@@ -1271,7 +1273,7 @@ export const products: Product[] = [
     name: "25\" Super Tough Reel - 450kg",
     description: "High performance ABS reel designed for run speeds up to 3000rpm. One-third the weight of equivalent mild steel reels. Ideal for wire drawing, bunching, stranding and transportation.",
     category: "Super Tough",
-    image: superToughNew,
+    image: superTough25,
     features: [
       "Material: ABS",
       "Flange Dia: 25\" (630mm)",
@@ -1287,7 +1289,7 @@ export const products: Product[] = [
     name: "25\" Super Tough Reel - 525kg",
     description: "High performance ABS reel designed for run speeds up to 3000rpm. One-third the weight of equivalent mild steel reels. Ideal for wire drawing, bunching, stranding and transportation.",
     category: "Super Tough",
-    image: superToughNew,
+    image: superTough25,
     features: [
       "Material: ABS",
       "Flange Dia: 25\" (630mm)",
