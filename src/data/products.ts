@@ -1,5 +1,6 @@
 import { Product } from "@/types/product";
 import taperedBobbinsNew from "@/assets/taper-reels-photo.jpg";
+import pt2TaperedBobbin from "@/assets/pt-2-tapered-bobbin.png";
 import pt1TaperedBobbin from "@/assets/pt-1-tapered-bobbin.jpg";
 import pt4TaperedBobbin from "@/assets/pt-4-tapered-bobbin.jpg";
 import pt6TaperedBobbin from "@/assets/pt-6-tapered-bobbin.jpg";
@@ -132,7 +133,7 @@ export const products: Product[] = [
     name: "PT-2 Tapered Bobbin",
     description: "Medium capacity tapered bobbin for cable winding applications. Durable plastic construction.",
     category: "Tapered Bobbins",
-    image: taperedBobbinsNew,
+    image: pt2TaperedBobbin,
     features: [
       "Ref. No: PT-2",
       "Flange Dia: 105/115mm (4.13/4.53 inch)",
